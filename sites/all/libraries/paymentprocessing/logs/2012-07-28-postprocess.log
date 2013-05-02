@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Marshall
+    [billTo_email] => EricaMMarshall@gmail.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => ApSm71QGY/T/ewaEkBUcV3evoAk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############9567
+    [reasonCode] => 100
+    [billTo_firstName] => Erica
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3434999010840178147363
+    [order_id] => 19001
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 602332
+    [card_expirationMonth] => 09
+    [orderNumber] => 1343499901081
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 619
+    [signedDataPublicSignature] => 9pa0Wl1IZxQf3u6NAelLPYgX6nQ=
+    [reconciliationID] => 074727615WTO9N54HCKDZ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdGxf8eil+oBGKFWDdo3ZN2zFrXqT3M5q0kQ5cS0mkp8YqxAFNJT4xViaQOpgSKKGTSTKuj0lnHAwlyLo2L/j0Uv1AIwAPR9O
+    [uid] => 619
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 106.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-28T182502Z
+    [orderAmount] => 106.25
+    [orderNumber_publicSignature] => e26Ruv2EO6/ppBOn1+cFUpEARP4=
+    [card_cardType] => 001
+    [billTo_street1] => PO Box 1133
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6039696271
+    [paymentOption] => card
+    [transactionSignature] => 9BlvicjWHE+j0jluWfi4he66YFo=
+    [merchantDefinedData1] => Request ID: 19001
+    [billTo_city] => Dover
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03821
+    [billTo_country] => us
+)

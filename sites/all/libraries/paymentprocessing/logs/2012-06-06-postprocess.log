@@ -1,0 +1,100 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Hinsman III
+    [billTo_email] => hinsmanlaw@aol.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => N
+    [orderAmount_publicSignature] => NlEX6s4yLSCcw1aOANOQ6uTjkUg=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############7868
+    [reasonCode] => 100
+    [billTo_firstName] => John
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3389947550280178147360
+    [order_id] => 7132
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 07480B
+    [billTo_company] => Law Office of John A.M. Hinsman III
+    [card_expirationMonth] => 09
+    [orderNumber] => 1338994601230
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 342
+    [signedDataPublicSignature] => 98DNafuljTDxp1tCRn7QJ61RucE=
+    [reconciliationID] => 048318050WTOFL2YZAU0X
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => N
+    [orderPage_requestToken] => Ahj//wSRb4nyEIkvVkBAKFWDRwzYuGDVhXqT40xlZtQarCwmn53SElgJNPzukJLaQJu5DdDJpJlXR6SzjgYTpFvifIQiS9WQEAAA9gvY
+    [uid] => 342
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 3.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-06T145915Z
+    [orderAmount] => 3.75
+    [orderNumber_publicSignature] => DpxTyJuyQB5h4VFVeXUDyzDo1ek=
+    [card_cardType] => 002
+    [billTo_street1] => 114 Locust Street, Suite 3-A
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6037431655
+    [paymentOption] => card
+    [transactionSignature] => tUTIxPvpF7BYyi+RaB4J2CfjVpQ=
+    [merchantDefinedData1] => Request ID: 7132
+    [billTo_city] => Dover
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03820
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => RAINBOTH
+    [billTo_email] => mrainboth@nhtrialattorneys.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => dz9m8peDD5v1iQVtDnn11qIxayM=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############1207
+    [reasonCode] => 100
+    [billTo_firstName] => MICHAEL
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3390045106080178147361
+    [order_id] => 13233
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 045483
+    [billTo_company] => Coughlin, Rainboth, Murphy & Lown, PA
+    [card_expirationMonth] => 03
+    [orderNumber] => 1339004510606
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 519
+    [signedDataPublicSignature] => W2WXpm9Z1EVRPs9pBHUr2dMdHJI=
+    [reconciliationID] => 048415406WTO1Q2Z327QZ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRb4ynPYCY5SBCKFWDRw0YtWjBtXqT2NFlaZsm9G0mkaWPE0gFNI0seJpaQToSIEN0MmkmVdHpLOOBhAkW+Mpz2AmOUgQg3wou
+    [uid] => 519
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 3300.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-06T174151Z
+    [orderAmount] => 3300
+    [orderNumber_publicSignature] => ArMin+Yw6s8Dy2OAWbE/SCi1rOY=
+    [card_cardType] => 001
+    [billTo_street1] => 439 Middle Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034311993
+    [paymentOption] => card
+    [transactionSignature] => Chb687K5ixsUSBaA+gTetO2uiyo=
+    [merchantDefinedData1] => Request ID: 13233
+    [billTo_city] => Portsmouth
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03801
+    [billTo_country] => us
+)

@@ -1,0 +1,94 @@
+<?php
+/**
+ * Implements hook_menu()
+ *
+ * @return array
+ */
+function file_delete_sync_menu() {
+  $items = array();
+
+  $items['file-delete'] = array(
+      'type' => MENU_CALLBACK,
+      'title' => 'File Delete Sync',
+      'page callback' => '_file_delete_sync',
+      'page arguments' => array(1,2),
+      'access callback' => '_anon_access'
+  );
+
+  return $items;
+}
+
+/**
+ * File Delete Sync access callback.
+ *
+ * @return true
+ */ 
+function _anon_access() {
+  return true;
+}
+
+/**
+ * File Delete Sync page callback.
+ *
+ * @param string $domain
+ * @param int $fid
+ * @param int $oid
+ */
+function _file_delete_sync($fid, $file = NULL) {
+  global $user;
+  $original_user = $user;
+  $old_state = session_save_session();
+  session_save_session(FALSE);
+  $user = user_load(1);
+  if( $fid != 'transcript') {
+    if(!module_load_include('inc','file_delete_sync', 'load_node_cck_field')) {
+      $node = node_load($fid);
+      if(!empty($node)) {
+        node_delete($fid);
+      }
+    }
+  }
+  else {
+    if( is_numeric(arg(3)) ) {
+      $node = node_load(arg(3));
+      if($node->field_completed_transcript[0]['filename'] == $file) {
+        if( field_file_delete($node->field_completed_transcript[0],TRUE) ) {
+          echo "file deleted";
+        }
+      }
+      else {
+        echo "no file found";
+      }
+    }
+    else {
+      return false;
+    }
+  }
+  $user = $original_user;
+  session_save_session($old_state);
+}
+
+/**
+ * Implements hook_nodeapi().
+ *
+ * @param mixed $node;
+ * @param string $op;
+ * @param $a3;
+ * @param $a4;
+ *
+ */
+function file_delete_sync_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  if($node->type == 'uploaded_file' && $op = 'delete' && arg(0) != 'file-delete')
+  {
+    $domain = 'avtstore.dev02.mcmurry.com';
+    $fid = $node->nid;
+    $oid = $node->field_order_reference[0]['nid'];
+    $url = 'http://tcro.dev02.mcmurry.com/file-delete/'.$domain.'/'.$fid.'/'.$oid;
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    $data = curl_exec($ch);
+    curl_close($ch);
+  }
+}
+?>

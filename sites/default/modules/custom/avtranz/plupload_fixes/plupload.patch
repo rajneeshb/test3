@@ -1,0 +1,252 @@
+*** plupload.module	2012-02-02 15:41:19.975250843 -0700
+--- plupload.avt	2012-02-02 15:40:28.131248966 -0700
+***************
+*** 64,70 ****
+      $form['plupload_import_field_type'] = array(
+        '#type' => 'select',
+        '#title' => t('Target field'),
+!       '#description' => t('Select the specific filefield you want to import photos into. During import, nodes of your selected type will be created and the selected field will be populated with the imported image. The image name will be used for the title and all other fields will be blank.'),
+        '#options' => $available['matches'],
+        '#default_value' => variable_get('plupload_import_field_type', $available['keys'][0]),
+      );
+--- 64,70 ----
+      $form['plupload_import_field_type'] = array(
+        '#type' => 'select',
+        '#title' => t('Target field'),
+!       '#description' => t('Select the specific filefield you want to import files into. During import, nodes of your selected type will be created and the selected field will be populated with the imported image. The image name will be used for the title and all other fields will be blank.'),
+        '#options' => $available['matches'],
+        '#default_value' => variable_get('plupload_import_field_type', $available['keys'][0]),
+      );
+***************
+*** 82,87 ****
+--- 82,91 ----
+   * Page callback for the bulk uploader.
+   */
+  function plupload_upload_page($options = array()) {
++   if (module_exists('plupload_fixes')) {
++     $options = _plupload_fixes_fix_plupload_upload_page_options($options);
++   }
++ 
+    $path = plupload_library_path();
+    // Plupload changed their distro file structure starting with version 1.4.3, but the github repo still uses the old structure
+    // Also, instead of including separate minified js files, all js files in a release are minified.  Only github source is non-minified
+***************
+*** 118,139 ****
+    // Get the field and its validators so we can build our extension list.
+    list($type, $field_name) = split(':::', $plupload_import_field_type);
+    $field = content_fields($field_name, $type);
+!   $validators = imagefield_widget_upload_validators($field);
+    $extensions = str_replace(' ', ',', $validators['filefield_validate_extensions'][0]);
+  
+    $url = url('plupload-pernode', array('query' => $query_string));
+    $swfurl = url('') . $js_dir .'/plupload.flash.swf';
+  
+    $settings = array();
+    $settings['plupload'] = array (
+      'url' => $url,
+      'swfurl' => $swfurl,
+!     'extensions' => $extensions
+    );
+  
+    drupal_add_js($settings, 'setting');
+!    
+!   $output .= theme('plupload_uploader');
+  
+    return $output;
+  }
+--- 122,151 ----
+    // Get the field and its validators so we can build our extension list.
+    list($type, $field_name) = split(':::', $plupload_import_field_type);
+    $field = content_fields($field_name, $type);
+!   if ( module_exists('plupload_fixes') ) {
+!     $validators = _plupload_fixes_widget_upload_validators($field);
+!   }
+!   else {
+!     $validators = imagefield_widget_upload_validators($field);
+!   }
+    $extensions = str_replace(' ', ',', $validators['filefield_validate_extensions'][0]);
+  
+    $url = url('plupload-pernode', array('query' => $query_string));
+    $swfurl = url('') . $js_dir .'/plupload.flash.swf';
++   $xapurl = url('') . $js_dir .'/plupload.silverlight.xap';
+  
+    $settings = array();
+    $settings['plupload'] = array (
+      'url' => $url,
+      'swfurl' => $swfurl,
+!     'xapurl' => $xapurl,
+!     'extensions' => $extensions,
+!     'max_file_size' => file_upload_max_size(),
+    );
+  
+    drupal_add_js($settings, 'setting');
+! 
+!   $output = theme('plupload_uploader');
+  
+    return $output;
+  }
+***************
+*** 153,170 ****
+  
+  
+    // Look for the content type header
+-   if (isset($_SERVER["HTTP_CONTENT_TYPE"])) {
+-     $content_type = $_SERVER["HTTP_CONTENT_TYPE"];
+-   }
+    if (isset($_SERVER["CONTENT_TYPE"])) {
+      $content_type = $_SERVER["CONTENT_TYPE"];
+    }
+  
+    // Is this a multipart upload?
+    if (strpos($content_type, "multipart") !== FALSE) {
+      if (isset($_FILES['file']['tmp_name']) && is_uploaded_file($_FILES['file']['tmp_name'])) {
+        // Open temp file
+!       $out = fopen($temp_directory . DIRECTORY_SEPARATOR . $file_name, $chunk == 0 ? "wb" : "ab");
+        if ($out) {
+          // Read binary input stream and append it to temp file
+          $in = fopen($_FILES['file']['tmp_name'], "rb");
+--- 165,187 ----
+  
+  
+    // Look for the content type header
+    if (isset($_SERVER["CONTENT_TYPE"])) {
+      $content_type = $_SERVER["CONTENT_TYPE"];
+    }
++   elseif (isset($_SERVER["HTTP_CONTENT_TYPE"])) {
++     $content_type = $_SERVER["HTTP_CONTENT_TYPE"];
++   }
++   else {
++     $content_type = '';
++   }
++ 
++   $file_path = $temp_directory . DIRECTORY_SEPARATOR . $file_name;
+  
+    // Is this a multipart upload?
+    if (strpos($content_type, "multipart") !== FALSE) {
+      if (isset($_FILES['file']['tmp_name']) && is_uploaded_file($_FILES['file']['tmp_name'])) {
+        // Open temp file
+!       $out = fopen($file_path, $chunk == 0 ? "wb" : "ab");
+        if ($out) {
+          // Read binary input stream and append it to temp file
+          $in = fopen($_FILES['file']['tmp_name'], "rb");
+***************
+*** 188,194 ****
+    }
+    else {
+      // Open temp file
+!     $out = fopen($temp_directory . DIRECTORY_SEPARATOR . $file_name, $chunk == 0 ? "wb" : "ab");
+      if ($out) {
+        // Read binary input stream and append it to temp file
+        $in = fopen("php://input", "rb");
+--- 205,211 ----
+    }
+    else {
+      // Open temp file
+!     $out = fopen($file_path, $chunk == 0 ? "wb" : "ab");
+      if ($out) {
+        // Read binary input stream and append it to temp file
+        $in = fopen("php://input", "rb");
+***************
+*** 213,219 ****
+    }
+  
+    // Move it to it's final home.
+!   $path = file_directory_path();
+  
+    // Pull off all the options from the query string for later attachment to the node.
+    $options = array();
+--- 230,241 ----
+    }
+  
+    // Move it to it's final home.
+!   if (module_exists('plupload_fixes')) {
+!     $path = _plupload_fixes_get_upload_destination();
+!   }
+!   else {
+!     $path = file_directory_path();
+!   }
+  
+    // Pull off all the options from the query string for later attachment to the node.
+    $options = array();
+***************
+*** 248,254 ****
+    $directory = file_directory_temp();
+    if (file_check_location($temp_filepath, $directory)) {
+      // Only get files where we can get some image info.
+!     if ($info = image_get_info($temp_filepath)) {
+        // Let the options array override the variable if it's set
+        // The drupal_ prefix is removed at this point
+        if (isset($options['plupload_import_field_type'])) {
+--- 270,276 ----
+    $directory = file_directory_temp();
+    if (file_check_location($temp_filepath, $directory)) {
+      // Only get files where we can get some image info.
+!     if ( module_exists('plupload_fixes') || ($info = image_get_info($temp_filepath)) ) {
+        // Let the options array override the variable if it's set
+        // The drupal_ prefix is removed at this point
+        if (isset($options['plupload_import_field_type'])) {
+***************
+*** 263,272 ****
+  
+        // Get the field and its validators.
+        $field = content_fields($field_name, $type);
+!       $validators = imagefield_widget_upload_validators($field);
+  
+        // make sure that the directory exists
+!       $directory = filefield_widget_file_path($field);
+        field_file_check_directory($directory, FILE_CREATE_DIRECTORY);
+  
+        // Create some defaults that imagefield expects.
+--- 285,304 ----
+  
+        // Get the field and its validators.
+        $field = content_fields($field_name, $type);
+!       if ( module_exists('plupload_fixes') ) {
+!         $validators = _plupload_fixes_widget_upload_validators($field);
+!       }
+!       else {
+!         $validators = imagefield_widget_upload_validators($field);
+!       }
+  
+        // make sure that the directory exists
+!       if (module_exists('plupload_fixes')) {
+!         $directory = _plupload_fixes_get_upload_destination( filefield_widget_file_path($field) );
+!       }
+!       else {
+!         $directory = filefield_widget_file_path($field);
+!       }
+        field_file_check_directory($directory, FILE_CREATE_DIRECTORY);
+  
+        // Create some defaults that imagefield expects.
+***************
+*** 397,409 ****
+   * Implementation of hook_theme().
+   */
+  function plupload_theme($existing, $type, $theme, $path) {
+!   return array('plupload_uploader' => array(
+!     'arguments' => array())
+    );
+  }
+  
+  /**
+!  * Theme function to return the uploader. (Once JS has it's way with it.) 
+   */
+  function theme_plupload_uploader() {
+    $path = drupal_get_path('module', 'plupload');
+--- 429,444 ----
+   * Implementation of hook_theme().
+   */
+  function plupload_theme($existing, $type, $theme, $path) {
+!   return array(
+!   	'plupload_uploader' => array(
+!   	  'template' => 'plupload_uploader',
+!     	'arguments' => array()
+!   	)
+    );
+  }
+  
+  /**
+!  * Theme function to return the uploader. (Once JS has it's way with it.)
+   */
+  function theme_plupload_uploader() {
+    $path = drupal_get_path('module', 'plupload');

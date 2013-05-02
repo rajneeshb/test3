@@ -1,0 +1,298 @@
+/* $Id$ */
+
+/**
+ * @file
+ * Form Styling
+ */
+
+
+fieldset {
+  border: 1px solid #b4b4b4;
+	border-radius: 8px; 
+  padding: 8px 16px;
+}
+
+legend {  font-size: 2em; font-weight: normal;  line-height: 1.3em; background: url('/sites/default/themes/avtstore/images/bullet-plus.png') 3px 10px no-repeat; padding-right: 5px; padding-left: 23px; color: #4e81a9; }
+ 
+fieldset.collapsible legend a { color: #4e81a9; text-decoration: none; background: none !important; padding: 0 !important;} 
+
+fieldset.collapsed  { border: none !important }
+
+fieldset.collapsed legend { padding-left: 24px; background: url('/sites/default/themes/avtstore/images/bullet-plus.png') 4px 10px no-repeat;  }
+
+/* Wrapper for a form element (or group of form elements) and its label*/
+.form-item,
+.form-checkboxes,
+.form-radios  {
+  margin: 0;
+}
+
+.form-item label,
+.form-checkboxes label,
+.form-radios label/* Wrapper for a form element (or group of form elements) and its label */ {
+  margin: 5px 4px 5px 0;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error /* Highlight the form elements that caused a form submission error */ {
+  border: 2px solid #c00;
+}
+
+.form-item label /* The label for a form element */ {
+  display: block;
+  font-weight: normal;
+
+ 
+}
+
+.field-label {
+  color: #60840e;
+  font-size: 1.15em;
+}
+
+.form-item label.option /* The label for a radio button or checkbox */ {
+  display: inline;
+  font-weight: normal;
+}
+
+.form-required /* The part of the label that indicates a required field */ {
+  color: #c00;
+}
+
+.form-item .description /* The descriptive help text (separate from the label) */ {
+  font-size: 0.85em;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item /* Pack groups of checkboxes and radio buttons closer together */ {
+  margin: 0.4em 0;
+}
+
+
+.form-item  .form-text { height: 25px; line-height: 25px; text-indent: 6px; }
+
+.form-item  .form-text,
+.form-item  textarea { 
+
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border: 1px solid #cbcbcb;
+
+ }
+
+.form-item  .form-text,
+.form-item  .form-select,
+.form-item textarea,
+.form-item .jquery-selectbox{  font-size: 1em; color: #6b6b6b;
+ }
+
+
+.form-submit /* The submit button */ {
+
+
+
+}
+
+.container-inline div,
+.container-inline label /* Inline labels and form divs */ {
+  display: inline;
+}
+
+.tips /* Tips for Drupal's input formats */ {
+}
+
+
+/*
+ * Search (search-theme-form.tpl.php)
+ */
+#search-box /* Wrapper for the search form */ {
+}
+
+#edit-search-theme-form-1-wrapper label /* Label that says "Search this site:" */ {
+  display: none;
+}
+
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+#search-block-form /* Wrapper for the search form */ {
+}
+
+#edit-search-block-form-1-wrapper label /* Label that says "Search this site:" */ {
+  display: none;
+}
+
+
+/*
+ * Drupal's default login form block
+ */
+#user-login-form {
+  text-align: left; /* LTR */
+}
+
+
+/*
+ * OpenID
+ *
+ * The default styling for the OpenID login link seems to assume Garland's
+ * styling of list items.
+ */
+
+#user-login-form ul /* OpenID creates a new ul above the login form's links. */ {
+  margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
+}
+
+#user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
+  margin-top: 1em;
+  margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
+}
+
+#user-login-form li.user-link /* The "Cancel OpenID login" link. */ {
+  margin-top: 1em;
+}
+
+#user-login ul {
+  margin: 1em 0;
+}
+
+#user-login li.openid-link,
+#user-login li.user-link /* The OpenID links on the /user form. */ {
+  margin-left: -2em; /* LTR */ /* Un-do all of the padding on the ul list. */
+}
+
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in html-elements.css, but restore them for the admin
+ * section of the site.
+ */
+
+form tbody {
+}
+
+form th,
+form thead th {
+
+}
+
+form tbody th {
+}
+
+/*individual forms*/
+
+.front .section  h1.title,
+.page-checkstatus .location .section h1.title, 
+.page-checkstatusadmin .section  h1.title,
+.page-checkstatusadminlocation .section  h1.title,
+.page-checkstatus .section  h1.title
+{ border-bottom: 1px solid #cbcbcb; position: relative; height: 50px;  }
+
+.front .section  h1.title a.handle,
+.page-checkstatus .section  h1.title a.handle { position: absolute; bottom: 0; right: 15px; display: block; background: url('/sites/default/themes/avtstore/images/shelf.png') top center no-repeat; width: 79px; height: 22px; }
+ 
+.views-exposed-form { margin-bottom: 30px }
+
+.view-check-status .view-filters .views-exposed-widgets { margin-top: 10px; position: relative; }
+.view-check-status .view-filters .views-exposed-widgets .views-exposed-widget { display: inline-block; }
+
+.view-check-status .view-filters .views-widget { margin-right: 10px; }
+.view-check-status .view-filters .views-widget-filter-field_orderstatus_value { vertical-align: top; margin-top: 25px; }
+.view-check-status .view-filters .views-submit-button { vertical-align: top; margin-top: 20px; position: relative; }
+.view-check-status .view-filters .views-submit-button span.views-throbbing { padding-right: 0; width: 18px; height: 18px; position: absolute; right: -20px; top: 5px; }
+
+.page-checkstatus .view-check-status .view-filters #edit-keys { width: 557px; }
+.page-checkstatus .view-check-status .view-filters .views-exposed-widgets .views-widget-filter-field_orderstatus_value { position: absolute; top: 30px; left: 0px; margin-top: 0; }
+.page-checkstatus .view-check-status .view-filters .views-submit-button { margin-top: 0; }
+
+.view-check-status .view-filters .form-submit { background: url('/sites/default/themes/avtstore/images/btn-search.png') top left no-repeat; border: none; width: 83px; height: 29px; font-size: 1px; line-height: 3px; color: #a7d2e9; cursor: pointer; }
+.view-check-status .view-filters .form-submit.hover { background-position: 0 -29px; }
+
+.view-check-status .view-filters { margin-top: 0px; }
+.view-check-status .view-filters .form-item { overflow: hidden; }
+.view-check-status .view-filters .form-item .form-text { width: 317px; }
+.view-check-status .view-filters .form-item .form-item { margin-bottom: 0 !important; }
+
+.view-check-status .view-filters select {  width: 321px; border: 1px solid #CBCBCB; border-radius: 4px; line-height: 30px; height: 30px; padding: 5px 4px 4px; }
+.view-check-status .view-filters #views-exposed-form-check-status-page-2 select {  }
+
+.views-exposed-form .views-exposed-widget { padding: 0; }
+.views-exposed-form .views-exposed-widget .form-submit { margin: 0; }
+
+/* User List page */
+.view-user-list .view-filters #edit-user-keys { width: 557px; margin-right: 1em; }
+.view-user-list .view-filters .form-submit { background: url('/sites/default/themes/avtstore/images/btn-search.png') top left no-repeat; border: none; width: 83px; height: 29px; font-size: 1px; line-h
+eight: 3px; color: #a7d2e9; cursor: pointer; }
+.view-user-list .view-filters .form-submit.hover { background-position: 0 -29px; }
+
+/* order view page */
+.section-order #block-block-4 h2 { margin-top: 10px; }
+#block-block-8  { text-align: right; margin-bottom: 10px; }
+.section-order #block-block-4 #top-block { margin-bottom: 5px; }
+.section-order #block-block-4 .questions { text-align: right; }
+.section-order #block-block-4 .balance_amount { font-size: 24px; line-height: 30px; font-weight: bold; margin-bottom: 10px; color: #60840E;}
+.section-order #block-block-4 .btn-wrapper { overflow: hidden; clear: both;  }
+
+.btn-wrapper form#cspaymentform { display: inline; }
+
+
+.btn-wrapper a.edit-order { float: right; }
+
+.section-order #block-block-4 .btn-wrapper div a:hover,
+.section-order #content-area .content { overflow: hidden; }
+
+.section-order #content-area .content .field { float: left; margin-right: 32px; margin-bottom: 11px  }
+
+.section-order ul.menu div.review { background: url('/sites/default/themes/avtstore/images/btn-review.png') top left no-repeat !important; height: 57px; width: 312px; }
+
+html.js input.form-autocomplete  { background: none #fff; }
+#autocomplete li{ margin: 0 !important;  height: 24px !important;}
+
+input[id*="-datepicker-"] { background-image: url('/sites/default/themes/avtstore/images/ico-date.png'); background-position: top right; background-repeat: no-repeat; }
+
+.node-type-order fieldset.group-header,
+.node-type-order fieldset.content-multigroup-group-hearingdates { clear: both; }
+
+#edit-field-appealtranscript-value-many-to-one { margin-right: 10px; }
+
+
+#user-register fieldset div.form-item,
+#user-register #edit-pass-wrapper div.form-item
+{ display: inline-block; width: 309px; }
+
+#user-register #edit-name-wrapper,
+#user-register #edit-mail-wrapper,
+#user-register #edit-pass-wrapper
+{ margin-left: 17px; margin-right: 17px; }
+#user-register .form-text { width: 309px; }
+
+#user-register #edit-name-wrapper input,
+#user-register #edit-mail-wrapper input
+{ width: 400px; }
+
+#user-register #edit-field-address-0-value-wrapper,
+#user-register #edit-field-comments-0-value-wrapper,
+#user-register .form-textarea
+{ width: 100%; }
+
+#user-register #edit-pass-pass1-wrapper,
+#user-register #edit-field-first-name-0-value-wrapper,
+#user-register #edit-field-company-firm-0-value-wrapper
+{ margin-right: 10px; }
+
+#user-register > div { text-align: right; }
+#user-register > div div.form-item,
+#user-register > div fieldset
+{ text-align: left; }
+
+table.ui-datepicker tbody td.ui-datepicker-today a { background-color: #FFFF84; background-image: none; }
+
+#user-login button[type="submit"] { margin-top: 10px; }
+#block-block-5 #user-login button[type="submit"] { margin-top: -3px; }
+
+input[disabled][type="text"],
+textarea[disabled]
+{ background-color: #EEE; }

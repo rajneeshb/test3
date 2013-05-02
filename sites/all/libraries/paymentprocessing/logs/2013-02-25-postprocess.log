@@ -1,0 +1,103 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Gross
+    [billTo_phoneNumber] => 6037421212
+    [orderAmount] => 50
+    [billTo_street1] => 466 Central Avenue
+    [billTo_street2] => suite 9
+    [card_accountNumber] => ############3494
+    [platform] => prd
+    [orderAmount_publicSignature] => FnFZn5KbEbE1EaqUF4W7UNH4gWA=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 179293548WTOFODGUI0G9
+    [signedDataPublicSignature] => SCrDi3mjzBoECxjeeb1ghe58wcM=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Howard
+    [billTo_customerID] => 1012
+    [uid] => 1012
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 42190
+    [transactionSignature] => tSjDhqheBgSSU/7dDoPmu4O+OTI=
+    [billTo_city] => Dover
+    [billTo_postalCode] => 03821
+    [orderPage_requestToken] => Ahj//wSRiEm7EgI7joBEKFWLdyycs2rRxXqT40+JHqyWEdymoMLEDqQFNQYWIHU6QNnEF+EMmkmVdHpLOOBhAkYhJuxICO46ARAA/CAY
+    [ccAuthReply_amount] => 50.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 00824D
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => hgatlaw@aol.com
+    [reasonCode] => 100
+    [order_id] => 42190
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 10
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => D2rjo+yB/WO90sshe/Zx3wpwSEY=
+    [requestID] => 3618218268440178147362
+    [orderNumber] => 1361821826843
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-02-25T195027Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Z
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Azarian
+    [billTo_phoneNumber] => 6037500015
+    [orderAmount] => 146.25
+    [billTo_street1] => 90 Washington Street
+    [billTo_street2] => Ste. 301 B/C
+    [card_accountNumber] => ############1451
+    [platform] => prd
+    [orderAmount_publicSignature] => Qdp7QT+52o5DoU/z+tV+/8xfjlg=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 179332448WTO9NDJD0G53
+    [signedDataPublicSignature] => Pv690U14nxrlUuOKthxPLMnal/E=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => David
+    [billTo_customerID] => 1476
+    [uid] => 1476
+    [billTo_company] => Azarian Law Office, PLLC
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 49354
+    [transactionSignature] => kuNkPFw/vh9JnHv7/Sfvn6S15FY=
+    [billTo_city] => Dover
+    [billTo_postalCode] => 03820
+    [orderPage_requestToken] => Ahj//wSRiErkRw+wvqBGKFWLdyzZsmjRxXqT3M6JKiMI7VmmksrEUYQFNJZWIow6QO5IS/CGTSTKuj0lnHAwfSMQlciOH2F9QIwA8x0V
+    [ccAuthReply_amount] => 146.25
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 686004
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => dazarian@azarianlaw.net
+    [reasonCode] => 100
+    [order_id] => 49354
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 03
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => e7cixwSI4rI2bb/RdrI3cUYcSJs=
+    [requestID] => 3618260096640178147363
+    [orderNumber] => 1361826009662
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-02-25T210010Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

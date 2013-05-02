@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Duke
+    [orderAmount] => 192.5
+    [billTo_street1] => 92 Portsmouth Avenue
+    [billTo_street2] => Suite 13
+    [card_accountNumber] => ###########1002
+    [platform] => prd
+    [orderAmount_publicSignature] => YvwJe0zejouqYFScfbHqxraDSf4=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 139785142WTO1Q9LB5G9T
+    [signedDataPublicSignature] => 5Om2jutTvW1yEAHrUqC4BQiuQNc=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => George R
+    [billTo_customerID] => 247
+    [uid] => 247
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 28454
+    [transactionSignature] => AsIb/g+pJDkU9EfTlr/vdlPaF50=
+    [billTo_city] => Exeter
+    [billTo_postalCode] => 03833
+    [orderPage_requestToken] => Ahj//wSRgGgy6Rd+DxBIKFWLNy3cNWLRlXqT2NFzMhNY7momkcg7j4ANNI5B3HwaQPlmRJFDJpJlXR6SzjgYPpGAaDLpF34PEEgA2RXm
+    [ccAuthReply_amount] => 192.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 180597
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [reasonCode] => 100
+    [order_id] => 28454
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 09
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Ay2V0tBFJt7HSqlMkCBhSfCHqbM=
+    [requestID] => 3545529022060178147364
+    [orderNumber] => 1354552902204
+    [signedFields] => billTo_lastName,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-03T164142Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)

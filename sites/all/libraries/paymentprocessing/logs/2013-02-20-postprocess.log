@@ -1,0 +1,151 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => pelissier
+    [billTo_phoneNumber] => 6035123694
+    [orderAmount] => 59.5
+    [billTo_street1] => p.o. box 912
+    [card_accountNumber] => ############3701
+    [platform] => prd
+    [orderAmount_publicSignature] => AGEn6rO8CLJvUWj9hLrdkb5TXcc=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 177122250WTOFLDDQMR3R
+    [signedDataPublicSignature] => r7Hnd794ZRWrIwSA/Q53WO63khw=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => nh
+    [billTo_firstName] => maurice
+    [billTo_customerID] => 1438
+    [uid] => 1438
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 48607
+    [transactionSignature] => ynv1hqnD88inh5P3fV7nhvBgv54=
+    [billTo_city] => epping
+    [billTo_postalCode] => 03042
+    [orderPage_requestToken] => Ahj//wSRh8nyjCpyTFBCKFWLduxZMmTVhXqT40yJEozaTOkmn9PJyngJNP6eTlPaQNufF9cMmkmVdHpLOOBgmkYfJ8owqckxQQgA4z4X
+    [ccAuthReply_amount] => 59.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 01626Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => moe@lawnmoe.com
+    [reasonCode] => 100
+    [order_id] => 48607
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 08
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 4WvvC2in3deO+HY32VCBpK5zE5k=
+    [requestID] => 3613614390140178147361
+    [orderNumber] => 1361361439013
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-02-20T115719Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Gill
+    [billTo_phoneNumber] => 6033823785
+    [orderAmount] => 531.25
+    [billTo_street1] => 2 Main Street
+    [card_accountNumber] => ############4693
+    [platform] => prd
+    [orderAmount_publicSignature] => DBmU1w5Ew1zPRlA+qSQ9lBELX9k=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 177153215WTOFODDQSZ2G
+    [signedDataPublicSignature] => L2RvGcXOw2E9u+zb0/T6YrwQUbg=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Michael
+    [billTo_customerID] => 1451
+    [uid] => 1451
+    [billTo_company] => The Mortgage Specialists
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 48923
+    [transactionSignature] => pe6Rywbi/EgadEBtZYxB6xR0bX8=
+    [billTo_city] => Plaistow
+    [billTo_postalCode] => 03865
+    [orderPage_requestToken] => Ahj//wSRh8wLj2a+M7g+KFWLduxas2TFrXqT40+JEo07TKOmoMI1tBQFNQYRraC6QQz4Uvrhk0kyro9JZxwMKMjD5gXHs18Z3B8A7l8h
+    [ccAuthReply_amount] => 531.25
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 09554G
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => clemieux@themortgagespecialists.com
+    [reasonCode] => 100
+    [order_id] => 48923
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 09
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => soExkijmwahq4o8n6cOmuEmU4VI=
+    [requestID] => 3613689967950178147359
+    [orderNumber] => 1361368974829
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-02-20T140317Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => pelissier
+    [billTo_phoneNumber] => 6035123694
+    [orderAmount] => 17
+    [billTo_street1] => p.o box 912
+    [card_accountNumber] => ############3701
+    [platform] => prd
+    [orderAmount_publicSignature] => v9i+gPY24Hw83saA1vOTuMYOjm4=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 177372975WTO8HDEU6JLQ
+    [signedDataPublicSignature] => 2Y2c3ezEbP4Jqw9hE5pTFU3cQFQ=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => nh
+    [billTo_firstName] => maurice
+    [billTo_customerID] => 1438
+    [uid] => 1438
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 48607
+    [transactionSignature] => hNFYawiY9v9iZaSowaZznr6P7gk=
+    [billTo_city] => epping
+    [billTo_postalCode] => 03042
+    [orderPage_requestToken] => Ahj//wSRh9PbS5PD6kBAKFWLduzbsnLdrXqT3EiJFqtpUyimj/7SDdwJNH/2kG76QL1IX1wyaSZV0eks44GCaRh9PbS5PD6kBAAAaQP+
+    [ccAuthReply_amount] => 17.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 06676Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => moe@lawnmoe.com
+    [reasonCode] => 100
+    [order_id] => 48607
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 08
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => C9vJ3FWn1JyYrQaZoXmIOGriW2o=
+    [requestID] => 3613971405640178147360
+    [orderNumber] => 1361397123336
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-02-20T215220Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)

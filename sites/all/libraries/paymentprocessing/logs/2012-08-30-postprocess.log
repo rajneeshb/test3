@@ -1,0 +1,100 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Stevens
+    [billTo_email] => legal@concordnh.gov
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => SuYEIAvWPOI3XGu3lxY/Vtj5PeY=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############7228
+    [reasonCode] => 100
+    [billTo_firstName] => Suzanne
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3463298165890178147359
+    [order_id] => 17578
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 005352
+    [billTo_company] => City of Concord
+    [card_expirationMonth] => 05
+    [orderNumber] => 1346329816587
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 594
+    [signedDataPublicSignature] => UkFkUTfPGse18UH2nPrxo/HxZcY=
+    [reconciliationID] => 091875725WTO8H6H8TRFZ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRd33ViRLz4cg+KFWDli4btW7JrXqT3EhtIcVKUa0mj9rYD0AJNH7WwHoaQMzkIw4ZNJMq6PSWccDBjIu77qxIl58OQfAAkixR
+    [uid] => 594
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 33.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-30T123017Z
+    [orderAmount] => 33
+    [orderNumber_publicSignature] => nfhoH/DgpC9KNlZ3JtxlDdaffK4=
+    [card_cardType] => 002
+    [billTo_street1] => 41 Green Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032258570
+    [paymentOption] => card
+    [transactionSignature] => 5dMDa5E6PtTc1TXBYzZGeDQsAEI=
+    [merchantDefinedData1] => Request ID: 17578
+    [billTo_city] => Concord
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03301
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Ward
+    [billTo_email] => dlw@michaelsward.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => 2C54UkpXth3yoVRBRWK/oRuhe+M=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############0744
+    [reasonCode] => 100
+    [billTo_firstName] => David
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3463489328160178147364
+    [order_id] => 23285
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 05638G
+    [billTo_company] => Michaels, Ward & Rabinovitz, LLP
+    [card_expirationMonth] => 01
+    [orderNumber] => 1346348921900
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 700
+    [signedDataPublicSignature] => fvG5P0iH2Z3BNwzx2Tznpd0sRK8=
+    [reconciliationID] => 092049491WTOFL6H8Z5AJ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRd4Mj0zevfyBIKFWDlkwaOWjljXqT40xtIcWmsGUmn6/3OMwFNP1/ucZ6QP6mBGHDJpJlXR6SzjgYQpF3gyPTN69/IEgAlSDb
+    [uid] => 700
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 300.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-30T174853Z
+    [orderAmount] => 300
+    [orderNumber_publicSignature] => 2TGlLGBUELXme32HTPF5lpkL/O8=
+    [card_cardType] => 001
+    [billTo_street1] => PO Box 961979
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6173504040
+    [paymentOption] => card
+    [transactionSignature] => yQLS8UIEKThnegVOANzbp3DklgM=
+    [merchantDefinedData1] => Request ID: 23285
+    [billTo_city] => Boston
+    [billTo_state] => MA
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 02196
+    [billTo_country] => us
+)

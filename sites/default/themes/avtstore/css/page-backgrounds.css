@@ -1,0 +1,70 @@
+/* $Id$ */
+
+/**
+ * @file
+ * Page Background Styling
+ *
+ * The default layout method of Zen doesn't give themers equal-height columns.
+ * However, equal-height columns are difficult to achieve and totally
+ * unnecessary. Instead, use the Faux Columns method described in the following
+ * ALA article:
+ *   http://www.alistapart.com/articles/fauxcolumns/
+ */
+
+
+body {
+	background-color: #eeeeee;
+}
+
+body.node-type-colorbox-content {
+	background-color: #fff;
+}
+
+#page-wrapper {
+}
+
+#page {
+	background: url('/sites/default/themes/avtstore/images/bg-sub.jpg') top left repeat-x;
+}
+
+
+.nid-1 #header { 
+	background:  url('/sites/default/themes/avtstore/images/bg-header-home.jpg') top center no-repeat #bedaf5;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+		height: 505px;
+		position: relative;
+		overflow: hidden;
+ }
+
+#header {
+	background:  url('/sites/default/themes/avtstore/images/bg-header-sub.jpg') top center repeat-x #bedaf5;
+}
+
+#header #block-block-6 {position: absolute; top: 0; right: -155px; width: 894px; height: 505px;  overflow: hidden;}
+
+#header .section {
+}
+
+.nid-1 #main-wrapper { background: url('/sites/default/themes/avtstore/images/bg-home.jpg') top left repeat-x; position: relative}
+
+#main-wrapper {
+background: url('/sites/default/themes/avtstore/images/bg-rcol.jpg') top center repeat-x; position: relative
+}
+
+#main {
+}
+
+
+
+#footer {
+
+}
+
+#footer .section {
+}
+
+
+

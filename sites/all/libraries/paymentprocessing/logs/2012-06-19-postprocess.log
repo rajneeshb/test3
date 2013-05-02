@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Twombly
+    [billTo_email] => dtwombly@co.strafford.nh.us
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => v6PQtKrhs/446MXkFaBDXxNLHM8=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2012
+    [card_accountNumber] => ############9111
+    [reasonCode] => 100
+    [billTo_firstName] => Liane
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3401415929180178147360
+    [order_id] => 14759
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 09457Z
+    [billTo_company] => Strafford County Attorney's Office
+    [card_expirationMonth] => 11
+    [orderNumber] => 1340141592916
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 547
+    [signedDataPublicSignature] => B2w/LrNVLqmXsT6HNtEnKSnEC/0=
+    [reconciliationID] => 055170860WTOFL3H2PUEA
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRcMhBzDsXgdBAKFWDVqxbsHDZhXqT40xnIZUKsWCmn6B5engJNP0Dy9PaQQ4Jwh7hk0kyro9JZxwMGMi4ZCDmHYvA6CAAVgyy
+    [uid] => 547
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 575.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-19T213313Z
+    [orderAmount] => 575
+    [billTo_street2] => Suite 201
+    [orderNumber_publicSignature] => RxHpZ2tX+bTKpjJa1fxeewSkmI4=
+    [card_cardType] => 002
+    [billTo_street1] => 259 County Farm Road
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035167121
+    [paymentOption] => card
+    [transactionSignature] => cHblHXGXF+GKyubBLVEtik5bJk4=
+    [merchantDefinedData1] => Request ID: 14759
+    [billTo_city] => Dover
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03820
+    [billTo_country] => us
+)

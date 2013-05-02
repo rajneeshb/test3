@@ -1,0 +1,17 @@
+.order-view fieldset > div { vertical-align: top; white-space-collapse: collapse; }
+.order-view fieldset#case_information > div { width: 154px; display: inline-block;  }
+
+.order-view .field-label { font-weight: bold; line-height: 30px; }
+.order-view .field-value { display: block; margin-bottom: 10px; margin-left: 10px; }
+.confidential { display: block; margin-bottom: 10px; margin-left: 10px; color: red; font-weight: bold; font-style: italic; font-size: 20px;}
+    
+.order-view .left-column,
+.order-view .right-column
+{ width: 300px; display: inline-block; vertical-align: top; }
+
+    
+.order-view .left-column .left-column,
+.order-view .right-column .right-column,
+.order-view .left-column .right-column,
+.order-view .right-column .left-column
+{ width: 148px; }

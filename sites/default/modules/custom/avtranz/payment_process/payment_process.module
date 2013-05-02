@@ -1,0 +1,172 @@
+<?php
+
+  defined('POSTPROCESS_LOG_FILE')
+    or define('POSTPROCESS_LOG_FILE', '/sites/all/libraries/paymentprocessing/logs/' . date('Y-m-d') . '-postprocess.log');
+
+/**
+ * Implements hook_menu().
+ *
+ * @return array
+ */
+function payment_process_menu() {
+  $items = array();
+
+  $items['payment-received'] = array(
+      'type' => MENU_CALLBACK,
+      'title' => 'Payment Received',
+      'page callback' => 'payment_received',
+      'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+/**
+ * CyberSource response handler
+ *
+ * Handles processing payment responses after CyberSource has gotten the
+ * information
+ *
+ * @return string
+ */
+function payment_received() {
+  /*
+   * Workaround so that we don't have to change the Cybersource postback URL
+   * when switching from development to staging/production.
+   */
+  if ( !empty($_REQUEST['source_domain']) ) {
+    if ( $_REQUEST['source_domain'] !== $_SERVER['SERVER_NAME'] ) {
+      drupal_goto('http://' . $_REQUEST['source_domain'] . '/payment-received', http_build_query($_REQUEST), NULL, 307);
+      exit;
+    }
+  }
+
+  global $user;
+
+  _payment_process_log_attempt($_REQUEST);
+  _payment_process_create_record($_REQUEST);
+
+  if ($_REQUEST['decision'] == 'ACCEPT') {
+    _payment_process_update_order($_REQUEST['order_id'], floatval($_REQUEST['orderAmount']));
+    watchdog('payment', 'Postprocess from user @uid at address @ip for order @oid', array('@uid' => $user->uid, '@ip' => $_SERVER['REMOTE_ADDR'], '@oid' => $_REQUEST['order_id']), WATCHDOG_INFO);
+  }
+  else {
+    watchdog('payment', 'Postprocess error from user @uid at address @ip for order @oid', array('@uid' => $user->uid, '@ip' => $_SERVER['REMOTE_ADDR'], '@oid' => $_REQUEST['order_id']), WATCHDOG_NOTICE);
+  }
+
+  return '';  // This content comes from a tpl
+}
+
+
+/**
+ * Creates a text log of the payment information
+ *
+ * @param array $payment_information
+ *
+ * @return NULL
+ */
+function _payment_process_log_attempt(array $payment_information) {
+  $path = realpath( basename( $_SERVER['SCRIPT_NAME'] ) );
+  $path = substr( $path, 0, strpos( $path, $_SERVER['SCRIPT_NAME'] ) );
+
+  $log_file = $path . POSTPROCESS_LOG_FILE;
+
+  if ( !file_exists($log_file) ) {
+    if ( !touch($log_file) ) {
+      watchdog('payment', $log_file . ' does not exist and was not able to be created!', NULL, WATCHDOG_ALERT);
+    }
+  }
+
+  if ( file_exists($log_file) && is_writeable($log_file) ) {
+    $output = print_r($payment_information, TRUE);
+
+    if ( file_put_contents($log_file, $output, FILE_APPEND) === FALSE ) {
+      watchdog('payment', 'Unable to write postprocess information! :: ' . serialize($output), NULL, WATCHDOG_ALERT);
+    }
+  }
+  else {
+    watchdog('payment', $log_file . ' still does not exist or could not be written to!', NULL, WATCHDOG_ALERT);
+  }
+
+  return NULL;
+}
+
+/**
+ * Creates an order payment node to track the transaction
+ *
+ * @param array $payment_information
+ *
+ * @return NULL
+ */
+function _payment_process_create_record(array $payment_information) {
+  global $user;
+
+  $newNode = new StdClass;
+  $newNode->type = 'order_payment';
+  $newNode->title = t('@order-id Order Payment Attempt of $@amount', array('@order-id' => $payment_information['order_id'], '@amount' => $payment_information['orderAmount']));
+  $newNode->uid = $user->uid;
+  $newNode->name = $user->name;
+  $newNode->created = time();
+  $newNode->changed = $newNode->created;
+  $newNode->status = 1;
+  $newNode->comment = 0;
+  $newNode->promote = 0;
+  $newNode->moderate = 0;
+  $newNode->sticky = 0;
+
+  // add CCK field data
+  //$newNode->field_{YOUR_CUSTOM_FIELD_1}[0]['value'] = '{DATA_1}';
+  $newNode->field_payment_order[0]['nid'] = $payment_information['order_id'];
+  $newNode->field_payment_amount[0]['value'] = $payment_information['orderAmount'];
+  $newNode->field_payment_result[0]['value'] = $payment_information['decision'];
+  $newNode->field_payment_reason_code[0]['value'] = $payment_information['reasonCode'];
+  $newNode->field_payment_serial_number[0]['value'] = $payment_information['orderPage_serialNumber'];
+  $newNode->field_payment_serialized_data[0]['value'] = serialize($payment_information);
+
+  node_save( node_submit( $newNode ) );
+}
+
+/**
+ * Updates an existing order node with the new payment
+ *
+ * @param int $order_id
+ * @param float $amount_paid
+ *
+ * @return boolean
+ */
+function _payment_process_update_order($order_id, $amount_paid) {
+  if ( empty($order_id) ) {
+    return FALSE;
+  }
+
+  $order = node_load($order_id);
+  if ( empty($order->nid) ) {
+    return FALSE;
+  }
+
+  $payment_field = floatval($order->field_deposit_paid[0]['value']) == 0 ? 'field_deposit_paid' : 'field_balance_paid';
+  $payment_date_field = $payment_field . '_date';
+
+  $order->{"$payment_field"}[0]['value'] += $amount_paid;
+  /*
+   * @bug Drupal's documentation says that format_date supports the same format
+   *      strings as date(), but it really doesn't. It supports a subset. The
+   *      correct identifier here is 'c', but Drupal doesn't pick that up. This
+   *      Y-m-dT00:00:00 is faking the actual value we need.
+   */
+  $order->{"$payment_date_field"}[0]['value'] = format_date( time(), 'custom', 'Y-m-dT00:00:00' );
+
+  // Automatically change some statuses when we receive a payment
+  switch ( $order->field_orderstatus[0]['value'] ) {
+    case 'pending_deposit':
+      $order->field_orderstatus[0]['value'] = 'pending_audio';
+      break;
+    case 'complete_balance_due':
+      $order->field_orderstatus[0]['value'] = 'completed';
+      break;
+  }
+
+  node_save($order);
+
+  return TRUE;
+}

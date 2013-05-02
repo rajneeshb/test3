@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Spofford
+    [billTo_phoneNumber] => 6032310214
+    [orderAmount] => 700
+    [billTo_street1] => 35 west broadway
+    [card_accountNumber] => ############8502
+    [platform] => prd
+    [orderAmount_publicSignature] => Evq1NqeswLV6hQ4w9wg4lm+uCvk=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 179656845WTOFODGUK87L
+    [signedDataPublicSignature] => YTp3Asc5DexRXnS6kgW/e6mtZts=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => nh
+    [billTo_firstName] => Eric
+    [billTo_customerID] => 1479
+    [uid] => 1479
+    [billTo_company] => The Granite House
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 49383
+    [transactionSignature] => mL+3ECIZ8FvaWgkViHMchP8+5hU=
+    [billTo_city] => derry
+    [billTo_postalCode] => 03038
+    [orderPage_requestToken] => Ahj//wSRiF2P3SbeuKhCKFWLdy2atnDRrXqT40+JHqy3DeYmoMLJhowFNQYWTDR6QRiLgX4wyaSZV0eks44GDKRiF2P3SbeuKhCAcg7H
+    [ccAuthReply_amount] => 700.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 264106
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => ericspofford@granitehousesl.com
+    [reasonCode] => 100
+    [order_id] => 49383
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 12
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => cYd8oEcPdeEqFpRXtZ2Ar/ECoVI=
+    [requestID] => 3618932763610178147361
+    [orderNumber] => 1361893276359
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-02-26T154117Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

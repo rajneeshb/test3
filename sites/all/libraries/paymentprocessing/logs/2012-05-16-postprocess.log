@@ -1,0 +1,145 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Carroll
+    [billTo_email] => jcarroll@colby-sawyer.edu
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => lmnpUVusEk/hLdCFqWS3b9N/BX8=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############7159
+    [reasonCode] => 100
+    [billTo_firstName] => Joseph
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3371706532190178147359
+    [order_id] => 9961
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 382358
+    [card_expirationMonth] => 03
+    [orderNumber] => 1337170653217
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 460
+    [signedDataPublicSignature] => +z8SbzJbsMxpu4mRFh9GXbaTrD4=
+    [reconciliationID] => 037462385WTOFL1ZM1OBQ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbY+n1euXfPg+KFWDNu0bMmbhrXqT40xjamsZ8Kimn5jLssAFNPzGXZYaQNmFkLMMmkmVdHpLOOBhTkW2Pp9Xrl3z4PgArRp/
+    [uid] => 460
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 48.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-16T121734Z
+    [orderAmount] => 48.75
+    [orderNumber_publicSignature] => 5EHo5nZX83fbixjKzvBchnJzwcs=
+    [card_cardType] => 001
+    [billTo_street1] => PO Box 1654
+    [decision] => ACCEPT
+    [paymentOption] => card
+    [transactionSignature] => lI+8CD4P0Te7Y2n5MCktKWaKdZ0=
+    [merchantDefinedData1] => Request ID: 9961
+    [billTo_city] => New London
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03257
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Dicey
+    [billTo_email] => nhhouses@myfairpoint.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => Bhy/VVvn7xz65YTN3zypqqJ1qmc=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############7607
+    [reasonCode] => 100
+    [billTo_firstName] => Howard
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3371893423580178147360
+    [order_id] => 10043
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 07117B
+    [card_expirationMonth] => 04
+    [orderNumber] => 1337189342356
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 247
+    [signedDataPublicSignature] => 1qUe3xJbpcPh+/RWa9m2Z+v91NU=
+    [reconciliationID] => 037672159WTO8V1ZIWX05
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbZTXx2DYi9BAKFWDNu2bsmLVzXqT3FZjak17DBqmkLIW/kQFNIWQt/I6QOkhiFmGTSTKuj0lnHAwhSLbKa+OwbEXoIAAkRyg
+    [uid] => 247
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 93.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-16T172903Z
+    [orderAmount] => 93.5
+    [orderNumber_publicSignature] => 41hCziPPvaywS4nvZbKHubjHBco=
+    [card_cardType] => 001
+    [billTo_street1] => 26 Chestnut Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032092674
+    [paymentOption] => card
+    [transactionSignature] => 6SkcCglJdkUD/KxxMspeSXc6laU=
+    [merchantDefinedData1] => Request ID: 10043
+    [billTo_city] => Keene
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03431
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Odom
+    [billTo_email] => bodom@iscmotorsports.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => ZJ6TKRBHf3VsBRkkDQs5ZdG6eDs=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ###########1003
+    [reasonCode] => 100
+    [billTo_firstName] => Benjamin
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3371899377290178147360
+    [order_id] => 10047
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 103288
+    [card_expirationMonth] => 08
+    [orderNumber] => 1337189937727
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 247
+    [signedDataPublicSignature] => l5M4ZdBatbm5JdH5MrTRQ0AGCQg=
+    [reconciliationID] => 037681583WTOFO1ZN1YJS
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRbZUCFR0b1mhAKFWDNu2cMWrhnXqT409janMbMqmmoIc5pFANNQQ5zSKaQTk7SELMMmkmVdHpLOOBg4kW2VAhUdG9ZoQArB6x
+    [uid] => 247
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 3025.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-16T173858Z
+    [orderAmount] => 3025
+    [orderNumber_publicSignature] => Iz5pVGCauMAkU+ryvN3VN99PmS4=
+    [card_cardType] => 003
+    [billTo_street1] => 1 Daytona Blvd.
+    [decision] => ACCEPT
+    [paymentOption] => card
+    [transactionSignature] => qSJ54PQkwNLs2sKMOq1DKD4yPrE=
+    [merchantDefinedData1] => Request ID: 10047
+    [billTo_city] => Daytona Beach
+    [billTo_state] => FL
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 32114
+    [billTo_country] => us
+)

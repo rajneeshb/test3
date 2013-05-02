@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Harden
+    [billTo_email] => Info@LenHarden.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => TN+DY6XuhlvvOMtBek1zaWIoVXE=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ###########2009
+    [reasonCode] => 100
+    [billTo_firstName] => Leonard D
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3462649257440178147359
+    [order_id] => 23264
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 123401
+    [billTo_company] => Harden Law Offices
+    [card_expirationMonth] => 04
+    [orderNumber] => 1346264925742
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 435
+    [signedDataPublicSignature] => 1AvW8reQh7Ms+4Rj1pUjqHGg1SU=
+    [reconciliationID] => 091540023WTOFL6GGPYQI
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRd2vSw3rH4iA+KFWDli1aMGDJnXqT40xtHj0LNGSmn6/YDpANNP1+wHSaQQtxsjChk0kyro9JZxwMHki7telhvWPxEB8A8F/B
+    [uid] => 435
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 468.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-29T182846Z
+    [orderAmount] => 468.75
+    [orderNumber_publicSignature] => OhTh/VtVRElbz6nTPXBCxH08iKE=
+    [card_cardType] => 003
+    [billTo_street1] => 148 Main Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6037882080
+    [paymentOption] => card
+    [transactionSignature] => QWCmozpr4sEA7QoWQogConjcu84=
+    [merchantDefinedData1] => Request ID: 23264
+    [billTo_city] => Lancaster
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03584
+    [billTo_country] => us
+)

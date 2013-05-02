@@ -1,0 +1,10 @@
+.response-links { display: none; visibility: hidden; margin-bottom: 25px; }
+ol { margin: 0; padding: 0; }
+ol li,
+div { color: #666666; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; margin-bottom: 25px; font-size: 16px; list-style-position: inside; overflow: hidden; padding: 10px 15px; }
+div div { padding: 0; margin: 0; }
+.brokerheader { color: #0068B3; font-size: 16px; font-weight: bold; }
+.brokeraddress { color: #666666; font-weight: normal; margin-bottom: 12px; margin-left: 20px; }
+div div.brokeraddress { margin: 0; }
+.odd { background: none repeat scroll 0 0 #F3F1F1; }
+div.odd { background: none; }

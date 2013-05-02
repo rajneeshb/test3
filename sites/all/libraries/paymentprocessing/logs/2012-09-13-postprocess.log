@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Reams
+    [billTo_email] => lmallett@rcao.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => ICA2BEVYnXkx4hTg6AnqHuoFmCI=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############0218
+    [reasonCode] => 100
+    [billTo_firstName] => James
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,orderPage_environment,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3475595584270178147361
+    [order_id] => 25008
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 08012G
+    [billTo_company] => Rockingham County Attorneys Office
+    [card_expirationMonth] => 09
+    [orderNumber] => 1347559558425
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 732
+    [signedDataPublicSignature] => qJwZwfvHb++/F9mXV+/akgSnhWY=
+    [orderPage_environment] => PRODUCTION
+    [reconciliationID] => 099554125WTOFL6ZT7PPI
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSReNMn8sxYZrhCKFWDly1atGLJrXqT40xtaqN6FCSmn7KlKVAFNP2VKUqaQQgjcjRhk0kyro9JZxwMGEi8aZP5ZiwzXCEAdVUo
+    [uid] => 732
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 333.35
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-13T180559Z
+    [orderAmount] => 333.35
+    [orderNumber_publicSignature] => iPgKSyagc3aupBvF8j5G1xFdpHc=
+    [card_cardType] => 001
+    [billTo_street1] => PO Box 1209
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6036424249
+    [paymentOption] => card
+    [transactionSignature] => 5F51PRS2ATtgIFoJ2WVEwfgFsT0=
+    [merchantDefinedData1] => Request ID: 25008
+    [billTo_city] => Kingston
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03848
+    [billTo_country] => us
+)

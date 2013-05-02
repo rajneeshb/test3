@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Saunders
+    [billTo_email] => chev31459@comcast.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => DvR+5ZT7zhZkiFx2vjjyQvttbIg=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############6237
+    [reasonCode] => 100
+    [billTo_firstName] => Cheryl
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3459121555150178147362
+    [order_id] => 21262
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 115373
+    [card_expirationMonth] => 01
+    [orderNumber] => 1345912155513
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 651
+    [signedDataPublicSignature] => Nzw+yxDTUj27el18Ne0qeQUlq/0=
+    [reconciliationID] => 089429825WTO8V6879351
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRdwno7mUuUbhEKFWDhy0ZOXDJrXqT3FZs4buWbVimkMf6txQFNIY/1bi6QLn2RfQyaSZV0eks44GCuRdwno7mUuUbhEAAdhku
+    [uid] => 651
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 12.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-25T162917Z
+    [orderAmount] => 12.75
+    [billTo_street2] => po box 222
+    [orderNumber_publicSignature] => xS/x6EqiTg/oX9cmQzWVN74P9qI=
+    [card_cardType] => 001
+    [billTo_street1] => 4 whittier st
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035711185
+    [paymentOption] => card
+    [transactionSignature] => VWOiURgHv0S32eh62LNqnEGEKrE=
+    [merchantDefinedData1] => Request ID: 21262
+    [billTo_city] => newton jct
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03859
+    [billTo_country] => us
+)

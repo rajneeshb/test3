@@ -1,0 +1,46 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Stillwagon
+    [billTo_phoneNumber] => 6038752248
+    [orderAmount] => 468.75
+    [billTo_street1] => PO Box 140
+    [card_accountNumber] => ############6084
+    [platform] => prd
+    [orderAmount_publicSignature] => TN+DY6XuhlvvOMtBek1zaWIoVXE=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => 9SurnV+E6Oa40Jz6lt0vIAZ9AEA=
+    [decision] => REJECT
+    [ccAuthReply_processorResponse] => 05
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Nancy
+    [billTo_customerID] => 1443
+    [uid] => 1443
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 48615
+    [transactionSignature] => eYze9PudoSQ9YoSumPjxqu8OKUk=
+    [billTo_city] => Alton Bay
+    [billTo_postalCode] => 03810
+    [orderPage_requestToken] => Ahj77wSRh6L9mDXC1fg+KJo/9aJ7MBTR/60T2ekELcbL6Uy9JMq6PSWccA6kYei/Zg1wtX4PgAAAnhWn
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => nhcivilrights@yahoo.com
+    [reasonCode] => 203
+    [order_id] => 48615
+    [ccAuthReply_reasonCode] => 203
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 11
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Xcy6TpjAkj/Uv77P2lNPXieOmcE=
+    [requestID] => 3612210821790178147359
+    [orderNumber] => 1361221082177
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

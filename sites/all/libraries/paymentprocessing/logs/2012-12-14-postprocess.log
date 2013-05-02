@@ -1,0 +1,103 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Burt
+    [billTo_phoneNumber] => 6036263310
+    [orderAmount] => 590
+    [billTo_street1] => 900 Elm Street, 16th Floor
+    [billTo_street2] => PO Box 3600
+    [card_accountNumber] => ############1096
+    [platform] => prd
+    [orderAmount_publicSignature] => hwrMVVC0o0JKJk0ocVacyaaBGC8=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 146543931WTO1QALRERRM
+    [signedDataPublicSignature] => I7FTt2oBCEPXQaT7EYje0X1eMsM=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Gary
+    [billTo_customerID] => 999
+    [uid] => 999
+    [billTo_company] => Primmer Piper Eggleston and Kramer
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 36274
+    [transactionSignature] => LzNhMMCy6aM0Oogolqx7NTPdbmo=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03105
+    [orderPage_requestToken] => Ahj//wSRgXAqkDXWqjhIKFWLRs1aM3LNjXqT2NGDMpRaVKamkc0oVPQJNI5pQqe6QQ5ngkthk0kyro9JZxwMJ8jAuBVIGutVHCQAXxoe
+    [ccAuthReply_amount] => 590.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 06807S
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => N
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => gburt@primmer.com
+    [reasonCode] => 100
+    [order_id] => 36274
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 05
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 6DqItHHtvAPBOI6syBH/rULcLA8=
+    [requestID] => 3555039449710178147364
+    [orderNumber] => 1355503944970
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-14T165225Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => N
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Bauer
+    [billTo_phoneNumber] => 6036263300
+    [orderAmount] => 2360
+    [billTo_street1] => 150 South Champlain Street
+    [card_accountNumber] => ############1096
+    [platform] => prd
+    [orderAmount_publicSignature] => lxvDTcr/ACnfdefuzD2qMYbkAsQ=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 146734800WTOFOALRY6BW
+    [signedDataPublicSignature] => 5zqsKZvQC+fUFjr7tvLLCqsESfo=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => MA
+    [billTo_firstName] => Cynthia
+    [billTo_customerID] => 778
+    [uid] => 778
+    [billTo_company] => Primmer Piper Eggleston & Cramer PC
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 40052
+    [transactionSignature] => RR3DakFXhUsZm2xu44N8dD7UinI=
+    [billTo_city] => Burlington
+    [billTo_postalCode] => 05401
+    [orderPage_requestToken] => Ahj//wSRgXTANFAC6MA+KFWLRs3ZtHDBhXqT40+DMpWW0KumoLPed6gJNQWe871aQS5ngJLYZNJMq6PSWccDCfIwLpgGigBdGAfANk+R
+    [ccAuthReply_amount] => 2360.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 02335S
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => N
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => sblackall@primmer.com
+    [reasonCode] => 100
+    [order_id] => 40052
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 05
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => n+ytmDlp8SPhpXLzqi/r/l4vj0w=
+    [requestID] => 3555204625000178147359
+    [orderNumber] => 1355520462499
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-14T212743Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => N
+)

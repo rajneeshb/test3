@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Prevett
+    [billTo_email] => thprevettesq1@aol.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => WyCYjYi+0zEJmHKTKAfQ2BJwuyg=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############9311
+    [reasonCode] => 100
+    [billTo_firstName] => Todd
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3452969597920178147361
+    [order_id] => 22071
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 03569C
+    [billTo_company] => Prevett & Prevett, LLP
+    [card_expirationMonth] => 04
+    [orderNumber] => 1345296959790
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 670
+    [signedDataPublicSignature] => /68KO7rLLG4gqvJTG/p8d2MkDfE=
+    [reconciliationID] => 085639020WTO1Q5ZQCYCM
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdl8opWH/OiBCKFWDhq2ZuWDJhXqT2NFraow7MOamkbUoyLwFNI2pRkX6QOyliLeGTSTKuj0lnHAwbSLsvlFKw/50QIQAKwT6
+    [uid] => 670
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 129.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-18T133601Z
+    [orderAmount] => 129.5
+    [orderNumber_publicSignature] => 5FaeWZx/9RcgxeoGT/E4Dk4iPhc=
+    [card_cardType] => 001
+    [billTo_street1] => 12 Baboosic Lake Road
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6036724683
+    [paymentOption] => card
+    [transactionSignature] => 5btVDo6Lt2tjdcwTFY+rlyKK4RM=
+    [merchantDefinedData1] => Request ID: 22071
+    [billTo_city] => Amherst
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03031
+    [billTo_country] => us
+)

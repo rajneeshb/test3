@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Fagan
+    [billTo_email] => dmarshall@fosteld.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => 4EN4O6YJNrmP7syjTRzJMzz9CAU=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############7710
+    [reasonCode] => 100
+    [billTo_firstName] => Colleen
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3370291042380178147360
+    [order_id] => 9444
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 04760G
+    [billTo_company] => Foster & Eldridge, LLP
+    [card_expirationMonth] => 11
+    [orderNumber] => 1337029104236
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 448
+    [signedDataPublicSignature] => JxxenjHiJ+1U2l078yehHa6pGU4=
+    [reconciliationID] => 036421326WTOFL1ZLY01V
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRbWheLPR/BJBAKFWDNs0ZMWbJtXqT40xjamWWDGsmn5jChIwFNPzGFCR6QRpDWQrwyaSZV0eks44GC+RbWheLPR/BJBAA+B8p
+    [uid] => 448
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 840.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-14T205824Z
+    [orderAmount] => 840.75
+    [billTo_street2] => suite 2100
+    [orderNumber_publicSignature] => 4Arbjb0kVYuV2eGUaNQQqM70jHY=
+    [card_cardType] => 001
+    [billTo_street1] => One Canal Park
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6172523366
+    [paymentOption] => card
+    [transactionSignature] => MlxOVokxcL4sQdb8LRNJ0jE/Uho=
+    [merchantDefinedData1] => Request ID: 9444
+    [billTo_city] => Cambridge
+    [billTo_state] => MA
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 02141
+    [billTo_country] => us
+)

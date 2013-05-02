@@ -1,0 +1,8 @@
+; $Id:$
+name = Hearing Date Field
+description = A CCK compound field representing a hearing date
+dependencies[] = content
+dependencies[] = date
+package = AVTranz
+core = 6.x
+version = 6.x-0.1

@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => wentzell
+    [billTo_email] => nherman57@yahoo.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => 50KbFq2JaLmXRLufZzzaM5eid7I=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2012
+    [card_accountNumber] => ############8001
+    [reasonCode] => 100
+    [billTo_firstName] => raymond
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3420341223050178147362
+    [order_id] => 16499
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 05722Z
+    [billTo_company] => none
+    [card_expirationMonth] => 10
+    [orderNumber] => 1342034071525
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 582
+    [signedDataPublicSignature] => XxNNtVnhJvwG20wNjrZpFoIrXeo=
+    [reconciliationID] => 066259707WTO1Q4GQI2JG
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRctWKGT1F9mhEKFWDZsyauW7BvXqT2NFpHoyWUqOmka1EHagJNI1qIO1aQM0vIkYZNJMq6PSWccDCFIuWrFDJ6i+zQiAA7hoE
+    [uid] => 582
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 33.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-11T191522Z
+    [orderAmount] => 33.75
+    [billTo_street2] => po box 596
+    [orderNumber_publicSignature] => uuUHL0/MEvQT6/cpcRg1yzNIsTU=
+    [card_cardType] => 002
+    [billTo_street1] => 410 Mill Village rd
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6038636781
+    [paymentOption] => card
+    [transactionSignature] => etyUbuO+EojzSVilngjV2bQmVOo=
+    [merchantDefinedData1] => Request ID: 16499
+    [billTo_city] => newport
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03773
+    [billTo_country] => us
+)

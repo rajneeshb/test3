@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Hardtke
+    [billTo_email] => mwhelan@hpgrlaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => IoAzmyRbXEdj8EzpI4jinXBvt8o=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############1300
+    [reasonCode] => 100
+    [billTo_firstName] => Christine
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3467803727240178147363
+    [order_id] => 23685
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 080036
+    [billTo_company] => Hoefle, Phoenix, Gormley & Roberts, P.A.
+    [card_expirationMonth] => 07
+    [orderNumber] => 1346780372722
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 326
+    [signedDataPublicSignature] => PzkcK+uXML/fReaGSHyaExJPEbY=
+    [reconciliationID] => 094653098WTOFL6IETR56
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRd/rjeW0810BGKFWDlo2as2DlxXqT40xtJi1KTVsmn7AqzJwFNP2BVmT6QR+QYRkQyaSZV0eks44GDqRd/rjeW0810BGAQ1xV
+    [uid] => 326
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1275.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-04T173933Z
+    [orderAmount] => 1275
+    [orderNumber_publicSignature] => QWMqrkDl2RuY4Qa1qEl8uF+KiF8=
+    [card_cardType] => 001
+    [billTo_street1] => 402 State Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034360666
+    [paymentOption] => card
+    [transactionSignature] => 59LSzN642BPjohZT7jrRalQxyog=
+    [merchantDefinedData1] => Request ID: 23685
+    [billTo_city] => Portsmouth
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03801
+    [billTo_country] => us
+)

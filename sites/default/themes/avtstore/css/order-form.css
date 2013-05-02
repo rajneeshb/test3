@@ -1,0 +1,290 @@
+.order-form p ~ p { margin-top: 5px; }
+
+ul#form-steps {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+ul#form-steps li {
+	  margin-right: 15px;
+	}
+
+ul#form-steps li.last { margin-right: none; }	
+
+ul#form-steps li,
+ul#form-steps li a.order-step
+{
+  display: inline-block;
+  overflow: hidden;
+  width: 39px;
+  height: 39px;
+  line-height: 39px;
+
+}
+
+ul#form-steps li {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+ul#form-steps li a.order-step {
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('/sites/default/themes/avtstore/images/sprite-steps.old.png');
+  text-indent: -1000%;
+}
+
+ul#form-steps li a.order-step-1 { background-position: 0 -40px; }
+ul#form-steps li a.order-step-2 { background-position: -56px -40px; }
+ul#form-steps li a.order-step-3 { background-position: -111px -40px; }
+
+ul#form-steps li a.order-step-1.active { background-position: 0 0; }
+ul#form-steps li a.order-step-2.active { background-position: -56px 0; }
+ul#form-steps li a.order-step-3.active { background-position: -111px 0; }
+
+ul#form-steps li a.order-step.numbered {
+  font-size: 24px;
+  color: #FFF;
+  text-align: center;
+  background: url('/sites/default/themes/avtstore/images/sprite-steps.png') no-repeat 0 -40px;
+  line-height: 39px;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+ul#form-steps li a.order-step.numbered.active { background-position: 0 0; }
+
+
+form.order-form div.step-wrapper fieldset { border: none; padding: 0; }
+form.order-form div.step-wrapper fieldset > legend { background-image: none; padding-left: 0; padding-bottom: 25px; }
+
+form.order-form div.step-wrapper input,
+form.order-form div.step-wrapper select,
+form.order-form div.step-wrapper textarea
+{
+	resize: none;
+  width: 316px;
+	overflow: auto;
+}
+
+
+
+form.order-form div.step-wrapper select,
+.menu-item-form select.form-select { border: 1px solid #CBCBCB; border-radius: 4px; line-height: 30px; height: 30px; width: 320px; padding: 5px 4px 4px; }
+
+form.order-form div.step-wrapper select.error { border-color: #F00; }
+
+form.order-form div.step-wrapper input[type="submit"],
+form.order-form div.step-wrapper input[type="radio"],
+form.order-form div.step-wrapper input[type="checkbox"]
+{
+  width: auto;
+}
+
+form.order-form #edit-group-hearingdates-group-hearingdates-add-more { border: none; background: none; text-transform: uppercase; padding: 0; color: #7B9934; text-decoration: underline; cursor: pointer; font-size: smaller; }
+
+form.order-form div.step-wrapper div.description,
+form.order-form div.step-wrapper div.status-description
+{ margin: 0; line-height: 15px; color: #7b9934; font-size: 12px; margin-top: 2px; }
+
+form.order-form div.step-wrapper div.form-col-primary { float: left; clear: left; width: 320px; margin-bottom: 9px; }
+form.order-form div.step-wrapper div.form-col-primary label,
+form.order-form div.step-wrapper div.form-col-secondary label
+{ margin-top: 0; }
+form.order-form div.step-wrapper div.form-col-secondary { float: right; clear: right; width: 320px;}
+form.order-form div.step-wrapper div.form-col-secondary #edit-field-est-transcript-cost-element-wrapper { margin-top: 36px; }
+
+body.page-node-add-order form.order-form .form-col-group_formats { position: relative; }
+body.page-node-add-order form.order-form .form-col-group_formats legend { display: none; }
+body.page-node-add-order form.order-form #edit-field-numcopies-0-value-wrapper { width: 127px; position: absolute; right: 0; top: 168px; }
+body.page-node-add-order form.order-form #edit-field-numcopies-0-value-wrapper input.form-text { width: 80px; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_header div.form-col-group_hearingdates { clear: both; float: none; width: auto; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates > legend { font-size: 14pt; padding-bottom: 0; line-height: 16pt; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates div.content-add-more { margin-top: 5px; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table.sticky-header { display: none; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values { margin: 0; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr {height: 40px;}
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr:first-child {height: 61px;}
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div { margin-bottom: 0 !important; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td.content-multiple-drag { display: none; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date,
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div
+{
+  display: inline-block;
+}
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date { padding-right: 20px; /*padding: 5px 20px 5px 0;*/ }
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date label,
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date div.description
+{
+  display: none;
+}
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0-field-hearingdate-value-wrapper label,
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0-field-hearingdate-value-wrapper div.description
+{
+  display: block;
+
+}
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0-field-estimatedhours-value-wrapper,
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0--remove-wrapper
+{
+  padding-top: 27px;
+}
+
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0--remove-wrapper { padding-left: 5px; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates > legend { display: none; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates #edit-group-hearingdates-0-field-estimatedhours-value-wrapper{ margin-left: -4px }
+
+
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div label { display: inline; margin-left: 5px; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td label#hearing_length_fake_label { position: absolute; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div input { width: 30px; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div input[id$="field-estimatedminutes-value"] { margin-left: 20px; }
+form.order-form div.step-wrapper fieldset#multistep-group_header fieldset#multistep-group_hearingdates table#group_hearingdates_values tbody tr td.content-multiple-remove-cell { vertical-align: top; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_header div.form-col-field_locationref { clear: both; float: none; width: auto; position: relative; }
+form.order-form div.step-wrapper fieldset#multistep-group_header div.form-col-field_locationref label#hierarchical_select_court_type_child { position: absolute; left: 345px; top: 0; }
+form.order-form div.step-wrapper fieldset#multistep-group_header div.form-col-field_locationref select#edit-field-locationref-nid-hierarchical-select-selects-0 { float: left; clear: left; margin-right: 20px; }
+form.order-form div.step-wrapper fieldset#multistep-group_header div.form-col-field_locationref select#edit-field-locationref-nid-hierarchical-select-selects-1 { margin-right: 0; left: 4px; position: relative; }
+
+form.order-form div.step-wrapper .form-col-field_appealtranscript { line-height: 67px; }
+form.order-form div.step-wrapper .form-col-field_appealtranscript .form-item { margin-bottom: 0 !important; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails { border-bottom: 1px solid #C2C2C2; border-radius: 0; overflow: hidden; height: auto; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-primary { float: right; clear: right; }
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-secondary { float: left; clear: left; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status_estimated_cost {
+  float: none;
+  clear: both;
+  width: auto;
+  text-align: right;
+  font-size: 2em;
+  color: #4e81a9;
+  border-bottom: 1px solid #C2C2C2;
+  padding-bottom: 5px;
+}
+
+
+form.order-form div.step-wrapper div.form-col-field_summary #edit-field-summary-element-wrapper { clear: both; float: none; width: auto; }
+form.order-form div.step-wrapper #edit-field-summary-element-wrapper dt { font-weight: bold; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status_estimated_cost div.status-description { font-size: 12px; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status_estimated_cost div.status-description a {
+  text-transform: lowercase;
+  padding-left: 19px;
+  background: url('/sites/default/themes/avtstore/images/ico-info.gif') top left no-repeat;
+}
+
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status_estimated_cost span.status-label { text-transform: capitalize; }
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status_estimated_cost span.status-value { }
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status { margin-bottom: 10px; }
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status div.status-description { }
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status span.status-label { font-weight: bold; margin-right: 5px; white-space: nowrap; }
+form.order-form div.step-wrapper fieldset#multistep-group_orderdetails div.form-col-status span.status-value { }
+
+form.order-form div.step-wrapper fieldset.group-orderrequirements div.form-col-field_delivery_instructions,
+form.order-form div.step-wrapper fieldset.group-orderrequirements div.form-col-field_additional_comments
+{ clear: both; float: left; width: 660px; margin-top: 10px; }
+
+form.order-form div.step-wrapper fieldset.group-orderrequirements div.form-col-field_additional_comments textarea { width: 100%; }
+
+.order-form-add fieldset#multistep-group_formats,
+.order-form-add fieldset#multistep-group_item_group
+{ margin-top: 0; }
+
+.order-form-add fieldset#multistep-group_item_group legend { display: none; }
+
+.order-form-add #edit-field-est-additional-cost-element-wrapper div.form-item,
+.order-form-add #edit-field-est-transcript-cost-element-wrapper div.form-item
+{ text-align: right; }
+
+.order-form-add #edit-field-est-additional-cost-element-wrapper label,
+.order-form-add #edit-field-est-transcript-cost-element-wrapper label
+{ float: left; margin: 0; padding: 0; margin-right: 10px; }
+
+.order-form-add #edit-field-est-additional-cost-element-wrapper span.value,
+.order-form-add #edit-field-est-transcript-cost-element-wrapper span.value
+{ font-weight: bold; font-size: larger; margin-right: 50px; }
+
+
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay { clear: both; float: none; width: auto; overflow: hidden; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.form-item label { display: none; }
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.form-item label.option { display: inline; }
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.form-radios div.form-item { display: inline-block; width: 320px; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.form-radios div#edit-field-how-to-pay-value-court-pay-wrapper { padding-right: 20px; }
+
+form.order-form div.form-col-field_witnesses { margin-top: 43px; }
+form.order-form div.form-col-field_witnesses textarea { height: 66px; padding: 0; }
+form.order-form div.form-col-field_transcribeextra { margin-top: 10px; }
+form.order-form div.form-col-field_transcribeextra .form-item { margin-bottom: 0.5em !important; }
+form.order-form div.form-col-field_transcribeextra .form-item .description { float: right; width: 150px; }
+
+form.order-form #multistep-group_payment_information a.help-icon img { vertical-align: text-top; }
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.description { text-transform: none; }
+
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.description span#pay_help_left,
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.description span#pay_help_right
+{
+  display: inline-block;
+  width: 320px;
+  vertical-align: top;
+}
+
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.description span#pay_help_right { }
+form.order-form div.step-wrapper fieldset#multistep-group_payment_information div.form-col-field_how_to_pay div.description span#pay_help_left span { display: block; }
+
+form.order-form div.step-wrapper div.form-col-primary.form-col-field_create_or_login { clear: both; float: none; width: auto; margin-top: 10px; }
+div.form-col-primary.form-col-field_create_or_login div.form-radios > div { display: inline-block; width: 320px; }
+div.form-col-primary.form-col-field_create_or_login div.form-radios #edit-field-create-or-login-value-create-wrapper { margin-right: 20px; }
+form.order-form div.step-wrapper div.form-col-secondary.form-col-field_username { float: left; }
+form.order-form div.step-wrapper div.form-col-primary.form-col-field_password { clear: right; float: right; }
+
+
+.page-node-add-order div#content-area div.item-list > h3 { display: none; }
+
+html.js fieldset.collapsible .fieldset-wrapper { overflow: visible; } /* @bug The right edge of the form is clipped by a small varying amount of px */
+
+
+#inline-ajax-login {
+  background-color: #e2e2e2;
+}
+
+#inline-ajax-login legend {
+  background-color: #e2e2e2;
+  width: 100%;
+}
+
+#edit-inline-ajax-login-pass-again-wrapper {
+}
+#edit-inline-ajax-login-pass-wrapper {
+}
+
+#order-step-prev { float: left; }
+
+.not-logged-in.page-node-add-order #edit-submit, .not-logged-in.page-node-add-order #edit-preview { display: none !important; visibility: hidden !important; }
+
+.section-node-add form.order-form input[name="op"] { display: none; }
+.form-col-status_hearing_dates .pages { margin-top: 20px; }
+
+.form-col-field_numcopies { position: relative; }
+
+
+tr.content-multiple-removed-row { display: none; }
+fieldset#multistep-group_hearingdates div.warning { display: none !important /* Gets an inline style we have to override */; }
+
+form#views-exposed-form-uploaded-order-files-block-1 { display: none; }
+form.order-form label.disabled { color: #CCC; }

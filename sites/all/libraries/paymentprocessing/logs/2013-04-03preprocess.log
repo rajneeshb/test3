@@ -1,0 +1,72 @@
+Array
+(
+    [Order ID] => 0
+    [Price] => 281.25
+    [User ID] => 1970
+    [IP] => 98.243.252.142
+    [Timestamp] => 1364994581
+    [Time/Date] => Wed, 03 Apr 2013 09:09:41 -0400
+    [Order Page Timestamp] => 1364994554716
+    [Order Page Time/Date] => Sat, 14 Dec 45224 21:05:16 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/6.0; .NET4.0C; .NET4.0E)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 106.25
+    [User ID] => 572
+    [IP] => 24.128.135.44
+    [Timestamp] => 1365002640
+    [Time/Date] => Wed, 03 Apr 2013 11:24:00 -0400
+    [Order Page Timestamp] => 1364997935936
+    [Order Page Time/Date] => Thu, 23 Jan 45225 00:18:56 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; MDDR; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET4.0C)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 106.25
+    [User ID] => 572
+    [IP] => 24.128.135.44
+    [Timestamp] => 1365002652
+    [Time/Date] => Wed, 03 Apr 2013 11:24:12 -0400
+    [Order Page Timestamp] => 1364997935936
+    [Order Page Time/Date] => Thu, 23 Jan 45225 00:18:56 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; MDDR; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET4.0C)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 106.25
+    [User ID] => 572
+    [IP] => 24.128.135.44
+    [Timestamp] => 1365002679
+    [Time/Date] => Wed, 03 Apr 2013 11:24:39 -0400
+    [Order Page Timestamp] => 1365002676028
+    [Order Page Time/Date] => Tue, 18 Mar 45225 21:00:28 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; MDDR; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET4.0C)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 106.25
+    [User ID] => 572
+    [IP] => 24.128.135.44
+    [Timestamp] => 1365007083
+    [Time/Date] => Wed, 03 Apr 2013 12:38:03 -0400
+    [Order Page Timestamp] => 1365007080676
+    [Order Page Time/Date] => Thu, 08 May 45225 20:31:16 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30; MDDR; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET4.0C)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 255.75
+    [User ID] => 1637
+    [IP] => 75.68.27.211
+    [Timestamp] => 1365025661
+    [Time/Date] => Wed, 03 Apr 2013 17:47:41 -0400
+    [Order Page Timestamp] => 1365024390952
+    [Order Page Time/Date] => Tue, 25 Nov 45225 04:55:52 -0500
+    [User Agent] => Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:19.0) Gecko/20100101 Firefox/19.0
+)

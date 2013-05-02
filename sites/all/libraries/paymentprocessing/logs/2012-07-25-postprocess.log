@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Leff
+    [billTo_email] => bsantos@sherleff.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => LHHOOCwKKykrBPQMCyQgyYHbHrk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ###########5006
+    [reasonCode] => 100
+    [billTo_firstName] => Alexander
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3432504387320178147362
+    [order_id] => 18552
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 127901
+    [billTo_company] => Sher Leff LLP
+    [card_expirationMonth] => 11
+    [orderNumber] => 1343250438731
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 504
+    [signedDataPublicSignature] => LOS254QAw7j2awjDIG152BST6H0=
+    [reconciliationID] => 073279834WTO8V4S6NUD2
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdCcilCj6HABEKFWDdmybuXDNpXqT3FZpTbTqsRkmkMCXlCgNNIYEvKFaQP5nhE/DJpJlXR6SzjgYQpF0JyKUKPocAEQA0gAe
+    [uid] => 504
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 295.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-25T210719Z
+    [orderAmount] => 295
+    [billTo_street2] => Suite 400
+    [orderNumber_publicSignature] => O+GIVpq/o+N79W3KWh84MlDV3u8=
+    [card_cardType] => 003
+    [billTo_street1] => 450 MIssion Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 4153488300104
+    [paymentOption] => card
+    [transactionSignature] => FMEAApqQxf8RXk9uNCPhKP9y8YY=
+    [merchantDefinedData1] => Request ID: 18552
+    [billTo_city] => San Francisco
+    [billTo_state] => CA
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 94105
+    [billTo_country] => us
+)

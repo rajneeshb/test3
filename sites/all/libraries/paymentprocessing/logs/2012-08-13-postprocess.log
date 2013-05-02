@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Skiathitis
+    [billTo_email] => oohayguy@gmail.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => jeqQk6z18DyHw+xy/+8dmBo3vXQ=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############5402
+    [reasonCode] => 100
+    [billTo_firstName] => Mark
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3448797659370178147361
+    [order_id] => 19573
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 866601
+    [card_expirationMonth] => 12
+    [orderNumber] => 1344879765936
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 247
+    [signedDataPublicSignature] => zpWo2O2ZxoMidvCn4dQHZP7OXDU=
+    [reconciliationID] => 082706142WTO1Q5TTV8MA
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdetdPV48NehCKFWDhk3YNmLRlXqT2NFrUqVnE2CmkbRMCawFNI2iYE16QQ1tgiyhk0kyro9JZxwMGki69a6erx4a9CEA1kQP
+    [uid] => 247
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 550.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-13T174247Z
+    [orderAmount] => 550
+    [orderNumber_publicSignature] => ZdAWZ7letvpsIMpKxfCUEBXvJQ8=
+    [card_cardType] => 001
+    [billTo_street1] => 70 Lancelot Ave.
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6036206275
+    [paymentOption] => card
+    [transactionSignature] => UflTQteg8mMM2wJdLYOX24mx5S4=
+    [merchantDefinedData1] => Request ID: 19573
+    [billTo_city] => Manchester
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03104
+    [billTo_country] => us
+)

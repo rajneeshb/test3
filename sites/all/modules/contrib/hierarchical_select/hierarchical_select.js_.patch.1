@@ -1,0 +1,11 @@
+--- hierarchical_select.js	2010-08-26 17:28:58.000000000 +0200
++++ hierarchical_select.js	2010-12-20 12:47:41.218899986 +0100
+@@ -5,7 +5,7 @@
+ Drupal.behaviors.HierarchicalSelect = function (context) {
+   $('.hierarchical-select-wrapper:not(.hierarchical-select-wrapper-processed)', context)
+   .addClass('hierarchical-select-wrapper-processed').each(function() {
+-    var hsid = $(this).attr('id').replace(/^hierarchical-select-(\d+)-wrapper$/, "$1");
++    var hsid = $('.hierarchical-hsid', this).val();
+     Drupal.HierarchicalSelect.initialize(hsid);
+   });
+ };

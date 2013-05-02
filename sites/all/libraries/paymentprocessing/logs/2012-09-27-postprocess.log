@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Scott
+    [billTo_email] => wscott@nhlawfirm.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => aV6QAF6i3n8p0BWa+iNdH6qKKmc=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############8735
+    [reasonCode] => 100
+    [billTo_firstName] => William
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,orderPage_environment,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3487690069010178147360
+    [order_id] => 26782
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 74704C
+    [billTo_company] => Boynton, Waldron
+    [card_expirationMonth] => 03
+    [orderNumber] => 1348768977220
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 773
+    [signedDataPublicSignature] => UGA6sl+12RRp/qirVNflHJVGfig=
+    [orderPage_environment] => PRODUCTION
+    [reconciliationID] => 106696109WTO9N7L3Z7D2
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSReiLYbmGykQhAKFWLBs2ctmLBzXqT3M5vMZ2m8RkmkqvYq6gFNJVexV1aQR4ZYRvwyaSZV0eks44GE+ReiLYbmGykQhAA8AHc
+    [uid] => 773
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1155.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-27T180327Z
+    [orderAmount] => 1155
+    [orderNumber_publicSignature] => 7rY6R4ParWhRh0+NZ02xOb+vV9E=
+    [card_cardType] => 001
+    [billTo_street1] => 82 Court Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034364010
+    [paymentOption] => card
+    [transactionSignature] => Ng5tG/jgxp2jBSa2hELSU07gCJM=
+    [merchantDefinedData1] => Request ID: 26782
+    [billTo_city] => Portsmouth
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03801
+    [billTo_country] => us
+)

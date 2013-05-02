@@ -1,0 +1,36 @@
+<?php
+/**
+ * @file
+ * .install for role_change_notify
+ */
+
+function role_change_notify_install() {
+  // Set weight higher than token module so we can alter actions.
+  $ret[] = update_sql("UPDATE {system} SET weight=11 WHERE name='role_change_notify'");
+  return $ret;
+}
+
+function role_change_notify_uninstall() {
+  db_query("DELETE FROM {variable} WHERE name like 'role_change_notify%'");
+  cache_clear_all('variables', 'cache');
+
+}
+
+/**
+ * Notify user that configuration tokens have changed with this release.
+ *
+ * @return array
+ */
+function role_change_notify_update_6200() {
+  $url = l(t('the Role Change Notify Configuration Page'), 'admin/user/role_change_notify');
+  drupal_set_message(
+    t('Role Change Notifications Configuration has changed. Please visit !url to update your settings.',
+        array('!url' => $url)));
+  return array();
+}
+// Set weight higher than token module so we can modify actions.
+function role_change_notify_update_6201() {
+  $ret = array();
+  $ret[] = update_sql("UPDATE {system} SET weight=11 WHERE name='role_change_notify'");
+  return $ret;
+}

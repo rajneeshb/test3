@@ -1,0 +1,10 @@
+; $Id: remove_history.info,v 1.1.2.1 2011/02/16 19:15:28 hosszukalman Exp $
+name = Remove history
+description = Removes summary (history) from user profile page.
+core = 6.x
+; Information added by drupal.org packaging script on 2011-02-16
+version = "6.x-1.0"
+core = "6.x"
+project = "remove_history"
+datestamp = "1297884167"
+

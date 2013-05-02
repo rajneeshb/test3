@@ -1,0 +1,103 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Houde
+    [billTo_phoneNumber] => 6036924282
+    [orderAmount] => 183.75
+    [billTo_street1] => 98 High Street
+    [card_accountNumber] => ############7561
+    [platform] => prd
+    [orderAmount_publicSignature] => PiGTnpwbyQouQXbATRvStCPJ+2k=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 154007560WTO9NALSH5FE
+    [signedDataPublicSignature] => 3lThWj+oY4nCWhtTcxUv12ioNaw=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => VT
+    [billTo_firstName] => Anna Marie
+    [billTo_customerID] => 263
+    [uid] => 263
+    [billTo_company] => Coolidge Law Firm
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 39370
+    [transactionSignature] => 0n3t/69hEGSBEvWgRwdo/aNhGdw=
+    [billTo_city] => Somersworth
+    [billTo_postalCode] => 03878
+    [orderPage_requestToken] => Ahj//wSRgwZVJMu/n0A+KFWLVowYN2rZhXqT3M6DMpyGsaKmkrvyyYwJNJXflkx6QPj45J9DJpJlXR6SzjgYOJGDBlUky7+fQD4A5h7H
+    [ccAuthReply_amount] => 183.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 538463
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => coolidgelaw@usa.net
+    [reasonCode] => 100
+    [order_id] => 39370
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => rFppUGH1/tOurlUzeXlZ20EIIwk=
+    [requestID] => 3569673133960178147359
+    [orderNumber] => 1356967313394
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-31T152154Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Z
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Leff
+    [billTo_phoneNumber] => 4153488300104
+    [orderAmount] => 3187.5
+    [billTo_street1] => 450 Mission Street
+    [billTo_street2] => Suite 400
+    [card_accountNumber] => ###########6004
+    [platform] => prd
+    [orderAmount_publicSignature] => xZEbDjCtvFQYqej5zrAoYuGpt8U=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 154134300WTO8HALTIZ0P
+    [signedDataPublicSignature] => CcafLm0Ii+j0HPxGJhZD8aqdc9c=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => CA
+    [billTo_firstName] => Alexander
+    [billTo_customerID] => 504
+    [uid] => 504
+    [billTo_company] => Sher Leff LLP
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 38528
+    [transactionSignature] => zB168k1ErHzk5NJz/TAGA4V3qsQ=
+    [billTo_city] => San Francisco
+    [billTo_postalCode] => 94105
+    [orderPage_requestToken] => Ahj//wSRgwnAwyck42BCKFWLVoxZtGbBhXqT3EiDMqSbTCgmj/CzMIgNNH+FmYRaQTm6PEn0MmkmVdHpLOOBhBkYMJwMMnJONgQgSAHE
+    [ccAuthReply_amount] => 3187.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 181845
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => bsantos@sherleff.com
+    [reasonCode] => 100
+    [order_id] => 38528
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 11
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => To5EWff0k2/OI7W20ffElMuwJ5M=
+    [requestID] => 3569796366320178147361
+    [orderNumber] => 1356979636630
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-31T184717Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)

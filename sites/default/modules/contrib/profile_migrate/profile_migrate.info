@@ -1,0 +1,10 @@
+name = Profile Migrate
+description = Migrate the core profile module fields to Content Profile fields.
+core = 6.x
+package = "Content Profile"
+; Information added by drupal.org packaging script on 2011-02-25
+version = "6.x-6.x-dev"
+core = "6.x"
+project = "profile_migrate"
+datestamp = "1298619995"
+

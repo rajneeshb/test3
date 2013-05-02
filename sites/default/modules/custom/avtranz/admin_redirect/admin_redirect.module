@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param array $form
+ * @param array $form_state
+ *
+ * @return NULL
+ */
+function admin_redirect_form_user_register_alter(&$form, &$form_state) {
+
+  if ( !is_array($form['#submit']) ) {
+    $form['#submit'] = empty($form['#submit']) ? array() : array($form['#submit']);
+  }
+
+  $form['#submit'][] = '_admin_redirect_form_user_register_submit';
+
+  return NULL;
+}
+
+/**
+ * Submit handler for hook_form_user_register_alter().
+ *
+ * @param array $form
+ * @param array $form_state
+ *
+ * @return NULL
+ */
+function _admin_redirect_form_user_register_submit(&$form, &$form_state) {
+  if ( empty($_SESSION['orders']['order']) ) {
+    $goto = NULL;
+    if ( user_access('administer users') ) {
+      $goto = 'admin';
+    }
+    else {
+      $goto = 'checkstatus';
+    }
+
+    $_REQUEST['destination'] = $goto;
+  }
+}

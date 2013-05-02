@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Mooney
+    [billTo_phoneNumber] => 6036062657
+    [orderAmount] => 400
+    [billTo_street1] => 385 Pembroke Street
+    [card_accountNumber] => ###########1005
+    [platform] => prd
+    [orderAmount_publicSignature] => lJAwh2PmqAjvF5FMMeZmK35DPU4=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 159645172WTOFLBJ65ZQY
+    [signedDataPublicSignature] => cneWBC3RzryYcCi6mrV+vKzERC0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Richard C.
+    [billTo_customerID] => 1127
+    [uid] => 1127
+    [billTo_company] => R.C. Mooney & Associates,P.C.
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 39439
+    [transactionSignature] => OjpFEgtg+R4WZqfWjz2JwpsLaGw=
+    [billTo_city] => Pembroke
+    [billTo_postalCode] => 03275
+    [orderPage_requestToken] => Ahj//wSRhBBvDpCOe4BCKFWLVy2aNWLdlXqT40yFKbNbVGymn8pgooANNP5TBRQaQQnEAvDhk0kyro9JZxwMFMjCCDeHSEc9wCEA8Frr
+    [ccAuthReply_amount] => 400.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 105438
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => rcm@rcmooneylaw.com
+    [reasonCode] => 100
+    [order_id] => 39439
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 12
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => wQHQ+JBfdAMxsBfC708ArSf9KWE=
+    [requestID] => 3579260440920178147361
+    [orderNumber] => 1357926044091
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-11T174044Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)

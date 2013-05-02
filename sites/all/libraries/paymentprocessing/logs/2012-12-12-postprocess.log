@@ -1,0 +1,102 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Greene
+    [billTo_phoneNumber] => 6036958622
+    [orderAmount] => 33.75
+    [billTo_street1] => 111 Amherst Street
+    [card_accountNumber] => ############7725
+    [platform] => prd
+    [orderAmount_publicSignature] => 50KbFq2JaLmXRLufZzzaM5eid7I=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 145255393WTOFLALRNWCZ
+    [signedDataPublicSignature] => 5pB7xbTqbw3iO6bGxu0x9NAnqn8=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Judith
+    [billTo_customerID] => 1018
+    [uid] => 1018
+    [billTo_company] => Devine, Millimet & Branch, PA
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 39609
+    [transactionSignature] => MjyEJcZV4R0ERXUonWDRbanJXj0=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03101
+    [orderPage_requestToken] => Ahj//wSRgUB5nlqCQQhAKFWLRqyatWblnXqT40yDMpTq8O0mn8Vh7DAFNP4rD2GaQM0vJK4ZNJMq6PSWccDB/IwKA8zy1BIIQgAA6wAr
+    [ccAuthReply_amount] => 33.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 05214G
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => N
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => lbrunelle@devinemillimet.com
+    [reasonCode] => 100
+    [order_id] => 39609
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 03
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => cw4RTkRDzJNunPxWVbNEf6LWzcI=
+    [requestID] => 3553321193490178147360
+    [orderNumber] => 1355332119348
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-12T170840Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => N
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Garod
+    [billTo_phoneNumber] => 6032794650
+    [orderAmount] => 962.5
+    [billTo_street1] => 34 Murray Hill Road
+    [card_accountNumber] => ############6100
+    [platform] => prd
+    [orderAmount_publicSignature] => yyXmAMmgFjGHTeN3YXt9MLXeJCw=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 145391061WTOFLALRO521
+    [signedDataPublicSignature] => zKyGacM+wyitc6mO0Ibh9+768qw=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Harvey
+    [billTo_customerID] => 1091
+    [uid] => 1091
+    [billTo_company] => Law Offices of Harvey J. Garod
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 38936
+    [transactionSignature] => 0ovnWfKEQ5VnK9dqZ74k3ZUnA+w=
+    [billTo_city] => Gilford
+    [billTo_postalCode] => 03249
+    [orderPage_requestToken] => Ahj//wSRgUN6TizWMNBGKFWLRqzcsWDZjXqT40yDMpT2rJimn8Vi0ngJNP4rFpPaQRu/0SVwyaSZV0eks44GDSRgUN6TizWMNBGAbk7D
+    [ccAuthReply_amount] => 962.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 00589Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => diane@garodlaw.com
+    [reasonCode] => 100
+    [order_id] => 38936
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 07
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => aVsnh58TiWRQaVbXj5Ud+hpFCKc=
+    [requestID] => 3553429376540178147363
+    [orderNumber] => 1355342878569
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-12T200858Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Z
+)

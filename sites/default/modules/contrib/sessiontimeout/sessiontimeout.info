@@ -1,0 +1,5 @@
+; $Id$
+name = Session Timeout
+description = Original Module file developed by Ahmed Al-Obaidy-2 (http://old.nabble.com/user/UserProfile.jtp?user=277316). Customized by Schogini.
+core = 6.x
+package = "Schogini"

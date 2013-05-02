@@ -1,0 +1,6 @@
+; $Id$
+name = Admin User Redirect
+description = Redirects admin user back to admin when adding user depending on session
+package = AVTranz
+core = 6.x
+version = 0.1

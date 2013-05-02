@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Zornic
+    [billTo_phoneNumber] => 6035408459
+    [orderAmount] => 137.5
+    [billTo_street1] => 34 Bay st
+    [card_accountNumber] => ############3595
+    [platform] => prd
+    [orderAmount_publicSignature] => QvCqkMuKXpH5a050hcLLVnI9d4Y=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 166923429WTO1QCB282HM
+    [signedDataPublicSignature] => WEuaCKI4JIQNFYzzcKPQQ/MlrNg=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Adalin
+    [billTo_customerID] => 1279
+    [uid] => 1279
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 45048
+    [transactionSignature] => yA1gVVIvNaFOccKj9SDkjTuwqm4=
+    [billTo_city] => Goffstown
+    [billTo_postalCode] => 03045
+    [orderPage_requestToken] => Ahj//wSRhZcqf2s+y3hCKFWLZs5ZM2jJzXqT2NGHCZOGUiamkdYHPHwFNI6wOeP6QO1ti9OGTSTKuj0lnHAwcSMLLlT+1n2W8IQA2Afr
+    [ccAuthReply_amount] => 137.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 09796A
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => azornic@gmail.com
+    [reasonCode] => 100
+    [order_id] => 45048
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 02
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => cDFgR9geHfFJurpH/FZn5C7WZaA=
+    [requestID] => 3593338051710178147361
+    [orderNumber] => 1359333793809
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-28T004325Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

@@ -1,0 +1,99 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Bacon
+    [billTo_email] => baconda@danielbacon.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => nc7OgzRt3CR2629zxRowS74lHXY=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############9990
+    [reasonCode] => 100
+    [billTo_firstName] => Daniel
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3443523843230178147364
+    [order_id] => 20147
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 292736
+    [card_expirationMonth] => 10
+    [orderNumber] => 1344352384321
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 641
+    [signedDataPublicSignature] => VsNkNta+x/PC1NyQHO4jUhUX3ho=
+    [reconciliationID] => 079790131WTO9N54HTM3I
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdVj8hbF1XfhIKFWDdy3csGLNjXqT3M5q0kVJrOSmkp9LDGAJNJT6WGMaQOknyKyGTSTKuj0lnHAwgyLqsfkLYuq78JAAGhNI
+    [uid] => 641
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 93.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-07T151305Z
+    [orderAmount] => 93.75
+    [orderNumber_publicSignature] => uaxeMRtnLFp92o0s8Ex1d7RvSUg=
+    [card_cardType] => 002
+    [billTo_street1] => PO Box 866
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6039864040
+    [paymentOption] => card
+    [transactionSignature] => bdxlsn2AdeXNPU/6oQG9d3LVTEE=
+    [merchantDefinedData1] => Request ID: 20147
+    [billTo_city] => North Conway
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03860
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Kennedy
+    [billTo_email] => dkennedy@dkennedylawnh.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => DXYdrs+PwLST3xmngn9vFy1E8w0=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############5248
+    [reasonCode] => 100
+    [billTo_firstName] => Donald
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3443637644100178147362
+    [order_id] => 20152
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 07370G
+    [billTo_company] => Law Office of Donald A. Kennedy
+    [card_expirationMonth] => 04
+    [orderNumber] => 1344363723434
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 642
+    [signedDataPublicSignature] => 1POuuaO7ZQUYPU83YsF4Ct1Cu6w=
+    [reconciliationID] => 079901320WTOFO54J0679
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdVwlIEUUU/BEKFWDdy5YMWbJhXqT409q0lMGzdymoJeWnEwFNQS8tOJ6QR8yURWQyaSZV0eks44GEORdVwlIEUUU/BEA4k21
+    [uid] => 642
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1244.90
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-07T182244Z
+    [orderAmount] => 1244.9
+    [orderNumber_publicSignature] => TsbslqUacjQpPIjoS0vDVnsHpwU=
+    [card_cardType] => 001
+    [billTo_street1] => 78 West Merrimack Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6036688787
+    [paymentOption] => card
+    [transactionSignature] => AWOuDgvQTN5eBV6KFx4e6SunmGc=
+    [merchantDefinedData1] => Request ID: 20152
+    [billTo_city] => Manchester
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03101
+    [billTo_country] => us
+)

@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Hage
+    [billTo_phoneNumber] => 6036682222
+    [orderAmount] => 73.75
+    [billTo_street1] => 1855 Elm Street
+    [card_accountNumber] => ############9780
+    [platform] => prd
+    [orderAmount_publicSignature] => ToIjq8EVo52SvFMrIjW/PmAXtWU=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 191677577Y250KEG36072
+    [signedDataPublicSignature] => YBgXTopfFQx1t8j7WQ2GDf/0kRk=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Jamie
+    [billTo_customerID] => 1700
+    [uid] => 1700
+    [billTo_company] => Hage Hodes, P.A.
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 53258
+    [transactionSignature] => ssepkT0hXhtjsBq9yMK5KEwJlD8=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03104
+    [orderPage_requestToken] => Ahj//wSRiurDTHbgrFhGKFWLli2bt2rdvZZNWEuLHZtmDdkogv/OE3oCUQX/nCb1pA3meYGQyaSZV0eks44GDiRiurDTHbgrFhGArlZG
+    [ccAuthReply_amount] => 73.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 03253S
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => SBouthiette@hagehodes.com
+    [reasonCode] => 100
+    [order_id] => 53258
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 12
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => T90yhp00pWk7A1XD2vpk5YzuCVo=
+    [requestID] => 3642466806870178147363
+    [orderNumber] => 1364246680685
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-03-25T212441Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)

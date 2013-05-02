@@ -1,0 +1,98 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Poulin
+    [billTo_email] => bpoulin01@yahoo.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => m+ZFsOZpWvj0eNzbgBZCOCVZRkM=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############3738
+    [reasonCode] => 100
+    [billTo_firstName] => Billy
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3391650179440178147363
+    [order_id] => 13563
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 09768Z
+    [card_expirationMonth] => 01
+    [orderNumber] => 1339164984465
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 527
+    [signedDataPublicSignature] => uHAtcP1a0ScWwNIkUbwQO6OhQKE=
+    [reconciliationID] => 049443848WTO9N2YZ6XUQ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRb7kz+O+jYWBGKFWDRy0aM3DRxXqT3M5lZtNrFWimkpQAaswJNJSgA1Z6QOi3SHCGTSTKuj0lnHAwoyLfcmfx30bCwIwA0QbF
+    [uid] => 527
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 89.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-08T141658Z
+    [orderAmount] => 89.25
+    [orderNumber_publicSignature] => CG87PhFjGFaU9q45RKvRCHIyXb0=
+    [card_cardType] => 002
+    [billTo_street1] => 2 holly lane
+    [decision] => ACCEPT
+    [paymentOption] => card
+    [transactionSignature] => f3dGjrnwB5b2FfU1l2pBC92BRUs=
+    [merchantDefinedData1] => Request ID: 13563
+    [billTo_city] => hudson
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03051
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Heisler
+    [billTo_email] => jgoodman@troubhheisler.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => vAYHr+5wLhs8Josg86NZOrkwKl0=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############6965
+    [reasonCode] => 100
+    [billTo_firstName] => Edwin
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3391700318520178147361
+    [order_id] => 13577
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 01000Z
+    [billTo_company] => Troubh Heisler, PA
+    [card_expirationMonth] => 07
+    [orderNumber] => 1339170031850
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 528
+    [signedDataPublicSignature] => 2/+I9pAEtwBnP6I5RiNukpf650g=
+    [reconciliationID] => 049488005WTO9N2YZ71YC
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRb7qYO2Qs6QBCKFWDRy0cOGDBrXqT3M5lZtN2NmGmkpQAvlgJNJSgBfLaQSifCIcIZNJMq6PSWccDChIt91MHbIWdIAhAuxvt
+    [uid] => 528
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1412.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-08T154032Z
+    [orderAmount] => 1412.5
+    [orderNumber_publicSignature] => DVjMWkMqZvIdrR18Z23OZZHhhhY=
+    [card_cardType] => 002
+    [billTo_street1] => p.o box 9711
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 2077806789
+    [paymentOption] => card
+    [transactionSignature] => DyPPgCjCxOPpgx+GFodNeym6U9s=
+    [merchantDefinedData1] => Request ID: 13577
+    [billTo_city] => portland
+    [billTo_state] => me
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 04104
+    [billTo_country] => us
+)

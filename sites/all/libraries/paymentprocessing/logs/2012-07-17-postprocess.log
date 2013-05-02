@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => rossi jr
+    [billTo_email] => iggy0280@yahoo.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => nc7OgzRt3CR2629zxRowS74lHXY=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############9822
+    [reasonCode] => 100
+    [billTo_firstName] => michael
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,ccAuthReply_authFactorCode,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3425481644690178147359
+    [order_id] => 17918
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 050538
+    [card_expirationMonth] => 06
+    [orderNumber] => 1342547904209
+    [ccAuthReply_authFactorCode] => N
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 602
+    [signedDataPublicSignature] => 9E6WSkN2h6orMV8Rb2SJAKcosgA=
+    [reconciliationID] => 069270814WTO8V4N35Z24
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRc2Q2/bt10wg+KFWDZyybsHDFpXqT3FZpOZtbTJomkL/GfKwFNIX+M+V6QOknyJeGTSTKuj0lnHAwkSLmyG37duumEHwA3AqU
+    [uid] => 602
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 93.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-17T180246Z
+    [orderAmount] => 93.75
+    [orderNumber_publicSignature] => LIC3eco5SWtJ4Njnnpk3VPzutTc=
+    [card_cardType] => 001
+    [billTo_street1] => 36 harris road
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034258795
+    [paymentOption] => card
+    [transactionSignature] => O98QDvEw3j1+4jYx5kfAvkwUYZw=
+    [merchantDefinedData1] => Request ID: 17918
+    [billTo_city] => windham
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03087
+    [billTo_country] => us
+)

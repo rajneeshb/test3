@@ -1,0 +1,4 @@
+name = Element Themes
+description = "Adds the ability to theme form elements"
+package = AVTranz
+core = 6.x

@@ -1,0 +1,208 @@
+<?php
+/**
+ * Disable breadcrumbs
+ *
+ * @file
+ *  Disable breadcrumbs on a per page/node basis via the node edit form settings.
+ *
+ */
+
+/**
+ * Implementation of hook_perm().
+ */
+function disable_breadcrumbs_perm() {
+  return array('administer breadcrumbs');
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function disable_breadcrumbs_menu() {
+  $items['admin/settings/disable_breadcrumbs'] = array(
+    'title' => 'Disable breadcrumbs',
+    'description' => 'Settings for Disable breadcrumbs',
+    'page callback' => 'disable_breadcrumbs_settings_page',
+    'access arguments' => array('administer breadcrumbs'),
+    'file' => 'disable_breadcrumbs.admin.inc',
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+/**
+ * Implementation of hook_init().
+ */
+function disable_breadcrumbs_init() {
+  $disable_breadcrumbs_all = variable_get('disable_breadcrumbs_all', NULL);
+  
+  if ($disable_breadcrumbs_all) {
+    drupal_set_breadcrumb(array());
+  }
+}
+
+/**
+ * Grabs disable_breadcrumb status of current node.
+ */
+function _disable_breadcrumbs_node_query($nid) {
+  return $query = db_result(db_query("SELECT db.disable_breadcrumb from {disable_breadcrumbs} db WHERE db.nid = %d", $nid));
+}
+
+/**
+ * Implementation of hook_nodeapi().
+ *
+ */
+function disable_breadcrumbs_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+
+  $all_breadcrumbs_disabled_content_types = variable_get('disable_breadcrumbs_node_types_all', array());
+
+  switch ($op) {
+    case 'prepare':
+    case 'load':
+      // Cannot load if the node has not been created yet.
+      if (!isset($node->nid)) {
+        return;
+      }
+      $node->disable_breadcrumb = _disable_breadcrumbs_node_query($node->nid) ? _disable_breadcrumbs_node_query($node->nid) : 0;
+    break;
+    case 'alter':
+      if ($node->disable_breadcrumb == 1 && !$a3 && $a4 || in_array($node->type, $all_breadcrumbs_disabled_content_types, TRUE)) {
+        $breadcrumb = array();
+        drupal_set_breadcrumb($breadcrumb);
+      }
+    break;
+    case 'delete':
+      //remove db record in disable_breadcrumbs table.
+      $remove_query = "DELETE FROM {disable_breadcrumbs} WHERE nid = %d";
+      db_query($remove_query, $node->nid);
+    break;
+  }
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function disable_breadcrumbs_form_alter(&$form, &$form_state, $form_id) {
+  $enabled_content_types = variable_get('disable_breadcrumbs_node_types', array());
+
+  // Only perform alteration if node edit form, content type is checked in settings, and user has permissions
+  if (strpos($form_id, "_node_form") !== FALSE && in_array($form['#node']->type, $enabled_content_types, TRUE) && user_access('administer breadcrumbs')) {
+    $form['breadcrumb'] = array(
+      '#type' => 'fieldset',
+      '#title' => t("Breadcrumbs"),
+    );
+    $form['breadcrumb']['disable_breadcrumb'] = array(
+      '#type' => 'checkbox',
+      '#title' => t("Disable breadcrumb"),
+      '#return_value' => 1,
+      '#default_value' => $form['#node']->disable_breadcrumb,
+      '#description' => t("Hide the breadcrumb when this node is viewed"),
+    );
+
+    // Append another submit function to update disable_node field in node table
+    $form['#submit'][] = 'disable_breadcrumbs_node_form_submit';
+  }
+}
+
+function disable_breadcrumbs_node_form_submit($form_state) {
+
+  // Get value before update to db to check whether to display message on save
+  $check_status = _disable_breadcrumbs_node_query($form_state['nid']['#value']);
+
+  if ($form_state['breadcrumb']['disable_breadcrumb']['#value'] == 1 && $check_status !== 1) {
+    // Update db
+    $update_query = "INSERT INTO {disable_breadcrumbs} SET disable_breadcrumb = %d, nid = %d";
+    db_query($update_query, $form_state['breadcrumb']['disable_breadcrumb']['#value'], $form_state['nid']['#value']);
+    // Display confirmation if checkbox has been checked to disable node breadcrumb and status has changed
+    if ($form_state['breadcrumb']['disable_breadcrumb']['#value'] == 1 && $check_status == 0) {
+      drupal_set_message(t("The breadcrumb for %title (node %nid) has been disabled.", array('%nid' => $form_state['#node']->nid, '%title' => $form_state['#node']->title)));
+    }
+  }
+  if ($form_state['breadcrumb']['disable_breadcrumb']['#value'] == 0 && $check_status == 1) {
+    //remove db record
+    $remove_query = "DELETE FROM {disable_breadcrumbs} WHERE nid = %d";
+    db_query($remove_query, $form_state['nid']['#value']);
+  }
+}
+
+/**
+ * Implementation of hook_node_operations().
+ */
+function disable_breadcrumbs_node_operations() {
+  $operations = array(
+    'disable_breadcrumbs' => array(
+      'label' => t('Disable breadcrumbs on selected nodes'), 
+      'callback' => 'disable_breadcrumbs_operations',
+      'callback arguments' => array('action' => 'disable_breadcrumbs'),
+    ), 
+    'enable_breadcrumbs' => array(
+      'label' => t('Enable breadcrumbs on selected nodes'), 
+      'callback' => 'disable_breadcrumbs_operations',
+      'callback arguments' => array('action' => 'enable_breadcrumbs'),
+    ), 
+  );
+  return $operations;
+}
+
+function disable_breadcrumbs_operations($nodes, $action) {
+  switch ($action) {
+    case 'disable_breadcrumbs':
+      foreach ($nodes as $node) {
+        db_query("REPLACE INTO {disable_breadcrumbs} SET nid = %d, disable_breadcrumb = 1", $node);
+      }
+      drupal_set_message(t("Breadcrumbs have been disabled for nodes: %nodes", array('%nodes' => implode(", ", $nodes))));
+    break;
+    case 'enable_breadcrumbs':
+      db_query("DELETE from {disable_breadcrumbs} WHERE nid IN (". db_placeholders($nodes, 'int') .")", $nodes);
+      drupal_set_message(t("Disable breadcrumb status has been unchecked for nodes: %nodes", array('%nodes' => implode(", ", $nodes))));
+    break;
+  }
+}
+
+/**
+ * Alter admin content form to show disable breadcrumb status of each node.
+ */
+function disable_breadcrumbs_form_node_admin_content_alter(&$form, &$form_state) {
+
+  //All nodes in current table list
+  $nodes = $form['admin']['nodes']['#options'];
+
+  if ($nodes) {
+    //Nodes that exist in disable_breadcrumbs table
+    $breadcrumb_nodes = array();
+
+    //Array of all nodes in table list with their disable_breadcrumb status.
+    //In the form of nid => status.
+    $breadcrumb_status = array();
+
+    $query = db_query("SELECT nid from {disable_breadcrumbs}");
+    while ($data = db_fetch_array($query)) {
+      $breadcrumb_nodes[]= $data['nid'];
+    }
+
+    foreach ($nodes as $key => $value) {
+      if (in_array($key, $breadcrumb_nodes)) {
+        $breadcrumb_status[$key] = 1;
+      }
+      else {
+        $breadcrumb_status[$key] = 0;
+      }
+    }
+
+    //Disable breadcrumbs image on admin content page.
+    $content_image = '<img src="'. base_path() . drupal_get_path('module', 'disable_breadcrumbs') .'/images/content_image.png" class="disable-breadcrumbs-icon" style="padding-left: 5px;"/>';
+
+    $form['disable_breadcrumbs'] = array(
+      '#type' => 'fieldset',
+      '#weight' => -5,
+    );
+    $form['disable_breadcrumbs']['markup'] = array(
+      '#value' => '<em>'. $content_image .' Denotes nodes that currently have their breadcrumb disabled.*</em>',
+    );
+
+    foreach ($form['admin']['status'] as $key => $value) {
+      if ($breadcrumb_status[$key] == 1) {
+        $form['admin']['status'][$key]['#value'] = $value['#value'] . $content_image ; 
+      }
+    }
+  }
+}

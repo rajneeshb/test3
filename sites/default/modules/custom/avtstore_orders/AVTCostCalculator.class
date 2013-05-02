@@ -1,0 +1,357 @@
+<?php
+/**
+ * Helper class to calculate the cost and estimates for a transcript request
+ *
+ * Formula:
+ *
+ * Estimated hours = ( (estimated hours * 60 + estimated minutes) / 60 )
+ * Estimated pages = estimated hours * pages per hour
+ *
+ * Estimated cost of transcript = Estimated pages * page rate
+ *
+ *
+ * Cost of all extra format options are calculated as:
+ *   Format cost * number of dates
+ *
+ *   Exceptions:
+ *     CD is a flat rate of format cost
+ *     Printed copies are format cost * dates * number of copies
+ *
+ * Total cost =
+ *     Estimated cost of the transcript +
+ *     cost of printed transcripts +
+ *     cost of transcripts on CD +
+ *     cost of ASCII files +
+ *     cost of E-Trans (PTX) files +
+ *     cost of condensed transcripts +
+ *     cost of word indexes
+ *
+ * @author swichers
+ *
+ */
+class AVTCostCalculator {
+  /**
+   * The number of pages that can be processed per hour
+   * @var int
+   */
+  const PAGES_PER_HOUR = 50;
+
+  /**
+   * The turnaround time costs
+   *
+   * Keys are the number of days, and values are the rate per day
+   *
+   * ex: 45 => 2.75 is 45 days at $2.75 per day
+   * @var array days => cost per page
+   */
+  static protected $turnaround_time_costs = array(
+      45 => 2.75,
+      30 => 2.95,
+      14 => 3.75,
+      7 => 4.25,
+      3 => 5.50,
+      1 => 7.00,
+      0 => 7.00,
+  );
+
+  /**
+   * The base cost of each format
+   * @var array format type => singular cost
+   */
+  static protected $format_costs = array(
+      'ascii' => 25,        // dates * cost
+      'etranscript' => 35,  // dates * cost
+      'condensed' => 25,    // dates * cost
+      'cd' => 25,           // flat rate
+      'paper' => 25,        // dates * cost * copies
+      'wordindex' => 25,    // dates * cost
+  );
+
+  /**
+   * Estimates the number of pages given the length in hours and minutes
+   *
+   * pages = (hours * 60 + minutes) / 60 * PAGES_PER_HOUR
+   *
+   * @param int $hours
+   *     The number of hours
+   *
+   * @param int $minutes
+   *     The number of minutes
+   *
+   * @return int
+   *     The estimated number of pages
+   */
+  public static function getPagesByTime($hours, $minutes) {
+    $hours =  self::getMinutes($hours, $minutes) / 60 ;
+
+    return intval( max(1, ceil( $hours * self::PAGES_PER_HOUR ) ) );
+  }
+
+  /**
+   * Calculates the total number of minutes in an hour/minute set
+   *
+   * @param int $hours
+   *     The number of hours
+   *
+   * @param int $minutes
+   *     The number of minutes
+   *
+   * @return int
+   *     The total number of minutes
+   */
+  public static function getMinutes($hours, $minutes) {
+    return intval($hours) * 60 + intval($minutes);
+  }
+
+  /**
+   * Gets the cost of a transcript's extra format option
+   *
+   * @param string $extra
+   *   The key of the format to calculate the cost for
+   *   @see AVTCostCalculator::$format_costs
+   *
+   * @param int $number_of_dates
+   *     The number of hearing dates to use in the calculation
+   *
+   * @param int $copies[optional]
+   *     The number of page copies, defaults to 1 and only used when applicable
+   *
+   * @return float
+   *     The cost for the given format option
+   *
+   */
+  public static function getExtraCost($extra, $number_of_dates, $copies = 1) {
+    if ( empty(self::$format_costs[$extra]) ) {
+      return 0.00;
+    }
+
+    $cost = 0.00;
+
+    switch ( $extra ) {
+      case 'cd':
+        return self::$format_costs[ $extra ];
+
+      case 'paper':
+        return self::$format_costs[ $extra ] * $number_of_dates * $copies;
+    }
+
+    return self::$format_costs[ $extra ] * $number_of_dates;
+  }
+
+  /**
+   * Calculates the total cost for all extra format options passed in
+   *
+   * @param array $extras
+   *     An array of extras to calculate the cost for
+   *     @see AVTCostCalculator::$format_costs
+   *
+   * @param int $number_of_dates
+   *     The number of hearing dates to use in the calculation
+   *
+   * @param int $copies[optional]
+   *     The number of page copies, defaults to 1 and only used when applicable
+   *
+   * @param bool $detailed[optional]
+   *     Whether to return an array with a cost breakdown, or a singular total
+   *
+   * @return array|float
+   *     The total cost of the extras selected, or a cost breakdown when $detailed is set
+   */
+  public static function getExtrasCost(array $extras, $number_of_dates, $copies = 1, $detailed = FALSE) {
+    $formats = array();
+    $total_cost = 0.00;
+
+    foreach ($extras as $extra) {
+      $formats[ $extra ] = self::getExtraCost($extra, $number_of_dates, $copies);
+      $total_cost += $formats[ $extra ];
+    }
+
+    return $detailed ? $formats : $total_cost;
+  }
+
+  /**
+   * Calculates cost information for a transcript request based on a specialized array
+   *
+   * Expects an array in a specific format for processing:
+   *
+   * <code>
+   * <?php
+   *   $example = array(
+   *     'turnaround' => 0,        // the index of the turnaround time option
+   *     'copies' => 0,            // the number of page copies
+   *     'hearings' => array(      // an array of hearing dates with times
+   *       array(
+   *         'date' => '',         // not processed, but included with the result
+   *         'hours' => 0,         // number of hours for this date
+   *         'minutes' => 0,       // number of minutes for this date
+   *       ),
+   *     ),
+   *     'formats' => array(''),   // Array of format option keys
+   *   );
+   * ?>
+   * </code>
+   *
+   * @param array $info
+   *     The information used to calculate costs
+   *
+   * @return array
+   *     The calculated cost information
+   */
+  public static function calculate(array $info) {
+    $result = array(
+        'costs' => array(          // total sums associated with the order
+            'estimated' => 0,      // estimated transcript (without extras)
+            'associated' => 0,     // cost associated with extra format options
+            'turnaround' => 0,     // cost of the turnaround time selected
+            'total' => 0,          // total estimated cost (estimated + associated)
+            'formats' => array(    // total sums associated with extra formats
+                'ascii' => 0,
+                'etranscript' => 0,
+                'condensed' => 0,
+                'cd' => 0,
+                'paper' => 0,
+                'wordindex' => 0,
+            ),
+        ),
+        'info' => array(
+            'turnaround' => 0,      // the selected turnaround days value
+            'copies' => 0,          // the number of copies for paper format
+            'hearings' => array(),  // hearing dates, hours, minutes, and estimates
+            'minutes' => 0,         // calculated minutes
+            'pages' => 0,           // estimated page count
+            'formats' => array(),   // format options selected
+        ),
+    );
+
+    foreach ($info['hearings'] as $date) {
+      $date['minutes'] = intval($date['minutes']);
+      $date['hours'] = intval($date['hours']);
+
+      $result['info']['hearings'][] = array(
+          'date' => $date['date'],
+          'hours' => $date['hours'],
+          'minutes' => $date['minutes'],
+          'total_minutes' => self::getMinutes($date['hours'], $date['minutes']),
+          'total_hours' => self::getMinutes($date['hours'], $date['minutes']) / 60,
+          'pages' => self::getPagesByTime($date['hours'], $date['minutes']),
+      );
+
+      $result['info']['pages'] += self::getPagesByTime($date['hours'], $date['minutes']);
+      $result['info']['minutes'] += self::getMinutes($date['hours'], $date['minutes']);
+    }
+
+    $result['info']['copies'] = intval($info['copies']);
+    $result['info']['turnaround'] = intval($info['turnaround']);
+    $result['costs']['turnaround'] = self::$turnaround_time_costs[ $result['info']['turnaround'] ];
+    $result['costs']['estimated'] = $result['info']['pages'] * $result['costs']['turnaround'];
+
+    $result['info']['formats'] = self::getExtrasCost($info['formats'], 1, 1, TRUE);
+    $result['costs']['formats'] = self::getExtrasCost($info['formats'], count($result['info']['hearings']), $result['info']['copies'], TRUE);
+    $result['costs']['associated'] = self::getExtrasCost($info['formats'], count($result['info']['hearings']), $result['info']['copies'], FALSE);
+
+    $result['costs']['total'] = round( $result['costs']['estimated'] + $result['costs']['associated'], 2 );
+
+    if ( 0 == $result['info']['pages'] ) {
+      $result['costs']['total'] = 0.00;
+    }
+
+    return $result;
+  }
+
+  /**
+   * Calculates the cost information for a transcript request based on a jQuery serialized form request
+   *
+   * @param array $data[optional]
+   *   An array as produced by jQuery's serialize method. Will assume $_GET if empty.
+   *
+   * @return array
+   *   The calculated cost information
+   *
+   * @see AVTCostCalculator::calculate
+   */
+  public static function calculateFromScript(array $data = array()) {
+    if ( empty($data) ) {
+      $data = $_GET;
+    }
+
+
+    $copies = empty($data['field_numcopies'][0]['value']) ? 0 : intval($data['field_numcopies'][0]['value']);
+    $turnaround = empty($data['field_turnaroundtime']['value']) ? 0 : $data['field_turnaroundtime']['value'];
+
+    $info = array(
+        'turnaround' => intval( $turnaround ),
+        'copies' => intval( $copies ),
+        'hearings' => array(),
+        'formats' => array(),
+    );
+
+    if ( !empty( $data['field_otherformats']['value'] ) ) {
+      $info['formats'] = array_values( $data['field_otherformats']['value'] );
+    }
+
+    foreach ($data['group_hearingdates'] as $idx => $date) {
+      if ( empty($date['field_hearingdate']['value']['date']) ) {
+        continue;
+      }
+
+      $info['hearings'][] = array(
+            'date' => $date['field_hearingdate']['value']['date'],
+            'hours' => $date['field_estimatedhours']['value'],
+            'minutes' => $date['field_estimatedminutes']['value'],
+          );
+    }
+
+    return self::calculate($info);
+  }
+
+  /**
+   * Calculates the cost information for a transcript request based on a jQuery serialized form request
+   *
+   * @param array $data
+   *   Expects an array in the format that $form_state['values']['values'] provides.
+   *
+   * @return array
+   *   The calculated cost information
+   *
+   * @see AVTCostCalculator::calculate
+   */
+  public static function calculateFromForm(array $data) {
+    $copies = empty($data['field_numcopies'][0]['value']) ? 0 : intval($data['field_numcopies'][0]['value']);
+    $turnaround = empty($data['field_turnaroundtime'][0]['value']) ? 0 : $data['field_turnaroundtime'][0]['value'];
+
+    $info = array(
+        'turnaround' => intval( $turnaround ),
+        'copies' => intval( $copies ),
+        'hearings' => array(),
+        'formats' => array(),
+    );
+
+    if ( !empty($data['field_otherformats']) ) {
+      $info['formats'] = array_values( $data['field_otherformats'] );
+      foreach ($info['formats'] as $idx => $format) {
+        $info['formats'][$idx] = $format['value'];
+      }
+    }
+    foreach ($data['field_hearingdate'] as $idx => $date) {
+      if ( empty($date['value']) ) {
+        continue;
+      }
+
+      $info['hearings'][] = array(
+          'date' => format_date( strtotime($date['value']), 'custom', 'm/d/Y'),
+          'hours' => intval( $data['field_estimatedhours'][$idx]['value'] ),
+          'minutes' => intval( $data['field_estimatedminutes'][$idx]['value'] ),
+      );
+    }
+
+    return self::calculate($info);
+  }
+
+  public static function calculateFromNode($node) {
+    if ( is_numeric($node) ) {
+      $node = node_load($node);
+    }
+
+    return self::calculateFromForm((array)$node);
+  }
+}

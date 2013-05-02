@@ -1,0 +1,629 @@
+/* $Id$ */
+
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body { margin: 0; padding: 0; }
+#page-wrapper { }
+#page { }
+/*
+ * The skip navigation link will be completely hidden until a user tabs to the
+ * link. See http://www.webaim.org/techniques/skipnav/
+ */
+#skip-link a,
+#skip-link a:visited { position: absolute; display: block; left: 0; top: -500px; width: 1px; height: 1px; overflow: hidden; text-align: center; background-color: #666; color: #fff; }
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus { position: static; width: 100%; height: auto; padding: 2px 0 3px 0; }
+/*
+ * Header
+ */
+#header { height: 146px; }
+#header .section { width: 1021px; height: 146px; margin: 0 auto; position: relative; }
+#header .block { margin: 0; }
+#logo /* Wrapping link for logo */ { position: absolute; /* LTR */ top: 19px; left: 15px; margin: 0; padding: 0; }
+#logo img { vertical-align: bottom; }
+#header #block-block-3 { position: absolute; top: 75px; right: 17px; width: 278px; height: 53px; }
+.nid-1 #header #block-block-3 { top: 151px; left: 48px; }
+
+#header #block-block-12 { position: absolute;top: 151px; left: 28px; width: 429px; height: 85px; }
+.nid-1 #header #block-block-12 {  }
+
+#name-and-slogan /* Wrapper for website name and slogan */ { }
+h1#site-name,
+div#site-name /* The name of the website */ { margin: 0; font-size: 2em; line-height: 1.3em; }
+#site-name a:link,
+#site-name a:visited { color: #000; text-decoration: none; }
+#site-name a:hover,
+#site-name a:focus { text-decoration: underline; }
+#site-slogan /* The slogan (or tagline) of a website */ { }
+.region-header /* Wrapper for any blocks placed in the header region */ { }
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper { }
+#main { width: 1021px; margin: 0 auto; }
+/*
+ * Content
+ */
+#content { }
+#content .section { padding-top: 37px; }
+#content .section a.colorbox-load { text-transform: uppercase; font-weight: bold; white-space: nowrap; margin-left: 4px; }
+#content .section h1 { margin-left: 25px; }
+#content .section h3 { background: url('/sites/default/themes/avtstore/images/bullet-asterisk.png') center left no-repeat; padding-left: 40px; }
+
+
+#views-exposed-form-check-status-page-1 .edit-submit-check-status,
+#views-exposed-form-check-status-page-2 .edit-submit-check-status { clear: both; }
+
+
+.hide { display: none; }
+
+
+/*
+.page-node-add-order #content .section h1.title { display: none; visibility: hidden }
+.page-node-add-order #content ul#steps { width: 151px; margin: 0 auto; overflow: hidden; padding: 0; }
+.page-node-add-order #content ul#steps li { float: left; width: 39px; height: 39px; margin: 0 17px 0 0; padding: 0; list-style: none; }
+.page-node-add-order #content ul#steps li span { display: none; visibility: hidden; }
+.page-node-add-order #content ul#steps li#stepDesc0 { background: url('/sites/default/themes/avtstore/images/sprite-steps.png') 0 -40px no-repeat; }
+.page-node-add-order #content ul#steps li#stepDesc0.current { background: url('/sites/default/themes/avtstore/images/sprite-steps.png') 0 0 no-repeat; }
+.page-node-add-order #content ul#steps li#stepDesc1 { background: url('/sites/default/themes/avtstore/images/sprite-steps.png') -56px -40px no-repeat; }
+.page-node-add-order #content ul#steps li#stepDesc1.current { background: url('/sites/default/themes/avtstore/images/sprite-steps.png') -56px 0 no-repeat; }
+.page-node-add-order #content ul#steps li#stepDesc2 { background: url('/sites/default/themes/avtstore/images/sprite-steps.png') -111px -40px no-repeat; margin-right: 0; }
+.page-node-add-order #content ul#steps li#stepDesc2.current { background: url('/sites/default/themes/avtstore/images/sprite-steps.png') -111px 0 no-repeat; }
+.page-node-add-order #content ul#steps li { display: block; width: 39px; height: 39px; background: url('/sites/default/themes/avtstore/images/sprite-steps.png') 0 0 no-repeat; }
+.page-node-add-order .section h3.requesttitle,
+.page-node-add-order .section h3.orderrequirements,
+.page-node-add-order .section h3#titleforstep3 { padding: 0 !important; background: none !important; }
+.page-node-add-order .section legend { display: none !important; visibility: hidden !important; }
+.page-node-add-order .section fieldset { border: none !important; padding: 0 !important; margin: 0 !important; overflow: hidden !important; border-radius: 0 }
+
+
+
+.page-node-add-order .form-item{ float: left; margin: 0 0 16px; }
+.page-node-add-order .form-item .form-item,
+.section-node-edit .form-item .form-item { margin-bottom: 0 !important; }
+/*.page-node-add-order .fieldset-wrapper .form-item .form-radios .form-item { width: 60px;  margin: 0 !important }*/
+
+/*
+.page-node-add-order .fieldset-wrapper .form-item input.form-text,
+.page-node-add-order .fieldset-wrapper .form-item .form-textarea,
+.page-node-add-order .fieldset-wrapper .form-item select { width: 321px; color: #6B6B6B;  font-size: 1em; margin-bottom: 4px; }
+/*.page-node-add-order .fieldset-wrapper .form-item .jquery-custom-selectboxes-replaced { width: 321px !important; } 
+.page-node-add-order .fieldset-wrapper .form-item .jquery-custom-selectboxes-replaced-list { width: 321px !important; }*/
+
+
+
+/*
+.page-node-add-order #orderstep1 { overflow: hidden; clear: both; }
+.page-node-add-order #orderstep1 .grippie { display: none; visibility: hidden  }
+.page-node-add-order #orderstep1 .fieldset-wrapper { overflow: hidden; }
+*/
+#views-exposed-form-check-status-page-1 div div.views-exposed-form .views-exposed-widgets #col1,
+#views-exposed-form-check-status-page-2 div div.views-exposed-form .views-exposed-widgets #col1
+/*.page-node-add-order #orderstep1 .fieldset-wrapper #col1,
+.page-node-add-order #orderstep2 .fieldset-wrapper #col1,
+.page-node-add-order #orderstep3 #col1 */
+{ float: left; width: 321px; margin-right: 20px; }
+
+
+#views-exposed-form-check-status-page-1 .form-checkboxes .bef-checkboxes{ overflow: hidden;  }
+#views-exposed-form-check-status-page-1 .form-checkboxes .bef-checkboxes .form-item { float: left; width: 48%; padding-right: 5px; }
+#views-exposed-form-check-status-page-1 .form-checkboxes .bef-checkboxes .jquery-checkbox { float: left; display: block; }
+#views-exposed-form-check-status-page-1 .form-checkboxes .bef-checkboxes .form-item label { float: left; display: block; width: 134px; font-size: 12px;}
+
+#views-exposed-form-check-status-page-2 .form-checkboxes .bef-checkboxes{ overflow: hidden;  }
+#views-exposed-form-check-status-page-2 .form-checkboxes .bef-checkboxes .form-item { float: left; width: 48%; padding-right: 5px; }
+#views-exposed-form-check-status-page-2 .form-checkboxes .bef-checkboxes .jquery-checkbox { float: left; display: block; }
+#views-exposed-form-check-status-page-2 .form-checkboxes .bef-checkboxes .form-item label { float: left; display: block; width: 134px; font-size: 12px;}
+
+
+#views-exposed-form-check-status-page-1 div div.views-exposed-form .views-exposed-widgets #col2,
+#views-exposed-form-check-status-page-2 div div.views-exposed-form .views-exposed-widgets #col2
+/*
+.page-node-add-order #orderstep1 .fieldset-wrapper #col2,
+.page-node-add-order #orderstep2 .fieldset-wrapper #col2,
+.page-node-add-order #orderstep3 #col2 
+*/
+{ float: left; width:321px; }
+/*
+.page-node-add-order #orderstep1 .fieldset-wrapper #group-hearingdates-items { clear: both; width: 100%; overflow: hidden; }
+.page-node-add-order #orderstep1 .fieldset-wrapper #group-hearingdates-items .form-item { float: none; }
+.page-node-add-order #orderstep1 .fieldset-wrapper #group-hearingdates-items #edit-group-hearingdates-0-field-hearingdate-value-datepicker-popup-0-wrapper.form-item div.description { display: none; visibility: hidden }
+.page-node-add-order #orderstep1 .fieldset-wrapper #item_6 .form-radios .form-item{ display: block; margin-right: 8px !important;  }
+
+.page-node-add-order #orderstep1 .content-add-more #edit-group-hearingdates-group-hearingdates-add-more,
+.section-node-edit .content-add-more #edit-group-hearingdates-group-hearingdates-add-more { background: url('/sites/default/themes/avtstore/images/btrn-add-date.png') 0 0 no-repeat !important; width: 151px; height: 29px; border: none; cursor: pointer; font-size: 1px; line-height: 1px; text-align: left; color: #fff;  text-indent: -1000px;  }
+.page-node-add-order #orderstep1 .content-add-more #edit-group-hearingdates-group-hearingdates-add-more.hover,
+.section-node-edit .content-add-more #edit-group-hearingdates-group-hearingdates-add-more.hover { background-position: 0 -29px !important; }
+
+.page-node-add-order #orderstep2 .fieldset-wrapper #item_1 .form-checkboxes .form-item,
+.page-node-add-order #orderstep2 .fieldset-wrapper #item_3 .form-radios .form-item,
+.page-node-add-order #orderstep2 .fieldset-wrapper #item_11 .form-checkboxes .form-item{ margin-bottom: 0 !important; width: 321px;  }
+
+
+.page-node-add-order #orderstep3 { overflow: hidden; clear: both; }
+.page-node-add-order #orderstep3 #estimated-cost { text-align: right; }
+.page-node-add-order #orderstep3 #estimated-cost h2 { color: #4e81a9; margin: 0; }
+.page-node-add-order #orderstep3 #estimated-cost div.info{   margin-bottom: 4px; }
+.page-node-add-order #orderstep3 #estimated-cost div.info a{ font-size: 12px; background: url('/sites/default/themes/avtstore/images/ico-info.gif') top left no-repeat; padding-left: 19px  }
+
+.page-node-add-order #orderstep3 #estimated-cost,
+.page-node-add-order #orderstep3 .step-result { border-bottom: 1px solid #c2c2c2;  overflow: hidden; margin-bottom: 15px;}
+
+.page-node-add-order #orderstep3 .step-result { padding: 10px 0 0; }
+
+.page-node-add-order #orderstep3 .step-result div div{ margin-bottom: 16px; }
+.page-node-add-order #orderstep3 .step-result div div div{ margin-bottom: 0; }
+.page-node-add-order #orderstep3 .step-result .key { font-weight: bold; display: inline; }
+.page-node-add-order #orderstep3 .step-result .value { display: inline; }
+
+.page-node-add-order #orderstep3 #multistep-group_payment_information { overflow: hidden;}
+.page-node-add-order #orderstep3 #multistep-group_payment_information label{ display: none; visibility: hidden;}
+.page-node-add-order #orderstep3 #multistep-group_payment_information label.option { display: block !important; visibility: visible !important; }
+.page-node-add-order #orderstep3 #multistep-group_payment_information .form-radios { clear: both; overflow: hidden; }
+
+.page-node-add-order #orderstep3 #multistep-group_payment_information .form-radios .form-item {  width: 49%; }
+
+.page-node-add-order #orderstep3 #multistep-group_payment_information .description { overflow: hidden; font-size: 14px; color: #6b6b6b; line-height: 22px; }
+.page-node-add-order #orderstep3 #multistep-group_payment_information .description span{ display: block; }
+.page-node-add-order #orderstep3 #multistep-group_payment_information .description span#pay_help_left,
+.page-node-add-order #orderstep3 #multistep-group_payment_information .description span#pay_help_right { float: left; width: 49%;}
+
+.page-node-add-order .content-multiple-table td.content-multiple-drag { width: 0; }
+.page-node-add-order .content-multiple-table td.content-multiple-drag a{ display: none; visibility: hidden; }
+
+.page-node-add-order .content-multiple-table td.content-multiple-remove-cell { width: 20px; vertical-align: top; }
+.page-node-add-order .content-multiple-table td.content-multiple-remove-cell .form-item{ padding-top: 22px; }
+
+.page-node-add-order .content-multiple-table td.content-multiple-remove-cell .content-multiple-remove-button { margin: 0; width: 14px; float: none; }
+
+
+.page-node-add-order #edit-group-hearingdates-0-field-hearingdate-value-datepicker-popup-0{ background: url('/sites/default/themes/avtstore/images/ico-date.png') center right no-repeat #fff !important; }
+
+.page-node-add-order div#content-area  div.standard p,
+.page-node-add-order div#content-area  div.standard div.description,
+.section-node-edit  div#content-area  div.standard div.description{ margin: 0; line-height: 15px; color: #7b9934; font-size: 12px; }
+
+.page-node-add-order div#content-area  div.standard p#step0commands,
+.page-node-add-order div#content-area  div.standard p#step1commands,
+.page-node-add-order div#content-area  div.standard p#step2commands { float: right; margin-right: 20px; }
+.page-node-add-order div#content-area  div.standard p#step1commands { width: 209px; }
+.page-node-add-order div#content-area  div.standard p a { display: block; width: 93px; height: 29px; line-height: 3px; font-size: 1px; color: #6ba8d6; background: url(/sites/default/themes/avtstore/images/btn-step-two.png) 0 0 no-repeat; text-decoration: none; }
+.page-node-add-order div#content-area  div.standard p a#step0Next:hover,
+.page-node-add-order div#content-area  div.standard p a#step1Next:hover,
+.page-node-add-order div#content-area  div.standard p a#step2Next:hover { background-position: 0 -29px; }
+.page-node-add-order div#content-area  div.standard p#step1commands a#step1Prev { float: left; display: block; width: 93px; height: 29px; line-height: 3px; font-size: 1px; color: #6ba8d6; background: url(/sites/default/themes/avtstore/images/btn-step-one.png) 0 0 no-repeat; text-decoration: none; margin-right: 11px; }
+.page-node-add-order div#content-area  div.standard p#step1commands a#step1Prev:hover { background-position: 0 -29px }
+.page-node-add-order div#content-area  div.standard p#step1commands a#step1Next { float: left; display: block; width: 105px; height: 29px; line-height: 3px; font-size: 1px; color: #6ba8d6; background: url(/sites/default/themes/avtstore/images/btn-step-three.png) 0 0 no-repeat; text-decoration: none; }
+.page-node-add-order div#content-area  div.standard p#step1commands a#step1Next:hover { background-position: 0 -29px }
+.page-node-add-order div#content-area  div.standard p#step2commands a{ display: block; width: 103px; height: 29px; line-height: 1px; font-size: 1px; color: #6ba8d6; background: url(/sites/default/themes/avtstore/images/btn-edit-quote.png) 0 0 no-repeat; text-decoration: none; }
+.page-node-add-order div#content-area  div.standard p#step2commands a:hover { background-position: 0 -29px; }
+
+.page-node-add-order div#content-area .node-form .form-submit {  background: url('/sites/default/themes/avtstore/images/btn-continue.png') 0 0 no-repeat #fff !important; border: none; width: 93px; height: 29px; cursor: pointer; font-size: 1px; line-height: 1px; text-align: left; color: #fff;  text-indent: -1000px; }
+.page-node-add-order div#content-area .node-form .hover { background-position: 0 -29px !important; }
+
+.page-node-add-order #orderstep2 { overflow: hidden; clear: both; }
+.page-node-add-order #orderstep2.grippie { display: none; visibility: hidden  }
+.page-node-add-order #orderstep2 .fieldset-wrapper { overflow: hidden; }
+.page-node-add-order #orderstep2 .fieldset-wrapper .col { float: left; width: 48%; }
+
+/* order edit page.*/
+
+
+.section-node-edit  #edit-field-orderstatus-value-wrapper.form-item { float: none; clear: both; }
+
+
+.section-node-edit .fieldset-wrapper #group-hearingdates-items { clear: both;  }
+.section-node-edit .fieldset-wrapper  #group-hearingdates-items legend{ display: none; visibility: hidden; }
+
+.section-node-edit .fieldset-wrapper #col1 { margin-right: 20px;: }
+.section-node-edit .fieldset-wrapper #col1,
+.section-node-edit .fieldset-wrapper #col2 { float: left; width: 306px; }
+
+.section-node-edit .fieldset-wrapper #col1 input.form-text,
+.section-node-edit .fieldset-wrapper #col2 input.form-text { width: 306px;  } 
+
+.section-node-edit .fieldset-wrapper .form-item select,
+.section-node-edit .fieldset-wrapper .form-item textarea { width: 306px; color: #6B6B6B;  font-size: 1em; margin-bottom: 4px; }
+
+/*
+.section-node-edit #multistep-group_payment_information { display: none; visibility: hidden; }
+*/
+#mission /* The mission statement of the site (displayed on homepage) */ { }
+.region-content-top /* Wrapper for any blocks placed in the "content top" region */ { margin: 0 0 0 25px; }
+
+
+.breadcrumb /* The path to the current page in the form of a list of links */ { padding-bottom: 0; /* Undo system.css */ }
+h3 { color: #4e81a9; }
+h1.title, /* The title of the page */
+h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+h3.title /* Comment title */ { margin: 0; }
+tr.even /* Some tables have rows marked even or odd. */ { /* background-color: #eee; */ /* Drupal core uses a #eee background */
+  background: none; }
+tr.odd { /* background-color: #eee; */ /* Drupal core uses a #eee background */
+background: none; }
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ { }
+div.status /* Normal priority messages */ { }
+div.warning,
+tr.warning /* Medium priority messages */ { /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ { }
+.error /* Errors that are separate from div.messages status messages. */ { /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+.warning /* Warnings that are separate from div.messages status messages. */ { /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+div.tabs /* See also the tabs.css file. */ { }
+
+.front.not-logged-in div.tabs { display: none; visibility: hidden;}
+
+
+.help /* Help text on a page */ { margin: 1em 0; }
+.more-help-link /* Link to more help */ { font-size: 0.85em; text-align: right; }
+#content-area,
+#content-area .view-check-status /* Wrapper for the actual page content */ { margin: 0 0 40px 25px; }
+.front #content-area,
+.page-checkstatus #content-area,
+.page-checkstatusadmin #content-area,
+.page-checkstatusadminlocation #content-area
+ { margin: 0; }
+ul.links /* List of links */ { margin: 1em 0; padding: 0; }
+ul.links.inline { margin: 0; display: inline; }
+ul.links li { display: inline; list-style-type: none; padding: 0 0.5em; }
+.pager /* A list of page numbers when more than 1 page of content is available */ { clear: both; margin: 1em 0; text-align: center; }
+.pager a,
+.pager strong.pager-current /* Each page number in the pager list */ { padding: 0.5em; }
+.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ { margin: 1em 0; }
+.more-link /* Aggregator, blog, and forum more link */ { text-align: right; /* LTR */ }
+.not-front .region-content-bottom{ width: auto; height: auto; }
+.region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ { position: relative; width: 1021px; height: 330px; }
+.region-content-bottom #block-menu-menu-home-nav { position: absolute; top: -154px; left: 11px; width: 495px; height: 446px; overflow: hidden; z-index: 52; }
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first { }
+.region-sidebar-first .section { }
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second { }
+.region-sidebar-second .section { }
+/*
+ * Footer
+ */
+#footer { border-top: 1px solid #d0cece; border-bottom: 1px solid #d0cece; background: #fff; width: 100%; margin-bottom: 20px; }
+#footer .block { margin: 0; }
+#footer .section { width: 1021px; margin: 0 auto; position: relative; overflow: hidden; height: 112px; }
+#footer #block-menu-menu-footer-nav-1 { position: absolute; top: 50px; left: 23px; width: auto; }
+#footer #block-menu-menu-footer-nav-1 ul { margin: 0; padding: 0; overflow: hidden; }
+#footer #block-menu-menu-footer-nav-1 ul li { margin: 0; padding: 0; float: left; list-style: none !important; line-height: 14px; border-right: 1px solid #7e7e7e; }
+#footer #block-menu-menu-footer-nav-1 ul li.last { border: none; }
+#footer #block-menu-menu-footer-nav-1 ul li a { color: #7e7e7e; font-size: 14px; text-decoration: none; line-height: 14px; margin: 0 10px; }
+#footer #block-menu-menu-footer-nav-1 ul li a:hover { text-decoration: underline; }
+#footer #block-menu-menu-footer-nav-1 ul li.first a { margin-left: 0; }
+#footer #block-menu-menu-footer-nav-1 ul li.last a { margin-right: 0; }
+#footer #block-menu-menu-footer-nav-2 { position: absolute; top: 31px; right: 345px; width: auto; }
+#footer #block-menu-menu-footer-nav-2 ul { margin: 0; padding: 0; }
+#footer #block-menu-menu-footer-nav-2 ul li { margin: 0; padding: 0; list-style: none; text-align: right; border-right: 1px solid #d4d4d4; line-height: 29px }
+#footer #block-menu-menu-footer-nav-2 ul li.first { border-bottom: 1px solid #d4d4d4; }
+#footer #block-menu-menu-footer-nav-2 ul li a { color: #7e7e7e; font-size: 17px; text-decoration: none; margin-right: 10px; line-height: 26px; }
+#footer #block-menu-menu-footer-nav-2 ul li a:hover { text-decoration: underline; }
+#footer #block-block-2 { position: absolute; top: 15px; right: 16px; width: 297px; height: 74px; }
+#footer #block-block-13 { position: absolute; top: 22px; left: 423px; width: 261px; height: 70px; }
+#footer h2.title { display: none; visibility: hidden; }
+#footer-message /* Wrapper for the footer message from Drupal's "Site information"
+                   and for any blocks placed in the footer region */ { }
+.region-footer { }
+/*
+ * Closure
+ */
+.region-page-closure /* Wrapper for any blocks placed in the closure region */ { }
+/*
+ * Drupal boxes
+ *
+ * Wrapper for Comment form, Comment viewing options, Menu admin, and
+ * Search results.
+ */
+.box /* Wrapper for box */ { }
+.box h2 /* Box title */ { }
+.box .content /* Box's content wrapper */ { }
+/*
+ * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
+ */
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden { display: none; }
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+.element-invisible { position: absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); }
+
+.section-colorbox,
+.node-type-colorbox-content { background: #fff; padding: 16px; }
+.section-colorbox h2,
+.node-type-colorbox-content h2 {
+	color: #4e81a9;
+   margin-top: 0;
+  background: url("/sites/default/themes/avtstore/images/ico-qmark.jpg") no-repeat scroll left center transparent;
+  padding-left: 50px;
+  line-height: 40px;
+}
+
+body.node-type-colorbox-content div.node-type-colorbox-content {margin-left: 52px; padding: 0!important;}
+body.node-type-colorbox-content div.node-type-colorbox-content p {margin: 10px 0;}
+
+.section-colorbox #wrapper #wrapper { margin-left: 50px; }
+
+/*Settle Deposit Page*/
+.page-settle-deposit .btn-back { text-align: right; margin-bottom: 15px; }
+
+.page-settle-deposit #item-wrapper { clear: both; }
+.page-settle-deposit #item-wrapper .item{ float: left; width: 33.2%; border-right: 1px solid #cacaca; }
+.page-settle-deposit #item-wrapper .item br { height: 0; display: none; visibility: hidden; }
+.page-settle-deposit #item-wrapper .item.last { border: none; }
+.page-settle-deposit #item-wrapper .item #caption { width: 205px; margin: 0 auto; text-align:center; line-height: 20px; height: 276px; }
+.page-settle-deposit #item-wrapper .item #caption img { display: block; margin-bottom: 10px; }
+.page-settle-deposit #item-wrapper .item #caption a.info-tip img { display: inline; margin: 0; }
+.page-settle-deposit #item-wrapper .item #caption h3 { text-transform: none; font-size: 17px; text-transform: uppercase; background: none; padding: 0; font-weight: bold; margin: 0 0 10px;  }
+.page-settle-deposit #item-wrapper .item #caption p { margin: 0 0 10px; }
+
+.page-settle-deposit .btn-back .fancy-button.deposit-button { float: none; }
+
+
+
+
+
+.fancy-button,
+ul.fancy-button-wrapper {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  text-align: right;
+}
+
+ul.fancy-button-wrapper li {
+  list-style: none;
+  list-style-image: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+ul.fancy-button-wrapper li:last-child {
+  margin-right: 0;
+}
+
+button.fancy-button,
+ul.fancy-button-wrapper li a.fancy-button,
+.fancy-button-text-wrap,
+.fancy-button-start,
+.fancy-button-end
+{
+  vertical-align: middle;
+  display: inline-block;
+  text-decoration: none;
+  color: #20537C;
+  height: 45px;
+  line-height: 44px;
+}
+
+button.fancy-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+button.fancy-button,
+button.fancy-button .fancy-button-text-wrap,
+button.fancy-button .fancy-button-start,
+button.fancy-button .fancy-button-end
+{
+  height: 46px;
+  line-height: 46px;
+}
+
+.fancy-button-text-wrap,
+.fancy-button-start,
+.fancy-button-end {
+  background: url(/sites/default/themes/avtstore/images/sprite-button.png) 0 0 repeat-x transparent;
+  white-space: nowrap;
+}
+
+.fancy-button-start,
+.fancy-button-end {
+  width: 27px;
+  background-repeat: no-repeat;
+}
+
+.fancy-button-start { background-position: 0 -392px; }
+.fancy-button-end { background-position: 0 -196px; }
+
+.fancy-button.fancy-button-left .fancy-button-text-wrap { padding-left: 10px; }
+.fancy-button.fancy-button-right .fancy-button-text-wrap { padding-right: 10px; }
+
+.fancy-button.fancy-button-left .fancy-button-start { background-position: 0 -294px; }
+.fancy-button.fancy-button-right .fancy-button-end { background-position: 0 -98px; }
+
+.fancy-button:hover .fancy-button-start { background-position: 0 -441px; }
+.fancy-button:hover .fancy-button-end { background-position: 0 -245px; }
+.fancy-button:hover .fancy-button-text-wrap { background-position: 0 -49px; }
+
+.fancy-button.fancy-button-left:hover .fancy-button-start { background-position: 0 -343px; }
+.fancy-button.fancy-button-right:hover .fancy-button-end { background-position: 0 -147px; }
+
+
+.fancy-button.fancy-button-small,
+.fancy-button.fancy-button-small .fancy-button-text-wrap,
+.fancy-button.fancy-button-small .fancy-button-start,
+.fancy-button.fancy-button-small .fancy-button-end {
+  height: 28px;
+  line-height: 28px;
+}
+
+button.fancy-button.fancy-button-small {
+    height: 32px;
+    margin-top: -3px;
+}
+
+.fancy-button-small .fancy-button-text-wrap,
+.fancy-button-small .fancy-button-start,
+.fancy-button-small .fancy-button-end {
+  background-image: url(/sites/default/themes/avtstore/images/sprite-button-small.png);
+}
+
+.fancy-button-small .fancy-button-start,
+.fancy-button-small .fancy-button-end {
+  width: 16px;
+}
+
+
+.fancy-button-small .fancy-button-start { background-position: 0 -232px; }
+.fancy-button-small .fancy-button-end { background-position: 0 -116px; }
+
+.fancy-button-small.fancy-button-left .fancy-button-text-wrap { padding-left: 10px; }
+.fancy-button-small.fancy-button-right .fancy-button-text-wrap { padding-right: 10px; letter-spacing: -.5px; }
+
+.fancy-button-small.fancy-button-left .fancy-button-start { background-position: 0 -174px; }
+.fancy-button-small.fancy-button-right .fancy-button-end { background-position: 0 -58px; }
+
+.fancy-button-small:hover .fancy-button-start { background-position: 0 -261px; }
+.fancy-button-small:hover .fancy-button-end { background-position: 0 -145px; }
+.fancy-button-small:hover .fancy-button-text-wrap { background-position: 0 -29px; }
+
+.fancy-button-small.fancy-button-left:hover .fancy-button-start { background-position: 0 -203px; }
+.fancy-button-small.fancy-button-right:hover .fancy-button-end { background-position: 0 -87px; }
+
+
+#block-block-7 {
+  background-color: #FFF;
+  border: 1px solid #D0D3D5;
+  border-radius: 10px;
+  font-size: smaller;
+  padding: 10px;
+  text-transform: lowercase;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#block-block-7 ul { list-style-image: url('/sites/default/themes/avtstore/images/key-bullet.png'); margin: 0; }
+#block-block-7 ul li { padding: 0; margin: 0; }
+
+td.active { background: none; }
+
+.section-checkstatus .view-check-status .view-filters { margin-top: 0; }
+.view-check-status .view-filters { margin-top: -40px; }
+.view-check-status .view-header {
+  position: relative;
+  text-align: right;
+  top: -24px;
+}
+
+.view-check-status .view-header p { margin: 0; }
+
+.view-check-status .view-header a {
+  display: inline-block;
+  padding: 0 5px;
+  font-weight: bold;
+  color: #A7A7A7;
+  text-transform: uppercase;
+  background-color: #DCDCDC;
+  border: 1px solid #CBCBCB;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.view-check-status .view-header a.expand {
+  background-color: #FEFEFF;
+  color: #3379b4;
+}
+
+#cboxClose {
+  top: 0;
+}
+
+#cboxLoadedContent {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#cboxTitle { top: 0; bottom: auto; }
+
+.password-description {
+    position: absolute;
+    left: -9999px;
+}
+
+button#edit-views-bulk-operations-delete-node-action { margin-left: 5px; }
+div#views-bulk-operations-select > fieldset { border: none; padding: 0; }
+div#views-bulk-operations-select > fieldset > legend { display: none; }
+
+body.front.not-logged-in #header { position: absolute; left: 0; right: 0; top: 0; }
+body.front.not-logged-in #main-wrapper { top: 350px; background-position: 0 155px; }
+body.front.not-logged-in #footer { position: relative; top: 352px; }
+body.front.not-logged-in #block-block-9 { height: 815px; width: 563px; margin-left: 153px; position: absolute; top: -350px; }
+body.front.not-logged-in #block-block-9 div.content { position: absolute; top: 830px; }
+body.front.not-logged-in .sidebar-first #content .section { padding-left: 510px; }
+body.front.not-logged-in .region-sidebar-first { width: 510px; margin-right: -510px; }
+
+
+
+body.front.not-logged-in #block-block-9 h3.title { background: none; padding: 0; font-size: 1.7em; font-weight: bold; color: #a6d443; margin-bottom: 15px }
+body.front.not-logged-in #block-block-9 label.signin { color: #fff; font-size: 1.3em; text-transform: uppercase; font-weight: bold; margin-bottom: 12px; display: block; }
+body.front.not-logged-in #block-block-9 #user-login { position: absolute; bottom: 68px; left: 70px; overflow: hidden; margin: 5px auto 0; width: 416px; }
+body.front.not-logged-in #block-block-9 .form-text,
+body.front.not-logged-in #block-block-9 .textOn,
+body.front.not-logged-in #block-block-9 .passOn { margin: 0 0 15px; border: 1px solid #e1e1e1; height: 44px; line-height: 44px; text-indent: 6px; width: 414px; color: #000; border: none; }
+body.front.not-logged-in #block-block-9 .textOff { background: url("/sites/default/themes/avtstore/images/bg-username-off-home.gif") no-repeat left top transparent; }
+body.front.not-logged-in #block-block-9 .passOff { background: url("/sites/default/themes/avtstore/images/bg-password-off-home.gif") no-repeat left top transparent; }
+body.front.not-logged-in #block-block-9 .textOn,
+body.front.not-logged-in #block-block-9 .passOn { background: url("/sites/default/themes/avtstore/images/bg-username-on-home.gif") no-repeat left top transparent; font-size: 1.4em; text-indent: 12px }
+body.front.not-logged-in #block-block-9 .form-submit { border: none; background: url('/sites/default/themes/avtstore/images/btn-signin-home.png') top left no-repeat; width: 129px; height: 44px; float: right; cursor: pointer; font-size: 1px; text-indent: -1000px; color: #bde8f6; }
+body.front.not-logged-in #block-block-9 .form-submit.hover { background-position: 0 -45px; }
+body.front.not-logged-in #block-block-9 a.retrieve { color: #fff; display: block; font-size: .9em; line-height: 1.6em; margin-left: 10px; text-decoration: none; }
+
+
+.page-more-information h2 { color: #4E81A9; background: url("/sites/default/themes/avtstore/images/bullet-asterisk.png") no-repeat left top transparent; padding-left: 38px; }
+p { margin-bottom: 10px; letter-spacing: 0.5px; font-size: 1em; line-height: 1.5em; }
+div.description { line-height: 1.5em; font-size: 1em; }
+div.description p { letter-spacing: 0; }
+
+body.node-type-help { background-color: #FFF; }
+body.node-type-help ul { margin-bottom: 10px }
+body.node-type-help ul li { line-height: 1.5em; margin-bottom: 0; }
+div.vcard { width: 18em; margin: 0 auto; }
+h2.confirmation-number { font-size: 1em; font-weight: bold; color: #000; }
+h2.confirmation-number .order-number { color: #F00; }

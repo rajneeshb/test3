@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Green
+    [billTo_phoneNumber] => 6036958622
+    [orderAmount] => 21.25
+    [billTo_street1] => PO Box 719
+    [card_accountNumber] => ############7725
+    [platform] => prd
+    [orderAmount_publicSignature] => /cs7aYsEtqFqDJJnx/7i9lTFZ+E=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 135487288WTO1Q9LAP5LT
+    [signedDataPublicSignature] => jj+eMzP6uYgf4ye09bsvy2DqC+w=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Judith T.
+    [billTo_customerID] => 1018
+    [uid] => 1018
+    [billTo_company] => Devine, Millimet & Branch, PA
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 37205
+    [transactionSignature] => bN+31E5DQke7gxchFmwp3T7HZK0=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03105-0719
+    [orderPage_requestToken] => Ahj//wSRf8PCt8dTFEBIKFWLNq0cN2ThxXqT2NFzMg0GsyomkcgNxeAFNI5Abi8aQMhNJG4ZNJMq6PSWccDB/Iv+HhW+OpiiAkAA0wC7
+    [ccAuthReply_amount] => 21.25
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 01963G
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => lbrunelle@devinemillimet.com
+    [reasonCode] => 100
+    [order_id] => 37205
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 03
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Tys5xJA4vtrG5g32lC3/29LyfA8=
+    [requestID] => 3539604509640178147364
+    [orderNumber] => 1353960427511
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-26T200731Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Z
+)

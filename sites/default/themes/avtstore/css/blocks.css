@@ -1,0 +1,151 @@
+/* $Id$ */
+
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block /* Block wrapper */ {
+  margin-bottom: 1em;
+}
+
+.block.region-odd /* Zebra striping for each block in the region */ {
+}
+
+.block.region-even /* Zebra striping for each block in the region */ {
+}
+
+.block.odd /* Zebra striping independent of each region */ {
+}
+
+.block.even /* Zebra striping independent of each region */ {
+}
+
+.region-count-1 /* Incremental count for each block in the region */ {
+}
+
+.count-1 /* Incremental count independent of each region */ {
+}
+
+.block h2.title /* Block title */ {
+}
+
+.block .content /* Block's content wrapper */ {
+}
+
+#block-aggregator-category-1 /* Block for the latest news items in the first category */ {
+}
+
+#block-aggregator-feed-1 /* Block for the latest news items in the first feed */ {
+}
+
+#block-block-1 /* First administrator-defined block */ {
+}
+
+#block-blog-0 /* "Recent blog posts" block */ {
+}
+
+#block-book-0 /* "Book navigation" block for the current book's table of contents */ {
+}
+
+#block-comment-0 /* "Recent comments" block */ {
+}
+
+#block-forum-0 /* "Active forum topics" block */ {
+}
+
+#block-forum-1 /* "New forum topics" block */ {
+}
+
+#block-menu-primary-links /* "Primary links" block */ {
+}
+
+#block-menu-secondary-links /* "Secondary links" block */ {
+}
+
+#block-node-0 /* "Syndicate" block for primary RSS feed */ {
+}
+
+#block-poll-0 /* "Most recent poll" block */ {
+}
+
+#block-profile-0 /* "Author information" block for the profile of the page's author */ {
+}
+
+#block-search-0 /* "Search form" block */ {
+}
+
+#block-statistics-0 /* "Popular content" block */ {
+}
+
+#block-user-0 /* "User login form" block */ {
+}
+
+#block-user-1 /* "Navigation" block for Drupal navigation menu */ {
+}
+
+#block-user-2 /* "Who's new" block for a list of the newest users */ {
+}
+
+#block-user-3 /* "Who's online" block for a list of the online users */ {
+}
+
+
+#block-views-uploaded_order_files-block_1 /* Block for uploaded files table */ {
+  margin-left: 25px;
+}
+
+#block-views-uploaded_order_files-block_1 table.views-table thead th.select-all {
+  width: 20px;
+}
+
+#block-views-uploaded_order_files-block_1 table.views-table thead th.views-field-filesize {
+  text-align: center;
+  width: 70px;
+}
+
+#block-views-uploaded_order_files-block_1 table.views-table thead th.views-field-timestamp {
+  text-align: center;
+  width: 100px;
+}
+
+#block-views-uploaded_order_files-block_1 table.views-table tbody td.views-field-filesize,
+#block-views-uploaded_order_files-block_1 table.views-table tbody td.views-field-timestamp {
+  text-align: right;
+}
+
+#block-block-5 { position: absolute; top: 0; right: 0; padding: 5px; color: #4E81A9; }
+.not-logged-in #block-block-5 { border-radius: 0px 0px 8px 8px; border: 0px solid #2B638F; background: #2b638f; }
+.logged-in #block-block-5 { text-align: right; }
+#block-block-5 .form-item { display: inline-block; }
+#block-block-5 .form-text { width: 145px; color: #CCC; padding: 0 0 0 5px; }
+#block-block-5 .form-text:focus { color: #000; }
+#block-block-5 button.fancy-button { vertical-align: top; }
+.logged-in #block-block-5 a { color: #4E81A9; font-weight: bold; text-transform: uppercase; font-size: 12px; }
+#block-block-5 a.retrieve { color: #84a7c8; font-size: .8em; line-height: .8em; text-decoration: underline; display: block; margin: 3px 0 5px;}
+
+.region-content-top #top-block { border: 1px solid #b8b8b8; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; background: #ffffff; overflow: hidden; padding: 16px; position: relative; }
+
+.region-content-top #top-block > div { display: inline-block; vertical-align: top; margin-right: 10px; } 
+
+
+.region-content-top #top-block #magic-button.disabled { background: url('/sites/default/themes/avtstore/images/btn-download-transcript-disabled.png') top left no-repeat; height: 33px; width: 186px; }
+
+.region-content-top #top-block #customer {  width: 175px; }
+.region-content-top #top-block #due-date {  width: 85px; }
+.region-content-top #top-block #status {  width: 150px; }
+
+
+.region-content-top #top-block #magic-button { position: absolute; right: 15px; margin-right: 0; }
+.region-content-top #top-block #magic-button a { display: block; background: url('/sites/default/themes/avtstore/images/btn-download-transcript.png') top left no-repeat; height: 33px; width: 186px; font-size: 1px; line-height: 3px; color: #6ba8d6; text-indent: 4px; text-decoration: none; }
+.region-content-top #top-block #magic-button a:hover { background-position: 0 -33px; }
+
+.region-content-top #top-block .due-date-title,
+.region-content-top #top-block .status-title,
+.region-content-top #top-block .magic-button,
+.region-content-top #top-block .customer-title { font-weight: bold; color: #60840e; font-size: 1.15em;  }
+
+#block-menu-menu-left-nav a:focus,
+#block-menu-menu-left-nav a:active
+{ text-decoration: none; }

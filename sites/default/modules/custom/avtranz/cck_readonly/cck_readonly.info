@@ -1,0 +1,5 @@
+name = CCK Readonly
+description = "Allows setting CCK fields to readonly"
+package = AVTranz
+core = 6.x
+dependencies[] = content

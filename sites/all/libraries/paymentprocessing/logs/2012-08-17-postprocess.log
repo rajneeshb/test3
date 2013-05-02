@@ -1,0 +1,148 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Gardner
+    [billTo_email] => gardnerbusinesslaw@gmail.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => BuYsROq5rcK6i7rN5IhDkKEEbOk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ###########1024
+    [reasonCode] => 100
+    [billTo_firstName] => Patricia
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3451907639380178147359
+    [order_id] => 21613
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 128917
+    [billTo_company] => Gardner Law Firm, Patricia S. Gardner, Esq., LLC
+    [card_expirationMonth] => 06
+    [orderNumber] => 1345190763936
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 340
+    [signedDataPublicSignature] => m4eCQcKlu80nix11YH6mp7s70Fc=
+    [reconciliationID] => 084981304WTO8V5V5VHMU
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdkGu+g0xcTA+KFWDho5cMWbBpXqT3FZrWa1pE2qmkMYhPXANNIYxCeuaQP1thFtDJpJlXR6SzjgYRZF2Qa76DTFxMD4A4RyG
+    [uid] => 340
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 275.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-17T080604Z
+    [orderAmount] => 275
+    [orderNumber_publicSignature] => FL7h5NDR8I8UrShxXco7HmsqaaA=
+    [card_cardType] => 003
+    [billTo_street1] => PO Box 453
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6037664933
+    [paymentOption] => card
+    [transactionSignature] => zhvS9StQve9af/Y0YooErl+vHeI=
+    [merchantDefinedData1] => Request ID: 21613
+    [billTo_city] => Newmarket
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03857
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Chellman
+    [billTo_email] => cchellman@chellmanlaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => A
+    [orderAmount_publicSignature] => 3mHi0Nj9U9pyC0SjsrPFrP3aWqk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############2034
+    [reasonCode] => 100
+    [billTo_firstName] => Carol
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3452223882210178147361
+    [order_id] => 21536
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 05530D
+    [card_expirationMonth] => 08
+    [orderNumber] => 1345222370703
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 247
+    [signedDataPublicSignature] => YC17S5oT3lMGuhOem9Heh7Lq4jo=
+    [reconciliationID] => 085228235WTO8H5V5VC5Y
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => A
+    [orderPage_requestToken] => Ahj//wSRdkp2BGiDRUhCKFWDhqyZOGTNrXqT3EhrWa1obWymj9e5IQQFNH69yQg6QRglKRbQyaSZV0eks44GDWRdkp2BGiDRUhCA2hPC
+    [uid] => 247
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 667.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-17T165308Z
+    [orderAmount] => 667.25
+    [orderNumber_publicSignature] => bbYqlAmqCHpdoadaLegImkUao5w=
+    [card_cardType] => 001
+    [billTo_street1] => 430 Richards Ave.
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035027001
+    [paymentOption] => card
+    [transactionSignature] => 7m5sdKacn1kcVgxh1QiSL1+FegM=
+    [merchantDefinedData1] => Request ID: 21536
+    [billTo_city] => Portsmouth
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => o3801
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Newton
+    [billTo_email] => collisioncenterofclaremont@yahoo.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############6095
+    [reasonCode] => 100
+    [billTo_firstName] => Tammy
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3452266091910178147362
+    [order_id] => 21783
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 762579
+    [card_expirationMonth] => 06
+    [orderNumber] => 1345226593448
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 661
+    [signedDataPublicSignature] => 16wJTzKaFgqSTRZ7EQwSHaaR13I=
+    [reconciliationID] => 085278595WTO9N5V0XEJK
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdkuh72fAbBhEKFWDhqybuGrlrXqT3M5rWYWIsqWmkqL3dzAJNJUXu7maQN1tkW0MmkmVdHpLOOBg9kXZLoe9nwGwYRAA7i8o
+    [uid] => 661
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 68.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-17T180330Z
+    [orderAmount] => 68.75
+    [orderNumber_publicSignature] => kjjgU+NLJo1lT9CXkFoI0E4EVWw=
+    [card_cardType] => 002
+    [billTo_street1] => 143 Charlestown Rd
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035426900
+    [paymentOption] => card
+    [transactionSignature] => 6Tpo107HptC/lmGVnAVT6+cVHQ0=
+    [merchantDefinedData1] => Request ID: 21783
+    [billTo_city] => Claremont
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03743
+    [billTo_country] => us
+)

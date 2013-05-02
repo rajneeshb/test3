@@ -1,0 +1,156 @@
+Array
+(
+    [Order ID] => 0
+    [Price] => 484
+    [User ID] => 557
+    [IP] => 66.31.65.168
+    [Timestamp] => 1340946016
+    [Time/Date] => Fri, 29 Jun 2012 01:00:16 -0400
+    [Order Page Timestamp] => 1340945986425
+    [Order Page Time/Date] => Sun, 19 Nov 44462 23:13:45 -0500
+    [User Agent] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79 Safari/535.11
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 484
+    [User ID] => 557
+    [IP] => 66.31.65.168
+    [Timestamp] => 1340946148
+    [Time/Date] => Fri, 29 Jun 2012 01:02:28 -0400
+    [Order Page Timestamp] => 1340945986425
+    [Order Page Time/Date] => Sun, 19 Nov 44462 23:13:45 -0500
+    [User Agent] => Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79 Safari/535.11
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 11.25
+    [User ID] => 501
+    [IP] => 64.140.235.209
+    [Timestamp] => 1340983708
+    [Time/Date] => Fri, 29 Jun 2012 11:28:28 -0400
+    [Order Page Timestamp] => 1340970911264
+    [Order Page Time/Date] => Tue, 04 Sep 44463 10:47:44 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; CMDTDF; InfoPath.3; .NET4.0C; .NET CLR 1.1.4322)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 11.25
+    [User ID] => 501
+    [IP] => 64.140.235.209
+    [Timestamp] => 1340983726
+    [Time/Date] => Fri, 29 Jun 2012 11:28:46 -0400
+    [Order Page Timestamp] => 1340970911264
+    [Order Page Time/Date] => Tue, 04 Sep 44463 10:47:44 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; CMDTDF; InfoPath.3; .NET4.0C; .NET CLR 1.1.4322)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 11.25
+    [User ID] => 501
+    [IP] => 64.140.235.209
+    [Timestamp] => 1340983749
+    [Time/Date] => Fri, 29 Jun 2012 11:29:09 -0400
+    [Order Page Timestamp] => 1340983747581
+    [Order Page Time/Date] => Thu, 31 Jan 44464 00:26:21 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/5.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; CMDTDF; InfoPath.3; .NET4.0C; .NET CLR 1.1.4322)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 236.5
+    [User ID] => 552
+    [IP] => 174.252.121.158
+    [Timestamp] => 1340987753
+    [Time/Date] => Fri, 29 Jun 2012 12:35:53 -0400
+    [Order Page Timestamp] => 1340987719277
+    [Order Page Time/Date] => Sun, 16 Mar 44464 23:41:17 -0500
+    [User Agent] => Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 236.5
+    [User ID] => 552
+    [IP] => 174.252.121.158
+    [Timestamp] => 1340987843
+    [Time/Date] => Fri, 29 Jun 2012 12:37:23 -0400
+    [Order Page Timestamp] => 1340987719277
+    [Order Page Time/Date] => Sun, 16 Mar 44464 23:41:17 -0500
+    [User Agent] => Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 187.5
+    [User ID] => 559
+    [IP] => 173.14.162.97
+    [Timestamp] => 1340987966
+    [Time/Date] => Fri, 29 Jun 2012 12:39:26 -0400
+    [Order Page Timestamp] => 1340987948583
+    [Order Page Time/Date] => Wed, 19 Mar 44464 15:23:03 -0500
+    [User Agent] => Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 236.5
+    [User ID] => 552
+    [IP] => 174.252.121.158
+    [Timestamp] => 1340988133
+    [Time/Date] => Fri, 29 Jun 2012 12:42:13 -0400
+    [Order Page Timestamp] => 1340988128920
+    [Order Page Time/Date] => Fri, 21 Mar 44464 17:28:40 -0500
+    [User Agent] => Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 275
+    [User ID] => 559
+    [IP] => 173.14.162.97
+    [Timestamp] => 1340988390
+    [Time/Date] => Fri, 29 Jun 2012 12:46:30 -0400
+    [Order Page Timestamp] => 1340988374825
+    [Order Page Time/Date] => Mon, 24 Mar 44464 13:47:05 -0500
+    [User Agent] => Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 275
+    [User ID] => 559
+    [IP] => 173.14.162.97
+    [Timestamp] => 1340988447
+    [Time/Date] => Fri, 29 Jun 2012 12:47:27 -0400
+    [Order Page Timestamp] => 1340988374825
+    [Order Page Time/Date] => Mon, 24 Mar 44464 13:47:05 -0500
+    [User Agent] => Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 236.5
+    [User ID] => 552
+    [IP] => 38.111.33.34
+    [Timestamp] => 1340992821
+    [Time/Date] => Fri, 29 Jun 2012 14:00:21 -0400
+    [Order Page Timestamp] => 1340992804196
+    [Order Page Time/Date] => Wed, 14 May 44464 20:09:56 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2; .NET CLR 1.1.4322; MS-RTC LM 8; .NET4.0C; .NET4.0E)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 1375
+    [User ID] => 247
+    [IP] => 70.96.33.195
+    [Timestamp] => 1341001588
+    [Time/Date] => Fri, 29 Jun 2012 16:26:28 -0400
+    [Order Page Timestamp] => 1341001584691
+    [Order Page Time/Date] => Sun, 24 Aug 44464 11:11:31 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64; rv:13.0) Gecko/20100101 Firefox/13.0.1
+)

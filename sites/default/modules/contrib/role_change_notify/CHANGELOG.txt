@@ -1,0 +1,29 @@
+CHANGELOG:
+----------
+
+6.x-2.3
+-------
+#731344 by fp, rfay: fix preg_match() expects parameter 2 to be string, array 
+        given problem when empty profile field.
+        
+6.x-2.2
+-------
+#736086 by rfay, heltem: Fixed Cannot use object of type stdClass as array. Removed
+        extraneous hook invocation.
+#736872 by rfay: Tests for Drupal 6.
+#732150 by rfay: Fixed Undefined property: stdClass::$rolename in role_change_notify().module.
+#705298 by rfay: Remove incorrect hook_action_info_alter()
+
+6.x-2.1
+-------
+#710210 by heltem, rfay: Fixed [role] token never interpreted. Added [role_changed] token
+#671688 by rfay: Fixed localization errors.
+#705298 by rfay: Fixed Incorrect check on 'token' - should be 'token_actions()'.
+                 This patch also improves the admin page documentation and adds help.
+
+6.x-2.0
+-------
+#587834 by rfay: Provide a trigger so that now both role add and role removal 
+                 can trigger token actions.
+#560852 by rfay: Add a separate permission for role_change_notify admin.
+Significant code cleanup.

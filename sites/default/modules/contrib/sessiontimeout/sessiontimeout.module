@@ -1,0 +1,115 @@
+<?php
+// $Id: sessiontimeout.module,v 0.1 2006/04/01 15:55:01 dries Exp $
+
+/**
+ * @file
+ * Enforce users to login again if they remain inactive for a certain amount of time.
+ * This module was original developed by Ahmed Al-Obaidy-2 (http://old.nabble.com/user/UserProfile.jtp?user=277316)
+ * Customization and adaptation for Drupal 6.x by Schogini Systems (http://schogini.in)
+ */
+
+function sessiontimeout_menu()
+{
+  $items['admin/settings/sessiontimeout'] = array(
+    'title' => t('Session Timeout'),
+	'page callback' => 'drupal_get_form',
+    'page arguments' => array('sessiontimeout_admin_settings'),	
+    'access arguments' => array('administer site configuration'),
+    'description' => t('Manage Drupal User Session Timeout'),
+    'type' => MENU_CALLBACK,
+  );  
+  return $items;	
+}
+ 
+/**
+ * Implementation of hook_help().
+ */
+function sessiontimeout_help($section) {
+  switch ($section) {
+    case 'admin/modules#description':
+      return t('Enforce users to login again if they remain inactive for a certain amount of time.');
+    case 'admin/settings/sessiontimeout':
+      return t('Specify a certain value of session time out for each role in seconds. Setting the value to anything less than 20 means the default server timeout');
+  }
+}
+
+/**
+ * Implementation of hook_node_name().
+ */
+function sessiontimeout_node_name($node) {
+  return t('Session Timeout');
+}
+
+/**
+ * Implementation of hook_init().
+ */
+function sessiontimeout_init(){
+  global $user;
+  if ($user){
+    $sid = session_id();
+    $roles = user_roles();
+    $maxtimeout = ini_get('session.cookie_lifetime');
+    $timeouts = array();
+    foreach($roles as $rid => $role){
+      $field      = "sessiontimeout_role$rid";
+      $timeout    = variable_get($field, 0);
+      if ($timeout == 0){
+        $timeout = $maxtimeout;
+      }
+      $timeouts[] = variable_get($field, 0);
+    }
+    $timeout = min($timeouts);
+	
+	// this if statement has been added by Gayatri --- the timeout it less than or equal to 20 secs do not do anything. else we will never be able to login into the system at all!
+	// The timeout is in seconds
+	if( $timeout > 20 )
+	{
+	    $count   = db_fetch_object(db_query("SELECT COUNT(*) count FROM {sessions} WHERE timestamp < %d AND sid='%s'", time() - $timeout, $sid));
+	    if ($count->count>0){
+	      db_query("DELETE FROM {sessions} WHERE timestamp < %d AND sid='%s'", time() - $timeout, $sid);
+	      session_destroy();
+	      module_invoke_all('user', 'logout', NULL, $user);
+	      unset($user);
+	      drupal_goto($_GET['q']);
+	    }
+	}
+  }
+}
+
+/**
+ * Admin settings form - This has been modified to work for Drupal 6.x
+ */
+function sessiontimeout_admin_settings()
+{
+  $output = '';
+  $roles = user_roles();
+  foreach($roles as $rid => $role){
+    $field = "sessiontimeout_role$rid";
+	$output[$field] = array(
+	  '#type' => 'textfield', 
+	  '#title' => t($role),
+	  '#default_value' => variable_get($field, 0),
+	  '#size' => 10,
+	  '#maxlength' => 255
+	);	
+  }
+  $output['submit'] = array('#type' => 'submit', '#value' => t('Save')); 
+  return $output;
+}
+
+/**
+ * Admin settings form submit
+ */
+function sessiontimeout_admin_settings_submit($form, &$form_state) 
+{
+	foreach( $form_state['values'] as $key => $val )
+	{
+		if( strpos($key, 'sessiontimeout_') !== FALSE && strpos($key, 'sessiontimeout_') == 0 )
+		{
+			variable_set($key, (int)$val + 0);
+		}
+	}
+	
+	drupal_set_message('Save succesful');
+}
+?>

@@ -1,0 +1,51 @@
+<?php
+
+defined('CCK_READONLY_OVERRIDE_PERM') or define('CCK_READONLY_OVERRIDE_PERM', 'allow ignoring of read-only or disabled fields');
+
+/**
+ * Implements hook_field_settings_alter()
+ *
+ * Lets us add a setting to CCK fields
+ *
+ * @param &$form
+ *    The CCK field configuration form array
+ *
+ * @param $op
+ *    The operation being performed
+ *
+ * @param $field
+ *    The field information array
+ *
+ */
+function cck_readonly_field_settings_alter(&$form, $op, $field) {
+  if ('order' != $field['type_name']) {
+    return;
+  }
+
+  if ('form' == $op) {
+    $element = array('cck_readonly' => array(
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'readonly' => t('Set to read-only'),
+        'disabled' => t('Set to disabled'),
+        'noadmin' => t('Allow users with permissions to edit regardless of these settings')
+      ),
+      '#title' => t('Field Read-Only status'),
+      '#description' => t('Allows this field to be set to read-only and/or disabled. Read-Only prevents users from changing the value (without using third party tools) without styling the element. Disabled prevents the user from changing the value while styling the element.'),
+      '#default_value' => !empty($field['cck_readonly']) ? intval($field['cck_readonly']) : array(),
+    ) );
+    
+    $form = array_merge($form, $element);
+  }
+  elseif ('save' == $op) {
+    $form = array_merge($form, array('cck_readonly'));
+  }
+}
+
+/**
+ * Implements hook_perm()
+ *
+ */
+function cck_readonly_perm() {
+  return array(CCK_READONLY_OVERRIDE_PERM);
+}

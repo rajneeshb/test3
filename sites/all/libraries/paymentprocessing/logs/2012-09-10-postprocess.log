@@ -1,0 +1,150 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Bauer
+    [billTo_email] => cbauer@primmer.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => N
+    [orderAmount_publicSignature] => gcbLNOso81Ku6jiY42XA4oSQs60=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############1096
+    [reasonCode] => 100
+    [billTo_firstName] => Cynthia
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3472888627530178147362
+    [order_id] => 23836
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 02751Z
+    [billTo_company] => Primmer Piper Eggleston and Cramer
+    [card_expirationMonth] => 05
+    [orderNumber] => 1347288862751
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 263
+    [signedDataPublicSignature] => 7bObIGV588LMu83bJTcUcOlRF/4=
+    [reconciliationID] => 097719087WTOFL6T7BPCT
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => N
+    [orderPage_requestToken] => Ahj//wSReIgF3SwcTWhEKFWDlu3YuWDhvXqT40xtUbwqEOomn7GzmqAJNP2NnNUaQSrNoIzoZNJMq6PSWccDCfIvEQC7pYOJrQiAHj53
+    [uid] => 263
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1770.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-10T145423Z
+    [orderAmount] => 1770
+    [orderNumber_publicSignature] => 9ritPXJdKIS2mwH+00ohcUoz2qQ=
+    [card_cardType] => 002
+    [billTo_street1] => 150 South Champlain Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 8028640880
+    [paymentOption] => card
+    [transactionSignature] => 7rfX9ju1Kn8MEo7/zuag9Ej2HI4=
+    [merchantDefinedData1] => Request ID: 23836
+    [billTo_city] => Burlington
+    [billTo_state] => VT
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 05401
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Serell
+    [billTo_email] => djk@rathlaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => N
+    [orderAmount_publicSignature] => gjP+ryxtZUGyYtPXOedU0MZdEPc=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############2758
+    [reasonCode] => 100
+    [billTo_firstName] => Andrew
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3472951033090178147360
+    [order_id] => 24212
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 04769Z
+    [billTo_company] => Rath, Young and Pignatelli, P.C.
+    [card_expirationMonth] => 07
+    [orderNumber] => 1347295103307
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 614
+    [signedDataPublicSignature] => dcA+Dwet9xnSUjfCKmbJQ9hNB98=
+    [reconciliationID] => 097790627WTOFL6T7BVAZ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => N
+    [orderPage_requestToken] => Ahj//wSReInBSDmD68hAKFWDlu3csGzJvXqT40xtUbwq0G0mn7G0ElgJNP2NoJLaQRzRQRnQyaSZV0eks44GD+ReInBSDmD68hAAEQBi
+    [uid] => 614
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1050.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-10T163823Z
+    [orderAmount] => 1050
+    [orderNumber_publicSignature] => bTA9g7TaRT3BWp31LD5ZSr0i/mM=
+    [card_cardType] => 002
+    [billTo_street1] => One Capital Plaza
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032262600
+    [paymentOption] => card
+    [transactionSignature] => ++75yHCARKYE1Io9rraTfsJ6nGs=
+    [merchantDefinedData1] => Request ID: 24212
+    [billTo_city] => Concord
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03301
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Hersom
+    [billTo_email] => wrobertslaw@gmail.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => A
+    [orderAmount_publicSignature] => jeqQk6z18DyHw+xy/+8dmBo3vXQ=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2012
+    [card_accountNumber] => ############0640
+    [reasonCode] => 100
+    [billTo_firstName] => Wendy
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3473102241440178147360
+    [order_id] => 24404
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 78782P
+    [billTo_company] => Law Office of Wendy E. Roberts, PLLC
+    [card_expirationMonth] => 11
+    [orderNumber] => 1347310210413
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 654
+    [signedDataPublicSignature] => 6hu0sHg7/a6i6HsMEgEPkxSHKSI=
+    [reconciliationID] => 097959450WTOFO6T7Q6OL
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => A
+    [orderPage_requestToken] => Ahj//wSReI3zrpxtkSBAKFWDlu5auWjVhXqT409tUb0W0+YmoKAhHrwJNQUBCPX6QQ1tgjOhk0kyro9JZxwMFki8RvnXTjbIkCAAQAOs
+    [uid] => 654
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 550.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-10T205025Z
+    [orderAmount] => 550
+    [orderNumber_publicSignature] => E1I5wDuQuqRm+0AlovZDu/Pf1/U=
+    [card_cardType] => 002
+    [billTo_street1] => 133 Main Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6036842351
+    [paymentOption] => card
+    [transactionSignature] => P30gAxVD5zpx8k9UMoLu8BbqiHs=
+    [merchantDefinedData1] => Request ID: 24404
+    [billTo_city] => Lancaster
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03598
+    [billTo_country] => us
+)

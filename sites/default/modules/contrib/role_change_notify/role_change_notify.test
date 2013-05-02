@@ -1,0 +1,247 @@
+<?php
+
+/**
+ * @file
+ * Test the Role Change Notify module.
+ *
+ * This file contains the test cases to check if module is performing as
+ * expected.
+ *
+ */
+
+/**
+ * Class with common helper methods.
+ */
+class TriggerWebTestCase extends DrupalWebTestCase {
+
+  /**
+   * Configure an advanced action.
+   *
+   * @param $action
+   *   The name of the action callback. For example: 'user_block_user_action'
+   * @param $edit
+   *   The $edit array for the form to be used to configure.
+   *   Example members would be 'actions_description' (always), 'message', etc.
+   * @return
+   *   the aid (action id) of the configured action, or FALSE if none.
+   */
+  protected function configureAdvancedAction($action, $edit) {
+    // Create an advanced action.
+    $hash = md5($action);
+    $this->drupalPost("admin/settings/actions/configure/$hash", $edit, t('Save'));
+    $this->assertText(t('The action has been successfully saved.'));
+
+    // Now we have to find out the action ID of what we created.
+    $result =  db_result(db_query('SELECT aid FROM {actions} WHERE callback = "%s" AND description = "%s"', $action, $edit['actions_description']));
+    return $result;
+  }
+}
+
+
+/**
+ * Basic testing of Role Change Notify.
+ */
+class RoleChangeNotifyTestCase extends TriggerWebTestCase {
+  protected $web_user;
+  protected $admin_user;
+  protected $prev_mail_count = 0;
+
+  public static function getInfo() {
+    return array(
+      'name' => t('Role Change Notify'),
+      'description' => t('Test Role Change Notify module'),
+      'group' => t('Role Change Notify'),
+    );
+  }
+
+  /**
+   * Enable modules and create user with specific permissions.
+   */
+  function setUp() {
+    // parent::setUp('role_change_notify', 'trigger', 'token', 'token_actions');
+    // Testbot can't handle required contrib modules like token.
+    parent::setUp('role_change_notify', 'trigger');
+    // Create user.
+    $this->web_user = $this->drupalCreateUser();
+    $this->admin_user = $this->drupalCreateUser(array('administer users', 'administer permissions', 'administer role change notification', 'administer actions'));
+  }
+
+  /**
+   * Enable notification for a specific role.
+   */
+  function testBasicNotification() {
+    // Login the admin user.
+    $this->drupalLogin($this->admin_user);
+    // Create a role that we'll use for testing.
+    $newrole1 = $this->drupalCreateRole(array('access content'), 'testrole1');
+    $newrole2 = $this->drupalCreateRole(array('access content'), 'testrole2');
+
+    // Configure notifications for the new role
+    $edit = array("role_change_notify_$newrole1" => TRUE);
+    $this->drupalPost('admin/user/role_change_notify', $edit, t('Save configuration'));
+
+    // Test the typical use from the role_change_notify form.
+    $this->assignRole($this->web_user, $newrole1);
+
+    $this->assertText(t('User @user notified of added role @role', array('@user' => $this->web_user->name, '@role' => 'testrole1')));
+    $this->assertMail('to', $this->web_user->mail, t('Email is to the correct user'));
+
+    $this->assertEmailBodyText(t('The role "@role" has been added', array('@role' => 'testrole1')));
+    $this->prev_mail_count = $this->verboseEmail();
+
+    // Turn off standard non-trigger notifications.
+    $edit = array("role_change_notify_$newrole1" => FALSE);
+    $this->drupalPost('admin/user/role_change_notify', $edit, t('Save configuration'));
+
+    // Create an advanced system_message_action to issue a message.
+    $message = 'Message: Role added=[role_changed] User=[user]';
+    $actions_edit = array(
+      'actions_description' => 'RCN Add Role',
+      'message' => $message,
+    );
+
+    if (defined('Issue736598Committed')) {
+      $aid = $this->configureAdvancedAction('token_actions_message_action', $actions_edit);
+      $edit = array('aid' => md5($aid));
+      // And assign it to the role_added trigger.
+      $this->drupalPost('admin/build/trigger/user', $edit, t('Assign'), array(), array(), 'trigger_user_role_added_assign_form');
+
+
+      // Verify that the action has been assigned to the correct hook.
+      $actions = $this->trigger_get_assigned_actions('role_added');
+      $this->verbose('actions assigned = ', print_r($actions, TRUE));
+      $this->assertEqual(1, count($actions), t('One Action assigned to the hook'));
+      $this->assertEqual($actions[$aid]['label'], $actions_edit['actions_description'], t('Correct action label found.'));
+
+      // Also assign the action to the role_$newrole2_added trigger.
+      $this->drupalPost('admin/build/trigger/user', $edit, t('Assign'), array(), array(), 'trigger_user_role_' . $newrole2 . '_added_assign_form');
+
+
+      // Verify that the action has been assigned to the correct hook.
+      $actions = $this->trigger_get_assigned_actions('role_' . $newrole2 . '_added');
+      $this->assertEqual(1, count($actions), t('One Action assigned to the hook'));
+      $this->assertEqual($actions[$aid]['label'], $actions_edit['actions_description'], t('Correct action label found.'));
+
+      // Assign role1 and see if we get the general system message, but not the role2 specific one
+      $this->assignRole($this->admin_user, $newrole1);
+
+      $this->assertUniqueText(t('Message: Role added=@role User=@user', array('@role' => 'testrole1', '@user' => $this->admin_user->name)));
+
+      // Assign role2 and see if we get both the general and specific system messages
+      $this->assignRole($this->admin_user, $newrole2);
+
+      $this->assertNoUniqueText(t('Message: Role added=@role User=@user', array('@role' => 'testrole2', '@user' => $this->admin_user->name)));
+
+      // Create a system email message that will be sent when a role is removed.
+      $message = 'Message: Role removed=[role_changed] User=[user]';
+      $actions_edit = array(
+        'actions_description' => 'RCN Remove Role',
+        'recipient' => 'nobody@example.com',
+        'subject' => t('Role removal message'),
+        'message' => $message,
+      );
+      $aid = $this->configureAdvancedAction('token_actions_send_email_action', $actions_edit);
+      $edit = array('aid' => md5($aid));
+      // And assign it to the role_removed trigger.
+      $this->drupalPost('admin/build/trigger/user', $edit, t('Assign'), array(), array(), 'trigger_user_role_removed_assign_form');
+
+      // Verify that the action has been assigned to the correct hook.
+      $actions = $this->trigger_get_assigned_actions('role_removed');
+      $this->assertEqual(1, count($actions), t('One Action assigned to the hook "role_removed"'));
+      $this->assertEqual($actions[$aid]['label'], $actions_edit['actions_description'], t('Correct action label found.'));
+
+      // Also assign the action to the role_$newrole2_removed trigger.
+      $this->drupalPost('admin/build/trigger/user', $edit, t('Assign'), array(), array(), 'trigger_user_role_' . $newrole2 . '_removed_assign_form');
+
+      // Verify that the action has been assigned to the correct hook.
+      $actions = $this->trigger_get_assigned_actions('role_' . $newrole2 . '_removed');
+      $this->assertEqual(1, count($actions), t('One Action assigned to the hook "role_%rid_removed"', array('%rid' => $newrole2)));
+      $this->assertEqual($actions[$aid]['label'], $actions_edit['actions_description'], t('Correct action label found.'));
+
+      // Remove role1 and see if we get the general email, but not the role2 specific one
+      $this->removeRole($this->admin_user, $newrole1);
+
+      $this->assertEmailBodyText(t('Message: Role removed=@role User=@user', array('@role' => 'testrole1', '@user' => $this->admin_user->name)));
+      $this->assertMail('to', $actions_edit['recipient'], t('Correct recipient for role removed email'));
+      $this->prev_mail_count = $this->verboseEmail();
+
+      // Remove role2 and see if we get both the general and specific emails
+      $this->removeRole($this->admin_user, $newrole2);
+
+      $this->assertEmailBodyText(t('Message: Role removed=@role User=@user', array('@role' => 'testrole2', '@user' => $this->admin_user->name)), 2);
+      $this->prev_mail_count = $this->verboseEmail();
+    } // End comment-out of section.
+  }
+
+  /**
+   * Look for a regex in the body of the email.
+   * @param string $regex
+   *   Text to search for.
+   * @param string $message
+   *   Message for simpletest.
+   */
+  protected function assertEmailBodyText($regex, $expected = 1) {
+    $mails = $this->drupalGetMails();
+    $mail_count = count($mails);
+    $regex_found = 0;
+    for ($i = $this->prev_mail_count; $i < $mail_count; $i++) {
+      $regex_found += preg_match("/$regex/", $mails[$i]['body']);
+    }
+    $this->assertTrue($regex_found == $expected, t('Email notification of role was sent.'));
+  }
+
+  /**
+   * Output the most recent email sent.
+   */
+  protected function verboseEmail() {
+    $mails = $this->drupalGetMails();
+    $mail_count = count($mails);
+    for ($i = $this->prev_mail_count; $i < $mail_count; $i++) {
+      $this->verbose(t('Email  was:') . '<pre>' . print_r($mails[$i], TRUE) . '</pre>');
+    }
+    return $mail_count;
+  }
+
+  /**
+   * Assign a role to a user.
+   *
+   * @param $account
+   *   The user object
+   * @param $role
+   *   The role to be assigned, as an integer.
+   */
+  protected function assignRole($account, $role) {
+    $edit = array('operation' => "add_role-$role", "accounts[{$account->uid}]" => TRUE);
+    $this->drupalPost('admin/user/user', $edit, t('Update'));
+    $this->assertText(t('The update has been performed'));
+  }
+
+  /**
+   * Remove a role from a user.
+   *
+   * @param $account
+   *   The user object
+   * @param $role
+   *   The role to be removed, as an integer.
+   */
+  protected function removeRole($account, $role) {
+    $edit = array('operation' => "remove_role-$role", "accounts[{$account->uid}]" => TRUE);
+    $this->drupalPost('admin/user/user', $edit, t('Update'));
+    $this->assertText(t('The update has been performed'));
+  }
+  /**
+   * This is stolen from D7 trigger_get_assigned_actions().
+   * @param $hook
+   */
+
+  function trigger_get_assigned_actions($op) {
+    $items = array();
+    $result = db_query("SELECT ta.aid, a.type, a.description as label FROM {trigger_assignments} ta LEFT JOIN {actions} a ON ta.aid = a.aid WHERE ta.op = '%s' ORDER BY ta.weight", $op);
+    while ($item = db_fetch_array($result)) {
+      $items[$item['aid']] = $item;
+    }
+    return $items;
+  }
+}
+
+

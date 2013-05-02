@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Ward
+    [billTo_email] => dlw@michaelsward.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => 1JfqYzx+7VNNis1LxCwBomsUkq4=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############0744
+    [reasonCode] => 100
+    [billTo_firstName] => David
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3464353535440178147360
+    [order_id] => 23285
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 07470G
+    [billTo_company] => Michaels, Ward & Rabinovitz, LLP
+    [card_expirationMonth] => 01
+    [orderNumber] => 1346435353542
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 700
+    [signedDataPublicSignature] => VHx4ElBNoP65IgXYKw0M730yUtQ=
+    [reconciliationID] => 092620333WTOFO6H9A2Z7
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRd5sgYxow6OBAKFWDlk2ZMGbNnXqT409tIcwWVpumoJ5mG5gFNQTzMNzaQNzkEYkMmkmVdHpLOOBhCkXebIGMaMOjgQAAFTk6
+    [uid] => 700
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 66.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-31T174914Z
+    [orderAmount] => 66
+    [orderNumber_publicSignature] => xTv8Vr739mjkKSyuWjM6S4tzjLs=
+    [card_cardType] => 001
+    [billTo_street1] => P.O. Box 961979
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6173504040
+    [paymentOption] => card
+    [transactionSignature] => a08sPt+Hg3q5xVEhOba2s6PRKs0=
+    [merchantDefinedData1] => Request ID: 23285
+    [billTo_city] => Boston
+    [billTo_state] => MA
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 02196
+    [billTo_country] => us
+)

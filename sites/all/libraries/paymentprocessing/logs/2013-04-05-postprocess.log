@@ -1,0 +1,101 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Pennington
+    [billTo_phoneNumber] => 6037845198
+    [orderAmount] => 137.5
+    [billTo_street1] => 70 Hancock Road
+    [billTo_street2] => Suite J
+    [card_accountNumber] => ############8367
+    [platform] => prd
+    [orderAmount_publicSignature] => QvCqkMuKXpH5a050hcLLVnI9d4Y=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 196905174Y250LF59O1KI
+    [signedDataPublicSignature] => cPjrV7Bzc3e6WGfXv7oqHO77ef8=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Richard
+    [billTo_customerID] => 247
+    [uid] => 247
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 53170
+    [transactionSignature] => N56Pce5gACT77usWOHoK3VytCOc=
+    [billTo_city] => Peterborough
+    [billTo_postalCode] => 03458
+    [orderPage_requestToken] => Ahj//wSRi+4YTU+t6UhGKFWLls5YNWLdpZZNWEyM1cz2MuSogzxCMNICUQZ4hGGlpA7W2MF4ZNJMq6PSWccDB5IxfcMJqfW9KQjAKT8h
+    [ccAuthReply_amount] => 137.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 015703
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => erik.lige@avtranz.com
+    [reasonCode] => 100
+    [order_id] => 53170
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => /tQONndreAaA//LFxHGBhohBnuI=
+    [requestID] => 3651810228450178147363
+    [orderNumber] => 1365181022843
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-04-05T165703Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Stockburger
+    [billTo_phoneNumber] => 6032779167
+    [orderAmount] => 300
+    [billTo_street1] => 30 Evergreen Ct
+    [card_accountNumber] => ############1772
+    [platform] => prd
+    [orderAmount_publicSignature] => 2C54UkpXth3yoVRBRWK/oRuhe+M=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 196967378Y24ZKF5BL2R4
+    [signedDataPublicSignature] => 9lvscMtXYNTfViID2pmpnyhf9x0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Shana
+    [billTo_customerID] => 2051
+    [uid] => 2051
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 56316
+    [transactionSignature] => QsTwjfHvHznkxMjz68AJCpMzmWE=
+    [billTo_city] => West Lebanon
+    [billTo_postalCode] => 03784
+    [orderPage_requestToken] => Ahj//wSRi+/U+LlZmwhCKFWLls5bN2bdxZZNLUuM1hTGVJon9T3HUSACn9T3HUSGkD+pgYLwyaSZV0eks44GEyRi+/U+LlZmwhCAVgC9
+    [ccAuthReply_amount] => 300.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 583659
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => shanastockburger@yahoo.com
+    [reasonCode] => 100
+    [order_id] => 56316
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 08
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => V6lIwFdix9JpDAafoqkDJgBIbKA=
+    [requestID] => 3651872810130178147361
+    [orderNumber] => 1365187281012
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-04-05T184121Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

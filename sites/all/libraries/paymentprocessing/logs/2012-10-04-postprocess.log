@@ -1,0 +1,56 @@
+Array
+(
+    [q] => payment-received
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Cotrupi
+    [billTo_email] => andrew@cotrupilaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => jeqQk6z18DyHw+xy/+8dmBo3vXQ=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2016
+    [card_accountNumber] => ###########2002
+    [reasonCode] => 100
+    [billTo_firstName] => Andrew
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,orderPage_environment,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3493615244220178147363
+    [order_id] => 28025
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 108962
+    [billTo_company] => Law Office of Andrew F. Cotrupi
+    [card_expirationMonth] => 01
+    [orderNumber] => 1349361524420
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 797
+    [signedDataPublicSignature] => 1pY0F4uFFDrIBBhJfktsQQYgRz0=
+    [orderPage_environment] => PRODUCTION
+    [reconciliationID] => 110383189WTO1Q7L21I7T
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSResdNVU2CkVBGKFWLFgzcM2LhzXqT2NFvMZMZLeomkb2BvCQNNI3sDeE6QQ1tgjmhk0kyro9JZxwMG0i9Y6aqpsFIqCMA00gI
+    [uid] => 797
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 550.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-10-04T143845Z
+    [orderAmount] => 550
+    [billTo_street2] => Suite 102
+    [orderNumber_publicSignature] => DSTCLmAp4KQqf9WCxkF8ucx+LL4=
+    [card_cardType] => 003
+    [billTo_street1] => 428 Lafayette Road
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6039265818
+    [paymentOption] => card
+    [transactionSignature] => LWBNIHxzgVxXuelZ5fZ95qSQTO0=
+    [merchantDefinedData1] => Request ID: 28025
+    [billTo_city] => Hampton
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03842
+    [billTo_country] => us
+)

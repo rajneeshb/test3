@@ -1,0 +1,1 @@
+<?php echo theme_checkboxes($element);

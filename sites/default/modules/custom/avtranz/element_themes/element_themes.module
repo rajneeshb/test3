@@ -1,0 +1,188 @@
+<?php
+
+/**
+ * Implements hook_theme()
+ *
+ */
+function element_themes_theme($existing, $type, $theme, $path) {
+  $theme_path = _element_themes_get_theme_path();
+  return array(
+    'form_element' => array(
+      'template' => 'form-element',
+      'arguments' => array('element' => NULL, 'value' => NULL),
+      'path' => $theme_path,
+    ),
+    'checkboxes' => array(
+      'template' => 'checkboxes',
+      'arguments' => array('element' => NULL),
+      'path' => $theme_path,
+    ),
+    'select' => array(
+      'template' => 'select',
+      'arguments' => array('element' => NULL),
+      'path' => $theme_path,
+    ),
+  );
+}
+
+/**
+ * Implements template_preprocess_hook()
+ *
+ * Used to add the CCK field information to the site preprocess variables
+ */
+function element_themes_preprocess_hierarchical_select(&$variables) {
+  if ( empty($variables['element']['#config']['params']['field_name']) ||
+       empty($variables['element']['#config']['params']['type_name']) )
+  {
+       return;
+  }
+
+  $field = content_fields($variables['element']['#config']['params']['field_name'], $variables['element']['#config']['params']['type_name']);
+
+  if (!empty($field)) {
+    $variables['element']['#field'] = $field;
+  }
+}
+
+/**
+ * Implements template_preprocess_hook()
+ *
+ * Used to override the theme for form elements
+ *
+ * @see _element_themes_preprocess_form_element_helper()
+ */
+function element_themes_preprocess_form_element(&$variables) {
+  _element_themes_preprocess_form_element_helper($variables, 'form-element');
+}
+
+/**
+ * Implements template_preprocess_hook()
+ *
+ * Used to override the theme for checkboxes
+ *
+ * @see _element_themes_preprocess_form_element_helper()
+ */
+function element_themes_preprocess_checkboxes(&$variables) {
+  if ( empty($variables['element']['#field_name']) ) {
+    $variables['element']['#field_name'] = $variables['element']['#parents'][0];
+    $variables['element']['#field'] = content_fields($variables['element']['#field_name']);
+  }
+  _element_themes_preprocess_form_element_helper($variables, 'checkboxes');
+}
+
+/**
+ * Implements template_preprocess_hook()
+ *
+ * Used to override the theme for selects
+ *
+ * @see _element_themes_preprocess_form_element_helper()
+ */
+function element_themes_preprocess_select(&$variables) {
+  if ( empty($variables['element']['#field_name']) ) {
+    $variables['element']['#field_name'] = $variables['element']['#parents'][0];
+    $variables['element']['#field'] = content_fields($variables['element']['#field_name']);
+  }
+  _element_themes_preprocess_form_element_helper($variables, 'select');
+}
+
+/**
+ * Implements template_preprocess_hook()
+ *
+ * Used to override the theme for form elements for the hierarchical select module
+ *
+ * @see _element_themes_preprocess_form_element_helper()
+ */
+function element_themes_preprocess_hierarchical_select_form_element(&$variables) {
+  _element_themes_preprocess_form_element_helper($variables, 'hierarchical-select-form-element');
+}
+
+/**
+ * Adds template files to the preprocess variables
+ *
+ * @param &$variables
+ *    Site preprocess variables
+ *
+ * @param $tpl_prefix
+ *    The file prefix for the tpl.php file names to generate
+ *
+ */
+function _element_themes_preprocess_form_element_helper(&$variables, $tpl_prefix) {
+  $template_files = array( $tpl_prefix );
+
+  $file_keys = array(
+      '#type_name',
+      '#type',
+      '#field_name',
+      '#id'
+      );
+
+  $element =& $variables['element'];
+  if (!empty($element)) {
+    $field =& $element['#field'];
+
+    if ( empty($element['#type_name']) && !empty($field['type_name']) ) {
+      $element['#type_name'] = $field['type_name'];
+    }
+
+    foreach ($file_keys as $key) {
+      if ( !empty($element[$key]) ) {
+        $template_files[] = implode('-', array($tpl_prefix, $element[$key]));
+      }
+    }
+
+    while ( !empty($file_keys) ) {
+      $template_parts = array($tpl_prefix);
+
+      foreach ($file_keys as $key) {
+        if ( !empty($element[$key]) ) {
+          $template_parts[] = $element[$key];
+        }
+      }
+
+      array_pop($file_keys);
+
+      $template_parts = array_filter($template_parts);
+      $template_parts = array_unique($template_parts, SORT_STRING);
+      $template_files[] = implode('-', $template_parts);
+    }
+
+    if ( !empty($element['#id']) && !empty($element['#type']) ) {
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $element['#type'], $element['#id']) ) );
+    }
+
+    if ( !empty($element['#field_name']) ) {
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $element['#type'], $element['#field_name']) ) );
+    }
+
+    if ( !empty($element['#field_name']) && !empty($element['#type_name'])) {
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $element['#type_name'], $element['#field_name']) ) );
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $element['#type_name'], $element['#type'], $element['#field_name']) ) );
+    }
+
+    if ( !empty($element['#type_name']) && !empty($element['#id'])) {
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $element['#type_name'], $element['#id']) ) );
+      if ( !empty($element['#type']) ) {
+        $template_files[] = implode('-', array_filter( array($tpl_prefix, $element['#type_name'], $element['#type'], $element['#id']) ) );
+      }
+    }
+
+    if (!empty($field)) {
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $field['field_name']) ) );
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $field['type_name']) ) );
+      $template_files[] = implode('-', array_filter( array($tpl_prefix, $field['field_name'], $field['type_name']) ) );
+    }
+  }
+
+  $template_files = array_unique($template_files, SORT_STRING);
+
+  $variables = array_merge($variables, array( 'template_files' => $template_files ) );
+}
+
+/**
+ * Helper function to get the module theme path
+ *
+ * Used to avoid multiple updates in case the path needs to change
+ */
+function _element_themes_get_theme_path() {
+  return drupal_get_path('module', 'element_themes') . '/templates';
+}

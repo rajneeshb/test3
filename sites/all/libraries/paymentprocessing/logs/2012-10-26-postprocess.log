@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Goodwin
+    [billTo_phoneNumber] => 6034364010
+    [orderAmount] => 93.75
+    [billTo_street1] => 82 Court Street
+    [card_accountNumber] => ############1355
+    [platform] => prd
+    [orderAmount_publicSignature] => nc7OgzRt3CR2629zxRowS74lHXY=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 120784750WTO1Q8QSPY37
+    [signedDataPublicSignature] => y7tFNq3ICDJZ08vO/HnjKSTGvV0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => David
+    [billTo_customerID] => 895
+    [uid] => 895
+    [billTo_company] => Boynton Waldron Doleac Woodman & Scott
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 33771
+    [transactionSignature] => Jyaiidag6ErbEAQCwRm7hFNltLQ=
+    [billTo_city] => Portsmouth
+    [billTo_postalCode] => 03801
+    [orderPage_requestToken] => Ahj//wSRfNjCo9kmsThIKFWLJg3cNG7VhXqT2NFxRp0LLNumkcNw6swFNI4bh1Z6QOknyPyGTSTKuj0lnHAwgSL5sYVHsk1icJAA3wva
+    [ccAuthReply_amount] => 93.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 042014
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => dduggan@nhlawfirm.com
+    [reasonCode] => 100
+    [order_id] => 33771
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 01
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => ILLFtw7YZCOEyl2VzF8hPA5Pd68=
+    [requestID] => 3512690987310178147364
+    [orderNumber] => 1351269098729
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-10-26T163139Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

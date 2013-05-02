@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Graber
+    [billTo_email] => lauren.graber@ropesgray.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 7eVcWJd5dMpznwYHrNvN9xN6Btg=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2016
+    [card_accountNumber] => ###########1004
+    [reasonCode] => 100
+    [billTo_firstName] => Lauren
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3409003759520178147362
+    [order_id] => 15494
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 185391
+    [billTo_company] => Ropes & Gray
+    [card_expirationMonth] => 07
+    [orderNumber] => 1340900375950
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 552
+    [signedDataPublicSignature] => nNihBunUCczgnuhEWivM8SKHP+I=
+    [reconciliationID] => 059640585WTO9N3ZOP1IX
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRcZrckzcWxSBEKFWDVy2aMGrhrXqT3M5nan0GMmwmkpkvdiQNNJTJe7E6QQoSIiEhk0kyro9JZxwMIsi4zW5Jm4tikCIAyw8r
+    [uid] => 552
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 412.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-28T161936Z
+    [orderAmount] => 412.5
+    [orderNumber_publicSignature] => Nmso5HB6JgNdWDsTeK0BAodSMCs=
+    [card_cardType] => 003
+    [billTo_street1] => 800 Boylston Street- Prudential Tower
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6179517161
+    [paymentOption] => card
+    [transactionSignature] => 7Ixm0w9HRSMB+qWHt0ldn1O93I4=
+    [merchantDefinedData1] => Request ID: 15494
+    [billTo_city] => Boston
+    [billTo_state] => MA
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 02199
+    [billTo_country] => us
+)

@@ -1,0 +1,100 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Parker
+    [billTo_phoneNumber] => 6035688100
+    [orderAmount] => 55.25
+    [billTo_street1] => 315 Rush Road
+    [card_accountNumber] => ############3089
+    [platform] => prd
+    [orderAmount_publicSignature] => vk1rbj8IOhJjcfP0lf0T67/ma6E=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 149428100WTOFOALS9LPI
+    [signedDataPublicSignature] => shXbWm69VIie/ZAWBfJFDHy7fWE=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Toni
+    [billTo_customerID] => 937
+    [uid] => 937
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 41069
+    [transactionSignature] => /x4K4NTo3cUbijrooLikL3n44Ws=
+    [billTo_city] => Henniker
+    [billTo_postalCode] => 03242
+    [orderPage_requestToken] => Ahj//wSRgencdNSZ/MhGKFWLRy0ZOGLBhXqT40+DMpuZlCSmoLP+swQFNQWf9Zg6QNrKkmUMmkmVdHpLOOBhDkYHp3HTUmfzIRgAwTx9
+    [ccAuthReply_amount] => 55.25
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 023957
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => theparkers06@comcast.net
+    [reasonCode] => 100
+    [order_id] => 41069
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 03
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 9i+8A8guWYYAPXjKEWHp7xSZU/Q=
+    [requestID] => 3559423970370178147363
+    [orderNumber] => 1355942397035
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-19T183957Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Z
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Valente
+    [billTo_phoneNumber] => 6038678465
+    [orderAmount] => 13.75
+    [billTo_street1] => 189 Kelley Street
+    [card_accountNumber] => ############5120
+    [platform] => prd
+    [orderAmount_publicSignature] => OY1qGMlAwxfZcdT0YEAhVtxN76I=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 149639309WTO8HALSV5AY
+    [signedDataPublicSignature] => 5G0nObloXhIV17X4xnl74QVs76I=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Debbie Ann
+    [billTo_customerID] => 869
+    [uid] => 869
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 31853
+    [transactionSignature] => dJDeIhKXCREkxgzdKhzw0R89qtQ=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03102
+    [orderPage_requestToken] => Ahj//wSRgfDj51CZwAhGKFWLRy2ZuWbBzXqT3EiDMp1msGymj/B1ilgFNH+DrFLaQLq+SZQyaSZV0eks44GEmRgfDj51CZwAhGAA9gX0
+    [ccAuthReply_amount] => 13.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 045295
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => debbievalente@comcast.net
+    [reasonCode] => 100
+    [order_id] => 31853
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 03
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => tOfTZLOAgg4/9YkB8AdgM3AAdZw=
+    [requestID] => 3559677220050178147363
+    [orderNumber] => 1355967722004
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-20T014202Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

@@ -1,0 +1,126 @@
+/* $Id$ */
+
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color: #000;
+}
+
+.sidebar #block-menu-menu-left-nav { width: 319px; margin-top: -17px; }
+.sidebar #block-menu-menu-left-nav ul { margin: 0; padding: 0; }
+
+.sidebar #block-menu-menu-left-nav ul li {
+  display: block;
+  height: 81px;
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  list-style-image: none;
+  background: url('/sites/default/themes/avtstore/images/sprite-lnav.png') 0 -95px no-repeat;
+}
+
+.sidebar #block-menu-menu-left-nav ul li a {
+  display: block;
+  height: 100%;
+  font-size: 2.1em;
+  text-transform: uppercase;
+  color: #327AB2;
+  padding: 20px 0 0 90px;
+  background-repeat: no-repeat;
+  background-position: 10px 8px;
+}
+
+.sidebar #block-menu-menu-left-nav ul li a:hover,
+.sidebar #block-menu-menu-left-nav ul li a:active {
+  text-decoration: none;
+}
+
+.sidebar #block-menu-menu-left-nav ul li a span {
+  display: block;
+  font-size: 0.55em;
+  text-transform: lowercase;
+  color: #989898;
+  margin-top: 2px;
+}
+
+.sidebar #block-menu-menu-left-nav ul li a.request { background-image: url('/sites/default/themes/avtstore/images/ico-request.png'); }
+.sidebar #block-menu-menu-left-nav ul li a.moreinfo { background-image: url('/sites/default/themes/avtstore/images/ico-info.png'); }
+.sidebar #block-menu-menu-left-nav ul li a.admin { background-image: url('/sites/default/themes/avtstore/images/ico-admin.png'); }
+.sidebar #block-menu-menu-left-nav ul li a.check { background-image: url('/sites/default/themes/avtstore/images/ico-check.png'); }
+.sidebar #block-menu-menu-left-nav ul li a.create { background-image: url('/sites/default/themes/avtstore/images/ico-create.png'); }
+
+
+.sidebar #block-menu-menu-left-nav ul li.active-trail,
+.sidebar #block-menu-menu-left-nav ul li:hover { background-position: -318px -95px; }
+
+.sidebar #block-menu-menu-left-nav ul li.first { background-position: 0 -2px; padding-top: 10px; }
+
+.sidebar #block-menu-menu-left-nav ul li.first.active-trail,
+.sidebar #block-menu-menu-left-nav ul li.first:hover { background-position: -318px -2px; }
+
+.sidebar #block-menu-menu-left-nav ul li.last { background-position: 0 -178px; padding-bottom: 10px; }
+
+.sidebar #block-menu-menu-left-nav ul li.last.active-trail,
+.sidebar #block-menu-menu-left-nav ul li.last:hover { background-position: -318px -178px; }
+
+
+#block-menu-menu-home-nav h2.title { display: none; }
+#block-menu-menu-home-nav { width: 495px; }
+#block-menu-menu-home-nav ul { margin: 0; padding: 0; }
+
+#block-menu-menu-home-nav ul li {
+  display: block;
+  width: 495px;
+  height: 149px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none;
+  background: url('/sites/default/themes/avtstore/images/sprite-home-nav.png') 0 -148px no-repeat;
+  overflow: hidden;
+}
+
+#block-menu-menu-home-nav ul li a {
+  display: block;
+  height: 100%;
+  font-size: 2.1em;
+  text-transform: uppercase;
+  color: #327AB2;
+  padding: 60px 0 0 130px;
+
+  background-repeat: no-repeat;
+  background-position: 35px 40px;
+}
+
+#block-menu-menu-home-nav ul li a:hover,
+#block-menu-menu-home-nav ul li a:active
+{
+  text-decoration: none;
+}
+
+#block-menu-menu-home-nav ul li a span {
+  display: block;
+  font-size: 0.55em;
+  text-transform: lowercase;
+  color: #989898;
+  margin-top: 2px;
+}
+
+#block-menu-menu-home-nav ul li:hover { background-position: -512px -148px; }
+
+#block-menu-menu-home-nav ul li.first { background-position: 0 0; }
+#block-menu-menu-home-nav ul li.first:hover { background-position: -512px 0; }
+
+#block-menu-menu-home-nav ul li.last { background-position: 0 -296px }
+#block-menu-menu-home-nav ul li.last:hover { background-position: -512px -296px; }
+
+#block-menu-menu-home-nav ul li a.request { background-image: url('/sites/default/themes/avtstore/images/ico-request-lg.png'); }
+#block-menu-menu-home-nav ul li a.moreinfo { background-image: url('/sites/default/themes/avtstore/images/ico-info-lg.png'); }
+#block-menu-menu-home-nav ul li a.create { background-image: url('/sites/default/themes/avtstore/images/ico-create-lg.png'); }

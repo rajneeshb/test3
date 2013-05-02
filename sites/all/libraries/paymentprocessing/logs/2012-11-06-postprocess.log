@@ -1,0 +1,303 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Lowery
+    [billTo_phoneNumber] => 8022955631
+    [orderAmount] => 22
+    [billTo_street1] => 167 N. Main St.
+    [card_accountNumber] => ############7870
+    [platform] => prd
+    [orderAmount_publicSignature] => KYuG+w+saRPckY7V/+zHnaFgPjA=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 125840472WTO1Q96GIBB5
+    [signedDataPublicSignature] => Gzn0dvbpgsV+Vkm2TOxmxOe3yMg=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => VT
+    [billTo_firstName] => Beth
+    [billTo_customerID] => 920
+    [uid] => 920
+    [billTo_company] => Davis Steadman & Ford, LLC
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 34740
+    [transactionSignature] => rsNIsrpVaVHl9FTxscFeFXLtkgM=
+    [billTo_city] => White River Jct.
+    [billTo_postalCode] => 05001
+    [orderPage_requestToken] => Ahj//wSRfeDAQ/kP6LBGKFWLJq4aMGjdlXqT2NFy2jyYUJqmkcW1EJgFNI4tqITaQMiYJB4ZNJMq6PSWccDCLIvvBgIfyH9FgjAA7hp9
+    [ccAuthReply_amount] => 22.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 045328
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => Lowery@whiteriverlawyers.com
+    [reasonCode] => 100
+    [order_id] => 34740
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 11
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Ysnwmh5lmCvjQit92ICqjOKyrIc=
+    [requestID] => 3522202255540178147363
+    [orderNumber] => 1352220225552
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-06T164347Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Z
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Lucier
+    [billTo_phoneNumber] => 6036344300
+    [orderAmount] => 1650
+    [billTo_street1] => 1838 Elm Street
+    [card_accountNumber] => ###########2039
+    [platform] => prd
+    [orderAmount_publicSignature] => aYEI8pDqJl132mdBjGT3JOtQPHs=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 125853356WTO1Q96GIDT5
+    [signedDataPublicSignature] => 46Efxlffgt1AiItBaXzl0WLGDPo=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Michael
+    [billTo_customerID] => 942
+    [uid] => 942
+    [billTo_company] => Getman, Schulthess & Steere, P.A.
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 35179
+    [transactionSignature] => mL9UHfpdWS+xKs6sOLZJsIhM/zU=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03104
+    [orderPage_requestToken] => Ahj//wSRfeEuARmfE1BIKFWLJq4as2bVtXqT2NFy2jyYlRqmkcW1POgNNI4tqedaQSoSIJB4ZNJMq6PSWccDB9IvvCXAIzPiagkAfE7c
+    [ccAuthReply_amount] => 1650.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 119664
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => ASchulman@gss-lawyers.com
+    [reasonCode] => 100
+    [order_id] => 35179
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 09
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => XNOjT0D2ojTj/QiJqRoXMyYUZ2A=
+    [requestID] => 3522217699900178147364
+    [orderNumber] => 1352221769988
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-06T170931Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Esburnett
+    [billTo_phoneNumber] => 6037650781
+    [orderAmount] => 275
+    [billTo_street1] => 46 Lowell st
+    [card_accountNumber] => ############8014
+    [platform] => prd
+    [orderAmount_publicSignature] => BuYsROq5rcK6i7rN5IhDkKEEbOk=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 125915363WTOFL96H5IZG
+    [signedDataPublicSignature] => fZYPttg3SurJRe+UmIIxQkS6JcM=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Ralph
+    [billTo_customerID] => 944
+    [uid] => 944
+    [billTo_company] => durabild Transmissions Inc
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 35217
+    [transactionSignature] => Bt7eMUVmiwciYmbg6gH4X5mjj88=
+    [billTo_city] => Nashua
+    [billTo_postalCode] => 03064
+    [orderPage_requestToken] => Ahj//wSRfeL8g+LYRkBGKFWLJq5YtWbZnXqT40xy2kNZNqOmn739/4AFNP3v7/waQP1thIPDJpJlXR6SzjgYNpF94vyD4thGQEYArQNP
+    [ccAuthReply_amount] => 275.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 585600
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => durabild@aol.com
+    [reasonCode] => 100
+    [order_id] => 35217
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 01
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => O8r9xt58lqRhRZ2tdcFO0Yg/UEA=
+    [requestID] => 3522282792520178147363
+    [orderNumber] => 1352228279250
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-06T185801Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Karametros
+    [billTo_phoneNumber] => 6035120330
+    [orderAmount] => 15
+    [billTo_street1] => 55 River rd 3h
+    [card_accountNumber] => ############1312
+    [platform] => prd
+    [orderAmount_publicSignature] => 3T3FMyIvI2rHbWKyVWK5IO1nHSE=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 125920945WTOFL96H5JLS
+    [signedDataPublicSignature] => NAxbMrZoAtM3zZDd0bfKVJ2+XS0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => nh
+    [billTo_firstName] => Kosta
+    [billTo_customerID] => 872
+    [uid] => 872
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 32240
+    [transactionSignature] => sFsihUeSGSt30dM5y+N3wgWQOrs=
+    [billTo_city] => manchester
+    [billTo_postalCode] => 03104
+    [orderPage_requestToken] => Ahj//wSRfeM1G3IMBDBEKFWLJq5ZMHLRrXqT40xy2kNZUymmn73+DTAFNP3v8GmaQLu4SDwyaSZV0eks44GC6RfeM1G3IMBDBEAAGBSs
+    [ccAuthReply_amount] => 15.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 846703
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => N
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => kostak@resmac.us
+    [reasonCode] => 100
+    [order_id] => 32240
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 12
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 0Rhj9fHqMC7fQOFn94ww6AaAxb0=
+    [requestID] => 3522290757140178147362
+    [orderNumber] => 1352229075713
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-06T191116Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => N
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => verma
+    [billTo_phoneNumber] => 6037034244
+    [orderAmount] => 275
+    [billTo_street1] => 516 mammoth road
+    [billTo_street2] => unit 3a
+    [card_accountNumber] => ###########1003
+    [platform] => prd
+    [orderAmount_publicSignature] => BuYsROq5rcK6i7rN5IhDkKEEbOk=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 125954048WTOFO96J8XMI
+    [signedDataPublicSignature] => 2XlJtT2mEWItcehPdcl76UmhCJk=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => nh
+    [billTo_firstName] => rajesh
+    [billTo_customerID] => 945
+    [uid] => 945
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 35235
+    [transactionSignature] => tXoIyg16m/mXX8J8rKzbt9DyScg=
+    [billTo_city] => londonderry
+    [billTo_postalCode] => 03053
+    [orderPage_requestToken] => Ahj//wSRfeROglaJhxBEKFWLJq5atGDRxXqT409y2lOLE2SmoKxrQuwNNQVjWhd6QP1thIPDJpJlXR6SzjgYMZF95E6CVomHEEQAqRkX
+    [ccAuthReply_amount] => 275.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 121706
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => nhatech@gmail.com
+    [reasonCode] => 100
+    [order_id] => 35235
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 07
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => tLvdo4sBWMdHrUd1NmkFpEB03mA=
+    [requestID] => 3522330360940178147362
+    [orderNumber] => 1352233036092
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-06T201716Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Stein
+    [orderAmount] => 850
+    [billTo_street1] => 1 Barberry Lane
+    [card_accountNumber] => ############5176
+    [platform] => prd
+    [orderAmount_publicSignature] => 7PxJ2Wn4nu8TsnGf/AKXGmIT+Lw=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 125968075WTOFL96H5OJ4
+    [signedDataPublicSignature] => aqn+ZLYOIP9BJxkqLMOYnYBw4co=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Robert
+    [billTo_customerID] => 946
+    [uid] => 946
+    [billTo_company] => Robert Stein and Associates
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 35239
+    [transactionSignature] => eDP1y82Bj1W+BUeqILK8cS1WraE=
+    [billTo_city] => Concord
+    [billTo_postalCode] => 03301
+    [orderPage_requestToken] => Ahj//wSRfeTM0vxQSYBCKFWLJq5bOGDdrXqT40xy2kNZ8pomn73+eTwFNP3v88n6QRpgQSDwyaSZV0eks44GDmRfeTM0vxQSYBCAaQTj
+    [ccAuthReply_amount] => 850.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 096644
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [reasonCode] => 100
+    [order_id] => 35239
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 09
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => zUCn4jlykFIGDXsmpxGzL8vOr3A=
+    [requestID] => 3522348138200178147361
+    [orderNumber] => 1352234813818
+    [signedFields] => billTo_lastName,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-06T204654Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

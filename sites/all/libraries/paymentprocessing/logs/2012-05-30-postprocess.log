@@ -1,0 +1,99 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Cook
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => Sqz0semNf2f7DhUp/OrXFx06sEE=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############6210
+    [reasonCode] => 100
+    [billTo_firstName] => Wesley
+    [signedFields] => billTo_lastName,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3383979864280178147363
+    [order_id] => 12140
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 01529C
+    [card_expirationMonth] => 09
+    [orderNumber] => 1338397986425
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 247
+    [signedDataPublicSignature] => PQhr4zD9op5o9vGGBfScqPPImgk=
+    [reconciliationID] => 044342844WTO8H2TE3UDO
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbuRPGvAtMYBGKFWDRozaMnDRpXqT3EhlUis6sSemj8fYzfQFNH4+xm+6QOo0iGeGTSTKuj0lnHAwXyLdyJ414FpjAIwA/xLV
+    [uid] => 247
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 104.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-30T171307Z
+    [orderAmount] => 104.5
+    [orderNumber_publicSignature] => 3oKXR8xSKVOl7ffQhysUxE09fQU=
+    [card_cardType] => 001
+    [billTo_street1] => 7105 Pinetree Lane
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034968072
+    [paymentOption] => card
+    [transactionSignature] => ZHPRsDCIBBXF93DLb4qYHyxk0/A=
+    [merchantDefinedData1] => Request ID: 12140
+    [billTo_city] => Lake Clarke Shores
+    [billTo_state] => FL
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 33406
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Mclean
+    [billTo_email] => lrosado@orr-reno.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############2490
+    [reasonCode] => 100
+    [billTo_firstName] => Maureen
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3384073126990178147362
+    [order_id] => 12375
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 05026Z
+    [billTo_company] => Orr & Reno
+    [card_expirationMonth] => 06
+    [orderNumber] => 1338407312697
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 497
+    [signedDataPublicSignature] => qMkX/uN0TBeYZEoBJeMby2x+hV8=
+    [reconciliationID] => 044442756WTO9N2TT8D4F
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbublxtHF37hEKFWDRo0aMm7VtXqT3M5lUqOIjSMmkpMo0iQJNJSZRpE6QN1tkM8MmkmVdHpLOOBhEkW7m5cbRxd+4RAAwjBn
+    [uid] => 497
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 68.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-30T194833Z
+    [orderAmount] => 68.75
+    [billTo_street2] => PO Box 3550
+    [orderNumber_publicSignature] => AzyMtU9387ujIYrlFbOLbUSkdPI=
+    [card_cardType] => 002
+    [billTo_street1] => One Eagle Square
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032239121
+    [paymentOption] => card
+    [transactionSignature] => QTcAJgqZ+ugRgluv+N5z4OwVCt4=
+    [merchantDefinedData1] => Request ID: 12375
+    [billTo_city] => Concord
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03302
+    [billTo_country] => us
+)

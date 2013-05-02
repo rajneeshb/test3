@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Calimeri
+    [billTo_email] => lsutherland1@hotmail.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 2C54UkpXth3yoVRBRWK/oRuhe+M=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############9244
+    [reasonCode] => 100
+    [billTo_firstName] => Laura
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3415853514420178147361
+    [order_id] => 15952
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 74696B
+    [card_expirationMonth] => 01
+    [orderNumber] => 1341585351440
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 568
+    [signedDataPublicSignature] => bc6kpHSuNcPk9/uSU35PHiQ6IP4=
+    [reconciliationID] => 063752646WTOFL430L173
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRclj7AsuQwLBCKFWDZm3asmzRtXqT40xozYTGLdmmn6Ol9QQJNP0dL6g6QP6mBEZDJpJlXR6SzjgYO5FyWPsCy5DAsEIAzASP
+    [uid] => 568
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 300.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-06T143552Z
+    [orderAmount] => 300
+    [orderNumber_publicSignature] => tFpJDMWRZ5aiux24Htp60qSaJug=
+    [card_cardType] => 002
+    [billTo_street1] => 212 D Cardigan Dr.
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034862939
+    [paymentOption] => card
+    [transactionSignature] => Obb/ScfqaCaYMo/MCr9LLVVVTEc=
+    [merchantDefinedData1] => Request ID: 15952
+    [billTo_city] => Pembroke
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03275
+    [billTo_country] => us
+)

@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Mosher
+    [billTo_phoneNumber] => 9196653214
+    [orderAmount] => 68.75
+    [billTo_street1] => 919 Shellbrook Ct
+    [billTo_street2] => Apt 2
+    [card_accountNumber] => ############1734
+    [platform] => prd
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 115130182WTO8H8771J5E
+    [signedDataPublicSignature] => eOavzGoNrQB2rQEcgB2mgKNV8pc=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NC
+    [billTo_firstName] => Peter
+    [billTo_customerID] => 785
+    [uid] => 785
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 27691
+    [transactionSignature] => GCEsp5rKEQHjnmZzprozRLFlA7g=
+    [billTo_city] => Raleigh
+    [billTo_postalCode] => 27609
+    [orderPage_requestToken] => Ahj//wSRe6FEB/j5KTA+KFWLFqxZsGLhlXqT3Ehw3bsZTWKmj+PIVdgFNH8eQq7aQN1tkd8MmkmVdHpLOOBg4kXuhRAf4+SkwPgAJgaQ
+    [ccAuthReply_amount] => 68.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 154378
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => pmosher1924@live.com
+    [reasonCode] => 100
+    [order_id] => 27691
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 05
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Xi3PeUp8E0CXuwWBbl0lsW5YQGE=
+    [requestID] => 3501468212820178147359
+    [orderNumber] => 1350146821280
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-10-13T164702Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

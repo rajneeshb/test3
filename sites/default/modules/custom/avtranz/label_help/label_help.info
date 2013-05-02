@@ -1,0 +1,6 @@
+name = Label Help
+description = "Adds help icons to form labels"
+package = AVTranz
+core = 6.x
+dependencies[] = colorbox
+dependencies[] = content

@@ -1,0 +1,140 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Grimes
+    [billTo_phoneNumber] => 6177910274
+    [orderAmount] => 25.5
+    [billTo_street1] => PO Box 51480
+    [card_accountNumber] => ############5872
+    [platform] => prd
+    [orderAmount_publicSignature] => ftnX6JtE+JfqCKYN4XOtLlBQVP8=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 187533029Y250PE7OHZGM
+    [signedDataPublicSignature] => 3wohzmNq1GSZYj41f/u3jsE8ZCo=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => MA
+    [billTo_firstName] => Heilan Yvette
+    [billTo_customerID] => 1006
+    [uid] => 1006
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 36285
+    [transactionSignature] => a+UNS5FxCC92OZEhF1X9Tpx4DN4=
+    [billTo_city] => Boston
+    [billTo_postalCode] => 02205
+    [orderPage_requestToken] => Ahj//wSRifZGAcY047hAKFWLhu1Zs2DJzZZNWFCK3nyLUeaohCl8/FMBUQhS+finpAyfYwChk0kyro9JZxwMI8jE+yMA4xpx3CAAlRW/
+    [ccAuthReply_amount] => 25.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 104536
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => yvettegr@hotmail.com
+    [reasonCode] => 100
+    [order_id] => 36285
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 02
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Qje9Zl4y7ccoe8N9W41D17iQXbY=
+    [requestID] => 3633658147150178147360
+    [orderNumber] => 1363365814713
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-03-15T164335Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Noonan
+    [billTo_phoneNumber] => 6037495000
+    [orderAmount] => 375
+    [billTo_street1] => P.O. Box 977
+    [card_accountNumber] => ############1812
+    [platform] => prd
+    [orderAmount_publicSignature] => ovz5IPVrsK7AHGFSQAt9Kl4Nan4=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => m3BTwztmO5c3kHeerjYuYanbzN0=
+    [decision] => REJECT
+    [ccAuthReply_processorResponse] => 05
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => D. Michael
+    [billTo_customerID] => 1606
+    [uid] => 1606
+    [billTo_company] => Shaheen & Gordon, PA
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 51830
+    [transactionSignature] => BWUiqRFCEOxBldeUcHGdw9hBt/o=
+    [billTo_city] => Dover
+    [billTo_postalCode] => 03821-0977
+    [orderPage_requestToken] => Ahj77wSRifjpxil+xQBAKKIKIQb2JAlEFEIN7E6QQknwwCTL0kyro9JZxwDORifjpxil+xQBAAAA+xa1
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [ccAuthReply_avsCodeRaw] => X
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => lwheaton@shaheengordon.com
+    [reasonCode] => 203
+    [order_id] => 51830
+    [ccAuthReply_reasonCode] => 203
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 06
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => OkJlunkFuXDsbef/jXu91mvyXzE=
+    [requestID] => 3633753252920178147360
+    [orderNumber] => 1363375325291
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => X
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Noonan
+    [billTo_phoneNumber] => 6037495000
+    [orderAmount] => 375
+    [billTo_street1] => PO Box 977
+    [card_accountNumber] => ############1812
+    [platform] => prd
+    [orderAmount_publicSignature] => ovz5IPVrsK7AHGFSQAt9Kl4Nan4=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => yDMZ80uDRyFSkaP9Gh/bxRWHwQc=
+    [decision] => REJECT
+    [source_domain] => nh.tcro.us
+    [billTo_state] => 03821
+    [billTo_firstName] => D Micheal
+    [billTo_customerID] => 430
+    [uid] => 430
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 51830
+    [transactionSignature] => df8z4GjUJXvS00gnYYagpYJ/Wm4=
+    [billTo_city] => Dover
+    [billTo_postalCode] => 0977
+    [orderPage_requestToken] => AhhRbwSRifkI9/ZOIIBEBaQYBIzaSZV0eks44BmAQUh0
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => lwheaton@shaheengordon.com
+    [reasonCode] => 102
+    [order_id] => 51830
+    [ccAuthReply_reasonCode] => 102
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 06
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 6G5b0xqZUC0Pds70OrcB5uWq2wI=
+    [requestID] => 3633757643160178147362
+    [orderNumber] => 1363375764314
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType
+    [card_cardType] => 002
+)

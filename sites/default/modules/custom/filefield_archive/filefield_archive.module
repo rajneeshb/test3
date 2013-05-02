@@ -1,0 +1,193 @@
+<?php
+
+/**
+ * This version of the module "imagefield_archive" was modified (hacked)
+ * to accommodate AVTranz's richmedia filefield.
+ */
+
+
+/**
+ * Implementation of hook_action_info().
+ */
+function filefield_archive_action_info() {
+  return array(
+    'filefield_archive_action' => array(
+      'type' => 'node',
+      'description' => t('Download archive of selected files'),
+      'configurable' => FALSE,
+      'aggregate' => VBO_AGGREGATE_FORCED,
+      'access op' => VBO_ACCESS_OP_VIEW,
+    ),
+  );
+}
+
+/**
+ * Implementation of action().
+ */
+function filefield_archive_action($nids, $context) {
+  $files = array();
+
+  array_walk($nids, 'intval');
+  $nids = array_filter($nids);
+  $sql = 'SELECT
+            `f`.`filename`,
+            `f`.`filepath`,
+            `f`.`fid`,
+            `ct`.`nid`
+          FROM
+            {content_type_uploaded_file} `ct`
+          LEFT JOIN
+            {files} `f` ON `ct`.`field_file_fid` = `f`.`fid`
+          WHERE
+            `ct`.`nid` IN (%s)';
+  $query = db_query($sql, implode(',', $nids));
+
+  while ($row = db_fetch_object($query)) {
+    $files[] = $row;
+  }
+
+  if (!empty($files)) {
+    filefield_archive_action_do($files, $context);
+  }
+}
+
+/**
+ * Handles the building and serving of the zipped files
+ *
+ * @todo
+ *   This used to support tokening on the filenames, but as part of the
+ *   optimization that functionality was removed (to eliminate loading every
+ *   file node).
+ *
+ * @param array $files
+ * @param array $context
+ */
+function filefield_archive_action_do($files, $context) {
+  // Create zip file.
+  $zipname = token_replace_multiple(
+      $context['settings']['zipname'],
+      array(
+          'global' => NULL,
+          'filefield_archive' => NULL,
+          'node' => node_load( arg(1) ),
+      )
+  );
+
+  /*
+   * Necessary to eat the output buffering from Drupal. If this loop is
+   * omitted then large numbers of files may cause zip files to download at
+   * 0 bytes
+   */
+  while ( ob_get_level() ) {
+    ob_end_clean();
+  }
+
+  if (ini_get('zlib.output_compression')) {
+    ini_set('zlib.output_compression', 'Off');
+  }
+
+  drupal_set_header('Pragma: public');
+  drupal_set_header('Last-Modified: ' . gmdate('D, d M Y H:i:s T'));
+  drupal_set_header('Expires: 0');
+  drupal_set_header('Accept-Ranges: bytes');
+  drupal_set_header('Connection: close');
+  drupal_set_header('Content-Type: application/zip');
+  drupal_set_header('Content-Disposition: attachment; filename="' . $zipname . '.zip";' );
+  drupal_set_header('Content-Transfer-Encoding: binary');
+
+  $file_paths = array();
+
+  foreach($files as $file) {
+    if ( !is_readable($file->filepath) ) {
+      continue;
+    }
+
+    $file_paths[] = escapeshellarg( realpath($file->filepath) );
+  }
+
+  /*
+   * -q quiet
+   * -j filenames only (no paths)
+   * -0 no compression
+   * - output to stdout
+   */
+  passthru('zip -jq -0 - ' . implode(' ', $file_paths));
+  exit;
+}
+
+/**
+ * Implementation of hook_token_list().
+ */
+function filefield_archive_token_list($type = 'all') {
+  $tokens = array();
+  if ($type == 'all' || $type == 'filefield_archive') {
+    $tokens['filefield_archive'] = array(
+      'filename' => t('Name of the file (without the extension)'),
+      'extension' => t('Extension of the file (without the leading dot)'),
+      'dirname' => t('Path of the file (without the filename)'),
+    );
+  }
+  return $tokens;
+}
+
+/**
+ * Implementation of hook_token_values().
+ */
+function filefield_archive_token_values($type, $object = NULL) {
+  if ( empty($object) || 'filefield_archive' != $type ) {
+    return array();
+  }
+
+  $pathinfo = pathinfo($object->filepath);
+
+  $filepathinfo = pathinfo($object->filename);
+
+  $values['filename'] = $filepathinfo['filename'];
+  $values['dirname'] = $pathinfo['dirname'];
+  $values['extension'] = $pathinfo['extension'];
+
+  return $values;
+}
+
+/**
+ * Implementation of action_views_bulk_operations_form_options().
+ */
+function filefield_archive_action_views_bulk_operations_form_options() {
+  $options['zipname'] = 'files-[site-date-yyyy][site-date-mm][site-date-dd]';
+  $options['filename'] = '';
+
+  return $options;
+}
+
+/**
+ * Implementation of action_views_bulk_operations_form().
+ */
+function filefield_archive_action_views_bulk_operations_form($options) {
+  $form['zipname'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Zip filename pattern'),
+    '#default_value' => $options['zipname'],
+    '#field_suffix' => '.zip',
+    '#description' => t('Enter the pattern to name the downloadable archive file. Available tokens are listed below:') . theme('fieldset', array(
+      '#title' => t('Available tokens'),
+      '#value' => theme('token_help', array('global', 'node', 'filefield_archive')),
+      '#collapsed' => TRUE,
+      '#collapsible' => TRUE,
+    )),
+  );
+
+  $form['filename'] = array(
+    '#type' => 'textfield',
+    '#title' => t('File filename pattern'),
+    '#default_value' => $options['filename'],
+    '#description' => t('Enter the pattern to name each file in the archive file. You can include path separators ("/") to create directories.
+                         Leave blank to use the file system hierarchy. Available tokens are listed below:') . theme('fieldset', array(
+      '#title' => t('Available tokens'),
+      '#value' => theme('token_help', array('global', 'node', 'filefield_archive')),
+      '#collapsed' => TRUE,
+      '#collapsible' => TRUE,
+    )),
+  );
+
+  return $form;
+}

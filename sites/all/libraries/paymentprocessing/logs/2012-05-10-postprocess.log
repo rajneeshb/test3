@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Serell
+    [billTo_email] => aws@rathlaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => N
+    [orderAmount_publicSignature] => ICA2BEVYnXkx4hTg6AnqHuoFmCI=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############2758
+    [reasonCode] => 100
+    [billTo_firstName] => Andrew
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3366779528120178147363
+    [order_id] => 9222
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 06629Z
+    [billTo_company] => Rath, Young and Pignatelli, P.C.
+    [card_expirationMonth] => 07
+    [orderNumber] => 1336677952810
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 438
+    [signedDataPublicSignature] => DWelP2bNnwcX0ieRscXwoWkgOUo=
+    [reconciliationID] => 034610197WTOFO1ZMRBVC
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => N
+    [orderPage_requestToken] => Ahj//wSRbQbnXbnI+wBGKFWDNo2YsGLlvXqT409jam0oVaGmoIcb95wJNQQ437z6QQgjchThk0kyro9JZxwMH8i2g3Ou3OR9gCMA71Gs
+    [uid] => 438
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 333.35
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-10T192553Z
+    [orderAmount] => 333.35
+    [orderNumber_publicSignature] => FlBcRsHj8jZYcXGW4B4XGRLTki4=
+    [card_cardType] => 002
+    [billTo_street1] => One Capital Plz.
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032262600
+    [paymentOption] => card
+    [transactionSignature] => K3vx8Isw6fvMKYE7piZVLl/Ibkg=
+    [merchantDefinedData1] => Request ID: 9222
+    [billTo_city] => Concord
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03301
+    [billTo_country] => us
+)

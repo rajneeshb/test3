@@ -1,0 +1,11 @@
+name = Chosen
+description = Makes select elements more user-friendly using <a href="http://harvesthq.github.com/chosen/">Chosen</a>.
+dependencies[] = libraries
+core = 6.x
+
+; Information added by drupal.org packaging script on 2011-12-20
+version = "6.x-1.x-dev"
+core = "6.x"
+project = "chosen"
+datestamp = "1324382662"
+

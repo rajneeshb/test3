@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Dunn
+    [billTo_email] => klucier@bdlnh.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => BuYsROq5rcK6i7rN5IhDkKEEbOk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############7127
+    [reasonCode] => 100
+    [billTo_firstName] => David
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3364822049860178147363
+    [order_id] => 8592
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 097910
+    [billTo_company] => Potter Stewart Jr. Law Offices PC
+    [card_expirationMonth] => 02
+    [orderNumber] => 1336482204984
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 403
+    [signedDataPublicSignature] => BP593IarymM7inWJIB477zZBD64=
+    [reconciliationID] => 033175552WTO9N1PLZF5Q
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRbNCSpYNbR/BGKFWDNmxbtWrVlXqT3M5jQmWozWimko1zuqQFNJRrndU6QP1thCjDJpJlXR6SzjgYQZFs0JKlg1tH8EYA2B4t
+    [uid] => 403
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 275.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-08T130325Z
+    [orderAmount] => 275
+    [orderNumber_publicSignature] => bsLkPw3icEukTKJAYfNNconhXnE=
+    [card_cardType] => 001
+    [billTo_street1] => 205 Main St
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6037952020106
+    [paymentOption] => card
+    [transactionSignature] => epKfA+1xNNLL26EpodnHi62rAb4=
+    [merchantDefinedData1] => Request ID: 8592
+    [billTo_city] => Brattleboro
+    [billTo_state] => VT
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 05301
+    [billTo_country] => us
+)

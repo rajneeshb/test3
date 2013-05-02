@@ -1,0 +1,193 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Ladd
+    [billTo_phoneNumber] => 6035281475
+    [orderAmount] => 93.75
+    [billTo_street1] => 152 Bean Hill Road
+    [card_accountNumber] => ############6362
+    [platform] => prd
+    [orderAmount_publicSignature] => nc7OgzRt3CR2629zxRowS74lHXY=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 189084525Y250AEG2LAIF
+    [signedDataPublicSignature] => Bq1MxCEZiujSF/JB73T3JSGABh4=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Kassandra
+    [billTo_customerID] => 1626
+    [uid] => 1626
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 52039
+    [transactionSignature] => Ygb11Kh9EZndAzkaqvyBHVUYc5c=
+    [billTo_city] => Belmont
+    [billTo_postalCode] => 03220
+    [orderPage_requestToken] => Ahj//wSRilUk4J1Y/ZBCKFWLhywcNGrJrZZNWEGLHZTIMmMogKuz+DYCUQFXZ/BtpA6SfMBoZNJMq6PSWccDBvIxSqScE6sfsghAnB1J
+    [ccAuthReply_amount] => 93.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 522587
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => Laddbrookfarm@aol.com
+    [reasonCode] => 100
+    [order_id] => 52039
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 07
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Hr8xU3t8N+N7FPMQ4sliodJx4UM=
+    [requestID] => 3637076220300178147361
+    [orderNumber] => 1363707622029
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-03-19T154022Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Riccitelli
+    [billTo_phoneNumber] => 4015788667
+    [orderAmount] => 637.5
+    [billTo_street1] => 1793 Smith Street
+    [card_accountNumber] => ############4086
+    [platform] => prd
+    [orderAmount_publicSignature] => 4BxW6JRUzJH+NLyziFkI5Ay/aAg=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => IMF1exE1J/xMJhby3KdOY7llby4=
+    [decision] => REJECT
+    [ccAuthReply_processorResponse] => 05
+    [source_domain] => nh.tcro.us
+    [billTo_state] => RI
+    [billTo_firstName] => Ruth
+    [billTo_customerID] => 1627
+    [uid] => 1627
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 52041
+    [transactionSignature] => L09BVHhWelRh2VETlPYq6RycmvI=
+    [billTo_city] => North Providence
+    [billTo_postalCode] => 02911
+    [orderPage_requestToken] => Ahj77wSRilUzlPoRh7BCKKIBwGSTDAlEA4DJJh6QQ+QYwGTL0kyro9JZxwDGRilUzlPoRh7BCAAAhBE5
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => rriccitelli@yahoo.com
+    [reasonCode] => 203
+    [order_id] => 52041
+    [ccAuthReply_reasonCode] => 203
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => qtqqKKeSK8sK7StRiWkVJW0Ds48=
+    [requestID] => 3637078289780178147361
+    [orderNumber] => 1363707783155
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Riccitelli
+    [billTo_phoneNumber] => 4015788667
+    [orderAmount] => 637.5
+    [billTo_street1] => 1793 Smith Street
+    [card_accountNumber] => ############4086
+    [platform] => prd
+    [orderAmount_publicSignature] => 4BxW6JRUzJH+NLyziFkI5Ay/aAg=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => Gq0joIdCVeTQXc2Cb/3V0SlvYyM=
+    [decision] => REJECT
+    [ccAuthReply_processorResponse] => 05
+    [source_domain] => nh.tcro.us
+    [billTo_state] => RI
+    [billTo_firstName] => Ruth
+    [billTo_customerID] => 1627
+    [uid] => 1627
+    [billTo_company] => American Heating & Plumbing
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 52041
+    [transactionSignature] => wm+zJJ9KNdsOdSdhuxHGeX9hk6g=
+    [billTo_city] => North Providence
+    [billTo_postalCode] => 02911
+    [orderPage_requestToken] => Ahj77wSRilU8hxpJKthCKJ/RNi4+cBJ/RNi4+dpBD5BjAZMvSTKuj0lnHAMZGKVTyHGkkq2EIAAAawp6
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => rriccitelli@yahoo.com
+    [reasonCode] => 203
+    [order_id] => 52041
+    [ccAuthReply_reasonCode] => 203
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 45Gs2zslKUBwZ0VY9ZMhAvVvJyw=
+    [requestID] => 3637079548790178147361
+    [orderNumber] => 1363707954877
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Riccitelli
+    [billTo_phoneNumber] => 4015788667
+    [orderAmount] => 25
+    [billTo_street1] => 1793 Smith St.
+    [card_accountNumber] => ############1868
+    [platform] => prd
+    [orderAmount_publicSignature] => vTVFYnOiz/u+69ZHWTLGFpi1VZ4=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 189151106Y250REG319YG
+    [signedDataPublicSignature] => 4hNNzNHKVD/GRPLFix2eoxt4D2E=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => RI
+    [billTo_firstName] => Robert
+    [billTo_customerID] => 430
+    [uid] => 430
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 52052
+    [transactionSignature] => ljCEaCvGulXHNiI+rczldR+N2LY=
+    [billTo_city] => North Providence
+    [billTo_postalCode] => 02911
+    [orderPage_requestToken] => Ahj//wSRilc2YWDi3HBAKFWLhyxasWLBtZZNWFKLHZsXNmOohKD7v8wBUQlB93+ZpAycQwGhk0kyro9JZxwMI0jFK5swsHFuOCAA6wmy
+    [ccAuthReply_amount] => 25.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 030468
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => rriccitelli@yahoo.com
+    [reasonCode] => 100
+    [order_id] => 52052
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 05
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 2mSx6iEhHRykoC12cSj4i2AfOHw=
+    [requestID] => 3637150741220178147360
+    [orderNumber] => 1363715074122
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-03-19T174434Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)

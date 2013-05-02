@@ -1,0 +1,432 @@
+<?php
+
+/**
+ * @file
+ * Send email or trigger actions when a new role is assigned
+ *
+ */
+
+define('RCN_SUBJECT_DEFAULT', t('Role [role_changed] added for [user] at [site-name]'));
+define('RCN_BODY_DEFAULT', t("[user],\n\nThe role \"[role_changed]\" has been added to your account at  [site-name].\n\nYou may now use the associated privileges."));
+
+/**
+ * Print module description on module activation page
+ */
+function role_change_notify_help($path, $arg) {
+  $output = '';
+
+  switch ($path) {
+    case 'admin/help#role_change_notify':
+      $output = '<p>' . t("Role Change Notify lets you configure email messages when roles are added, and provides a configurable trigger when roles are added or removed. It supports tokens provided by token module, and supports tokens from the user profile if profile module is enabled. Configure role change notifications at <a href='!admin_link'>the administrative configuration page</a> or on the <a href='!trigger_link'>User triggers page</a> (if the Trigger and Token Actions modules are enabled).", array('!admin_link' => url('admin/user/role_change_notify'), '!trigger_link' => url('admin/build/trigger/user'))) . '</p>';
+      break;
+    case 'admin/user/role_change_notify':
+      $from = variable_get('site_mail', ini_get('sendmail_from'));
+      if (!valid_email_address($from)) {
+        drupal_set_message(t('None of these notifications will be sent unless you specify a valid site !email_address on the !site_information settings page.', array('!email_address' => '<strong>'. t('E-mail address') .'</strong>', '!site_information' => l(t('Site information'), 'admin/settings/site-information'))), 'error');
+      }
+      $output .= '<p>'. t('This page allows you to configure whether automatic emails should be set to users when a new role is assigned to them. You define if an email should be sent for each role type, and if so, you define what the subject and body of the resulting email will be.') .'</p>'
+      .'<p>'. t('For any of the settings below, you can use placeholders which will be substituted with the current values for the user, role, and site.') .' ';
+      if (!module_exists('token')) {
+        $output .= t('Available variables are:') . '[user] (username), [uid], [site-name], [site-url], [uri_brief], [mail], [site-date], [login_uri], [account-edit], [role_changed].';
+        if (module_exists('profile')) {
+          $output .= t('<br/>User profile variables are also available in the') . ' [profile_value] ' . t('format.');
+        }
+        $output .= t('<br/>For more variables you may choose to install and enable the <a href="http://drupal.org/project/token">token module</a>');
+      }
+      $output .= '</p>';
+      $output .= "<p>" . t("If the Triggers module is enabled, this module also provides Role Change Notification triggers on the
+        <a href='!link'>User Triggers Page</a> that can be fired when a role is added or removed. To use these notifications,
+        you'll need to enable the Token Actions module, which is part of the <a href='http://drupal.org/project/token'>Token module</a>.",
+        array('!link' => url('admin/build/trigger/user'))) . "</p>";
+      break;
+    case 'admin/build/trigger/user':
+      if (!module_exists('token_actions')) {
+        $output = "<p><em><strong>" . t("To use the Role Change Notifications triggers, you'll need to enable the Token Actions module, part of the <a href='http://drupal.org/project/token'>Token module.</a>") . "</strong></em></p>";
+      }
+      break;
+  }
+  return $output;
+}
+
+/**
+ * @see hook_menu()
+ */
+function role_change_notify_menu() {
+  $items = array();
+  global $account;
+  $items['admin/user/role_change_notify'] = array(
+    'title' => 'Role Change Notifications',
+    'description' => 'Configure email notifications when a role is added to a user account',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('role_change_notify_settings_form'),
+    'access arguments' => array('administer role change notification'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+/**
+ * implements hook_perm.
+ */
+function role_change_notify_perm() {
+  return array('administer role change notification');
+}
+
+/**
+ * implements hook_info to provide 'role_added/removed' op from hook_user.
+ */
+function role_change_notify_hook_info() {
+  $triggers = array(
+    'user' => array(
+      'user' => array(
+        'role_added' => array(
+          'runs when' => t("When a role is added to an account"),
+        ),
+        'role_removed' => array(
+          'runs when' => t("When a role is removed from an account"),
+        ),
+      ),
+    ),
+  );
+
+  $roles = user_roles(TRUE);
+  unset($roles[DRUPAL_AUTHENTICATED_RID]);
+  foreach ($roles as $roleid => $rolename) {
+    $triggers['user']['user']['role_' . $roleid . '_added']['runs when'] =
+      t("When the %role role is added to an account", array('%role' => $rolename));
+    $triggers['user']['user']['role_' . $roleid . '_removed']['runs when'] =
+      t("When the %role role is removed from an account", array('%role' => $rolename));
+  }
+
+  return $triggers;
+}
+
+/**
+ * Implements hook_action_info_alter() to change the actions provided by token
+ * and make them associate with role_added and role_removed.
+ */
+function role_change_notify_action_info_alter(&$info) {
+  $my_hooks = array('role_added', 'role_removed');
+  $roles = user_roles(TRUE);
+  unset($roles[DRUPAL_AUTHENTICATED_RID]);
+  foreach ($roles as $roleid => $rolename) {
+    $my_hooks[] = 'role_' . $roleid . '_added';
+    $my_hooks[] = 'role_' . $roleid . '_removed';
+  }
+  $actions_to_alter = array('token_actions_message_action', 'token_actions_send_email_action', 'views_bulk_operations_delete_user_action', 'views_bulk_operations_user_roles_action');
+  foreach ($actions_to_alter as $action) {
+    if (isset($info[$action])) {
+      if (!isset($info[$action]['hooks']['user'])) {
+        $info[$action]['hooks']['user'] = array();
+      }
+      $info[$action]['hooks']['user'] = array_merge($info[$action]['hooks']['user'], $my_hooks);
+    }
+  }
+}
+
+/**
+ * Form to modify default values for emails to users during account status modification
+ *
+ * @return
+ *   system_settings_form
+ */
+function role_change_notify_settings_form() {
+  $roles = user_roles(TRUE);
+
+  unset($roles[DRUPAL_AUTHENTICATED_RID]);
+  if (sizeof($roles) == 0) {
+    $form['noroles'] = array(
+      '#value' => "<p><em>". t("No roles have been set up except Authenticated User. \nPlease set up additional roles if you want to use role notification.") ."</em></p>",
+    );
+    return $form;
+  }
+  $form['instructions'] = array(
+      '#value' => "<b>". t("Select roles for which notification should be sent") ."</b>",
+  );
+  foreach ($roles as $roleid => $rolename) {
+    $form["role_change_notify_" . $roleid] = array(
+      '#type' => 'checkbox',
+      '#title' => $rolename,
+      '#default_value' => variable_get('role_change_notify_'. $roleid, FALSE),
+    );
+  }
+  $form['role_change_notify_role_added_subject'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Subject'),
+    '#default_value' => variable_get('role_change_notify_role_added_subject', RCN_SUBJECT_DEFAULT),
+    '#size' => 72,
+    '#maxlength' => 200,
+  );
+  $form['role_change_notify_role_added_body'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Body'),
+    '#default_value' => variable_get('role_change_notify_role_added_body', RCN_BODY_DEFAULT),
+    '#cols' => 72,
+    '#rows' => 10,
+    '#description' => '',
+  );
+  if (module_exists('token')) {
+    $form['view']['token_help'] = array(
+      '#title' => t('Replacement patterns'),
+      '#type' => 'fieldset',
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#description' => t('Prefer raw-text replacements for text to avoid problems with HTML entities!'),
+    );
+
+    $form['view']['token_help']['help'] = array(
+      '#value' => theme('token_help', 'user'),
+    );
+  }
+  return system_settings_form($form);
+}
+
+/**
+ * Sends user an email based on the role modification
+ *
+ * @param $op
+ *   'role_added', 'role_removed', 'update'
+ * @param $arg2
+ *   $edit if update, $role if role operation
+ * @param $arg3
+ *   $account if update, NULL if role operation
+ */
+function role_change_notify_user($op, $edit, $account) {
+  if ($op == 'update' && array_key_exists('roles', $edit)) {
+    role_change_notify_user_update($edit, $account);
+  }
+}
+
+/**
+ * Trigger actions if a role change has occurred.
+ *
+ * @param $op
+ *   'role_added' or 'role_removed'
+ * @param $account
+ *   the affected user account.
+ */
+function _role_change_notify_trigger_actions($op, $account) {
+  if (!module_exists('trigger')) {
+    return;
+  }
+  // Find any the ids of any actions associated with this hook/operation pair.
+  if ($aids = _trigger_get_hook_aids('user', $op)) {
+    $token_info = array(
+      'user' => $account,
+      'global' => NULL,
+    );
+    actions_do(array_keys($aids), $account, $token_info);
+  }
+}
+
+/**
+ * Helper function to handle hook_user's 'update' op.
+ * @param $edit
+ *   array of changed pieces of the account.
+ * @param $account
+ *   user account object.
+ */
+function role_change_notify_user_update($edit, $account) {
+  $roles = user_roles(TRUE);
+  $oldroles = array_keys($account->roles);
+  $newroles = array_keys($edit['roles']);
+  $rolesadded = array_diff($newroles, $oldroles);
+  $roles_removed = array_diff($oldroles, $newroles);
+
+  $from = variable_get('site_mail', ini_get('sendmail_from'));
+  $headers = array(
+    'X-Mailer' => 'Drupal Role Change Notify module - http://drupal.org/project/role_change_notify',
+  );
+
+  foreach ($rolesadded as $roleid) {
+    $role = $roles[$roleid];
+    $account->rolename = $role;
+
+    if (module_exists('token')) {
+      token_get_values('global', NULL, TRUE); // Flush tokens so it knows user object has changed.
+    }
+    // Invoke actions that should take place on role addition.
+    _role_change_notify_trigger_actions('role_added', $account);
+    _role_change_notify_trigger_actions('role_' . $roleid . '_added', $account);
+
+    if (variable_get("role_change_notify_$roleid", FALSE)) {
+      if (valid_email_address($account->mail) && valid_email_address($from)) {
+        if(module_exists('profile')){
+          profile_load_profile($account);
+        }
+        if(module_exists('token')){
+          $subject = token_replace(variable_get('role_change_notify_role_added_subject', RCN_SUBJECT_DEFAULT), $type = 'user', $account);
+          $body = token_replace(variable_get('role_change_notify_role_added_body', RCN_BODY_DEFAULT), $type = 'user', $account);
+        }else{
+          $variables = _role_change_notify_get_variables($account, $role);
+          $subject = strtr(variable_get('role_change_notify_role_added_subject', RCN_SUBJECT_DEFAULT), $variables);
+          $body = strtr(variable_get('role_change_notify_role_added_body', RCN_BODY_DEFAULT), $variables);
+        }
+        $language = user_preferred_language($account);
+        $context['from'] = $from;
+        $context['subject'] = $subject;
+        $context['body'] = $body;
+        $context['headers'] = $headers;
+        $params = array('context' => $context);
+        drupal_mail('role_change_notify', 'role_added', $account->mail, $language, $params);
+        drupal_set_message(t("User %user notified of added role %role", array('%user' => $account->name, '%role' => $role)));
+      }
+    }
+  }
+
+  // Invoke actions that should take place on role removal.
+  foreach ($roles_removed as $roleid) {
+    if (module_exists('token')) {
+      token_get_values('global', NULL, TRUE); // Flush tokens so it knows user object has changed.
+    }
+
+    $role = $roles[$roleid];
+    $account->rolename = $role;
+    _role_change_notify_trigger_actions('role_removed', $account);
+    _role_change_notify_trigger_actions('role_' . $roleid . '_removed', $account);
+  }
+}
+
+/**
+ * Implementation of hook_mail().
+ *
+ * @param $key
+ *   Key to the message tex to be used (passed in in this case)
+ * @param &$messsage
+ *   The message to be altered
+ * @param $params
+ *   Array of free-form items to be used in creating message
+ *
+ * @see hook_mail()
+ *
+ */
+function role_change_notify_mail($key, &$message, $params) {
+  if ($key == 'role_added') {
+    $message['subject'] = $params['context']['subject'];
+    $message['body'][] = $params['context']['body'];
+    $message['from'] = $params['context']['from'];
+    $message['headers'] = array_merge($message['headers'], $params['context']['headers']);
+  }
+}
+
+/**
+ * Return an array of substitution variables for email bodies and subjects.
+ *
+ * @param $account
+ *   The user object of the account being notified.
+ * @param $rolename
+ *   The new role being applied to the account
+ *
+ * @return
+ *   Array of substitution variables.
+ */
+function _role_change_notify_get_variables($account, $rolename) {
+  global $base_url;
+	$isSSL = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? TRUE : FALSE);
+
+  $variables = array(
+    '[user]' => $account->name,
+    '[uid]' => $account->uid,
+    '[site-name]' => variable_get('site_name', 'drupal'),
+    '[site-url]' => $base_url,
+    '[uri_brief]' => drupal_substr($base_url, drupal_strlen($isSSL ? 'https://' : 'http://')),
+    '[mail]' => $account->mail,
+    '[site-date]' => format_date(time()),
+    '[login_uri]' => url('user', array('absolute' => TRUE)),
+    '[account-edit]' => url('user/'. $account->uid .'/edit', array('absolute' => TRUE)),
+    '[role]' => $rolename,
+    '[role_changed]' => $rolename,
+  );
+  // If the profile module is present, create replacement patters for the values
+  if ($account->uid && module_exists('profile')) {
+    profile_load_profile($account);
+    $role_change_user_keys = array_keys(get_object_vars($account));
+    foreach($role_change_user_keys as $key){
+      if (strpos($key, 'profile_') === 0) {
+        $value = _role_change_notify_format_profile_field($account->$key);
+        if (!empty($value)) {
+          $variables['['.$key.']'] = $value;
+        }
+      }
+    }
+  }
+  return $variables;
+}
+
+/**
+ * Implementation of hook_token_values().
+ */
+function role_change_notify_token_values($type, $account = NULL) {
+  if ($type == 'user' && is_object($account) && !empty($account->rolename)) {
+    global $base_url;
+    $isSSL = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on' ? TRUE : FALSE);
+
+    $tokens = array(
+        'uri_brief' => drupal_substr($base_url, drupal_strlen($isSSL ? 'https://' : 'http://')),
+        'login_uri' => url('user', array('absolute' => TRUE)),
+        'role' => $account->rolename,
+        'role_changed' => $account->rolename,
+    );
+
+    if (module_exists('profile')) {
+      $keys = array_keys(get_object_vars($account));
+      foreach($keys as $key) {
+        if (strpos($key, 'profile_') === 0) {
+          $value = _role_change_notify_format_profile_field($account->$key);
+          if (!empty($value)) {
+            $tokens[$key] = $value;
+          }
+        }
+      }
+    }
+    return $tokens;
+  }
+}
+
+/**
+ * Format a profile field value into an HTML-escaped string
+ *
+ * @param $value
+ *   The profile field value
+ *
+ * @return
+ *   Formatted string
+ */
+function _role_change_notify_format_profile_field($value) {
+  if (is_string($value)) {
+    return check_plain($value);
+  } elseif (is_array($value) && isset($value['day'])) {
+    // duplicate the date formatting in profile_view_field()
+    $format = substr(variable_get('date_format_short', 'm/d/Y - H:i'), 0, 5);
+    $replace = array(
+      'd' => sprintf('%02d', $value['day']),
+      'j' => $value['day'],
+      'm' => sprintf('%02d', $value['month']),
+      'M' => map_month($value['month']),
+      'Y' => $value['year'],
+      'H:i' => NULL,
+      'g:ia' => NULL,
+    );
+    return strtr($format, $replace);
+  } // else return NULL (all profile fields should be strings or date arrays)
+}
+
+/**
+ * Implementation of hook_token_list().
+ */
+function role_change_notify_token_list($type = 'profile') {
+  if ($type == 'user' || $type == 'all' || $type == 'profile') {
+    if (module_exists('profile')) {
+      $result = db_query('SELECT title, name FROM {profile_fields}');
+      while($row = db_fetch_array($result)){
+        $tokens['profile'][$row['name']] = $row['title'];
+      }
+    }
+    $tokens['global']['uri_brief'] = t('Brief site URL');
+    $tokens['user']['login_uri'] = t('Login URL');
+    $tokens['user']['role'] = t('Name of the role being added or removed (deprecated)');
+    $tokens['user']['role_changed'] = t('Name of the role being added or removed');
+
+    return $tokens;
+  }
+}

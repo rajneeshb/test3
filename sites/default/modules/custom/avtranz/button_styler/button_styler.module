@@ -1,0 +1,113 @@
+<?php
+
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function button_styler_form_user_register_alter(&$form, &$form_state) {
+  _button_styler_user_buttons_alter($form, $form_state);
+}
+
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function button_styler_form_user_login_alter(&$form, &$form_state) {
+  _button_styler_user_buttons_alter($form, $form_state);
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function button_styler_form_user_pass_alter(&$form, $form_state) {
+  $form['submit']['#value'] = t('Reset my password');
+  _button_styler_user_buttons_alter($form, $form_state);
+}
+
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function _button_styler_user_buttons_alter(&$form, $form_state) {
+  $form['styled_submit'] = array(
+      '#type' => 'markup',
+      '#value' => _button_styler_generic($form['submit']['#value'], $attributes, TRUE),
+  );
+
+  $form['styled_submit'] = array_merge($form['submit'], $form['styled_submit']);
+
+  $form['submit']['#access'] = FALSE;
+}
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function button_styler_form_alter(&$form, $form_state, $form_id) {
+// dpm($form_id);
+}
+
+//function button_styler_form_order_node_form_alter(&$form, &$form_state) {
+//  dpm($form);
+//}
+
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ */
+function button_styler_form_views_bulk_operations_form__1_alter(&$form, &$form_state) {
+//  dpm($form);
+
+  $attributes = array(
+      'id' => 'edit-views-bulk-operations-delete-node-action',
+      'name' => 'op',
+  );
+
+  $form['select']['views_bulk_operations_delete_node_action']['#prefix'] = '<span class="hide">';
+  $form['select']['views_bulk_operations_delete_node_action']['#suffix'] = '</span>' . _button_styler_generic($form['select']['views_bulk_operations_delete_node_action']['#value'], $attributes, TRUE);
+
+  $attributes['id'] = 'edit-filefield-archive-action';
+  $form['select']['filefield_archive_action']['#prefix'] = '<span class="hide">';
+  $form['select']['filefield_archive_action']['#suffix'] = '</span>' . _button_styler_generic($form['select']['filefield_archive_action']['#value'], $attributes, TRUE);
+
+  $attributes['id'] = 'edit-submit';
+  $form['actions']['submit']['#prefix'] = '<span class="hide">';
+  $form['actions']['submit']['#suffix'] = '</span>' . _button_styler_generic(empty($form['actions']['submit']['#value']) ? '' : $form['actions']['submit']['#value'], $attributes, TRUE);
+
+}
+
+function button_styler_form_order_node_form_alter(&$form, &$form_state)
+{ $form['#after_build'][] = 'button_styler_form_order_node_form_after_build';
+}
+function button_styler_form_order_node_form_after_build(&$form, &$form_state) {
+
+  if ( !empty($form['field_completed_transcript'][0]['filefield_upload']) ) {
+    $attributes['id'] = 'edit-field-completed-transcript-0-filefield-upload';
+    $attributes['name'] = 'op';
+
+    $form['field_completed_transcript'][0]['filefield_upload']['#prefix'] = '<span class="hide">';
+    $form['field_completed_transcript'][0]['filefield_upload']['#suffix'] = '</span>' . _button_styler_generic($form['field_completed_transcript'][0]['filefield_upload']['#value'], $attributes, TRUE);
+  }
+  return $form;
+}
+
+function _button_styler_generic( $value, $attributes = array(), $small = FALSE ) {
+  $defaults = array(
+      'class' => array('form-submit', 'fancy-button'),
+      'type' => 'submit',
+      'value' => $value,
+  );
+
+  if ( $small ) {
+    $defaults['class'][] = 'fancy-button-small';
+  }
+
+  $attributes = array_merge($defaults, $attributes);
+
+  $attributes['class'] = implode(' ', $defaults['class']);
+
+  $button_html = '<button' . drupal_attributes($attributes) . '><span class="fancy-button-start"></span><span class="fancy-button-text-wrap">';
+  $button_html .= $value;
+  $button_html .= '</span><span class="fancy-button-end"></span></button>';
+
+  return $button_html;
+}

@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => White
+    [billTo_email] => office@lawyersnh.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => W
+    [orderAmount_publicSignature] => nc7OgzRt3CR2629zxRowS74lHXY=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############5089
+    [reasonCode] => 100
+    [billTo_firstName] => Jack
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3457440105830178147360
+    [order_id] => 22330
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 09573Z
+    [billTo_company] => Welts, White & Fontaine, P.C.
+    [card_expirationMonth] => 03
+    [orderNumber] => 1345743993426
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 684
+    [signedDataPublicSignature] => PTkw6QAF/ap06TQsUoO0ODL3Eqg=
+    [reconciliationID] => 088395347WTO8V5ZPCWG4
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => W
+    [orderPage_requestToken] => Ahj//wSRdts9g+ZJeZhAKFWDhwzctWbRvXqT3FZraoQ68domkMbVxEAJNIY2riIaQOknyLyGTSTKuj0lnHAwnSLttnsHzJLzMIAAoxL9
+    [uid] => 684
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 93.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-23T174651Z
+    [orderAmount] => 93.75
+    [billTo_street2] => P.O. Box 507
+    [orderNumber_publicSignature] => tBKn0IzOs1eb8SvfhR023gOBYvE=
+    [card_cardType] => 002
+    [billTo_street1] => 29 Factory Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6038830797
+    [paymentOption] => card
+    [transactionSignature] => 0cJ0JyUHmdCQaUWz+yyShQBc5Ow=
+    [merchantDefinedData1] => Request ID: 22330
+    [billTo_city] => Nashua
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03061-0507
+    [billTo_country] => us
+)

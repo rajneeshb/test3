@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Smeltzer
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => N
+    [orderAmount_publicSignature] => u+oCkfkkPJQJXdil/AnyQGlnNrA=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############6962
+    [reasonCode] => 100
+    [billTo_firstName] => Tiffany
+    [signedFields] => billTo_lastName,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3468705196310178147361
+    [order_id] => 22615
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 208628
+    [billTo_company] => Germaine & Blaszka, PA
+    [card_expirationMonth] => 08
+    [orderNumber] => 1346870490751
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 263
+    [signedDataPublicSignature] => KczG3Cu+cNZvYPHTQQCBjciCZ+U=
+    [reconciliationID] => 095400405WTO9N6I7DGAY
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => N
+    [orderPage_requestToken] => Ahj//wSReBPozBzXi1hCKFWDlq0YMGjBrXqT3M5tJbxI8GymkqZMO4AFNJUyYdwaQQ27ojJhk0kyro9JZxwMJci8CfRmDmvFrCEA+lhL
+    [uid] => 263
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 562.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-05T184200Z
+    [orderAmount] => 562.5
+    [orderNumber_publicSignature] => d2MC97Z+1gQCwfuXu9F1LqVglLA=
+    [card_cardType] => 001
+    [billTo_street1] => 23 Birch Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034344125
+    [paymentOption] => card
+    [transactionSignature] => GCLhSZ85KYVhhgwp5paZspLDHKI=
+    [merchantDefinedData1] => Request ID: 22615
+    [billTo_city] => Derry
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03038
+    [billTo_country] => us
+)

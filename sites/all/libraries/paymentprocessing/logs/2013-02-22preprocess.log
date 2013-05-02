@@ -1,0 +1,108 @@
+Array
+(
+    [Order ID] => 0
+    [Price] => 481.25
+    [User ID] => 263
+    [IP] => 24.147.94.203
+    [Timestamp] => 1361542863
+    [Time/Date] => Fri, 22 Feb 2013 09:21:03 -0500
+    [Order Page Timestamp] => 1361542851263
+    [Order Page Time/Date] => Fri, 30 Jul 45115 14:34:23 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 481.25
+    [User ID] => 263
+    [IP] => 24.147.94.203
+    [Timestamp] => 1361542960
+    [Time/Date] => Fri, 22 Feb 2013 09:22:40 -0500
+    [Order Page Timestamp] => 1361542957065
+    [Order Page Time/Date] => Sat, 31 Jul 45115 19:57:45 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 481.25
+    [User ID] => 263
+    [IP] => 24.147.94.203
+    [Timestamp] => 1361543043
+    [Time/Date] => Fri, 22 Feb 2013 09:24:03 -0500
+    [Order Page Timestamp] => 1361542957065
+    [Order Page Time/Date] => Sat, 31 Jul 45115 19:57:45 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 481.25
+    [User ID] => 263
+    [IP] => 24.147.94.203
+    [Timestamp] => 1361544406
+    [Time/Date] => Fri, 22 Feb 2013 09:46:46 -0500
+    [Order Page Timestamp] => 1361544404470
+    [Order Page Time/Date] => Tue, 17 Aug 45115 14:01:10 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 448.25
+    [User ID] => 435
+    [IP] => 24.105.172.146
+    [Timestamp] => 1361556582
+    [Time/Date] => Fri, 22 Feb 2013 13:09:42 -0500
+    [Order Page Timestamp] => 1361556560111
+    [Order Page Time/Date] => Wed, 05 Jan 45116 06:35:11 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 448.25
+    [User ID] => 435
+    [IP] => 24.105.172.146
+    [Timestamp] => 1361556834
+    [Time/Date] => Fri, 22 Feb 2013 13:13:54 -0500
+    [Order Page Timestamp] => 1361556560111
+    [Order Page Time/Date] => Wed, 05 Jan 45116 06:35:11 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64; rv:19.0) Gecko/20100101 Firefox/19.0
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 3.75
+    [User ID] => 1012
+    [IP] => 70.96.33.195
+    [Timestamp] => 1361571477
+    [Time/Date] => Fri, 22 Feb 2013 17:17:57 -0500
+    [Order Page Timestamp] => 1361571464568
+    [Order Page Time/Date] => Sun, 25 Jun 45116 18:42:48 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 3.75
+    [User ID] => 1012
+    [IP] => 70.96.33.195
+    [Timestamp] => 1361571853
+    [Time/Date] => Fri, 22 Feb 2013 17:24:13 -0500
+    [Order Page Timestamp] => 1361571845454
+    [Order Page Time/Date] => Fri, 30 Jun 45116 04:30:54 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 3.75
+    [User ID] => 1012
+    [IP] => 70.96.33.195
+    [Timestamp] => 1361572248
+    [Time/Date] => Fri, 22 Feb 2013 17:30:48 -0500
+    [Order Page Timestamp] => 1361572241914
+    [Order Page Time/Date] => Tue, 04 Jul 45116 18:38:34 -0500
+    [User Agent] => Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+)

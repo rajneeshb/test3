@@ -1,0 +1,1142 @@
+<?php
+// $Id $
+
+/**
+ * @file
+ * Alters Storefront Order Form
+ */
+
+defined('AVTSTORE_ORDER_IMPERSONATE_PERM') or define('AVTSTORE_ORDER_IMPERSONATE_PERM', 'save order for another user');
+defined('AVTSTORE_ORDER_VIEW_ADMIN_ORDER_LISTING') or define('AVTSTORE_ORDER_VIEW_ADMIN_ORDER_LISTING', 'view order administration list');
+defined('AVTSTORE_ORDER_VIEW_ADMIN_ORDER_LISTING_BY_LOC') or define('AVTSTORE_ORDER_VIEW_ADMIN_ORDER_LISTING_BY_LOC', 'view order administration list by location');
+
+function avtstore_orders_menu() {
+  $items = array();
+
+  $items['ajax/order/estimate'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => '_avtstore_orders_estimate_cost',
+    'page arguments' => array(),
+    'access arguments' => array('access content'),
+  );
+
+  return $items;
+}
+
+function avtstore_orders_perm() {
+  return array(AVTSTORE_ORDER_IMPERSONATE_PERM, AVTSTORE_ORDER_VIEW_ADMIN_ORDER_LISTING, AVTSTORE_ORDER_VIEW_ADMIN_ORDER_LISTING_BY_LOC);
+}
+
+
+function avtstore_orders_form_order_node_form_alter(&$form, &$form_state) {
+  foreach (array('#after_build', '#validate', '#submit') as $key) {
+    if (empty($form[$key])) { $form[$key] = array(); }
+  }
+
+  $form['#attributes']['class'] = 'order-form';
+  $form['#attributes']['class'] .= ' order-form-' . (!empty($form['#node']->nid) ? 'edit' : 'add');
+
+  if ( empty($form['#node']->nid) ) {
+    $form['#after_build'][] = '_avtstore_orders_order_node_form_after_build';
+    $form['#validate'][] = '_avtstore_orders_form_order_node_form_validate';
+    $form['#submit'][] = '_avtstore_orders_form_order_node_form_submit';
+  }
+  // added by sph
+  else {
+    $form['#after_build'][] = '_avtstore_orders_form_order_node_form_after_build_edit';
+    $form['#validate'][] = 'avtstore_orders_form_order_node_form_edit_validate';
+  }
+
+  if ( !empty($_SESSION['orders']['create']['node_id']) ) {
+    drupal_set_message(
+        t('There is a pending order that will be lost if you continue. To complete that order please <a href="@user-register">create a user account</a>.',
+            array(
+                '@user-register' => user_is_anonymous() ? url('user/register') : url('admin/user/user/create')
+              )
+        ), 'warning' );
+  }
+
+  $form['revision_information']['#access'] = FALSE;
+}
+
+function avtstore_orders_form_user_register_alter(&$form, &$form_state) {
+  if (!empty($_SESSION['orders']['create']['form_state'])) {
+    drupal_set_message( t('There is a pending order that will not be saved until you finish creating a user account.'), 'warning' );
+
+    if ( isset($form['account']) ) {
+      $form_ref =& $form['account'];
+    }
+    else {
+      $form_ref =& $form;
+    }
+
+    $form_ref['name']['#default_value'] = $_SESSION['orders']['create']['form_state']['values']['field_username'];
+
+    if ( user_access(AVTSTORE_ORDER_IMPERSONATE_PERM) && user_validate_mail( $form_ref['name']['#default_value'] ) !== NULL ) {
+      $email = explode('@', variable_get('site_mail', ini_get('sendmail_from')));
+      $email[0] .= '+' . preg_replace('/[^a-z]/','-', strtolower($form_ref['name']['#default_value']));
+      $email = implode('@', $email);
+
+      $form_ref['mail']['#default_value'] = $email;
+    }
+    else {
+      $form_ref['mail']['#default_value'] = $_SESSION['orders']['create']['form_state']['values']['field_username'];
+    }
+
+    $form_state['storage']['pass'] = $_SESSION['orders']['create']['form_state']['values']['field_password'];
+
+    /*
+      default_value is not supported by password/password_confirm fields, so we
+      have to use this funky workaround
+    */
+    $form['#after_build'][] = '_avtstore_orders_form_user_register_after_build';
+  }
+}
+
+function avtstore_orders_user($op, &$edit, &$account, $category = NULL) {
+  if ( 'insert' !== $op || empty($_SESSION['orders']['create']['node_id']) ) {
+    return;
+  }
+
+  if ( user_is_anonymous() ) {
+    /*
+     * Force the user to log in. This is necessary at this point (instead of
+     * waiting for Drupal to do it later) because they will get an access
+     * denied error when trying to access the order they are submitting.
+     */
+    user_authenticate( array('name' => $edit['name'], 'pass' => $edit['pass'] ) );
+  }
+
+  $order = node_load($_SESSION['orders']['create']['node_id']);
+  if ( !empty($order) && 'order' === $order->type ) {
+    /*
+     * We need to map the newly created user to the order they were created
+     * under, otherwise they won't be able to see this order until an admin
+     * reassigns it to them.
+     */
+    $order->uid = $account->uid;
+    $order->name = $account->name;
+    $order->status = TRUE;
+    $order->pathauto_perform_alias = TRUE;
+
+    node_submit($order);
+    if ( $order->validated ) {
+      node_save($order);
+
+      /*
+       *  Required to prevent possible incorrect "A pending order..." warning
+       *  messages in scenarios where the user doesn't wind up on the
+       *  confirmation page after creating an order, and then goes back to the
+       *  request screen.
+       */
+      unset($_SESSION['orders']);
+
+      $_REQUEST['destination'] = _avtstore_orders_after_landing_path($order);
+    }
+    else {
+      drupal_set_message( t('There was a problem saving the order.'), 'error' );
+    }
+  }
+}
+
+function _avtstore_orders_set_pass_default_value(&$element) {
+  if ( ($pos = stripos($element, ' name="pass[pass1]"')) !== FALSE && !empty($_SESSION['orders']['create']['form_state']['values']['field_password'])) {
+    $element = substr_replace($element, drupal_attributes( array('value' => $_SESSION['orders']['create']['form_state']['values']['field_password']) ), $pos, 0);
+  }
+
+  return $element;
+}
+
+function _avtstore_orders_form_user_register_after_build(&$form, &$form_state) {
+  if ( empty($form['pass']['#post_render']) ) { $form['pass']['#post_render'] = array(); }
+  $form['pass']['pass1']['#post_render'][] = '_avtstore_orders_set_pass_default_value';
+
+  return $form;
+}
+
+/**
+ * Implementation of hook_nodeapi().
+ *
+ * @param &$node
+ *     The node the action is being performed on.
+ *
+ * @param $op
+ *     What kind of action is being performed. Possible values: alter, delete,
+ *     delete revision, insert, load, prepare, prepare translation, print,
+ *     rss item, search result, presave, update, update index, validate, view
+ * @param $a3
+ * @param $a4
+ */
+function avtstore_orders_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  $goto = NULL;
+
+  if ( 'order' === $node->type && 'update index' === $op) {
+    /*
+     * Add user's first and last name into search index for order (so it will
+     * work in the keyword box on the Check Status/Admin searches)
+     */
+    $profile = content_profile_load( 'profile', $node->uid );
+    if ( !empty($profile) ) {
+      $name_parts = array();
+      if ( !empty($profile->field_first_name[0]['value']) ) {
+        $name_parts[] = $profile->field_first_name[0]['value'];
+      }
+      if ( !empty($profile->field_last_name[0]['value']) ) {
+        $name_parts[] = $profile->field_last_name[0]['value'];
+      }
+      $name_parts[] = $node->nid;
+      return implode(' ', $name_parts);
+    }
+    else {
+      return '';
+    }
+  }
+  elseif ( 'order' === $node->type && ('load' === $op || 'prepare' === $op)) {
+    /*
+     * Add a default Jurisdiction to orders that don't have one set
+     */
+    $jurisdiction_vid = variable_get('jurisdiction_vid', 3);
+    if ( !empty($jurisdiction_vid) ) {
+      $tax = module_invoke('taxonomy', 'nodeapi', $node, 'load');
+      $node->taxonomy = $tax['taxonomy'];
+
+      $has_jurisdiction = FALSE;
+
+      foreach ($node->taxonomy as $tid => $taxonomy) {
+        if ( $taxonomy->vid == $jurisdiction_vid ) {
+          $has_jurisdiction = TRUE;
+          break;
+        }
+      }
+
+      if ( !$has_jurisdiction ) {
+        $new_hamp_jurisdiction_tid = variable_get('jurisdiction_nh_tid', 107);
+        $new_hamp_jurisdiction = taxonomy_get_term($new_hamp_jurisdiction_tid);
+        if ( !empty($new_hamp_jurisdiction) ) {
+          $node->taxonomy[$new_hamp_jurisdiction_tid] = $new_hamp_jurisdiction;
+        }
+      }
+    }
+  }
+  elseif ( 'order' === $node->type && 'insert' === $op) {
+    if ( !empty($_SESSION['orders']['create']['form_state']['storage']['new_user']) ) {
+      $_SESSION['orders']['create']['node_id'] = $node->nid;
+
+      $goto = user_is_anonymous() ? 'user/register' : 'admin/user/user/create';
+    }
+    elseif ( !empty($node->nid) ) {
+      $goto = _avtstore_orders_after_landing_path($node);
+    }
+  }
+  elseif ( 'profile' === $node->type && 'insert' === $op ) {
+    if ( !empty($_SESSION['orders']['order_id']) ) {
+      $goto = _avtstore_orders_after_landing_path( $_SESSION['orders']['order'] );
+    }
+  }
+
+  if ( !empty($goto) ) {
+    $_REQUEST['destination'] = $goto;
+
+    /*
+     * Our soft redirect gets overriden in each order/profile case due to hooks
+     * and/or hardcoded core Drupal redirects. We have to force the redirect,
+     * but this winds up causing issues with later hooks not getting run.
+     */
+    _avtstore_orders_goto($goto, 303, $node);
+  }
+}
+
+/**
+ * After build callback for the Order edit form
+ *
+ * @param array &$form
+ * @param array &$form_state
+ *
+ * @return array
+ */
+function _avtstore_orders_form_order_node_form_after_build_edit(&$form, &$form_state) {
+  /*
+    submitted|Submitted
+    pending_deposit|Pending deposit
+    pending_audio|Pending audio
+    audio_uploaded|Audio uploaded
+    in_production|In production
+    completed|Completed
+    complete_balance_due|Complete, balance due
+    complete_amended|Complete, amended
+    copy_only|Copy only
+    cancelled|Cancelled
+    on_hold|On hold
+    on_hold_customer|On hold, customer
+    on_hold_court|On hold, court
+  */
+  if ( !empty($form['group_administration']['field_orderstatus']['#value']['value']) ) {
+    $allOptions = $form['group_administration']['field_orderstatus']['value']['#options'];
+
+    $currentStatus = $form['group_administration']['field_orderstatus']['#default_value'][0]['value'];
+
+    $options = Array();
+
+    $options['submitted']             = Array ( 'pending_deposit', 'pending_audio', 'in_production', 'copy_only',
+                                              'on_hold', 'on_hold_customer', 'on_hold_court', 'cancelled'
+                                            );
+    $options['pending_deposit']       = Array ( 'pending_audio', 'on_hold_customer', 'on_hold', 'cancelled'
+                                            );
+    $options['pending_audio']         = Array ( 'audio_uploaded', 'on_hold', 'cancelled'
+                                            );
+    $options['audio_uploaded']        = Array ( 'in_production', 'on_hold', 'on_hold_customer', 'on_hold_court', 'cancelled'
+                                            );
+    $options['in_production']         = Array ( 'completed', 'complete_balance_due', 'on_hold', 'on_hold_customer',
+                                              'on_hold_court', 'cancelled'
+                                            );
+    $options['complete_balance_due']  = Array ( 'completed', 'on_hold', 'on_hold_customer', 'cancelled'
+                                            );
+    $options['completed']             = Array ( 'on_hold', 'complete_amended'
+                                            );
+    $options['complete_amended']      = Array ( 'on_hold'
+                                            );
+    $options['copy_only']             = Array ( 'on_hold', 'on_hold_customer', 'on_hold_court', 'cancelled'
+                                            );
+    $options['on_hold_court']         = Array ( 'pending_deposit', 'pending_audio', 'in_production', 'completed',
+                                              'complete_balance_due', 'complete_amended', 'copy_only', 'cancelled',
+                                              'on_hold', 'on_hold_customer'
+                                            );
+    $options['on_hold_customer']      = Array ( 'pending_deposit', 'pending_audio', 'in_production', 'completed',
+                                              'complete_balance_due', 'complete_amended', 'copy_only', 'cancelled',
+                                              'on_hold', 'on_hold_court'
+                                            );
+    $options['on_hold']               = Array ( 'pending_deposit', 'pending_audio', 'in_production', 'completed',
+                                              'complete_balance_due', 'complete_amended', 'copy_only', 'cancelled',
+                                              'on_hold_customer', 'on_hold_court'
+                                            );
+    $options['cancelled']            = array( 'on_hold' );
+
+    $form['group_administration']['field_orderstatus']['value']['#options'] = Array();
+    $form['group_administration']['field_orderstatus']['value']['#options'][$currentStatus] = $allOptions[$currentStatus];
+
+    if (array_key_exists($currentStatus, $options)) {
+      foreach($options[$currentStatus] as $option) {
+        $form['group_administration']['field_orderstatus']['value']['#options'][$option] = $allOptions[$option];
+      }
+    }
+  }
+  return $form;
+}
+
+/**
+ * @param array &$form
+ * @param array &$form_state
+ */
+function _avtstore_orders_form_order_node_form_validate(&$form, &$form_state) {
+  if ( 'no' !== $form_state['values']['field_appealtranscript'][0]['value'] ) {
+    if ( empty($form_state['values']['field_appeal_number'][0]['value']) ) {
+      form_set_error('field_appeal_number', t('The appeal number is required when the transcript checkbox is marked'));
+    }
+  }
+
+  if ( !empty($form_state['clicked_button']['#post']['field_locationref']['nid']['hierarchical_select']['selects'][1]) && 'none' == $form_state['clicked_button']['#post']['field_locationref']['nid']['hierarchical_select']['selects'][1] ) {
+    form_set_error('field_locationref', t('A court location must be selected'));
+  }
+
+  // These are not in form_values because they are added after the form is built
+  $username = $form['#post']['username'];
+  $password = $form['#post']['password'];
+
+  $valid_email = user_validate_mail( $username );
+  $valid_username = user_validate_name( $username );  // Used for separate checking for AVT users
+  $create_login = $form['#post']['field_create_or_login']['value'];
+
+  if ($create_login == 'create' && !empty($valid_email)) {
+     form_set_error('username', $valid_email);
+  }
+
+  if (empty($valid_email) && !empty($valid_username)) {
+    $valid_email = $valid_username;
+  }
+
+  if ( !empty($form_state['values']['field_estimatedhours']) || !empty($form_state['values']['field_estimatedminutes']) ) {
+    foreach ($form_state['values']['field_estimatedhours'] as $index => $hour_info) {
+      $entered_hours = $hour_info['value'];
+      $entered_minutes = $form_state['values']['field_estimatedminutes'][$index]['value'];
+      $need_time = (0 >= ($entered_hours + $entered_minutes));
+      $need_date = empty($form_state['values']['field_hearingdate'][$index]['value']);
+      if ( $need_date || $need_time ) {
+        if ( 0 === $index || ( !$need_date && $need_time) ) {
+          form_set_error('field_estimatedhours][' . $index . '][value', t('A length of time must be entered for the hearing date'));
+          form_set_error('field_estimatedminutes][' . $index . '][value', ' ');
+          array_pop($_SESSION['messages']['error']);  // Remove the previous blank entry
+        }
+      }
+
+      if( empty($entered_hours) )
+      {
+        $form_state['values']['field_estimatedhours'][$index]['value'] = 0;
+      }
+      if( empty($entered_minutes) )
+      {
+        $form_state['values']['field_estimatedminutes'][$index]['value'] = 0;
+      }
+    }
+  }
+
+  if ( user_is_anonymous() ) {
+    _avtstore_orders_validate_anonymous_user_info($username, $password, $valid_email, $form_state);
+  }
+  elseif (user_access(AVTSTORE_ORDER_IMPERSONATE_PERM)) {
+    if (!empty($username)) {
+      $user = user_load( array('name' => $username ) );
+      if (empty($user)) {
+        $user = user_load(array('mail' => $username));
+      }
+    }
+
+    if ( empty($user) && !empty($password) ) {
+      // new user
+
+      $form_state['storage']['new_user'] = TRUE;
+
+      if ( !empty($valid_username) ) {
+        form_set_error('username', $valid_username);
+      }
+    }
+    elseif ( !empty($user) && empty($password) ) {
+      // existing user
+
+      $form_state['storage']['user'] = $user;
+    }
+    elseif ( !empty($username) && empty($user) && empty($password) ) {
+      form_set_error('password', t('A password is required when creating a new user.') );
+    }
+    elseif ( !empty($user) && !empty($password) ) {
+      // user exists, but it looks like they wanted to make a new one
+      form_set_error('username', t('The user %username is already in use. If you want to save this order to that user please leave the password field empty.', array('%username' => filter_xss($user->name)) ) );
+    }
+  }
+}
+
+/**
+ * Implementation of edit validation callback function.
+ *
+ * @param array &$form
+ * @param array &$form_state
+ */
+function avtstore_orders_form_order_node_form_edit_validate(&$form, &$form_state) {
+  if( 'in_production' == $form_state['values']['field_orderstatus'][0]['value'] && empty($form_state['values']['field_due_date'][0]['value']) ) {
+	  form_set_error('field_due_date][0][value', t('Before an order can be set to \'In Production\' a \'Due Date\' must be set'));
+  }
+  if( 'in_production' == $form_state['values']['field_orderstatus'][0]['value'] && empty($form_state['values']['field_order_number'][0]['value']) ) {
+          form_set_error('field_order_number][0][value', t('Before an order can be set to \'In Production\' an \'Order Number\' must be set'));
+  }
+
+  foreach($form_state['values']['field_estimatedhours'] as $hours => $hr)
+  {
+    if($hr['value'] == '')
+    {
+      $form_state['values']['field_estimatedhours'][$hours]['value'] = 0;
+    }
+  }
+  foreach($form_state['values']['field_estimatedminutes'] as $mins => $min)
+  {
+    if($min['value'] == '')
+    {
+      $form_state['values']['field_estimatedminutes'][$mins]['value'] = 0;
+    }
+  }
+}
+
+/**
+ *
+ *
+ * We only need to do this username/password checking for anonymous users.
+ * Logged in users will already have the order assigned to them, and AVTranz
+ * employees need different logic since they do not need the password or have
+ * to use e-mail addresses for usernames.
+ *
+ * @param unknown_type $username
+ * @param unknown_type $password
+ * @param unknown_type $valid_email
+ * @param unknown_type $form_state
+ */
+function _avtstore_orders_validate_anonymous_user_info($username, $password, $valid_email, &$form_state) {
+  if (!empty($username)) {
+    if ( !empty($password) ) {
+      $user = user_load( array('name' => $username, 'pass' => $password) );
+      // We couldn't find a user with the given information
+      if (empty($user)) {
+        // Is this a new user or an existing user with the wrong password?
+        $user = user_load( array( 'name' => $username ) );
+
+        if (!empty($user)) {
+          // Existing user, but wrong pass.. Throw login error message
+          form_set_error( 'username', t('Sorry, unrecognized username or password.') );
+        }
+        elseif ( !empty($valid_email) ) {
+          /*
+           * This validation check is here (instead of earlier) to allow for
+           * users with non-email address usernames to log in (ex: users
+           * created by AVT employees).
+           */
+          form_set_error( 'username', $valid_email );
+        }
+        else {
+          $form_state['storage']['new_user'] = TRUE;
+        }
+      }
+      else {
+        /*
+         * This is here instead of replacing the user_load above because
+         * user_authenticate uses form_get_errors() to check if there were
+         * any other problems on the form. This results in the logic saying
+         * that the username/password is incorrect.
+         *
+         * This call logs the user in when there are no form errors.
+         */
+        $user = user_authenticate( array('name' => $username, 'pass' => $password) );
+
+        /*
+         * Setting uid and name are necessary because Drupal will not set them
+         * before hook_form_submit
+         */
+        $form_state['values']['uid'] = $user->uid;
+        $form_state['values']['name'] = $user->name;
+      }
+    }
+    else {
+      form_set_error( 'password', t('@field-name field is required.', array('@field-name' => $form['group_user']['field_password']['#title'])) );
+    }
+  }
+  else {
+    form_set_error( 'username', $valid_email );
+    if (empty($password)) {
+      form_set_error( 'password', t('@field-name field is required.', array('@field-name' => $form['group_user']['field_password']['#title'])) );
+    }
+  }
+}
+
+/**
+ * @param array $form
+ * @param array $form_state
+ * @return string
+ */
+function _avtstore_orders_form_order_node_form_submit(&$form, &$form_state) {
+  // Clean out any order that may not have been completed previously
+  unset($_SESSION['orders']);
+
+  /*
+   * Force the estimated cost incase someone decided to get sneaky with Firebug
+   * or some other browser web development addon.
+   */
+  module_load_include('class', 'avtstore_orders', 'AVTCostCalculator');
+  if ( class_exists('AVTCostCalculator') ) {
+    $estimated_costs = AVTCostCalculator::calculateFromForm($form_state['values']);
+  }
+  else {
+    $estimated_costs['costs']['total'] = 0.00;
+    $estimated_costs['info']['pages'] = 0;
+  }
+
+  $form_state['values']['field_estimated_cost'][0]['value'] = $estimated_costs['costs']['total'];
+  $form_state['values']['field_estimated_pages'][0]['value'] = $estimated_costs['info']['pages'];
+
+  foreach($form_state['values']['field_estimatedhours'] as $hours => $hr)
+  {
+    if($hr['value'] == '')
+    {
+      $form_state['values']['field_estimatedhours'][$hours]['value'] = 0;
+    }
+  }
+  foreach($form_state['values']['field_estimatedminutes'] as $mins => $min)
+  {
+    if($min['value'] == '')
+    {
+      $form_state['values']['field_estimatedminutes'][$mins]['value'] = 0;
+    }
+  }
+
+  /*
+   * We force the user associated with the order to the current user by default.
+   * Client did not request a way to alter this during the creation screen for
+   * admin users.
+   */
+  $profile = content_profile_load('profile', $form_state['values']['uid']);
+  $form_state['values']['field_creator'][0]['nid'] = $profile->nid;
+
+  /*
+   * All self pay orders should set themselves to require a deposit. Court pay
+   * orders will be reviewed by AVTranz employees.
+   */
+  if ( 'client_pay' == $form_state['values']['field_how_to_pay'][0]['value']) {
+    $form_state['values']['field_deposit_required'][0]['value'] = 'on';
+  }
+
+  if ( user_access(AVTSTORE_ORDER_IMPERSONATE_PERM) ) {
+    // $form_state values are passed to presave
+    if ( !empty($form_state['storage']['user']) ) {
+      // Save to an existing user
+      $form_state['values']['name'] = $form_state['storage']['user']->name;
+      $form_state['values']['uid']  = $form_state['storage']['user']->uid;
+    }
+  }
+
+  if ( !empty($form_state['storage']['new_user']) || user_is_anonymous()) {
+    $form_state['values']['field_password'] = $form_state['clicked_button']['#post']['password'];
+    $form_state['values']['field_username'] = $form_state['clicked_button']['#post']['username'];
+    $_SESSION['orders']['create']['form_state'] = $form_state;
+  }
+}
+
+function _avtstore_orders_modify_group_payment_information(array &$form, array &$form_state) {
+  $hidden_fields = array(
+      'field_estimated_cost', 'field_deposit_required', 'field_actual_cost',
+      'field_deposit_paid', 'field_deposit_paid_date', 'field_balance_paid',
+      'field_balance_paid_date', 'field_balance_due'
+      );
+
+  foreach ($hidden_fields as $field_name) {
+    if ( !empty($form['group_payment_information'][$field_name]) ) {
+      /*
+       * Wrapper here to work around an issue with Drupal and the #access
+       * attribute causing some fields to not save, even if programmatically
+       * set.
+       */
+      $form['group_payment_information'][$field_name]['#prefix'] = '<div style="display: none;">';
+      $form['group_payment_information'][$field_name]['#suffix'] = '</div>';
+      #$form['group_payment_information'][$field_name]['#access'] = FALSE;
+    }
+  }
+
+  $form['group_payment_information']['#title'] .= l(
+      theme('image', drupal_get_path('theme', 'avtstore') . '/images/ico-info.gif', t('Help icon'), t('What\'s this?') ),
+      drupal_get_path_alias('node/' . 2800),
+      array(
+          'html' => TRUE,
+          'attributes' => array(
+              'class' => 'colorbox-load help-icon'
+          )
+      )
+  );
+
+  return $form['group_payment_information'];
+}
+
+function _avtstore_orders_modify_group_user(array &$form, array &$form_state) {
+  $form['group_user']['#access'] = user_is_anonymous() || user_access(AVTSTORE_ORDER_IMPERSONATE_PERM);
+
+
+  $form['group_user']['field_create_or_login']['value']['#title'] = '';
+
+  $shared_attributes = array(
+      '#parents' => array('group_user'),
+      '#attributes' => array('autocomplete' => 'off'),
+      '#required' => user_is_anonymous() || !user_access(AVTSTORE_ORDER_IMPERSONATE_PERM),
+      '#access' => TRUE,
+  );
+
+  $form['group_user']['field_username'] = array_merge( $shared_attributes, array(
+      '#type' => 'textfield',
+      '#name' => 'username',
+      '#id' => 'order-username',
+      '#title' => t('E-mail address'),
+      '#value' => empty($form['#post']['username']) ? '' : $form['#post']['username'],
+      '#maxlength' => EMAIL_MAX_LENGTH,
+      '#weight' => $form['group_user']['field_create_or_login']['#weight'] + 1,
+  ) );
+
+  $form['group_user']['field_password'] = array_merge( $shared_attributes, array(
+      '#type' => 'password',
+      '#name' => 'password',
+      '#id' => 'order-password',
+      '#value' => empty($form['#post']['password']) ? '' : $form['#post']['password'],
+      '#title' => t('Password'),
+      '#weight' => $form['group_user']['field_create_or_login']['#weight'] + 2,
+  ) );
+
+  if ( user_access(AVTSTORE_ORDER_IMPERSONATE_PERM) ) {
+    $form['group_user']['field_username']['#autocomplete_path'] = 'user/autocomplete';
+  }
+
+  if ( user_access('administer users') ) {
+    $form['group_user']['#description'] = t('If you are creating a new
+                transcript request for an existing user, enter the User\'s
+                Username or e-mail address but do not enter a password.  If you
+                are creating a new transcript request for a new user, enter a
+                unique Username and a password.  You will be redirected to a
+                user register screen where you will need to complete additional
+                information');
+  }
+
+  return $form['group_user'];
+}
+
+function _avtstore_orders_modify_group_orderrequirements(array &$form, array &$form_state) {
+  return $form['group_orderrequirements'];
+}
+
+function _avtstore_orders_modify_group_orderdetails(array &$form, array &$form_state) {
+    // Fieldset is hidden by default because there are no form elements under it
+    $form['group_orderdetails']['#access'] = TRUE;
+    _avtstore_orders_add_order_details_placeholders($form, $form_state);
+
+  return $form['group_orderdetails'];
+}
+
+function _avtstore_orders_modify_group_header(array &$form, array &$form_state) {
+  $form['group_header']['group_hearingdates']['group_hearingdates_add_more']['#value'] = t('Add another date');
+  $form['group_header']['field_locationref']['nid']['hierarchical_select']['selects'][0]['#options']['label_0'] = t('Please select');
+
+  $is_real_submit = $form_state['submitted'] && $form_state['clicked_button']['#name'] != 'group_hearingdates_add_more';
+
+  /*
+   * This logic is to clear out empty hearing date groups without screwing up
+   * the AJAX request to build a new hearing date group
+   */
+  if ( $is_real_submit && !empty($form_state['values']['field_hearingdate']) ) {
+    foreach ($form_state['values']['field_hearingdate'] as $index => $info) {
+      if ( 0 !== $index ) {
+        if ( empty($info['value']['date']) ) {
+          $hours = $form_state['values']['field_estimatedhours'][$index]['value'];
+          $minutes = $form_state['values']['field_estimatedminutes'][$index]['value'];
+          if ( empty($hours) && empty($minutes) ) {
+            unset($form_state['values']['field_hearingdate'][$index]);
+            unset($form_state['values']['field_estimatedhours'][$index]);
+            unset($form_state['values']['field_estimatedminutes'][$index]);
+            unset($form['group_header']['group_hearingdates'][$index]);
+          }
+        }
+      }
+    }
+  }
+
+  return $form['group_header'];
+}
+
+
+function _avtstore_orders_order_node_form_after_build(&$form, &$form_state) {
+  /*
+   * Requested that these fields be hidden from all roles on creation, but not
+   * any time else.
+   */
+  #$form['group_administration']['#access'] = FALSE;
+  /*
+   * Wrapper here to work around an issue with Drupal and the #access
+   * attribute causing some fields to not save, even if programmatically
+   * set.
+   */
+  $form['group_administration']['#prefix'] = '<div style="display: none;">';
+  $form['group_administration']['#suffix'] = '</div>';
+
+  $form['taxonomy']['#access'] = FALSE;
+
+  $helper_functions = array(
+        'group_payment_information',
+        'group_user',
+        'group_orderrequirements',
+        'group_orderdetails',
+        'group_header',
+      );
+
+  foreach ($helper_functions as $key) {
+    $func = '_avtstore_orders_modify_' . $key;
+    if ( function_exists($func) ) {
+      $form[$key] = $func($form, $form_state);
+    }
+  }
+
+  $form = _avtstore_orders_wrap_group_items($form);
+  _avtstore_orders_stepify_form($form, $form_state);
+
+  return $form;
+}
+
+
+/**
+ * Builds the placeholder HTML elements for the third step of the Order form
+ *
+ * @param array $form
+ */
+function _avtstore_orders_add_order_details_placeholders(&$form) {
+  $status_items = array(
+    'status_estimated_cost' => array( '#title' => t('Estimated total cost'),
+        '#description' => l(
+              t('How is the estimate calculated?'),
+              drupal_get_path_alias('node/2082'),
+              array('alias' => TRUE, 'attributes' => array('class' => 'colorbox-load') )
+             ) ),
+    'status_case_name' => array( '#title' => t('Case name') ),
+    'status_case_numbers' => array( '#title' => t('Case number(s)') ),
+    'status_court_type' => array( '#title' => t('Court type') ),
+    'status_hearing_location' => array( '#title' => t('Hearing location') ),
+    'status_hearing_dates' => array( '#title' => t('Hearing date(s)') ),
+    'status_estimated_pages' => array( '#title' => t('Estimated number of pages') ),
+    'status_appeal_number' => array( '#title' => t('Appeal number') ),
+    'status_transcribe' => array( '#title' => t('Transcribe') ),
+    'status_requested_turnaround' => array( '#title' => t('Requested turnaround'),
+        '#description' => t('AVTranz will make every effort to acquire the audio
+                             for the requested hearing date(s) as quickly as
+                             possible. However, the turnaround time will not
+                             begin until AVTranz has received the audio from the
+                             Court') ),
+    //'status_transcript_due_date' => array( '#title' => t('Transcript due date') ),
+    //'status_delivery_method' => array( '#title' => t('Delivery method') ),
+    'status_additional' => array( '#title' => t('Additional') ),
+  );
+
+  /*
+
+  Case name           Appeal number
+  Court type          Requested turnaround
+  Hearing date(s)     Transcript due date
+  Transcribe          Delivery method
+  Case number(s)      Additional
+  Hearing location
+
+  */
+  $weight = $form['group_orderdetails']['#weight'];
+  foreach ($status_items as $key => $data) {
+    $form['group_orderdetails'][$key] = array_merge( array( '#type' => 'markup',
+      /*
+      '#value' => 'Placeholder',
+      '#disabled' => TRUE,
+      '#readonly' => TRUE,
+      '#name' => $key,
+      '#id' => $key,
+      '#attributes' => array( 'readonly' => 'readonly', 'class' => 'status-item' ),
+      */
+      '#weight' => $weight++,
+      '#value' => '<span class="status-label">' . $data['#title'] . ':</span><span class="status-value"></span>',
+      '#access' => TRUE,
+    ), $data);
+
+    if (!empty($data['#description'])) {
+      $form['group_orderdetails'][$key]['#value'] .= '<div class="status-description">' . $data['#description'] . '</div>';
+    }
+  }
+
+  $form['group_orderdetails']['estimated_cost']['#description'] = l(t('How is this estimate calculated?'), 'estimate');
+  $form['group_orderdetails']['#attributes']['class'] .= ' hide';
+}
+
+function _avtstore_orders_group_sort($element_1, $element_2) {
+  if( intval($element_1['#weight']) == intval($element_2['#weight']) ) {
+    return 0;
+  }
+  return ( intval($element_1['#weight']) < intval($element_2['#weight']) ) ? -1 : 1;
+}
+
+
+function _avtstore_orders_wrap_group_items(&$form) {
+  foreach ($form as $header => $header_data) {
+    if ( strpos( $header, 'group_' ) !== 0 ) {
+      continue;
+    }
+
+    if ( empty($header_data) || !is_array($header_data) ) {
+      continue;
+    }
+
+    $column_items = array();
+
+    foreach ($header_data as $key => $data) {
+      $str_start = drupal_substr($key, 0, strpos($key, '_'));
+      if ( in_array($str_start, array( 'field', 'status', 'group') ) ) {
+        if ( FALSE !== $form[$header][$key]['#access'] ) {
+          $column_items[] = array('header' => $header, 'key' => $key, 'type' => $str_start, '#weight' => $form[$header][$key]['#weight']);
+        }
+      }
+    }
+
+    if ( !empty($column_items) ) {
+      uasort( $column_items , '_avtstore_orders_group_sort');
+
+      $column_items = array_merge($column_items); // reindex array
+
+      foreach ($column_items as $index => $info) {
+        $even = (($index+1) % 2) === 0;
+        $referenced_item = &$form[$info['header']][$info['key']];
+        $referenced_item = _avtstore_orders_add_column_classes($referenced_item, !$even, array($info['header'], $info['key'], $info['type'], 'index-' . $index));
+      }
+    }
+  }
+
+  return $form;
+}
+
+/**
+ *
+ * @param array $item
+ * @param boolean $primary
+ * @param array $class_suffixes
+ *
+ * @return array
+ */
+function _avtstore_orders_add_column_classes(array $item, $primary = TRUE, array $class_suffixes = array()) {
+  $classes = array(
+      'form-col',
+      'form-col-' . ($primary ? 'primary' : 'secondary'),
+  );
+
+  if ( !empty($class_suffixes) ) {
+    foreach ($class_suffixes as $suffix) {
+      $classes[] = 'form-col-' . $suffix;
+    }
+  }
+
+  if ( empty($item['#prefix']) ) {
+    $item['#prefix'] = '';
+  }
+  $item['#prefix'] = '<div class="' . implode(' ', $classes) . '">' . $item['#prefix'];
+
+  if ( empty($item['#suffix']) ) {
+    $item['#suffix'] = '';
+  }
+
+  $item['#suffix'] .= '</div>';
+
+  return $item;
+}
+
+
+function _avtstore_orders_stepify_form(&$form, &$form_state) {
+  $step_info = array(
+    array('group_header'),
+    array('group_orderrequirements'),
+    array(
+      array( 'primary' => FALSE, 'group' => 'group_orderdetails' ),
+      array( 'primary' => TRUE, 'group' => 'group_payment_information' ),
+      'group_user',
+    ),
+  );
+
+  $step_info = _avtstore_orders_fix_step_info($step_info, $form);
+
+  $order_steps = array();
+  foreach ($step_info as $step_number => $headers) {
+    $step_number += 1;
+
+    foreach ($headers as $header_index => $header) {
+      $options = is_array($header) ? $header : NULL;
+
+      if (!empty($options)) {
+        $header = $options['group'];
+      }
+
+      if ( 0 == $header_index ) {
+        if ( empty($form[$header]['#prefix']) ) {
+          $form[$header]['#prefix'] = '';
+        }
+        $form[$header]['#prefix'] = '<div id="order-step-' . $step_number . '" class="step-wrapper">' . $form[$header]['#prefix'];
+      }
+
+      if (!empty($options['primary']) || ( !isset($options['primary']) && ( 0 == $header_index ) ) ) {
+        $order_steps[$step_number] = trim( $form[$header]['#title'], ':' );
+      }
+
+      if ( ( count($headers) - 1 ) == $header_index ) {
+        if ( empty($form[$header]['#suffix']) ) {
+          $form[$header]['#suffix'] = '';
+        }
+        $form[$header]['#suffix'] .= '</div>';
+      }
+    }
+  }
+
+  if (!empty($order_steps)) {
+    foreach ($order_steps as $step_number => &$title) {
+      $title = check_plain( strip_tags($title) );
+      $title = l(
+          (empty($title) ? t('Step @step-number', array( '@step-number' => $step_number ) ) : $title),
+          $_GET['q'],
+          array( 'fragment' => 'order-step-' . $step_number, 'attributes' => array('class' => 'order-step order-step-' . $step_number, 'title' => $title) )
+        );
+    }
+    unset($title);
+
+    $form['#prefix'] = theme('item_list', array_values($order_steps), t('Steps'), 'ul', array('id' => 'form-steps') );
+  }
+}
+
+
+function _avtstore_orders_fix_step_info(array $step_info, array $form) {
+  foreach ($step_info as $step_index => $headers) {
+    foreach ($headers as $header_index => $header) {
+      $options = is_array($header) ? $header : NULL;
+
+      if (!empty($options)) {
+        $header = $options['group'];
+      }
+
+      if ( !empty($form[$header]) && ($form[$header]['#access'] !== FALSE) ) {
+        continue;
+      }
+
+      // Step group is not set or visible to current user
+      unset( $step_info[$step_index][$header_index] );
+
+      // Entire step is empty, remove it from handling
+      if (empty($step_info[$step_index])) {
+        unset($step_info[$step_index]);
+      }
+      else {
+        // This header was marked as primary, but not usable.. Fall back to first header
+        if ( !empty($options['primary']) && (0 != $header_index) && is_array($step_info[$step_index][0]) ) {
+            $step_info[$step_index][0]['primary'] = TRUE;
+        }
+      }
+    }
+  }
+
+  return $step_info;
+}
+
+
+/**
+ * @param unknown_type $node
+ * @return Ambiguous
+ */
+function _avtstore_orders_after_landing_path($node) {
+  $_SESSION['orders']['order_id'] = $node->nid;
+  $_SESSION['orders']['order'] = $node;
+
+  return ( 'court_pay' == $node->field_how_to_pay[0]['value'] ) ?
+    'confirm/thanks/court' :
+    'confirm/thanks/private';
+}
+
+
+/**
+ *
+ */
+function _avtstore_orders_estimate_cost() {
+  module_load_include('class', 'avtstore_orders', 'AVTCostCalculator');
+
+  if ( !empty($_GET['nid']) ) {
+    $result = AVTCostCalculator::calculateFromNode($_GET['nid']);
+  }
+  else {
+    $result = AVTCostCalculator::calculateFromScript($_GET);
+  }
+
+  echo drupal_json($result);
+  exit;
+}
+
+
+
+/**
+ * @return multitype:number string
+ */
+function avtstore_orders_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'avtstore_orders') . '/views',
+  );
+}
+
+/**
+ * Determines the balance due for a specific order
+ *
+ * @param int $order_id
+ *     The order to check for a balance on
+ *
+ * @param boolean $text_format
+ *     TRUE to return the result as a currency formatted string
+ *
+ * @return float|string|boolean
+ *     The (un)formatted amount due/owed or FALSE on failure
+ */
+function _avtstore_orders_calculate_balance_due($order, $text_format = FALSE, $allow_negative = FALSE) {
+  if ( empty($order->nid) ) {
+    if ( is_numeric($order) ) {
+      $order = node_load($order);
+      if ( empty($order->nid) ) {
+        return FALSE;
+      }
+    }
+    else {
+      return FALSE;
+    }
+  }
+
+  $amount_owed = !empty( $order->field_actual_cost[0]['value'] ) ?
+                    floatval( $order->field_actual_cost[0]['value'] ) :
+                    floatval( $order->field_estimated_cost[0]['value'] );
+
+  $amount_paid = floatval( $order->field_deposit_paid[0]['value'] ) + floatval( $order->field_balance_paid[0]['value'] );
+
+  $balance_due = round( $amount_owed - $amount_paid, 2 );
+
+  $is_negative = 0.00 > $balance_due;
+  $is_court_pay = 'court_pay' === $order->field_how_to_pay[0]['value'];
+  $is_required = 'on' === $order->field_deposit_required[0]['value'];
+
+  // Courts do not have to pay. We need to allow a negative in case of a refund
+  if ( $is_court_pay && $balance_due > 0.00 ) {
+    $balance_due = 0.00;
+  }
+  /*
+   * Non-courts do need to pay, but only if deposit required is checked.
+   * Special handling for negative values, so that they don't get forced to 0.00
+   */
+  elseif ( !$is_court_pay && !$is_required && !$is_negative) {
+    $balance_due = 0.00;
+  }
+  // Need to explicitly deny a negative value to wind up with 0.00
+  elseif ( !$allow_negative && $is_negative) {
+    $balance_due = 0.00;
+  }
+
+  setlocale(LC_MONETARY, 'en_US.UTF-8');
+  return $text_format ?
+    money_format('%n', $balance_due) :
+    $balance_due;
+}
+
+
+/**
+ * @return Ambigous <boolean, unknown>
+ */
+function _avtstore_orders_get_current_order() {
+  global $node;
+  if ( !empty($_SESSION['orders']['order_id']) ) {
+    $order = !empty($_SESSION['orders']['order']) ?
+    $_SESSION['orders']['order'] :
+    node_load($_SESSION['orders']['order_id']);
+  }
+  elseif ( !empty($node->nid) && 'order' == $node->type) {
+    $order = $node;
+  }
+  elseif ( in_array( arg(0), array('node', 'file-plupload') ) && is_numeric( arg(1) ) ) {
+    $order = node_load( arg(1) );
+  }
+  elseif ( is_numeric( arg(1) ) ) {
+    $order = node_load( arg(1) );
+
+    if ( 'order' !== $order->type ) {
+      $order = NULL;
+    }
+  }
+
+  return empty($order->nid) || 'order' !== $order->type ? FALSE : $order;
+}
+
+/**
+ * This is a wrapper for drupal_goto() to work around some issues with forcing
+ * a redirect before a node is finalized
+ *
+ * @param string $path
+ *   The path to redirect to
+ *
+ * @param integer $code[optional]
+ *   The HTTP status code to use
+ *
+ * @param stdObject $node[optional]
+ *   A node object to save before redirecting
+ */
+function _avtstore_orders_goto($path, $code = 303, $node = NULL) {
+  if ( !empty($node) ) {
+    node_save( node_submit($node) );
+  }
+
+  drupal_goto($path, NULL, NULL, $code);
+  exit;
+}

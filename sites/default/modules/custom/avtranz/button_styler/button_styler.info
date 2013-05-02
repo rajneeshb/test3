@@ -1,0 +1,6 @@
+; $Id$
+name = Button Styler
+description = Themes various buttons on the site to match the AVTranz button format 
+package = AVTranz
+core = 6.x
+version = 0.1

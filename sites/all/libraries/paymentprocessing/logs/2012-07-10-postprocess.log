@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => McGrath
+    [billTo_email] => mmcgrath@upton-hatfield.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => LHHOOCwKKykrBPQMCyQgyYHbHrk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2016
+    [card_accountNumber] => ###########2016
+    [reasonCode] => 100
+    [billTo_firstName] => Michael
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3419449239770178147360
+    [order_id] => 16382
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 126644
+    [billTo_company] => Upton & Hatfield, LLP
+    [card_expirationMonth] => 01
+    [orderNumber] => 1341944862293
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 578
+    [signedDataPublicSignature] => DULSxYdG7ClBa+WPeAxuH3+whKY=
+    [reconciliationID] => 065694010WTO9N4GR31IF
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRcrzILRrZ/KhAKFWDZq2ctGDFhXqT3M5pHpM2MmMmkpuoQswNNJTdQhZ6QP5nhEhDJpJlXR6SzjgYQpFyvMgtGtn8qEAAzAml
+    [uid] => 578
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 295.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-10T182844Z
+    [orderAmount] => 295
+    [orderNumber_publicSignature] => sEkh5BehrB1yni0mbl0BUZI1GO8=
+    [card_cardType] => 003
+    [billTo_street1] => 14 Highview Terrace
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032247791
+    [paymentOption] => card
+    [transactionSignature] => 1arcA0U+jLupth7VFzVwtRG09eM=
+    [merchantDefinedData1] => Request ID: 16382
+    [billTo_city] => Manchester
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03104
+    [billTo_country] => us
+)

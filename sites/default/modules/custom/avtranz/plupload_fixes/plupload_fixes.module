@@ -1,0 +1,99 @@
+<?php
+
+/**
+ * Apply the patch file to plupload-6.x-1.x-dev
+ */
+
+  global $cookie_domain;
+
+  // Defined in plupload.module
+  defined('PLUPLOAD_URL_PARAM_PREFIX') or
+    define('PLUPLOAD_URL_PARAM_PREFIX', 'drupal_');
+
+  // Field to store order IDs on
+  defined('PLUPLOAD_ORDER_FIELD') or
+    define('PLUPLOAD_ORDER_FIELD', 'field_order_reference');
+
+  // $_GET key to look for
+  defined('PLUPLOAD_PREFIXED_ORDER_FIELD') or
+    define('PLUPLOAD_PREFIXED_ORDER_FIELD', PLUPLOAD_URL_PARAM_PREFIX . PLUPLOAD_ORDER_FIELD);
+
+  // Path to save files under in /files/
+  defined('PLUPLOAD_ORDER_PATH') or
+    define('PLUPLOAD_ORDER_PATH',  sprintf('/orders/%/', trim($cookie_domain, ' .') ) );
+
+  // Path to save files that don't have an order ID
+  defined('PLUPLOAD_ORDER_UNREFERENCED_PATH') or
+    define('PLUPLOAD_ORDER_UNREFERENCED_PATH', sprintf('/%s/unreferenced/', trim(PLUPLOAD_ORDER_PATH, '/') ) );
+
+
+/**
+ * Fixes the plupload options array to include the order number
+ *
+ * @param array $options[optional]
+ * 		The options array plupload creates
+ *
+ * @returns array
+ * 		An array of options with the order id included
+ */
+function _plupload_fixes_fix_plupload_upload_page_options($options = array()) {
+  if (!is_array($options)) {
+    $options = array(PLUPLOAD_PREFIXED_ORDER_FIELD => intval($options));
+  }
+
+  return $options;
+}
+
+/**
+ * Gets the correct upload destination based on order ID
+ *
+ * @param string $base_path[optional]
+ * 		The base folder to save files to
+ *
+ * @returns string
+ * 		The path to save files in
+ */
+function _plupload_fixes_get_upload_destination($base_path = NULL) {
+  if ( empty($base_path) ) {
+    $base_path = file_directory_path();
+  }
+
+  $path = (!empty($_GET[PLUPLOAD_PREFIXED_ORDER_FIELD]) && is_numeric($_GET[PLUPLOAD_PREFIXED_ORDER_FIELD])) ?
+          trim($base_path, '/') . PLUPLOAD_ORDER_PATH . intval($_GET[PLUPLOAD_PREFIXED_ORDER_FIELD]) :
+          trim($base_path, '/') . PLUPLOAD_ORDER_UNREFERENCED_PATH;
+
+  return $path;
+}
+
+/**
+ * Runs the correct filefield validators for our uploads
+
+ * @param array $field
+ * 		The field to run the validators on
+ *
+ * @returns @see filefield_widget_upload_validators()
+ */
+function _plupload_fixes_widget_upload_validators($field) {
+  return filefield_widget_upload_validators($field);
+}
+
+/**
+ * Implements plupload_node_presave()
+ *
+ * Used to save the order ID to the node
+ *
+ * @param object $node
+ * 		The node object before it gets saved
+ *
+ * @param array $options
+ * 		The options array for the node
+ *
+ * @returns
+ * 		No return
+ */
+function plupload_fixes_plupload_node_presave($node, $options) {
+  if ( !empty($options[PLUPLOAD_ORDER_FIELD]) ) {
+    $node->{PLUPLOAD_ORDER_FIELD}[0]['nid'] = intval($options[PLUPLOAD_ORDER_FIELD]);
+  }
+}
+

@@ -1,0 +1,99 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Dorfman
+    [billTo_email] => unherdof@earthlink.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => ApSm71QGY/T/ewaEkBUcV3evoAk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############2078
+    [reasonCode] => 100
+    [billTo_firstName] => Jay
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3436676825880178147364
+    [order_id] => 19107
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 193253
+    [card_expirationMonth] => 05
+    [orderNumber] => 1343667645364
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 468
+    [signedDataPublicSignature] => dH8eKWJD6yqpl5r8QvMCP+O4Aoo=
+    [reconciliationID] => 075334410WTOFO54IKB9H
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdJrxibAJ/oBIKFWDdqzZtGjFhXqT409q0ky4TmQmoJdnOYQJNQS7Ocw6QOpgSKSGTSTKuj0lnHAwhyLpNeMTYBP9AJAAixqv
+    [uid] => 468
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 106.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-30T170123Z
+    [orderAmount] => 106.25
+    [orderNumber_publicSignature] => +4Ivq20ldAjG1eEiDO/6iB67DVU=
+    [card_cardType] => 002
+    [billTo_street1] => 100 east palisade avenue
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 9173280602
+    [paymentOption] => card
+    [transactionSignature] => 7MI77CpoL+LQDErGlSfCzia3ooQ=
+    [merchantDefinedData1] => Request ID: 19107
+    [billTo_city] => englewood
+    [billTo_state] => Nj
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 07631
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Taussig
+    [billTo_email] => eric@erictaussig.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => OY1qGMlAwxfZcdT0YEAhVtxN76I=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ###########1001
+    [reasonCode] => 100
+    [billTo_firstName] => Eric
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3436980022590178147362
+    [order_id] => 18313
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 104909
+    [card_expirationMonth] => 06
+    [orderNumber] => 1343698002257
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 608
+    [signedDataPublicSignature] => V1TrvqotQ0Bxq+AYlnKA3RyZ+20=
+    [reconciliationID] => 075598402WTOFO54IL26L
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRdKNb4UpTOnhEKFWDdq1cuGjBlXqT409q0kzGTaYmoJdpIFgNNQS7SQLaQLq+RSQyaSZV0eks44GCmRdKNb4UpTOnhEAA7Rwo
+    [uid] => 608
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 13.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-07-31T012643Z
+    [orderAmount] => 13.75
+    [billTo_street2] => PO Box 471
+    [orderNumber_publicSignature] => RSTeojmVZ/Q9IHxptg+IHX65YjE=
+    [card_cardType] => 003
+    [billTo_street1] => 13 Hemlock Point
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035443010
+    [paymentOption] => card
+    [transactionSignature] => xWbvtQIzgED7p714uUFGuAY+Yz0=
+    [merchantDefinedData1] => Request ID: 18313
+    [billTo_city] => Moultonborough
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03254-0471
+    [billTo_country] => us
+)

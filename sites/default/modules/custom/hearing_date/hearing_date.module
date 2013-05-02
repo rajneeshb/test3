@@ -1,0 +1,267 @@
+<?php
+// $Id:$
+
+/**
+ * @file
+ * This is a Drupal Module - Person Field
+ * It implements a Person field for CCK
+ *
+ * Copyright 2009 Jennifer Hodgdon, Poplar ProductivityWare LLC
+ *
+ * Licensed under the GNU Public License
+ */
+
+
+// needs:
+// field info
+// hook install, uninstall, enable, disable,
+// field settings
+// filefield field settings operations
+// field
+// content is empty / default value
+// widget info
+// hook elements
+// process and validate
+// hook widget
+// widget settings
+// filefield widget settings callbacks
+// field formatter info
+// theme
+
+
+/**
+ * Implementation of CCK's hook_field_info().
+ *
+ * Returns basic information about this CCK field.
+ */
+function hearing_date_field_info() {
+  return array(
+    'hearing_date' => array(
+      'label' => t('Hearing Date'),
+      'description' => t('Stores duration information about hearing dates.'),
+    )
+  );
+}
+
+
+/**
+ * Implementation of hook_install().
+ *
+ * Lets CCK take care of this.
+ */
+function hearing_date_install() {
+  content_notify('install', 'hearing_date');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ *
+ * Lets CCK take care of this.
+ */
+function hearing_date_uninstall() {
+  content_notify('uninstall', 'hearing_date');
+}
+
+/**
+ * Implementation of hook_enable().
+ *
+ * Lets CCK take care of this.
+ */
+function hearing_date_enable() {
+  content_notify('enable', 'hearing_date');
+}
+
+/**
+ * Implementation of hook_disable().
+ *
+ * Lets CCK take care of this.
+ */
+function hearing_date_disable() {
+  content_notify('disable', 'hearing_date');
+}
+
+/**
+ * Implementation of CCK hook_field_settings().
+ */
+function hearing_date_field_settings($op, $field) {
+  switch ($op) {
+    case 'database columns':
+      $columns['displayed_name'] = array('type' => 'varchar', 'length' => 255, 'not null' => FALSE, 'sortable' => TRUE, 'default' => '');
+      $columns['job_title'] = array('type' => 'varchar', 'length' => 255, 'not null' => FALSE, 'sortable' => TRUE, 'default' => '');
+      $columns['phone'] = array('type' => 'varchar', 'length' => 255, 'not null' => FALSE, 'sortable' => FALSE, 'default' => '');
+      return $columns;
+  }
+}
+
+/**
+ * Implementation of CCK hook_field().
+ */
+function hearing_date_field($op, &$node, $field, &$items, $teaser, $page) {
+  switch ($op) {
+    case 'validate':
+      if (is_array($items)) {
+        foreach ($items as $delta => $item) {
+          if ($item['email'] != '' && !valid_email_address(trim($item['email']))) {
+            form_set_error($field['field_name'],t('"%mail" is not a valid email address',array('%mail' => $item['email'])));
+          }
+        }
+     }
+     break;
+
+    case 'sanitize':
+      foreach ($items as $delta => $item) {
+        foreach ($item as $col => $dat) {
+          $items[$delta]['safe_' . $col ] = check_plain($item[ $col ]);
+        }
+      }
+      break;
+  }
+}
+
+/**
+ * Implementation of hook_content_is_empty().
+ */
+function hearing_date_content_is_empty($item, $field) {
+  if (empty($item['displayed_name'])) {
+    return TRUE;
+  }
+  return FALSE;
+}
+
+/**
+ * Implementation of hook_widget_info().
+ */
+function hearing_date_widget_info() {
+  return array(
+    'person_entry' => array(
+      'label' => t('Text fields'),
+      'field types' => array('person'),
+      'multiple values' => CONTENT_HANDLE_CORE,
+      'callbacks' => array(
+        'default value' => CONTENT_CALLBACK_DEFAULT,
+      ),
+    ),
+  );
+}
+
+/**
+ * Implementation of Form API's hook_elements().
+ *
+ * Returns a skeleton Form API array that defines callbacks
+ * for the widget form.
+ */
+function hearing_date_elements() {
+  $elements = array('person_entry' =>
+    array(
+      '#input' => TRUE,
+      '#process' => array('hearing_date_person_entry_process'),
+    ),
+  );
+
+  return $elements;
+}
+
+/**
+ * Process callback for widget
+ *
+ * Returns a Forms API array that defines the widget's editing form.
+ */
+function hearing_date_person_entry_process($element, $edit, &$form_state, $form) {
+
+  $defaults = $element['#value'];
+  $field = content_fields($element['#field_name'], $element['#type_name']);
+
+  $element['displayed_name'] = array(
+    '#title' => t('Name'),
+    '#type' => 'textfield',
+    '#default_value' => $defaults['displayed_name'],
+    '#weight' => 2,
+  );
+
+  $element['job_title'] = array(
+    '#title' => t('Job Title'),
+    '#type' => 'textfield',
+    '#default_value' => $defaults['job_title'],
+    '#weight' => 3,
+  );
+
+  $element['phone'] = array(
+    '#title' => t('Phone'),
+    '#type' => 'textfield',
+    '#default_value' => $defaults['phone'],
+    '#weight' => 4,
+  );
+
+  return $element;
+}
+
+/**
+ * Implementation of hook_theme().
+ */
+function hearing_date_theme() {
+  return array(
+    'person_entry' => array(
+      'arguments' => array('element' => NULL),
+    ),
+    'hearing_date_formatter_default' => array(
+      'arguments' => array('element' => NULL),
+    ),
+  );
+}
+
+/**
+ * FAPI theme for an individual text elements.
+ */
+function theme_person_entry($element) {
+  return $element['#children'];
+}
+
+/**
+ * Implementation of hook_widget().
+ */
+function hearing_date_widget(&$form, &$form_state, $field, $items, $delta = 0) {
+  $element = array(
+    '#type' => $field['widget']['type'],
+    '#default_value' => isset($items[$delta]) ? $items[$delta] : '',
+  );
+  return $element;
+}
+
+/**
+ * Implementation of CCK's hook_field_formatter_info().
+ *
+ * Returns information about available field formatters.
+ */
+function hearing_date_field_formatter_info() {
+  return array(
+    'default' => array(
+       'label' => t('Person display'),
+       'field types' => array('person'),
+    ),
+  );
+}
+
+/**
+ * Theme function for default formatter.
+ */
+function theme_hearing_date_formatter_default($element = NULL) {
+  if(empty($element['#item'])) {
+    return '';
+  }
+
+  $stuff = $element['#item'];
+
+  $flds = array('displayed_name', 'job_title', 'phone');
+  $ret = '<div class="staff_info">';
+  $sep = '';
+  foreach($flds as $fld) {
+    if(!empty($stuff['safe_' . $fld ])) {
+      $ret .= $sep . '<span class="' . $fld . '">' . $stuff['safe_' . $fld ] . '</span>';
+      $sep = "<br />\n";
+    }
+  }
+
+  $ret .= '</div>';
+
+  return $ret;
+}

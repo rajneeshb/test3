@@ -1,0 +1,336 @@
+/****************************/
+/* LOCAL CSS                */
+/****************************/
+
+/* Put your custom CSS and CSS overrides in this file and  */
+/* rename it local.css.  By restricting your CSS changes   */
+/* to local.css, your changes will not be overwritten when */
+/* upgrading to a new version of this theme.  You can also */
+/* use a local-rtl.css file for the equivalent in RTL.     */
+
+/* Steps to activate local.css:                       */
+/* 1. Add your custom CSS to this file                */
+/* 2. Rename this file to local.css                   */
+/* 3. Clear cached data at admin/settings/performance */
+
+/* yes i know this defeats the whole fluid width thing, 
+but next time we will try to get the designers to create a site in 960px.  */
+
+body { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-main.jpg') top left; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; color: #666; }
+body,
+.full-width { min-width: 998px; }
+.node { margin-bottom: 0; }
+.row { max-width: 998px; min-width: 998px; }
+.block .inner { margin: 0; }
+.block { margin-bottom: 0; }
+
+a:link, a:visited { color: #0066cc;}
+a:hover, a:active { color: #0052a3;}
+
+#header-group-wrapper,
+#main-wrapper,
+#footer-wrapper,
+#footer-message-wrapper { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-content.png') top center repeat-y; }
+#header-group-inner,
+#content-top-inner,
+#content-region-inner,
+#content-bottom-inner,
+#footer-inner,
+#footer-message-inner,
+#breadcrumbs-inner { margin-right: 29px; margin-left: 29px; }
+#header-group { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/header-top.gif') top center no-repeat; height: 124px; width: 998px; position: relative; padding-bottom: 21px; }
+#header-group #header-site-info { height: 64px; width: 286px; position: absolute; top: 39px; left: 32px; }
+#header-group #logo { width: 286px; height: 64px; }
+
+
+/* Bread Crumbs */
+
+#breadcrumbs .breadcrumb {margin-bottom: 25px; padding-bottom: 0;}
+#breadcrumbs .breadcrumb a{ font-size: 18px; font-weight: bold; color: #e79930; }
+
+
+/*Fake Breadcrumbs*/
+
+.breadcrumb-wrapper { color: #cdc7c7; line-height: 23px; font-weight: bold; height: 23px;  font-size: 18px; font-weight: bold; overflow: hidden; margin-bottom: 23px; float: left; width: 80%;}
+.breadcrumb-wrapper a, .breadcrumb-wrapper span {  color: #e79930; display: block; float: left; margin-right: 10px;}
+.breadcrumb-wrapper img { display: block; float: left; margin-right: 10px; }
+
+/*seee all plans*/
+
+.see-plans {float: right; width: 20%; text-align: right; margin: 0 0 23px; line-height: 23px; height: 23px; }
+.see-plans a{ margin-right: 19px; }
+
+/* Share Links */
+
+#header-group #block-block-3 { position: absolute; right: 41px; top: 84px; height: 16px; width: 169px; overflow: hidden; }
+#header-group #block-block-3 .social-grp .left-col { float: left; color: #0066cc; margin-right: 6px; line-height: 16px; }
+#header-group #block-block-3 .social-grp .right-col { float: left; }
+/*
+#header-group #block-block-3 .social-grp .right-col a { display: block; width: 16px; height: 16px; float: left; }
+#header-group #block-block-3 .social-grp .right-col a { display: block; float: left; margin-right: 4px; }
+#header-group #block-block-3 .social-grp .right-col a:hover { text-decoration: none; }
+#header-group #block-block-3 .social-grp .right-col a.email { width: 16px; height: 16px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-social-grp.gif') -1px 0 no-repeat; }
+#header-group #block-block-3 .social-grp .right-col a.email:hover { width: 16px; height: 16px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-social-grp.gif') -1px -16px no-repeat; }
+#header-group #block-block-3 .social-grp .right-col a.fb { width: 16px; height: 16px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-social-grp.gif') -21px 0 no-repeat; }
+#header-group #block-block-3 .social-grp .right-col a.fb:hover { width: 16px; height: 16px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-social-grp.gif') -21px -16px no-repeat; }
+*/
+#header-group #block-block-3 .social-grp .right-col span.st_sharethis { width: 58px !important; height: 16px !important; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-social-grp.gif') 0 0 no-repeat !important;  display: block !important; float: left !important; cursor: pointer }
+/*#header-group #block-block-3 .social-grp .right-col a.tw:hover { width: 16px; height: 16px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-social-grp.gif') -41px -16px no-repeat; }
+*/
+
+#header-group #block-block-3 .social-grp .right-col span span { display: none !important; }
+/*Home page*/
+
+
+#pid-front #content-region { margin-bottom: 24px; }
+#pid-front #content-region h1 { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/title-shopping.jpg') top center no-repeat; width: 844px; height: 113px; font-size: 1px; color: #fff; margin-bottom: 15px; margin-left: 5px; }
+#pid-front #content-region h2 { font-size: 27px; color: #666666; font-weight: normal; margin-bottom: 26px; }
+#pid-front #content-region .cta-wrapper { overflow: hidden; }
+#pid-front #content-region .cta-wrapper .btn-grp { float: left; width: 297px; height: 224px; margin-right: 24px; }
+#pid-front #content-region .cta-wrapper .btn-grp .inner { margin: 22px 22px 0 22px; }
+#pid-front #content-region .cta-wrapper .btn-grp h3 { color: #fff; font-size: 31px; margin-bottom: 13px; }
+#pid-front #content-region .cta-wrapper .btn-grp p { color: #fff; font-size: 15px; line-height: 18px; margin-bottom: 31px; }
+#pid-front #content-region .cta-wrapper .btn-grp .lets-begin { display: block; height: 36px; width: 203px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-lts-bgn.png') 0 0 no-repeat; margin: 0 auto 30px; }
+#pid-front #content-region .cta-wrapper .btn-grp a.lets-begin:hover { display: block; height: 36px; width: 203px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-lts-bgn.png') 0 -36px no-repeat; text-decoration: none; }
+#pid-front #content-region .cta-wrapper .btn-grp .questions { text-align: right; }
+#pid-front #content-region .cta-wrapper .btn-grp .questions a { color: #fff; font-style: italic; }
+#pid-front #content-region .cta-wrapper .btn1 { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-individual.jpg') top center no-repeat; }
+#pid-front #content-region .cta-wrapper .btn2 { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-family.jpg') top center no-repeat; }
+#pid-front #content-region .cta-wrapper .btn3 { margin-right: 0 !important; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-child.jpg') top center no-repeat; }
+
+
+/*Plan Picker*/
+
+.page-planpicker #content-region {  font-size: 16px; color: #666; margin-bottom: 40px;   }
+.page-planpicker #content-region h1.title,
+.node-type-recommendation #content-region h1.title, 
+.page-brokersearch #content-region h1.title{ font-size: 33px; line-height: 38px; color: #009999; margin-bottom: 10px;}
+.page-planpicker #content-region p { margin: 0 0 25px; }
+.page-planpicker #content-region #planpicker-nameform { overflow: hidden; width: 75%;}
+.page-planpicker #content-region #planpicker-nameform .form-item, 
+.page-planpicker #content-region #planpicker-nameform #edit-smoker-N-wrapper { margin: 0 0 27px; }
+.page-planpicker #content-region #planpicker-nameform .form-item { width: 100%; }
+
+.page-planpicker #content-region #planpicker-nameform .list-wrapper { overflow: hidden; }
+.page-planpicker #content-region #planpicker-nameform .list-wrapper .list-item { float: left; }
+.page-planpicker #content-region #planpicker-nameform .list-wrapper .list-item .numbered { display: block; float: left; margin-right: 6px; font-weight: bold; color: #009999; }
+
+.page-planpicker #content-region #planpicker-nameform .form-radios { margin: 0; }
+.page-planpicker #content-region #planpicker-nameform .form-radios .form-item { float: left; width:auto; margin: 0; overflow: hidden; }
+.page-planpicker #content-region #planpicker-nameform .form-item label{ width: auto; float: left; margin-right: 10px;  }
+.page-planpicker #content-region #planpicker-nameform .list { color: #009999; margin-right: 4px; float: left; width: auto; }
+.page-planpicker #content-region #planpicker-nameform .form-item .form-radios { float: left; overflow: hidden; width: auto; margin: 0; }
+.page-planpicker #content-region #planpicker-nameform .form-item select { width: 175px; }
+.page-planpicker #content-region #planpicker-nameform .form-item .description { clear: both; margin-top: 5px; font-style: italic; font-size: 13px;  }
+
+.page-planpicker #content-region #planpicker-nameform .form-submit { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-submit.jpg') 0 0 no-repeat; border: none; height: 27px; width: 117px; text-align: left; font-size: 1px; color: #e08f2a; float: right; margin-right: 147px; }
+
+
+.page-planpicker #content-region #planpicker-nameform .form-submit.hover { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-submit.jpg') 0 -27px no-repeat; color: #eca143;}
+
+
+/*Recommendation Page*/
+.node-type-recommendation .center-wrapper { overflow: hidden; margin-bottom: 30px; }
+.node-type-recommendation .center-wrapper .panel-panel{ min-height: 604px; }
+.node-type-recommendation .pane-node-body ul { padding: 0; margin: 0 0 20px;} 
+.node-type-recommendation .pane-node-body ul li {  background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/checkmark.jpg') 0 0 no-repeat; font-size: 12px; margin-bottom: 17px; margin-left: 32px; margin-right: 30px; list-style: none; padding: 0 0 0 30px; line-height: 14px; min-height: 30px;}
+.node-type-recommendation #content-content.content-content .panel-display .panel-panel, #block-block-8 { border-right: 1px solid #ccc; position: relative; }
+.node-type-recommendation #content-content.content-content .panel-display .panel-col-last { border: none; }
+.node-type-recommendation #content-content.content-content .panel-display { margin-bottom: 31px; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .pane-field-planlogo { text-align: center; margin-top: 48px; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .field-items .pane-field-planlogo  img { margin: 0 auto; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .panel-col-first .inside {    margin: 0; min-height: 604px;}
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .panel-col { border-bottom: 1px solid #ccc; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .panel-col .inside { margin: 0; min-height: 604px; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .panel-col-last .inside {    margin: 0;  min-height: 604px;}
+
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .min-max-wrapper { overflow: hidden; font-size: 20px; font-weight: bold; color: #0068b3; margin: 0 0 20px 20px; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .min-max-wrapper .min-max { float: left; }
+.node-type-recommendation #content-content.content-content .panel-3col-33-stacked .min-max-wrapper .min-max span{ font-size: 16px; font-weight: normal; }
+
+.node-type-recommendation .pane-block-5 { position: absolute; top: 0; left: 0; }
+.node-type-recommendation .pane-block-5 div.pane-content { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/top-recommendation.jpg') 0 0 no-repeat; 
+ width: 311px; height: 33px; }
+ .node-type-recommendation .pane-block-5 div.pane-content p { display: none; visibility: hidden;}
+
+
+/*Broker Search*/
+.page-brokersearch #content-region #content-content { font-size: 16px; }
+.page-brokersearch #content-region #brokersearch-nameform { width: 650px; }
+.page-brokersearch #content-region #brokersearch-nameform input.form-text { line-height: 20px; height: 20px; text-indent: 4px; }
+.page-brokersearch #content-region #brokersearch-nameform .form-item { background: #f3f1f1; }
+.page-brokersearch #content-region #brokersearch-nameform .form-item,
+.page-brokersearch #content-region #brokersearch-nameform .form-radios { margin: 0; }
+.page-brokersearch #content-region #brokersearch-nameform .form-radios .form-el-2,
+.page-brokersearch #content-region #brokersearch-nameform .form-radios .form-el-3 { float: left; margin-left: 30px; width: 226px; font-size: 15px; }
+.page-brokersearch #content-region #brokersearch-nameform .form-el-1 { margin-bottom: 30px; }
+.page-brokersearch #content-region #brokersearch-nameform .label-el-1 { color: #0068b3; font-size: 18px; margin-bottom: 10px; }
+.page-brokersearch #content-region #brokersearch-nameform  h3.brokerheader { font-size: 18px; color: #666666; }
+.page-brokersearch #content-region #brokersearch-nameform .form-el-4 { margin-bottom: 10px; }
+.page-brokersearch #content-region #brokersearch-nameform .form-el-1,
+.page-brokersearch #content-region #brokersearch-nameform .form-el-4 { padding: 10px 15px; overflow: hidden; }
+.page-brokersearch #content-region #brokersearch-nameform h3.or { margin-left: 60px; font-size: 14px; color: #666666; }
+.page-brokersearch #content-region #brokersearch-nameform .zip-city-wrapper { overflow: hidden; background: #f3f1f1; padding: 10px 15px; margin-bottom: 25px; }
+.page-brokersearch #content-region #brokersearch-nameform .zip-city-wrapper .or { float: left; margin: 0 0 0 20px; }
+.page-brokersearch #content-region #brokersearch-nameform .zip-city-wrapper .form-item { float: left; margin-right: 20px; }
+.page-brokersearch #content-region #brokersearch-nameform .zip-city-wrapper input.form-text{ width: 170px; float: left; border: 1px solid #999999; margin-left: 6px; color: #666666; font-size: 12px; }
+.page-brokersearch #content-region #brokersearch-nameform .label-el-4,
+.page-brokersearch #content-region #brokersearch-nameform .zip-city-wrapper label { float: left; width: 88px; font-weight: normal; font-size: 15px; text-align: right; }
+.page-brokersearch #content-region #brokersearch-nameform .form-el-4 input.form-text { float: left; border: 1px solid #999999; margin-left: 6px; color: #666666; font-size: 12px; }
+.page-brokersearch #content-region #brokersearch-nameform .form-el-4 .description { display: none; visibility: hidden; }
+.page-brokersearch #content-region #brokersearch-nameform input.form-submit { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-search.jpg') 0 0 no-repeat; border: none; width: 116px; height: 28px; margin: 0 0 40px 265px; }
+.page-brokersearch #content-region #brokersearch-nameform input.form-submit.hover{ background-position: 0 -28px;  }
+.page-brokersearch #content-region .brokerrequest { float: left; width: 213px; margin-right: 30px; font-size: 16px; }
+.page-brokersearch #content-region .brokerrequest .requesttitle { color: #0068b3; font-size: 14px; font-weight: bold; }
+.page-brokersearch #content-region .brokerrequest .requestlabel { font-weight: bold; }
+.page-brokersearch #content-region .brokerrequest p { margin: 0; }
+.page-brokersearch #content-region .brokerrequest .modifysearch { margin-top: 35px; margin-bottom: 10px; }
+.page-brokersearch #content-region .brokerrequest .modifysearch a { display: block; width: 110px; height: 21px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-modify-search.gif') 0 0 no-repeat; }
+.page-brokersearch #content-region .brokerrequest .modifysearch a:hover { background-position: 0 -21px; }
+.page-brokersearch #content-region .brokerrequest .modifysearch a span { visibility: hidden; display: none; }
+.page-brokersearch #content-region .brokerrequest .request-links { cursor: pointer; text-decoration: underline; color: #009999; font-size: 14px; }
+.page-brokersearch #content-region #brokerresults { float: left; width: 669px; }
+.page-brokersearch #content-region #brokerresults li { padding: 10px 15px; list-style-position: inside; font-size: 16px; color: #009999; font-weight: bold; overflow: hidden;  }
+.page-brokersearch #content-region #brokerresults li.odd { background: #f3f1f1; }
+.page-brokersearch #content-region #brokerresults li span.brokerheader { color: #0068b3; font-size: 16px; font-weight: bold; }
+.page-brokersearch #content-region #brokerresults li div.brokeraddress { margin-left:20px; font-weight: normal; color: #666666; margin-bottom: 12px;}
+.page-brokersearch #content-region #brokerresults li div.response-links { margin-left:20px; font-size: 14px; font-weight: normal; color: #009999;}
+.page-brokersearch #content-region #brokerresults li div.response-links .empty-link { float: left; margin-right: 38px; color: #666; }
+.page-brokersearch #content-region #brokerresults li div.response-links a { float: left; margin-right: 38px; color: #009999; text-decoration: underline; }
+.page-brokersearch #content-region #brokerresults li div.response-links .print-broker-link{ text-decoration: underline; cursor: pointer; float: left; }
+
+
+/*quick tabs*/
+
+
+#content-tabs { margin: 0; position: relative; }
+
+#pid-allavailableplans #content-tabs .more-link { position: absolute; top: 178px; right: 34px; z-index: 1000; width: 280px; height: 20px; color: #666666; font-weight: bold; }
+#pid-allavailableplans #content-tabs .more-link a { color: #2c83c3; text-decoration: underline; }
+
+#content-tabs .more-link { position: absolute; top: 0; right: 34px; z-index: 1000; width: 280px; height: 20px; color: #666666; font-weight: bold; }
+#content-tabs .more-link a { color: #2c83c3; text-decoration: underline; }
+#block-quicktabs-1 { margin: 0; }
+.quicktabs_main.quicktabs-style-zen { overflow: hidden; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-tabs-bottom.png') bottom center repeat-x #0068b3; padding: 15px 0 25px }
+ul.quicktabs_tabs.quicktabs-style-zen { margin-bottom: 0; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-tabs-top.png') bottom center repeat-x; padding-bottom: 0; height: 34px; }
+ul.quicktabs_tabs.quicktabs-style-zen li { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-left-ie6.png") no-repeat scroll left -42px transparent; float: left; margin: 0 5px; padding: 0 0 0 7px; }
+ul.quicktabs_tabs.quicktabs-style-zen li.first { margin-left: 42px; }
+ul.quicktabs_tabs.quicktabs-style-zen li.active { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-left-ie6.png") no-repeat scroll left 0 transparent; }
+ul.quicktabs_tabs.quicktabs-style-zen li a { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-right-ie6.png") no-repeat scroll right -42px transparent; border-width: 0; display: block; font: bold 14px/34px "Trebuchet MS", Arial, Helvetica, sans-serif; ; margin: 0; padding: 0 17px 0 12px; text-decoration: none; color: #fff; letter-spacing: .03em; }
+ul.quicktabs_tabs.quicktabs-style-zen li.active a,
+ul.quicktabs_tabs.quicktabs-style-zen li.active a:hover { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-right-ie6.png") no-repeat scroll right 0 transparent; border-width: 0; text-decoration: none; }
+ul.quicktabs_tabs.quicktabs-style-zen li.active:hover { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-left-ie6.png") no-repeat scroll left 0 transparent; }
+ul.quicktabs_tabs.quicktabs-style-zen li:hover { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-left-ie6.png") no-repeat scroll left -83px transparent; }
+ul.quicktabs_tabs.quicktabs-style-zen li:hover a { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/tab-right-ie6.png") no-repeat scroll right -83px transparent; }
+.quicktabs_tabpage { background-color: #fff; width: 945px; overflow: hidden; margin: 0 auto; }
+.quicktabs_tabpage img { display: block; }
+.quicktabs_tabpage .view-content { overflow: hidden; margin: 5px 15px; }
+.quicktabs_tabpage .view-content .views-row { float: left; width: 24%; margin-right: 1%; display: block; margin-bottom: 4px; }
+.quicktabs_tabpage .view-content .views-row a { color: #707070; text-decoration: underline; }
+
+
+/*footer*/
+
+#content-bottom { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-content-bottom.png') top center repeat-x; padding-top: 22px; padding-bottom: 23px; }
+#content-bottom-inner .block { background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/footer-box.png') top left no-repeat; width: 460px; height: 123px; overflow: hidden; color: #666; line-height: 18px; position: relative; }
+#content-bottom-inner .block h2 { font-size: 23px; }
+#content-bottom-inner .block .inner { margin: 20px 15px 0; }
+#content-bottom-inner a { text-decoration: underline; color:#2ba7b4; }
+#content-bottom-inner #block-block-1 { margin-right: 20px; }
+#content-bottom-inner #block-block-1 h2 { color: #729630; margin-bottom: 11px; }
+#content-bottom-inner #block-block-2 h2 { color: #1573b9; margin-bottom: 8px; }
+#content-bottom-inner #block-block-1 .left-col { float: left; width: 60%; margin-right: 38px; }
+#content-bottom-inner #block-block-1 .right-col { float: left; width: 31%; }
+#content-bottom-inner #block-block-1 .right-col a { display: block; float: left; margin-right: 7px; text-decoration: none; }
+#content-bottom-inner #block-block-1 .right-col a:hover { text-decoration: none; }
+#content-bottom-inner #block-block-1 .right-col a.email { width: 39px; height: 35px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-email-lg.png') 0 0 no-repeat; margin-right: 5px; }
+#content-bottom-inner #block-block-1 .right-col a.email:hover { width: 39px; height: 35px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-email-lg.png') 0 -35px no-repeat; }
+#content-bottom-inner #block-block-1 .right-col a.fb { width: 35px; height: 35px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-fb-lg.png') 0 0 no-repeat; margin-right: 7px; }
+#content-bottom-inner #block-block-1 .right-col a.fb:hover { width: 35px; height: 35px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-fb-lg.png') 0 -35px no-repeat; }
+#content-bottom-inner #block-block-1 .right-col a.tw { width: 35px; height: 35px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-tw-lg.png') 0 0 no-repeat; margin-right: 7px; }
+#content-bottom-inner #block-block-1 .right-col a.tw:hover { width: 35px; height: 35px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-tw-lg.png') 0 -35px no-repeat; }
+#content-bottom-inner #block-block-2 .left-col { float: left; width: 67%; }
+#content-bottom-inner #block-block-2 .right-col { position: absolute; height: 88px; width: 117px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/steth.jpg') 0 0 no-repeat; top: -4px; right: 26px; }
+
+
+/*footer menu*/
+
+#footer-wrapper #block-menu-menu-footer { overflow: hidden; padding-bottom: 36px; }
+#footer-wrapper #block-menu-menu-footer ul { overflow: hidden; margin: 0; padding: 0; }
+#footer-wrapper #block-menu-menu-footer ul li { float: left; margin: 0; padding: 0 12px; list-style: none; border-right: 1px solid #666; line-height: 16px; }
+#footer-wrapper #block-menu-menu-footer ul li.first { padding-left: 0; }
+#footer-wrapper #block-menu-menu-footer ul li.last { border: none; padding-right: 0; }
+#footer-wrapper #block-menu-menu-footer ul li a { color: #666; line-height: 16px; letter-spacing: .075em; }
+#footer-wrapper #block-menu-menu-footer ul li.last a:hover { cursor: default; }
+
+
+/*lightbox*/
+
+
+  #frameContainer { padding: 0 !important; background: #90c0e4; overflow: hidden; }
+#lightboxFrame { background: none repeat scroll 0 0 #FFFFFF; border: medium none !important; margin: 16px 0; padding: 0 18px 0; width: 90% !important; }
+#imageData { overflow: hidden; background: #90c0e4; }
+#imageData #bottomNav { margin: 0; height: 40px; overflow: hidden; }
+#imageData #numberDisplay { display: none; visibility: hidden; }
+.lightbox2-alt-layout-data #bottomNavClose,
+.lightbox2-alt-layout #bottomNavClose { margin-top: 0; }
+#bottomNavClose { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/close.gif") no-repeat scroll 0 0 transparent; display: block; float: right; height: 16px; width: 15px; padding-top: 0 !important; }
+.lightbox2-alt-layout-data #bottomNavClose,
+.lightbox2-alt-layout #bottomNavClose { margin-top: 13px; }
+#bottomNavClose:hover { background-position: 0 -17px; }
+#outerImageContainer{ height:250px !important; }
+
+/*Apply Now*/
+
+.panel-col-bottom .apply-wrapper, #block-block-8 .apply-wrapper{ width: 100%; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/bg-apply-now.jpg') top left no-repeat; height: 70px; overflow: hidden; margin-bottom: 20px;  }
+
+
+ #block-block-8 .inner { height: 175px; }
+
+
+.panel-col-bottom .apply-wrapper a,  #block-block-8 .inner a { display: block; width: 209px; height: 42px; background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-apply-now.jpg') 0 0 no-repeat; margin: 14px auto 0;  }
+.panel-col-bottom .apply-wrapper a:hover,  #block-block-8 .inner a:hover {  background: url('/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-apply-now.jpg') 0 -42px no-repeat; }
+
+.block .fusion-edit a { display: none; visibility: hidden;}
+
+
+.panel-col-bottom .apply-wrapper a span,  #block-block-8 .inner a span { visibility: hidden; display: none; }
+
+.pane-block-8 p, #block-block-8 p { font-style:italic; font-size: 12px; line-height: 14px; margin: 0 auto; width: 872px; }
+
+
+/*Miscellanous*/
+
+.not-logged-in .content-messages-inner .warning { display: none; visibility: hidden; }
+.not-logged-in .content-messages-inner .status { display: none; visibility: hidden; }
+
+.pane-node-body .inner { min-height: 415px; }
+
+.views-view-grid td { font-size: 11px; vertical-align: top; } 
+
+.views-view-grid td .views-field-title {
+  color: #0068B3;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+}
+
+.views-view-grid td .views-field-body ul { margin-left: 0; }
+
+.views-view-grid td .views-field-body ul li{
+  background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/checkmark-sm.jpg") no-repeat scroll 0 0 transparent;
+  line-height: 14px;
+list-style: none outside none;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 0 0 0 18px;
+}
+
+
+#pid-allavailableplans .main-content-inner  h1.title {  }
+
+#pid-allavailableplans .main-content-inner  h1.title .apply-now{ display: block; float: right; width: 201px; height: 34px; background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-apply-now-2.jpg") no-repeat scroll 0 0 transparent;   }
+#pid-allavailableplans .main-content-inner  h1.title .apply-now:hover { background: url("/sites/bcidaho.ddev.mcmurryis.com/themes/fusion/fusion_starter/images/btn-apply-now-2.jpg") no-repeat scroll 0 -35px transparent; }
+#pid-allavailableplans .main-content-inner  h1.title .apply-now span { display: none; visibility: hidden; }
+

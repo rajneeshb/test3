@@ -1,0 +1,32 @@
+<?php
+
+/*
+ * Changes the label on the drop down menu for Check Status Admin filter "Appeal?"
+ * @author Jorge Martinez
+ *   
+ */
+
+
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ *
+ * @param array &$form
+ * @param array &$form_state
+ */
+function drop_down_rename_form_views_exposed_form_alter($form, &$form_state) {
+  if($form['#action'] == "/checkstatusadmin"){
+    $form['#after_build'][] = '_drop_down_rename_form_views_exposed_form_rename';
+  }
+}
+
+/**
+ * Implementation of after build function.
+ *
+ * @param array &$form
+ * @param array &$form_state
+ */
+function _drop_down_rename_form_views_exposed_form_rename(&$form, &$form_state){
+  $form['field_appealtranscript_value_many_to_one']['#options']['yes']="Yes";
+  return $form;
+}
+?>

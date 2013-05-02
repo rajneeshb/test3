@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Smith
+    [billTo_email] => emps@collegeboundmovers.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => TJYJouOBLkl/5tH2x3EVQT5DaZc=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############0013
+    [reasonCode] => 100
+    [billTo_firstName] => Edwatd
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,ccAuthReply_authFactorCode,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3395907179720178147362
+    [order_id] => 13899
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 01329A
+    [card_expirationMonth] => 04
+    [orderNumber] => 1339590717970
+    [ccAuthReply_authFactorCode] => N
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 532
+    [signedDataPublicSignature] => /oAaEC8xJpxCHtzPRC/lfK+cAr4=
+    [reconciliationID] => 051789729WTO1Q3DHSJ4X
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRcC9bx1YXqEBEKFWDVi3cOW7JzXqT2NFnEkU5TSwmkaeStKgFNI08laVaQLzkQ6wyaSZV0eks44GDCRcC9bx1YXqEBEAA0gZh
+    [uid] => 532
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 16.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-13T123158Z
+    [orderAmount] => 16.5
+    [orderNumber_publicSignature] => sUfq7sv8MwEDfHXyG73Grt/yXe4=
+    [card_cardType] => 001
+    [billTo_street1] => 3 stonewall crossing
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035400328
+    [paymentOption] => card
+    [transactionSignature] => dpStb/DFsiZAY7smWQHIrEgdXjA=
+    [merchantDefinedData1] => Request ID: 13899
+    [billTo_city] => amherst
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03031
+    [billTo_country] => us
+)

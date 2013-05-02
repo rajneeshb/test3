@@ -1,0 +1,93 @@
+<?php
+
+/**
+ * Implements hook_field_settings_alter()
+ *
+ * Lets us add a setting to CCK fields
+ *
+ * @param &$form
+ *    The CCK field configuration form array
+ *
+ * @param $op
+ *    The operation being performed
+ *
+ * @param $field
+ *    The field information array
+ *
+ */
+function label_help_field_settings_alter(&$form, $op, $field) {
+
+  if ('order' != $field['type_name']) {
+    return;
+  }
+
+  if ('form' == $op) {
+    $helps = views_get_view_result('help_messages');
+    if (empty($helps))
+      return $form;
+
+    $options = array( -1 => '<none>' );
+    foreach ($helps as $data) {
+      $options[ $data->nid ] = $data->node_title;
+    }
+
+    $element = array('label_help_nid' => array(
+      '#type' => 'select',
+      '#options' => $options,
+      '#title' => t('Help message'),
+      '#description' => t('The help message associated with this type.'),
+      '#default_value' => isset($field['label_help_nid']) ? intval($field['label_help_nid']) : -1,
+    ) );
+
+    $form = array_merge($form, $element);
+  }
+  elseif ('save' == $op) {
+    $form = array_merge($form, array('label_help_nid'));
+  }
+}
+
+/**
+ * Implements template_preprocess_hook()
+ *
+ * @see _label_help_preprocess_form_element_helper()
+ */
+function label_help_preprocess_form_element(&$variables) {
+  _label_help_preprocess_form_element_helper($variables);
+}
+
+/**
+ * Adds the label node to the preprocess variables
+ *
+ * @param &$variables
+ *    Site preprocess variables
+ *
+ */
+function _label_help_preprocess_form_element_helper(&$variables) {
+  if ( empty($variables['element']['#field']) ) {
+    if ( empty($variables['element']['#field_name']) ) {
+      if ( !empty($variables['element']['#parents'][0]) ) {
+        $field_name = $variables['element']['#parents'][0];
+      }
+      else {
+
+      }
+    }
+    else {
+      $field_name = $variables['element']['#field_name'];
+    }
+
+    if ( !empty($field_name) ) {
+      $variables['element']['#field'] = content_fields($field_name);
+    }
+  }
+
+  if ( !empty($variables['element']['#field']['label_help_nid']) ) {
+    static $included = FALSE;
+    if (!$included) {
+      drupal_add_js( colorbox_get_js() );
+      drupal_add_css( drupal_get_path('module', 'colorbox') .'/styles/default/colorbox_default_style.css');
+      $included = TRUE;
+    }
+    $variables['element']['#field']['help_node'] = node_load( $variables['element']['#field']['label_help_nid'] );
+  }
+}

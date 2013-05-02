@@ -1,0 +1,7 @@
+; $Id$
+name = AVTranz Storefront Order Control
+description = Makes adjustments to the order creation workflow
+package = AVTranz
+core = 6.x
+version = 0.1
+dependencies[] = views

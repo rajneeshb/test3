@@ -1,0 +1,6 @@
+; $Id$
+name = Order Payment Processing
+description = Logs payments and updates totals
+package = AVTranz
+core = 6.x
+version = 0.1

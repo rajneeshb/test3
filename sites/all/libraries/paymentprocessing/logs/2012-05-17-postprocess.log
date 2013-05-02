@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Trefethen
+    [billTo_email] => steve1955tre@cs.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 3W3DExfSCa1D5cgJNwyAiDIPKSI=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############4116
+    [reasonCode] => 100
+    [billTo_firstName] => Stephen
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3372706387630178147362
+    [order_id] => 10105
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 00791D
+    [card_expirationMonth] => 05
+    [orderNumber] => 1337270638761
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 466
+    [signedDataPublicSignature] => 9G/phF02Jl4+r5LIjG36F2dSpyk=
+    [reconciliationID] => 038188838WTO8V2AXI5NU
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbatoPF7nXzhEKFWDNwxcOHDNxXqT3FZlBsSWs6qmkLOatkwFNIWc1bJ6QPh1pC1DJpJlXR6SzjgYLZFtq2g8XudfOEQA3BjQ
+    [uid] => 466
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 173.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-05-17T160359Z
+    [orderAmount] => 173.25
+    [orderNumber_publicSignature] => W2GBKp5VutKuPerUbcGfn2iEKtw=
+    [card_cardType] => 001
+    [billTo_street1] => 4 Mulberry Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6035120772
+    [paymentOption] => card
+    [transactionSignature] => CbBILc53NPhk7L6eVMoGXAotxoU=
+    [merchantDefinedData1] => Request ID: 10105
+    [billTo_city] => Windham
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03087
+    [billTo_country] => us
+)

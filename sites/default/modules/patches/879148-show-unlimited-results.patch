@@ -1,0 +1,32 @@
+diff --git a/views_ignore_node_permissions.module b/views_ignore_node_permissions.module
+index d6b807c..ff71655 100644
+--- a/views_ignore_node_permissions.module
++++ b/views_ignore_node_permissions.module
+@@ -16,9 +16,17 @@ function views_ignore_node_permissions_views_pre_render(&$view)
+       $replacements = module_invoke_all('views_query_substitutions', $view);
+       $query = str_replace(array_keys($replacements), $replacements, $view->build_info['query']);
+       $args = $view->build_info['query_args'];
+-      $offset = $view->pager['current_page'] * $view->pager['items_per_page'] + $view->pager['offset'];
+-      // Runs the query a second time.
+-      $result = db_query_range($query, $args, $offset, $view->pager['items_per_page']);
++
++      if ($view->pager['items_per_page'] == 0) {
++        // No limit specified, so just return the results.
++        $result = db_query($query, $args);
++      }
++      else {
++        // Run the query a second time to limit results.
++        $offset = $view->pager['current_page'] * $view->pager['items_per_page'] + $view->pager['offset'];
++        $result = db_query_range($query, $args, $offset, $view->pager['items_per_page']);
++      }
++
+       // Overwrites the default empty result set with the results from our 2nd sql query.
+       $view->result = array();
+       while ($item = db_fetch_object($result)) {
+@@ -46,4 +54,4 @@ function views_ignore_node_permissions_views_data()
+     ),
+    );
+    return $data;
+-}
+\ No newline at end of file
++}

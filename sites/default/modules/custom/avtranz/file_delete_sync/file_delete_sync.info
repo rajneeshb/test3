@@ -1,0 +1,5 @@
+name = File Delete Syncing
+description = Syncs file deletion between storefront and tcro
+package = AVTranz
+core = 6.x
+version = 0.1

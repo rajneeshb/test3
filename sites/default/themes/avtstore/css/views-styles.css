@@ -1,0 +1,34 @@
+/* $Id$ */
+
+/**
+ * @file
+ * Views Styling
+ */
+
+
+.views-exposed-form label { font-weight: normal; }
+
+/*zebra tables*/
+
+.views-table { border: 1px solid #d0d0d0; width: 100%;}
+.views-table thead { background: #c3dff8; font-size: 1.2em }
+.views-table thead a{  color: #4c86b5; }
+ .views-table thead th{padding: 6px; border-right: 1px solid #d0d0d0 }
+  .views-table thead th.views-field views-field-field-orderstatus-value { border-right: none; }
+
+.views-table tr.odd { background: #f1efef; border-bottom: none; }
+.views-table tr.even { background: #fff;  border-bottom: none; }
+.views-table td { padding: 6px; line-height: 1.3em }
+.views-table td { border-right: 1px solid #d0d0d0 }
+
+
+
+.view-check-status .views-exposed-form .views-exposed-widget { float: none; }
+
+div.view-check-status table.views-table thead th.views-field-field-casename-value { width: auto; }
+div.view-check-status table.views-table thead th.views-field-field-case-number-value { width: 100px; }
+div.view-check-status table.views-table thead th.views-field-field-order-number-value-1 { width: 110px; }
+div.view-check-status table.views-table thead th.views-field-field-appeal-number-value { width: 75px; }
+div.view-check-status table.views-table thead th.views-field-field-due-date-value { width: 75px; }
+div.view-check-status table.views-table thead th.views-field-field-orderstatus-value { width: 65px; }
+

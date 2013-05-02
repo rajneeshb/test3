@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => McCandless
+    [billTo_email] => roy@roymccandlesslaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => MqtbTDdYH6nUkHT8+PFLCqYoD0Y=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############0682
+    [reasonCode] => 100
+    [billTo_firstName] => Roy
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3403852642870178147359
+    [order_id] => 14942
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 02787Z
+    [billTo_company] => Roy S. McCandless, Esq., PLLC
+    [card_expirationMonth] => 09
+    [orderNumber] => 1340385250436
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 539
+    [signedDataPublicSignature] => 9U+nJ4LXy+YydLdkDPD7UZ4vHz0=
+    [reconciliationID] => 056640184WTO9N3KTWP4N
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRcQvjsJzHEdg+KFWDVs2aMGLhpXqT3M5nLqV6DScmkpcohiAJNJS5RDEaQSjqCIfoZNJMq6PSWccDBZIuIXx2E5jiOwfANmRA
+    [uid] => 539
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1460.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-22T171424Z
+    [orderAmount] => 1460.5
+    [billTo_street2] => suite 4137
+    [orderNumber_publicSignature] => bS+0E56IicPn9DsCgeWcDJw7VhA=
+    [card_cardType] => 002
+    [billTo_street1] => 6 loudon Road
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6038568441
+    [paymentOption] => card
+    [transactionSignature] => lR8CBJSbrr16SPSuzbqAu6FZRjU=
+    [merchantDefinedData1] => Request ID: 14942
+    [billTo_city] => concord
+    [billTo_state] => nh
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03302
+    [billTo_country] => us
+)

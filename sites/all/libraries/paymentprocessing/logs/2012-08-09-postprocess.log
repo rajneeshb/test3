@@ -1,0 +1,98 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Laclair
+    [billTo_email] => kelly.deslauriers@avtranz.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############6703
+    [reasonCode] => 100
+    [billTo_firstName] => Paula
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3445316627540178147359
+    [order_id] => 19579
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 780752
+    [card_expirationMonth] => 03
+    [orderNumber] => 1344531662751
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 263
+    [signedDataPublicSignature] => rWUW1G+aZGTDQXx5gWkhXCyFPeA=
+    [reconciliationID] => 080918169WTOFO54J3Y80
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdYq/BVseQTA+KFWDhg5YuGLZzXqT409q0lM7LhgmoJeiILAJNQS9EQWaQN1tkV0MmkmVdHpLOOBg3kXWKvwVbHkEwPgA9woH
+    [uid] => 263
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 68.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-09T170103Z
+    [orderAmount] => 68.75
+    [orderNumber_publicSignature] => AAOkRG4/cNnn6JGuX2lOx+dLaJA=
+    [card_cardType] => 002
+    [billTo_street1] => 1 Jefferson Terrace
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6022630885
+    [paymentOption] => card
+    [transactionSignature] => 7gPrVZJWKDwTujQUrM0/8n05hkA=
+    [merchantDefinedData1] => Request ID: 19579
+    [billTo_city] => Loudon
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03307
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Gueydan
+    [billTo_email] => jgueydan@earthlink.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 6ZXLy1F/LfaKGZ/wKVAaXI48V98=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############0734
+    [reasonCode] => 100
+    [billTo_firstName] => James
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3445550512440178147359
+    [order_id] => 20673
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 063331
+    [card_expirationMonth] => 02
+    [orderNumber] => 1344555051242
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 646
+    [signedDataPublicSignature] => Trt5qytSZd6oPUfuVoEEriurIhU=
+    [reconciliationID] => 081113264WTO9N54HY0MM
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdZE834K76QA+KFWDhixYs2TZpXqT3M5q0kWWE2amkp9YypwFNJT6xlT6QO/FiK6GTSTKuj0lnHAwUSLrInm/BXfSAHwAXhB6
+    [uid] => 646
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 161.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-09T233052Z
+    [orderAmount] => 161.5
+    [orderNumber_publicSignature] => Y56hONtZmNYL1Mw7GlT+sKAAH80=
+    [card_cardType] => 001
+    [billTo_street1] => 19 Robbe Farm Rd.
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6032317936
+    [paymentOption] => card
+    [transactionSignature] => dmKlsO7FYxTwaMdffA93jXFXqKc=
+    [merchantDefinedData1] => Request ID: 20673
+    [billTo_city] => Peterborough
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03458
+    [billTo_country] => us
+)

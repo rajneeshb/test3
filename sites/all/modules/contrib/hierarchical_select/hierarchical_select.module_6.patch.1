@@ -1,0 +1,64 @@
+--- hierarchical_select.module	2010-10-08 18:04:55.000000000 +0200
++++ hierarchical_select.module	2010-12-20 13:01:46.033903237 +0100
+@@ -375,28 +375,11 @@ function hierarchical_select_json() {
+  * Hierarchical select form element type #process callback.
+  */
+ function hierarchical_select_process($element, $edit, &$form_state, $form) {
+-  if (!is_array($element['#value']) || !isset($element['#value']['hsid'])) {
+-    // The HSID is stored in the session, to allow for multiple Hierarchical
+-    // Select form items on the same page of which at least one is added through
+-    // AHAH. A normal static variable won't do in this case, because then at
+-    // least two Hierarchical Select form items will have HSID 0, because they
+-    // are generated in different requests, both of which will have a first HSID
+-    // of 0. This will then cause problems on the page. 
+-    if (!isset($_SESSION['hsid'])) {
+-      $_SESSION['hsid'] = 0;
+-    }
+-    else {
+-      // Let the HSID go from 0 to 99, then start over. Larger numbers are
+-      // pointless: who's going to use more than a hundred Hierarchical Select
+-      // form items on the same page?
+-      $_SESSION['hsid'] = ($_SESSION['hsid'] + 1) % 100;
+-    }
+-    $hsid = $_SESSION['hsid'];
+-  }
+-  else {
+-    $hsid = check_plain($element['#value']['hsid']);
+-  }
+-  $element['hsid'] = array('#type' => 'hidden', '#value' => $hsid);
++
++  static $hsids_settings = array();
++  $hsid = $element['#id'];
++  
++  $element['hsid'] = array('#type' => 'hidden', '#value' => $hsid, '#attributes' => array('class' => 'hierarchical-hsid'));
+   // A hierarchical_select form element expands to multiple items. For example
+   // $element['hsid'] got set just above. If #value is not an array, then
+   // form_set_value(), which is called by form_builder() will fail, because it
+@@ -434,11 +417,16 @@ function hierarchical_select_process($el
+            'createNewLevels'  => (isset($config['editability']['allow_new_levels'])) ? (int) $config['editability']['allow_new_levels'] : 0,
+            'resizable'        => (isset($config['resizable'])) ? (int) $config['resizable'] : 0,
+            'path'             => $config['path'],
++	   'updatesEnabled'   => 'true',
+         ),
+        ),
+      )
+   );
+-  _hierarchical_select_add_js_settings($settings, $form_state);
++
++  if(!in_array($hsid, $hsids_settings)) { 
++    _hierarchical_select_add_js_settings($settings, $form_state);
++  }
++  $hsids_settings[] = $hsid;
+ 
+   // Basic config validation and diagnostics.
+   if (HS_DEVELOPER_MODE) {
+@@ -2339,7 +2327,8 @@ function _hierarchical_select_add_js_set
+   }
+   // Otherwise, use drupal_add_js().
+   else {
+-    drupal_add_js($settings, 'setting');
++
++        drupal_add_js($settings, 'setting');
+ 
+     // Necessary for Views AJAX pager support.
+     // Also see hierarchical_select_ajax_data_alter().

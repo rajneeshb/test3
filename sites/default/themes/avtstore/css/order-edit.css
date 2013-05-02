@@ -1,0 +1,103 @@
+.order-form-edit .description
+{ margin: 0; line-height: 15px; color: #7b9934; font-size: 12px; margin-top: 2px; }
+
+.order-form-edit div.container-inline-date .form-item .form-item { float: none; }
+.order-form-edit fieldset fieldset legend { display: none; }
+.order-form-edit fieldset fieldset { border: none; padding: 0; margin: 0; }
+
+.order-form-edit input.form-text,
+.order-form-edit select.form-select,
+.order-form-edit textarea.form-textarea
+{ width: 100%; color: #6B6B6B;
+    font-size: 1em;
+    margin-bottom: 4px;
+	border: 1px solid #CBCBCB;
+    border-radius: 4px 4px 4px 4px;
+    line-height: 30px;}
+	.order-form-edit textarea.form-textarea { height: auto !important;  padding: 5px 4px 4px; width: 98%;}
+	.order-form-edit select.form-select {  padding: 5px 4px 4px;
+	}
+.order-form-edit div.hierarchical-select select.form-select { width: 300px; }
+
+.order-form-edit .btn-wrap { text-align: right; }
+.order-form-edit .btn-wrap button { text-align: left; }
+
+.order-form-edit div.row { position: relative; }
+
+.order-form-edit div.row > div { vertical-align: top; }
+.order-form-edit div.row > div.checkbox { vertical-align: bottom; margin-bottom: 5px; }
+
+.order-form-edit div.inline-blocks > div { display: inline-block; }
+.order-form-edit div.two-column > div { width: 300px; }
+.order-form-edit div.two-column div.left-column { margin-right: 20px; }
+	
+.order-form-edit div.two-column .two-column > div { width: 143px; }
+.order-form-edit div.two-column .two-column div.left-column { margin-right: 10px; }
+
+.order-form-edit div.item-value { text-indent: 1em; background-color: #EEE; border: 1px solid #BBB; border-radius: 5px; padding: 3px; }
+
+.order-form-edit fieldset.case-info { border: none; }
+.order-form-edit fieldset.case-info legend { background: transparent; padding-left: 0; }
+
+.order-form-edit #edit-field-order-number-0-value-wrapper,
+.order-form-edit div.edit-field-order-number-wrapper
+{ width: 150px; margin-right: 10px; }
+.order-form-edit #edit-field-casename-0-value-wrapper { width: 295px; margin-right: 10px; }
+.order-form-edit #edit-field-orderstatus-value-wrapper { width: 150px; }
+
+.order-form-edit label#hierarchical_select_court_type_child { position: absolute; left: 325px; top: 0; }
+.order-form-edit #edit-field-locationref-nid-hierarchical-select-selects-0 { margin-right: 24px; }
+
+.order-form-edit fieldset.group-hearingdates { border: none; }
+
+.order-form-edit fieldset.group-hearingdates div.content-add-more { margin-top: 5px; }
+
+.order-form-edit fieldset.group-hearingdates table.sticky-header { display: none; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values { margin: 0; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values #hearing_length_fake_label {margin-top: 5px;}
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr {height: 40px;}
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr:first-child {height: 61px;}
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div { margin-bottom: 0 !important; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td.content-multiple-drag { display: none; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date,
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div
+{
+  display: inline-block;
+}
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date { padding-right: 20px; width: 300px; margin-right: 5px; }
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date label,
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date div.description
+{
+  display: none;
+}
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0-field-hearingdate-value-wrapper label,
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0-field-hearingdate-value-wrapper div.description
+{
+  display: block;
+
+}
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0-field-estimatedhours-value-wrapper,
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0--remove-wrapper
+{
+  padding-top: 31px;
+}
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td #edit-group-hearingdates-0-field-estimatedhours-value-wrapper{ margin-left: -4px }
+
+
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div#edit-group-hearingdates-0--remove-wrapper { padding-left: 5px; }
+
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div label { display: inline; margin-left: 5px; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td label#hearing_length_fake_label { position: absolute; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div input { width: 30px; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td div.container-inline-date ~ div input[id$="field-estimatedminutes-value"] { margin-left: 20px; }
+.order-form-edit fieldset.group-hearingdates table#group_hearingdates_values tbody tr td.content-multiple-remove-cell { vertical-align: top; }
+
+.order-form-edit fieldset#multistep-group_formats { position: relative; }
+.order-form-edit #edit-field-numcopies-0-value-wrapper { width: 127px; position: absolute; right: 0; top: 165px; text-align: right; }
+.order-form-edit #edit-field-numcopies-0-value-wrapper input.form-text { width: 80px; }

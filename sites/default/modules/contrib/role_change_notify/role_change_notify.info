@@ -1,0 +1,10 @@
+name = Role Change Notify
+description = Send email to users when a new role is assigned to them.
+
+core = 6.x
+; Information added by drupal.org packaging script on 2011-04-04
+version = "6.x-2.3"
+core = "6.x"
+project = "role_change_notify"
+datestamp = "1301929868"
+

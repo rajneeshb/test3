@@ -1,0 +1,6 @@
+; $Id$
+name = Drop Down Rename
+description = Tweaks drop down menu "Appeals?"
+package = AVTranz
+core = 6.x
+version = 0.1

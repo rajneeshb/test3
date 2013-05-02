@@ -1,0 +1,151 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Nesbitt
+    [billTo_phoneNumber] => 6039687534
+    [orderAmount] => 3300
+    [billTo_street1] => 8 Marston Road
+    [card_accountNumber] => ###########4007
+    [platform] => prd
+    [orderAmount_publicSignature] => dz9m8peDD5v1iQVtDnn11qIxayM=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => +TfjvdgVqwMKox7VY7pQfWOvTdA=
+    [decision] => REVIEW
+    [ccAuthReply_processorResponse] => 01
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Lynne
+    [billTo_customerID] => 247
+    [uid] => 247
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 41671
+    [transactionSignature] => FTPhMZE4LxpBVxciIoyc7QgWp8o=
+    [billTo_city] => Holderness
+    [billTo_postalCode] => 03245
+    [orderPage_requestToken] => Ahj77wSRg/ebBzVqgIA+KJqC4xQaoDTUFxig1WkE6EiBeEmTpJlXR6SzjgGMjB+82DmrVAQB8AAA3xK5
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => TNX1DY4K72TD6D0OwxMBxhhE1V8=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => ltnesbitt@roadrunner.com
+    [reasonCode] => 201
+    [order_id] => 41671
+    [ccAuthReply_reasonCode] => 201
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 07
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 9Enr7gtG2d4a3tymgyZVcJv9EbY=
+    [requestID] => 3578365909400178147359
+    [orderNumber] => 1357836590938
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Crocker
+    [billTo_phoneNumber] => 6038984383
+    [orderAmount] => 93.75
+    [billTo_street1] => 13 Olde Road
+    [card_accountNumber] => ############7600
+    [platform] => prd
+    [orderAmount_publicSignature] => nc7OgzRt3CR2629zxRowS74lHXY=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 159133983WTO1QALSZCNB
+    [signedDataPublicSignature] => C6w+MtWQ6aHwxr+Ehp0fNr8PmOA=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Norman
+    [billTo_customerID] => 263
+    [uid] => 263
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 43526
+    [transactionSignature] => kM1kPSzImQuECIkYu5Rq3KV6fDc=
+    [billTo_city] => Danville
+    [billTo_postalCode] => 03819
+    [orderPage_requestToken] => Ahj//wSRg/h32nPasPBCKFWLVyxZs3LhnXqT2NGDMp2oc6Emkc2+XGwJNI5t8uN6QOkny8KGTSTKuj0lnHAwhSMH8O+057Vh4IQAzhy+
+    [ccAuthReply_amount] => 93.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 01088Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => ebattles@salemlegalservices.com
+    [reasonCode] => 100
+    [order_id] => 43526
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 07
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Dgbr4kahkxiF0EPsZTmHsG7BYuY=
+    [requestID] => 3578396987780178147361
+    [orderNumber] => 1357839698776
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-10T174139Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Burton
+    [billTo_phoneNumber] => 6037876941
+    [orderAmount] => 5.5
+    [billTo_street1] => 3855 Dartmouth College Hwy
+    [card_accountNumber] => ############0357
+    [platform] => prd
+    [orderAmount_publicSignature] => F3QXWqLIqKtkd+8z/XzFkSAQG0Q=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 159241254WTO9NALT5NOG
+    [signedDataPublicSignature] => Oc5EIjkUHIf9+1TzTLpyzJ8GReU=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Raymond
+    [billTo_customerID] => 795
+    [uid] => 795
+    [billTo_company] => Grafton County
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 28018
+    [transactionSignature] => 4Mlc8m45ubJjahbrEGAX4b7W3l0=
+    [billTo_city] => North Haverhill
+    [billTo_postalCode] => 03774
+    [orderPage_requestToken] => Ahj//wSRg/va4FLSG+hEKFWLVyyaMWTVpXqT3M6DMqNZ0+OmkrwyC6AFNJXhkF0aQKiYvChk0kyro9JZxwMFEjB/e1wKWkN9CIAAtBjR
+    [ccAuthReply_amount] => 5.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 006753
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => afarina@co.grafton.nh.us
+    [reasonCode] => 100
+    [order_id] => 28018
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 02
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => XcbUQ2IuID5sgKA1xsNnFLWMBWk=
+    [requestID] => 3578519010410178147362
+    [orderNumber] => 1357851901039
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-10T210501Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Z
+)

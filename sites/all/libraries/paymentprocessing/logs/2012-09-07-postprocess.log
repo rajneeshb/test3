@@ -1,0 +1,99 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Freeman
+    [billTo_email] => julietfreeman@comcast.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => ToIjq8EVo52SvFMrIjW/PmAXtWU=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ############5274
+    [reasonCode] => 100
+    [billTo_firstName] => Juliet
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3470422070370178147362
+    [order_id] => 24124
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 051763
+    [card_expirationMonth] => 02
+    [orderNumber] => 1347042207035
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 721
+    [signedDataPublicSignature] => yjGJ4/qjUwmmm1cCpyOi9WL/DRM=
+    [reconciliationID] => 096634451WTOFO6T7NZAC
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSReEOP69XET0hEKFWDls2ZtGjVjXqT409tUbzrUGGmoKAZpqwFNQUAzTV6QN5nkZcMmkmVdHpLOOBhLkXhDj+vVxE9IRAA9UEh
+    [uid] => 721
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 73.75
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-07T182328Z
+    [orderAmount] => 73.75
+    [orderNumber_publicSignature] => FQEZtk8svDUVijkHyKWV8DxCyik=
+    [card_cardType] => 001
+    [billTo_street1] => 811 Washington Road
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6033792560
+    [paymentOption] => card
+    [transactionSignature] => SckIqCqrZ/ipGNpnqadawDXeVKs=
+    [merchantDefinedData1] => Request ID: 24124
+    [billTo_city] => Rye
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03870
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => PURJES
+    [billTo_email] => patricia@joliepapier.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => z1AxoHYmFF5O2tDxRvhZy0kempo=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############7942
+    [reasonCode] => 100
+    [billTo_firstName] => DAN
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3470440166440178147360
+    [order_id] => 24127
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 00162G
+    [billTo_company] => ROCKWOOD GROUP LLC.
+    [card_expirationMonth] => 04
+    [orderNumber] => 1347044016642
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 722
+    [signedDataPublicSignature] => zyRnYiiYe9i1qXrYbEZFp5y3L24=
+    [reconciliationID] => 096651064WTO8V6STK1GH
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSReEQQgGUEq8BAKFWDls2asWDZpXqT3FZtTqS2MeQmkMruEMQFNIZXcIY6QPhsRGXDJpJlXR6SzjgYM5F4RBCAZQSrwEAA2RPi
+    [uid] => 722
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 172.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-09-07T185337Z
+    [orderAmount] => 172.5
+    [billTo_street2] => LOBBY LEVEL
+    [orderNumber_publicSignature] => hWJky0BX4AM9la8Hu309R49Txf4=
+    [card_cardType] => 001
+    [billTo_street1] => 401 HACKENSACK AVE.
+    [decision] => ACCEPT
+    [paymentOption] => card
+    [transactionSignature] => KosVYDQogmY1b/+2O3z76cyCAw8=
+    [merchantDefinedData1] => Request ID: 24127
+    [billTo_city] => HACKENSACK
+    [billTo_state] => NJ
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 07601
+    [billTo_country] => us
+)

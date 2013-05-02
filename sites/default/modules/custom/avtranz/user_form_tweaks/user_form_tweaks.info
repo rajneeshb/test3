@@ -1,0 +1,6 @@
+; $Id$
+name = User Form Tweaks
+description = Tweaks aspects of the different user forms (login, registration, etc)
+package = AVTranz
+core = 6.x
+version = 0.1

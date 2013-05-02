@@ -1,0 +1,156 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Blaszka
+    [billTo_email] => don@germainelaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => ApSm71QGY/T/ewaEkBUcV3evoAk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2014
+    [card_accountNumber] => ###########1013
+    [reasonCode] => 100
+    [billTo_firstName] => Donald
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3385503013600178147363
+    [order_id] => 12607
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 168496
+    [billTo_company] => Germaine & Blaszka, P.A.
+    [card_expirationMonth] => 07
+    [orderNumber] => 1338550301358
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 506
+    [signedDataPublicSignature] => uh/5zSv/9QL8tzXrQhekX/Lef+8=
+    [reconciliationID] => 045355352WTOFL2TUZSSR
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbw6Vu2lKJiBGKFWDRqzatWbVlXqT40xlUq2qdOkmn50Pi8gNNPzofF5aQOpgSGmGTSTKuj0lnHAwayLeHSt20pRMQIwAjADN
+    [uid] => 506
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 106.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-01T113142Z
+    [orderAmount] => 106.25
+    [orderNumber_publicSignature] => LQLd2oQrGYv/aj+/CV527DeYyas=
+    [card_cardType] => 003
+    [billTo_street1] => 23 Birch Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034344125
+    [paymentOption] => card
+    [transactionSignature] => rc7tAETmM5QXlcnmYxW9vGxthz8=
+    [merchantDefinedData1] => Request ID: 12607
+    [billTo_city] => Derry
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03038
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Weaver
+    [billTo_email] => kathy@fordandweaver.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Z
+    [orderAmount_publicSignature] => kHXQ026zgySqsQKqBnx2A+3yb7U=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2012
+    [card_accountNumber] => ############8742
+    [reasonCode] => 100
+    [billTo_firstName] => Mark
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3385700720780178147362
+    [order_id] => 12656
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 03392Z
+    [billTo_company] => Ford & Weaver, P.A.
+    [card_expirationMonth] => 06
+    [orderNumber] => 1338570072077
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 507
+    [signedDataPublicSignature] => bRUZDbxylQcMN+pxBLNWThPl4lg=
+    [reconciliationID] => 045698399WTO9N2TTCDDH
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Z
+    [orderPage_requestToken] => Ahj//wSRbxQShq09CZBEKFWDRq2cuGblzXqT3M5lUqQ4kSQmkpMzwpgJNJSZnhTaQPxEpDTDJpJlXR6SzjgYRZFvFBKGrT0JkEQA5hva
+    [uid] => 507
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 251.25
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-01T170112Z
+    [orderAmount] => 251.25
+    [billTo_street2] => Suite 400
+    [orderNumber_publicSignature] => /RUxxqQ40Zmh4Fljg8mR3XKKikA=
+    [card_cardType] => 002
+    [billTo_street1] => 10 Pleasant Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034332002
+    [paymentOption] => card
+    [transactionSignature] => mg5VpIpytMWh9ISx20robHVcYP8=
+    [merchantDefinedData1] => Request ID: 12656
+    [billTo_city] => Portsmouth
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03801
+    [billTo_country] => us
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Santos
+    [billTo_email] => bsantos@sherleff.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => BXdteWngvxXR6RTekDzTTDAS5O8=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ###########5006
+    [reasonCode] => 100
+    [billTo_firstName] => Beverly
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,billTo_street2,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3385860792530178147360
+    [order_id] => 12618
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 105078
+    [billTo_company] => Sher Leff LLP
+    [card_expirationMonth] => 11
+    [orderNumber] => 1338586079251
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 504
+    [signedDataPublicSignature] => CG1Diqti4pNVj31MbBCCRLVlLx4=
+    [reconciliationID] => 045882286WTO9N2TTCWFL
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRbxiD535nsAhAKFWDRq4cMmThtXqT3M5lUqQ68aYmkpM1V9QNNJSZqr66QOjKCGmGTSTKuj0lnHAwhSLeMQfO/M9gEIAANAmG
+    [uid] => 504
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 90.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-06-01T212800Z
+    [orderAmount] => 90
+    [billTo_street2] => Suite 400
+    [orderNumber_publicSignature] => JOXiLo8FDJcbw4FdAJwAofyYTmc=
+    [card_cardType] => 003
+    [billTo_street1] => 450 Mission Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 4153488300
+    [paymentOption] => card
+    [transactionSignature] => kQGpYvrucsGs8ZtjpTJh2iPCBlU=
+    [merchantDefinedData1] => Request ID: 12618
+    [billTo_city] => San Francisco
+    [billTo_state] => Ca
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 94105
+    [billTo_country] => us
+)

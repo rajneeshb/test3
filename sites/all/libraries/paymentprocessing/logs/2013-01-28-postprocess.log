@@ -1,0 +1,152 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Dasey
+    [billTo_phoneNumber] => 6034102866
+    [orderAmount] => 210
+    [billTo_street1] => 10 Centre Street
+    [card_accountNumber] => ############9613
+    [platform] => prd
+    [orderAmount_publicSignature] => 3nZdEtUzbilFFfCIV8qxik2S59c=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 167119954WTO1QCB2A0Q6
+    [signedDataPublicSignature] => k5c7leF4vW6mfAzXodFQbrl6oQ0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Christine
+    [billTo_customerID] => 479
+    [uid] => 479
+    [billTo_company] => Upton &  Hatfield, LLP
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 45162
+    [transactionSignature] => 98R7n8L/wRN/KpVzDIX2tTri074=
+    [billTo_city] => Concord
+    [billTo_postalCode] => 03301
+    [orderPage_requestToken] => Ahj//wSRhaQ2sPdX5uBCKFWLZuxYuXLVpXqT2NGHCZQWFFsmkdYLq7wFNI6wXV36QPpBBepDJpJlXR6SzjgYOZGFpDaw91fm4EIAsgz9
+    [ccAuthReply_amount] => 210.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 074654
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => cdasey@upton-hatfield.com
+    [reasonCode] => 100
+    [order_id] => 45162
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 08
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => J/nZ4myCyLqLRh+3YtiJjOiKUaY=
+    [requestID] => 3593808142160178147361
+    [orderNumber] => 1359380814214
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-28T134655Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Warner
+    [billTo_phoneNumber] => 9134899939
+    [orderAmount] => 574.75
+    [billTo_street1] => 12107 Ballentine Street
+    [card_accountNumber] => ############9455
+    [platform] => prd
+    [orderAmount_publicSignature] => GUeY5njHUhxJ/89HoDXA0zvJFC8=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 167334479WTO8HCAT9YTU
+    [signedDataPublicSignature] => rMC491xqlrQ+u+mKLd2MWmhDBPo=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => KS
+    [billTo_firstName] => Jennifer
+    [billTo_customerID] => 604
+    [uid] => 604
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 31472
+    [transactionSignature] => pBYb+JdQXu/LJUqM0/aAKCCO4FM=
+    [billTo_city] => Overland Park
+    [billTo_postalCode] => 66213
+    [orderPage_requestToken] => Ahj//wSRhasrnZA+66BEKFWLZuzZtGjdzXqT3EiHBqObNSqmj/kxWwAFNH/JitgaQQ4IMvUhk0kyro9JZxwMH0jC1ZXOyB910CIAURoc
+    [ccAuthReply_amount] => 574.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 00597D
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => hbjrwarner@kc.rr.com
+    [reasonCode] => 100
+    [order_id] => 31472
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 06
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 79n8d/gS3bI5S9Yi1XjMLEIFOuI=
+    [requestID] => 3594058784960178147362
+    [orderNumber] => 1359405878495
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-28T204440Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Mahoney
+    [billTo_phoneNumber] => 6036680359
+    [orderAmount] => 137.5
+    [billTo_street1] => 51 High St.
+    [card_accountNumber] => ############1876
+    [platform] => prd
+    [orderAmount_publicSignature] => QvCqkMuKXpH5a050hcLLVnI9d4Y=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 167349320WTOFLCBC7SBT
+    [signedDataPublicSignature] => bBQD62r2vYZWPjOoQl9Hp70UO1s=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Marilyn
+    [billTo_customerID] => 1315
+    [uid] => 1315
+    [billTo_company] => Harvey & Mahoney, P.A.
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 45688
+    [transactionSignature] => 4u1blhOZMGiq/tDrmrMpk1/tY3E=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03104
+    [orderPage_requestToken] => Ahj//wSRhauLrCwGxzhCKFWLZuzaOWbJhXqT40yHCht6cKomn85mb7QJNP5zM326QO1ti9SGTSTKuj0lnHAwnSMLVxdYWA2OcIQAPwoO
+    [ccAuthReply_amount] => 137.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 00578Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => jgorton@harveymahoney.com
+    [reasonCode] => 100
+    [order_id] => 45688
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 09
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => FCG6ddxw0pmJcW8Vc3hayeNUSrU=
+    [requestID] => 3594072303790178147361
+    [orderNumber] => 1359407199098
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-28T210710Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)

@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Tober
+    [billTo_email] => rdeangelis@toberlaw.com
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => vcuGKBZuhKdu2Dkt1O+bXqRXvws=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############8523
+    [reasonCode] => 100
+    [billTo_firstName] => Susan
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,orderPage_environment,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3491250566030178147360
+    [order_id] => 27992
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 42739P
+    [billTo_company] => Tober Law Offices P.A.
+    [card_expirationMonth] => 07
+    [orderNumber] => 1349125056601
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 685
+    [signedDataPublicSignature] => 4xUnFqvcWYi5oAvVbIbUnmllV2g=
+    [orderPage_environment] => PRODUCTION
+    [reconciliationID] => 108742866WTO1Q7L1YVUV
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSReoWrSLt8cLhAKFWLBw3aMnDZtXqT2NFvMY2a1Wsmkb14A7gJNI3rwB3aQSsIOI44ZNJMq6PSWccDB1IvULVpF2+OFwgAKTAS
+    [uid] => 685
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1807.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-10-01T205737Z
+    [orderAmount] => 1807.5
+    [orderNumber_publicSignature] => quF3XnlrqdNUdnw8EsVSOGlQQnw=
+    [card_cardType] => 002
+    [billTo_street1] => 381 Middle Street
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034311003
+    [paymentOption] => card
+    [transactionSignature] => 0MY0mgYIANRDgHg3ukP8oY7VOWs=
+    [merchantDefinedData1] => Request ID: 27992
+    [billTo_city] => Portsmouth
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03801
+    [billTo_country] => us
+)

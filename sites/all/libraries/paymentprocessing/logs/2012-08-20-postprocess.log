@@ -1,0 +1,49 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Olson
+    [billTo_email] => attyolson@comcast.net
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => NL8ok6C8iqu0imKlrbpDSeRqsV0=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2015
+    [card_accountNumber] => ############8614
+    [reasonCode] => 100
+    [billTo_firstName] => Carl
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3454942484650178147363
+    [order_id] => 22136
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 052409
+    [card_expirationMonth] => 04
+    [orderNumber] => 1345494248463
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 679
+    [signedDataPublicSignature] => iWyz8OrgNlv0x+ma7yL7ILcURcQ=
+    [reconciliationID] => 086664217WTOFO5ZTL08J
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdpXq2XBmsOhGKFWDhs2bNGTFvXqT409raqTGDiUmoJvnOagFNQTfOc1aQR8bMRcwyaSZV0eks44GDyRdpXq2XBmsOhGAfUhu
+    [uid] => 679
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 1237.50
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-20T202409Z
+    [orderAmount] => 1237.5
+    [orderNumber_publicSignature] => kgMFbCFPkdfVE04nXh1h9SLfAmY=
+    [card_cardType] => 001
+    [billTo_street1] => 2 Palmer Drive, Suite 5
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6034256555
+    [paymentOption] => card
+    [transactionSignature] => u86VM2DeQ8aLMIVWpwPjBrSoNhQ=
+    [merchantDefinedData1] => Request ID: 22136
+    [billTo_city] => Londonderry
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03053
+    [billTo_country] => us
+)

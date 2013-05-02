@@ -1,0 +1,60 @@
+Array
+(
+    [Order ID] => 0
+    [Price] => 55
+    [User ID] => 565
+    [IP] => 64.134.70.177
+    [Timestamp] => 1343313234
+    [Time/Date] => Thu, 26 Jul 2012 10:33:54 -0400
+    [Order Page Timestamp] => 1343313147031
+    [Order Page Time/Date] => Sun, 24 Nov 44537 15:50:31 -0500
+    [User Agent] => Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 637.5
+    [User ID] => 614
+    [IP] => 72.248.85.98
+    [Timestamp] => 1343314098
+    [Time/Date] => Thu, 26 Jul 2012 10:48:18 -0400
+    [Order Page Timestamp] => 1343314064122
+    [Order Page Time/Date] => Thu, 05 Dec 44537 06:35:22 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 172.5
+    [User ID] => 615
+    [IP] => 96.233.83.174
+    [Timestamp] => 1343327095
+    [Time/Date] => Thu, 26 Jul 2012 14:24:55 -0400
+    [Order Page Timestamp] => 1343327084048
+    [Order Page Time/Date] => Sun, 04 May 44538 23:14:08 -0500
+    [User Agent] => Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; WOW64; Trident/5.0)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 0
+    [User ID] => 0
+    [IP] => 150.70.75.30
+    [Timestamp] => 1343328583
+    [Time/Date] => Thu, 26 Jul 2012 14:49:43 -0400
+    [Order Page Timestamp] => 0
+    [Order Page Time/Date] => Wed, 31 Dec 1969 19:00:00 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+)
+Array
+(
+    [Order ID] => 0
+    [Price] => 258.5
+    [User ID] => 614
+    [IP] => 72.248.85.98
+    [Timestamp] => 1343335203
+    [Time/Date] => Thu, 26 Jul 2012 16:40:03 -0400
+    [Order Page Timestamp] => 1343335181124
+    [Order Page Time/Date] => Wed, 06 Aug 44538 16:25:24 -0500
+    [User Agent] => Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)
+)

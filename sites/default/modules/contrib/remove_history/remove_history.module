@@ -1,0 +1,22 @@
+<?php
+// $Id: remove_history.module,v 1.1.2.2 2011/02/16 19:17:00 hosszukalman Exp $
+/**
+ * @file
+ *
+ *
+ *
+ * @author Kálmán Hosszu - hosszu.kalman@gmail.com - http://www.kalman-hosszu.com
+ */
+
+/* ====================== */
+/* ==== DRUPAL HOOKS ==== */
+/* ====================== */
+
+/**
+ * Implementation of hook_profile_alter().
+ *
+ * @param &$account A user object whose profile is being rendered. Profile items are stored in $account->content.
+ */
+function remove_history_profile_alter(&$account) {
+  unset($account->content['summary']);
+}

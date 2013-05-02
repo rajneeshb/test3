@@ -1,0 +1,52 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Granados-Larson
+    [billTo_phoneNumber] => 8026495700
+    [orderAmount] => 106.25
+    [billTo_street1] => 8 Beaver Meadow Rd
+    [billTo_street2] => PO Box 1229
+    [card_accountNumber] => ###########1007
+    [platform] => prd
+    [orderAmount_publicSignature] => ApSm71QGY/T/ewaEkBUcV3evoAk=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 187010813Y250BE7LZLYX
+    [signedDataPublicSignature] => S4ttTiIiUz0Xe0Axn9OCmKyNlpE=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => VT
+    [billTo_firstName] => Andrea
+    [billTo_customerID] => 430
+    [uid] => 430
+    [billTo_company] => Vitt Brannen & Loftus, PLC
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 51749
+    [transactionSignature] => RbI6To61iw5gjuwJblmZ2jOPFL8=
+    [billTo_city] => Norwich
+    [billTo_postalCode] => 05055
+    [orderPage_requestToken] => Ahj//wSRid4SpQ+ed2BCKFWLhuwYsHDFnZZNWEKK3mWplmwogOcC0tIDUQHOBaWlpA6mBMAYZNJMq6PSWccDB5IxO8JUofPO7AhAug0P
+    [ccAuthReply_amount] => 106.25
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 113013
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => Gvitt@vbllawyers.com
+    [reasonCode] => 100
+    [order_id] => 51749
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 10
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => jRLUicBbOgufQ36Uaaze/MEIK4s=
+    [requestID] => 3632786227440178147361
+    [orderNumber] => 1363278622743
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-03-14T163023Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Z
+)

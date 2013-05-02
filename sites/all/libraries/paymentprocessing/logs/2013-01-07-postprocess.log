@@ -1,0 +1,192 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Katsoulis
+    [orderAmount] => 68.75
+    [billTo_street1] => P.O. Box 1163
+    [card_accountNumber] => ############1490
+    [platform] => prd
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => 01S9Wt/kHw77xsMF5pJLmBJONgk=
+    [decision] => REJECT
+    [ccAuthReply_processorResponse] => 05
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => George
+    [billTo_customerID] => 263
+    [uid] => 263
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 42201
+    [transactionSignature] => aO8R6EVnqRjQSwkGIJe1zxxR8Cs=
+    [billTo_city] => Hollis
+    [billTo_postalCode] => 03049
+    [orderPage_requestToken] => Ahj77wSRg63HZ1eTZ8BIKJpHNqxlICTSObVjKWkDdbZd+mXpJlXR6SzjgGsjB1uOzq8mz4CQgikE
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => georgekatsoulis@aol.com
+    [reasonCode] => 203
+    [order_id] => 42201
+    [ccAuthReply_reasonCode] => 203
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 08
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => ptz15m66t2Go7aqwjv3Exm31GUc=
+    [requestID] => 3575706023720178147364
+    [orderNumber] => 1357570602370
+    [signedFields] => billTo_lastName,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Katsoulis
+    [orderAmount] => 68.75
+    [billTo_street1] => P.O.Box 1163
+    [card_accountNumber] => ############1490
+    [platform] => prd
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [signedDataPublicSignature] => Rj9tw3KDLgEO4i3sr8QoteAtLY4=
+    [decision] => REJECT
+    [ccAuthReply_processorResponse] => 05
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => George
+    [billTo_customerID] => 263
+    [uid] => 263
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 42201
+    [transactionSignature] => NcSDj9RiuU4WsKK4irkveuNUuBU=
+    [billTo_city] => Hollis
+    [billTo_postalCode] => 03049
+    [orderPage_requestToken] => Ahj77wSRg63SbSiWYNhIKJpHNqxwACTSObVjgGkDdbZd+mXpJlXR6SzjgGsjB1uk2lEswbCQIynl
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [decision_publicSignature] => 0dXZuXVlTstro9Mt4xaCuwk/s40=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => georgekatsoulis@aol.com
+    [reasonCode] => 203
+    [order_id] => 42201
+    [ccAuthReply_reasonCode] => 203
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 08
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => dSqc+WbGCm70CGmu87sdwjO4bHY=
+    [requestID] => 3575707575030178147364
+    [orderNumber] => 1357570757501
+    [signedFields] => billTo_lastName,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,orderCurrency_publicSignature,orderPage_transactionType,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,card_cardType,ccAuthReply_avsCode
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Cotrupi
+    [billTo_phoneNumber] => 6039265818
+    [orderAmount] => 481.25
+    [billTo_street1] => 428 Lafayette Road
+    [billTo_street2] => Suite 102
+    [card_accountNumber] => ###########2002
+    [platform] => prd
+    [orderAmount_publicSignature] => 8FUO2i5GlZxJENYQRbk8qVV6UGg=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 157498120WTOFLBJ5V8ME
+    [signedDataPublicSignature] => yHJ2Q7LtUrs1ERbTmUaUGWNuSQk=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Andrew
+    [billTo_customerID] => 797
+    [uid] => 797
+    [billTo_company] => Law Office of Andrew F. Cotrupi
+    [card_expirationYear] => 2016
+    [merchantDefinedData1] => Request ID: 42571
+    [transactionSignature] => 7ONVTIkW5IASGJ2lve6L1VWnfCM=
+    [billTo_city] => Hampton
+    [billTo_postalCode] => 03842
+    [orderPage_requestToken] => Ahj//wSRg6/XPcDD5ehEKFWLVu0cuGLJhXqT40yFKa1nE2Kmn8pFjUANNP5SLGoaQQu/0u/hk0kyro9JZxwMG0jB1+ue4GHy9CIA1wqj
+    [ccAuthReply_amount] => 481.25
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 182650
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => andrew@cotrupilaw.com
+    [reasonCode] => 100
+    [order_id] => 42571
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 01
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => QmSJVOfG9cAbW7bwcDSaX/7MFNc=
+    [requestID] => 3575780310250178147362
+    [orderNumber] => 1357578031023
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,billTo_street2,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-07T170031Z
+    [card_cardType] => 003
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Katsoulis
+    [billTo_phoneNumber] => 6035668093
+    [orderAmount] => 68.75
+    [billTo_street1] => P.O. Box 1163
+    [card_accountNumber] => ############2231
+    [platform] => prd
+    [orderAmount_publicSignature] => 9KgVKoJH0M0fgfO4/1IiEZcOYbI=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 157524300WTOFOBJ634U8
+    [signedDataPublicSignature] => JVG9EiucpsqfS2ypz13ZaYGRsjg=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => George
+    [billTo_customerID] => 263
+    [uid] => 263
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 42201
+    [transactionSignature] => /kXEnh8bohwMXj63QJh3QHe9r+o=
+    [billTo_city] => Hollis
+    [billTo_postalCode] => 03049
+    [orderPage_requestToken] => Ahj//wSRg7CGNWvSQWhEKFWLVu1ZNGbBhXqT40+FKbM2lVwmoLixCtQJNQXFiFa6QN1tl38MmkmVdHpLOOBgxkYOwhjVr0kFoRAA3z3C
+    [ccAuthReply_amount] => 68.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 04145P
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => georgekatsoulis@aol.com
+    [reasonCode] => 100
+    [order_id] => 42201
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => Q2lu9P69cbqVdzDaet77bPpFbVE=
+    [requestID] => 3575804934730178147362
+    [orderNumber] => 1357580493472
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2013-01-07T174134Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)

@@ -1,0 +1,150 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Gardner
+    [billTo_phoneNumber] => 6036717342
+    [orderAmount] => 828.75
+    [billTo_street1] => 1 Fair St
+    [card_accountNumber] => ############0567
+    [platform] => prd
+    [orderAmount_publicSignature] => Vq3pisWtDDczG/yz1HvQWkae8IQ=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 128895578WTO1Q9FGVAVP
+    [signedDataPublicSignature] => Whta5Bp1V6RkJiWgK6gXfInWiw0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => George
+    [billTo_customerID] => 948
+    [uid] => 948
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 35390
+    [transactionSignature] => 8DiiC4SFj6rBYNsxq5XdP4Fr2x4=
+    [billTo_city] => Franklin
+    [billTo_postalCode] => 03235
+    [orderPage_requestToken] => Ahj//wSRfoKg5KrFJwBAKFWLJw4ctWrdxXqT2NFzGj1oNagmkccEJbgFNI44IS3aQRod2SHQyaSZV0eks44GEqRfoKg5KrFJwBAAxxrn
+    [ccAuthReply_amount] => 828.75
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 996219
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => sox_345@yahoo.com
+    [reasonCode] => 100
+    [order_id] => 35390
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 03
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => PnwDZ+YoYOSkZ3WPdaSKzM5efRo=
+    [requestID] => 3528034505400178147360
+    [orderNumber] => 1352803450538
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-13T104412Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Y
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Ross
+    [billTo_phoneNumber] => 6033696465
+    [orderAmount] => 412.5
+    [billTo_street1] => 10 Manomet Street #207
+    [card_accountNumber] => ############9589
+    [platform] => prd
+    [orderAmount_publicSignature] => 7eVcWJd5dMpznwYHrNvN9xN6Btg=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 129184755WTO9N9GYDTDA
+    [signedDataPublicSignature] => KD4Gv+MGJeLlACSN31oo0W6iVNo=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => MA
+    [billTo_firstName] => Brandon
+    [billTo_customerID] => 908
+    [uid] => 908
+    [card_expirationYear] => 2013
+    [merchantDefinedData1] => Request ID: 34048
+    [transactionSignature] => Hd5sA0QezsY9iEPvlNo3YESxyV8=
+    [billTo_city] => New Bedford
+    [billTo_postalCode] => 02745
+    [orderPage_requestToken] => Ahj//wSRfo2nGD/tpZhEKFWLJyxcNG7VrXqT3M5zHsxKkSCmkrWg/iwFNJWtB/F6QQoSIkOhk0kyro9JZxwMJMi/RtOMH/bSzCIAygSR
+    [ccAuthReply_amount] => 412.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 08316B
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => A
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => brandon@bdrosslaw.com
+    [reasonCode] => 100
+    [order_id] => 34048
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => hVs9dFlTarv+11AIv0ePjQpQCMg=
+    [requestID] => 3528431694950178147362
+    [orderNumber] => 1352843169494
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-13T214610Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => A
+)
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Domin
+    [billTo_phoneNumber] => 4072763897
+    [orderAmount] => 22.5
+    [billTo_street1] => 4 12th St
+    [card_accountNumber] => ############8184
+    [platform] => prd
+    [orderAmount_publicSignature] => t1+rOduE3X88UKlcguUpDZdPijA=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 129261919WTO8H9FJY5N2
+    [signedDataPublicSignature] => c9mkOZ8TucEn2ACeSeo2xoMISq0=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Krista
+    [billTo_customerID] => 807
+    [uid] => 807
+    [card_expirationYear] => 2014
+    [merchantDefinedData1] => Request ID: 28448
+    [transactionSignature] => MD533UKPqy52hsDPsXSGx2XgomA=
+    [billTo_city] => Hampton
+    [billTo_postalCode] => 03842
+    [orderPage_requestToken] => Ahj//wSRfpB70s1rUChGKFWLJyybMXLFzXqT3EhzGlWWs5kmj+o0tnwFNH9RpbP6QMjKJDoZNJMq6PSWccDCPIv0g96Wa1qBQjAA8hSU
+    [ccAuthReply_amount] => 22.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 08312B
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Z
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => kdomin@gmail.com
+    [reasonCode] => 100
+    [order_id] => 28448
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 04
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => OpDFGmbbfBF+YAE2ybiRspxR3DY=
+    [requestID] => 3528533691450178147363
+    [orderNumber] => 1352853369143
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-11-14T003609Z
+    [card_cardType] => 001
+    [ccAuthReply_avsCode] => Z
+)

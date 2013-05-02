@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Burton
+    [billTo_email] => afarina@co.grafton.nh.us
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => N
+    [orderAmount_publicSignature] => BuYsROq5rcK6i7rN5IhDkKEEbOk=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2013
+    [card_accountNumber] => ############0357
+    [reasonCode] => 100
+    [billTo_firstName] => Raymond
+    [signedFields] => billTo_lastName,billTo_email,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,billTo_company,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,orderPage_environment,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,billTo_phoneNumber,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3491965026160178147362
+    [order_id] => 28018
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 006247
+    [billTo_company] => Grafton County
+    [card_expirationMonth] => 02
+    [orderNumber] => 1349196502614
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 263
+    [signedDataPublicSignature] => bF0IhJZIiM2qnAywAhRiuZc5bEY=
+    [orderPage_environment] => PRODUCTION
+    [reconciliationID] => 109279513WTOFL7L6ZYBJ
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => N
+    [orderPage_requestToken] => Ahj//wSRepl/1CNaGWBEKFWLByybuWrFnXqT40xvMbWrMKUmn7XHI+wFNP2uOR96QP1thHJDJpJlXR6SzjgYKJF6mX/UI1oZYEQAwhUP
+    [uid] => 263
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 275.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-10-02T164823Z
+    [orderAmount] => 275
+    [orderNumber_publicSignature] => WCF+YmO9MH+zlkOTcFkkn5pKmYw=
+    [card_cardType] => 001
+    [billTo_street1] => 3855 Dartmouth College Highway
+    [decision] => ACCEPT
+    [billTo_phoneNumber] => 6037876941
+    [paymentOption] => card
+    [transactionSignature] => Dy3cX63LsTtg3aaMA7+W7vZDfyE=
+    [merchantDefinedData1] => Request ID: 28018
+    [billTo_city] => North Haverhill
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03744
+    [billTo_country] => us
+)

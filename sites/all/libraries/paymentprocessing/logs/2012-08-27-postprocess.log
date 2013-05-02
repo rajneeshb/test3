@@ -1,0 +1,47 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Gallo
+    [orderPage_serialNumber] => 3213046286400176056193
+    [ccAuthReply_avsCodeRaw] => Y
+    [orderAmount_publicSignature] => 2NoZYeBioS72GOT2UrVDttWVh24=
+    [orderCurrency] => usd
+    [platform] => prd
+    [card_expirationYear] => 2012
+    [card_accountNumber] => ############5657
+    [reasonCode] => 100
+    [billTo_firstName] => Peter
+    [signedFields] => billTo_lastName,orderPage_serialNumber,ccAuthReply_avsCodeRaw,orderAmount_publicSignature,orderCurrency,platform,card_expirationYear,card_accountNumber,reasonCode,billTo_firstName,requestID,order_id,orderPage_transactionType,ccAuthReply_reasonCode,ccAuthReply_authorizationCode,card_expirationMonth,orderNumber,orderCurrency_publicSignature,billTo_customerID,reconciliationID,source_domain,ccAuthReply_avsCode,orderPage_requestToken,uid,ccAuthReply_processorResponse,ccAuthReply_amount,decision_publicSignature,ccAuthReply_authorizedDateTime,orderAmount,orderNumber_publicSignature,card_cardType,billTo_street1,decision,paymentOption,merchantDefinedData1,billTo_city,billTo_state,merchantID,billTo_postalCode,billTo_country
+    [requestID] => 3460846782740178147363
+    [order_id] => 21501
+    [orderPage_transactionType] => sale
+    [ccAuthReply_reasonCode] => 100
+    [ccAuthReply_authorizationCode] => 291496
+    [card_expirationMonth] => 12
+    [orderNumber] => 1346084678272
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [billTo_customerID] => 247
+    [signedDataPublicSignature] => DCsYhOSPatVbc3nQ3JQWO++rIjM=
+    [reconciliationID] => 090197420WTO8H686YI1O
+    [source_domain] => nh.tcro.us
+    [ccAuthReply_avsCode] => Y
+    [orderPage_requestToken] => Ahj//wSRdznLaRmjoDBGKFWDlgxct2jJhXqT3Ehs4bWZLGemj9mUU+QFNH7Mop86QNrwEYEMmkmVdHpLOOBg8kXc5y2kZo6AwRgA0iET
+    [uid] => 247
+    [ccAuthReply_processorResponse] => 00
+    [ccAuthReply_amount] => 56.00
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_authorizedDateTime] => 2012-08-27T162439Z
+    [orderAmount] => 56
+    [orderNumber_publicSignature] => c9zJargPzte1Z6y1Af41784BP7E=
+    [card_cardType] => 001
+    [billTo_street1] => 30 Kitt Lane
+    [decision] => ACCEPT
+    [paymentOption] => card
+    [transactionSignature] => z2VUPLYxX9NsD0NfvQU1t0GbLCc=
+    [merchantDefinedData1] => Request ID: 21501
+    [billTo_city] => Londonderry
+    [billTo_state] => NH
+    [merchantID] => avtranzsb
+    [billTo_postalCode] => 03053
+    [billTo_country] => us
+)

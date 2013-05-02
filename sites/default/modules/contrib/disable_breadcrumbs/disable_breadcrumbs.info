@@ -1,0 +1,11 @@
+name = "Disable breadcrumbs"
+description = "Disable breadcrumbs on a per page/node or per content type basis"
+package = "Other"
+core = 6.x
+
+; Information added by drupal.org packaging script on 2011-09-18
+version = "6.x-1.1"
+core = "6.x"
+project = "disable_breadcrumbs"
+datestamp = "1316354201"
+

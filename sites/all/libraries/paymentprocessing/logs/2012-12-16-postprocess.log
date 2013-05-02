@@ -1,0 +1,50 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Konze
+    [billTo_phoneNumber] => 3106979332
+    [orderAmount] => 137.5
+    [billTo_street1] => 24240 Ocean Ave
+    [card_accountNumber] => ############6229
+    [platform] => prd
+    [orderAmount_publicSignature] => QvCqkMuKXpH5a050hcLLVnI9d4Y=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 147799113WTOFLALRY7E8
+    [signedDataPublicSignature] => 64jS+gQ+Y/KiykZC0pbFy1FCc9I=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => CA
+    [billTo_firstName] => Maggie
+    [billTo_customerID] => 1151
+    [uid] => 1151
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 40061
+    [transactionSignature] => VRsn93PYXdOXlV4OwoCRUF0HFT0=
+    [billTo_city] => Torrance
+    [billTo_postalCode] => 90505
+    [orderPage_requestToken] => Ahj//wSRgagHDKQbLEBEKFWLRu3cuWLFnXqT40yDMpWW8Vwmn8WAUcgJNP4sAo5aQO1tiS+GTSTKuj0lnHAwiyMDUA4ZSDZYgIgAkQFX
+    [ccAuthReply_amount] => 137.50
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 09447Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => maggiekonze@yahoo.com
+    [reasonCode] => 100
+    [order_id] => 40061
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 12
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 247X31p38Wz+gtMPcMJifyTgdOM=
+    [requestID] => 3557052064200178147362
+    [orderNumber] => 1355705206418
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-17T004647Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)

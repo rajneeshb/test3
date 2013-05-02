@@ -1,0 +1,5 @@
+name = PLUpload Helper
+description = "Helper module for PLUpload that fixes some issues and adds support for AVTranz"
+package = AVTranz
+core = 6.x
+dependencies[] = plupload

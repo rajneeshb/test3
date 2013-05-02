@@ -1,0 +1,51 @@
+Array
+(
+    [q] => payment-received
+    [billTo_lastName] => Desmarais
+    [billTo_phoneNumber] => 6036235524
+    [orderAmount] => 236
+    [billTo_street1] => 175 Canal Street
+    [card_accountNumber] => ############0459
+    [platform] => prd
+    [orderAmount_publicSignature] => l9MRScZ3AU/9fauejvapukZ0Xkg=
+    [orderPage_serialNumber] => 3213046286400176056193
+    [orderCurrency] => usd
+    [reconciliationID] => 141858921WTO8VACO043K
+    [signedDataPublicSignature] => ZIYSI/lJ7KZmC9WIAxf0ConTPYA=
+    [decision] => ACCEPT
+    [ccAuthReply_processorResponse] => 00
+    [source_domain] => nh.tcro.us
+    [billTo_state] => NH
+    [billTo_firstName] => Janice
+    [billTo_customerID] => 1088
+    [uid] => 1088
+    [billTo_company] => Desmarais, Ewing, &Johnston, PLLC
+    [card_expirationYear] => 2015
+    [merchantDefinedData1] => Request ID: 38931
+    [transactionSignature] => Lme4/Ig5KovOzARv/rHmu0uLkT8=
+    [billTo_city] => Manchester
+    [billTo_postalCode] => 03101
+    [orderPage_requestToken] => Ahj//wSRgLId94MvrcBGKFWLRi4auHLJjXqT3FaDDnsGjOWmkN1jRIgJNIbrGiRaQPuGBJLDJpJlXR6SzjgYSZGAsh33gy+twEYA9iAh
+    [ccAuthReply_amount] => 236.00
+    [orderCurrency_publicSignature] => pfcMEzOHelrVLvafAkpPGnECGbk=
+    [orderPage_transactionType] => sale
+    [ccAuthReply_authorizationCode] => 00650Z
+    [decision_publicSignature] => KnPsJG1LWbeM0M209/iKgV4eG28=
+    [ccAuthReply_avsCodeRaw] => Y
+    [paymentOption] => card
+    [billTo_country] => us
+    [billTo_email] => corinneprovost@gmail.com
+    [reasonCode] => 100
+    [order_id] => 38931
+    [ccAuthReply_reasonCode] => 100
+    [orderPage_environment] => PRODUCTION
+    [card_expirationMonth] => 05
+    [merchantID] => avtranzsb
+    [orderNumber_publicSignature] => 0mCNOoPLnA3WkLmhaqgwOPUsc80=
+    [requestID] => 3548192205480178147363
+    [orderNumber] => 1354819220546
+    [signedFields] => billTo_lastName,billTo_phoneNumber,orderAmount,billTo_street1,card_accountNumber,platform,orderAmount_publicSignature,orderPage_serialNumber,orderCurrency,reconciliationID,decision,ccAuthReply_processorResponse,source_domain,billTo_state,billTo_firstName,billTo_customerID,uid,billTo_company,card_expirationYear,merchantDefinedData1,billTo_city,billTo_postalCode,orderPage_requestToken,ccAuthReply_amount,orderCurrency_publicSignature,orderPage_transactionType,ccAuthReply_authorizationCode,decision_publicSignature,ccAuthReply_avsCodeRaw,paymentOption,billTo_country,billTo_email,reasonCode,order_id,ccAuthReply_reasonCode,orderPage_environment,card_expirationMonth,merchantID,orderNumber_publicSignature,requestID,orderNumber,ccAuthReply_authorizedDateTime,card_cardType,ccAuthReply_avsCode
+    [ccAuthReply_authorizedDateTime] => 2012-12-06T184021Z
+    [card_cardType] => 002
+    [ccAuthReply_avsCode] => Y
+)
